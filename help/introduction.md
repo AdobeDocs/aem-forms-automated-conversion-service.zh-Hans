@@ -1,59 +1,59 @@
 ---
 title: 简介
-description: '加快将打印表单转换为自适应表单的速度 '
+description: '加速打印表单向自适应表单的转换 '
 translation-type: tm+mt
-source-git-commit: ef5789dabccc65dcf988b9424b435aa036017691
+source-git-commit: ceff5cb56aa9896a28004628c5e26c262b7918bd
 
 ---
 
 
 # 简介 {#introduction-to-automated-forms-conversion-service}
 
-自动表单转换服务通过将PDF表单自动转换为自适应表单，帮助加快数据捕获体验的数字化和现代化。 此服务由Adobe Sensei提供支持，可自动将您的PDF表单转换为设备友好型、响应式和基于HTML5的自适应表单。 在利用PDF表单和XFA中的现有投资的同时，该服务在转换过程中还将适当的验证、样式和布局应用于自适应表单字段。 该服务有助于：
+自动化表单转换服务可将 PDF 表单自动转换为自适应表单，帮助加速数据捕获体验的数字化和现代化进程。 此服务由 Adobe Sensei 提供支持，可将您的 PDF 表单自动转换为设备友好、响应迅速且基于 HTML5 的自适应表单。 它可以充分利用现有 PDF 表单和 XFA 表单的投资，并可在表单转换期间将适当的验证、样式和布局应用于自适应表单的相应字段。 此服务有助于：
 
-* 节省将打印表单转换为自适应表单所需的手动工作
-* 在转换过程中应用模式和适当的验证
-* 在转换过程中生成记录文档
-* 将经常出现的字段分组到可重用的表单片段中
-* 在转化过程中启用Adobe Analytics
+* 省去采用人工方式将打印表单转换为自适应表单时的繁琐过程
+* 在转换期间自动应用相应模式和适当验证
+* 在转换期间生成记录文件
+* 将常见字段分组为可复用的表单片段
+* 在转换期间启用 Adobe Analytics
 
-![这很简单。 您只需提供源表单，并将所有内容留给我们。 我们将为您提供美观的自适应表单。 当然，你会对产出感到满意。 ](assets/pdf-to-adaptive-form-gitx50.gif)
+![操作很简单。 您只需提供源表单，其余一切我们来做。 我们将为您呈上漂亮的自适应表单。 当然，您也可以对输出内容进行修改，直至满意为止。](assets/pdf-to-adaptive-form-gitx50.gif)
 
-## 入职 {#onboarding}
+## 入门 {#onboarding}
 
-AEM 6.5 Forms内部部署定期客户和Adobe Managed service企业客户可免费使用该服务。 您可以联系Adobe销售团队或Adobe代表以请求访问该服务。
+AEM 6.4 Forms和AEM 6.5 Forms内部部署定期客户以及Adobe Managed Service企业客户可免费使用该服务。 欲访问服务，请联系 Adobe 销售团队或 Adobe 代表。
 
-Adobe为您的组织启用了访问权限，并为您组织中指定为管理员的人员提供所需的权限。 管理员可以授予您单位的AEM Forms开发人员（用户）连接服务的访问权限。 有关详 [细信息，请参阅配置自动表单转换服务](configure-service.md) 。
+Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各种所需权限。 管理员可以向贵企业的 AEM Forms 开发人员（用户）授予权限并连接到该服务。 有关详细信息，请参见[“配置自动化表单转换服务”](configure-service.md)。
 
-## 支持的PDF表单和语言 {#supported-languages-and-pdf-forms}
+## 支持的 PDF 表单和语言{#supported-languages-and-pdf-forms}
 
-该服务支持非交互式PDF表单、使用Adobe Acrobat创建的称为AcroForms的表单以及使用AEM Forms或Adobe LiveCycle创建的基于XFA的表单。
+此服务支持非交互式 PDF 表单、由 Adobe Acrobat 创建的 AcroForms 表单、以及由 AEM Forms 或 Adobe LiveCycle 创建的 XFA 表单。
 
-该服务只能将英语表单转换为自适应表单。 您可以使用 [AEM翻译工作流将生成的自适应表单翻译为其他语言](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)。
+此服务仅限于将英语表单转换为自适应表单。 您可以通过 [AEM 翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将生成的自适应表单翻译成其他语言。
 
-## 转换工作流 {#conversion-workflow}
+## 转换工作流  {#conversion-workflow}
 
-自动表单转换服务在Adobe cloud上运行。 您将AEM实例连接到服务，将表单上传到AEM实例，然后开始转换。 完整的转化过程如下：
+自动化表单转换服务在 Adobe Cloud 上运行。 您需要将 AEM 实例连接到服务，将表单上传到 AEM 实例，然后开始转换。 整个转换过程如下所示：
 
 ![工作流](assets/conversion-workflow.png)
 
-### 1.设置环境 {#set-up-the-environment}
+### 1. 搭建环境{#set-up-the-environment}
 
-自动表单转换服务在Adobe cloud上运行。 [配置单位的Adobe I/O帐户，并将本地AEM实例连接到Adobe cloud上运行的转换服务](configure-service.md) 。
+自动化表单转换服务在 Adobe Cloud 上运行。 [配置贵企业的 Adobe I/O 帐户，然后将本地 AEM 实例](configure-service.md)连接到 Adobe Cloud 上运行的转换服务。
 
-### 2.将PDF表单转换为自适应表单 {#use-the-conversion-service}
+### 2. 将 PDF 表单转换为自适应表单{#use-the-conversion-service}
 
-在配置AEM表单环境后，要将PDF表单转换为自适应表单，请将 [PDF表单上传到AEM实例](convert-existing-forms-to-adaptive-forms.md) ，然后 [开始转换](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 在上传表单之前，请考虑以下事项：
+配置好 AEM 表单环境后，若要将 PDF 表单转换为自适应表单，先[将 PDF 表单](convert-existing-forms-to-adaptive-forms.md)上传到 AEM 实例，然后[开始转换](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 上传表单之前，请注意以下几点：
 
-* 请勿上传受保护的表单。 该服务不会转换受密码保护和加密的表单。
-* 请勿上传扫描的、彩色的、非英语的表单和填写的表单。 不支持此类表单。
-* 请勿上传文件名中包含空格的PDF表单。
-* 请勿上传 [PDF包](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务不会将PDF包转换为自适应表单。
-* 对PDF表单进行建议的更改，这些更改在最佳实践和 [注意事项文章中介绍](styles-and-pattern-considerations-and-best-practices.md) 。
-* 阅读已知 [问题文章](known-issues.md) ，以避免陷入陷阱。
+* 请勿上传受保护的表单。 该服务无法转换受密码保护和加密的表单。
+* 请勿上传扫描版、彩色、非英语和已填充的表单。 此类表单不受支持。
+* 请勿上传文件名中带空格的 PDF 表单。
+* 请勿上传 [PDF 产品组合](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将 PDF 产品组合转换为自适应表单。
+* 对 PDF 表单进行修改，详情参见[“最佳实践和注意事项”](styles-and-pattern-considerations-and-best-practices.md)文章。
+* 阅读[“已知问题”](known-issues.md)避免出现意外故障。
 
-### 3.查看转换的表单 {#review-converted-forms}
+### 3. 查看转换后的表单{#review-converted-forms}
 
-真实表单在字段布局、命名或隐式建议方面可能具有复杂的数据捕获要求，而基于AI/ML的检测逻辑可能无法准确捕获这些要求。 自动转换完成后，您可以使用“ [Review and Correct”（审阅和更正）编辑器来审阅转换的表单](review-correct-ui-edited.md) ，并进行必要的更新并生成更接近所需体验的增强输出。 进行必要的更改后，再次发送表单以进行转换。
+真实世界的表单可能在字段布局、命名或隐式建议等方面具有各种复杂的数据捕获要求，无法被基于 AI/ML 的检测逻辑准确捕获。 自动化转换完成后，您可使用[审阅和修正编辑器](review-correct-ui-edited.md)对转换后的表单进行审核并作必要更新，生成更符合要求的输出效果。 完成必要更改后，再次发送表单进行转换。
 
-自动转换所花费的时间取决于各种因素，如输入表单的大小、表单的复杂性、对服务处理队列的贷款等。 通过文件夹／文件上的状态指示器定期向用户通知进度。 转换完成后，还会向配置的电子邮件地址发送电子邮件通知。
+自动化转换的用时取决于多种因素，例如输入表单大小、表单复杂性、处理队列负荷等。 文件夹/文件上的状态指示器会定期向用户发送转换进度通知。 转换完成后，系统还会向配置的电子邮件地址发送通知。
