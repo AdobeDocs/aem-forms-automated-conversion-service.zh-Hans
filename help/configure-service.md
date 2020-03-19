@@ -1,19 +1,19 @@
 ---
-title: 配置自动表单转换服务
+title: 配置自动化表单转换服务
 description: 为AEM实例准备使用自动表单转换服务
 translation-type: tm+mt
-source-git-commit: ef5789dabccc65dcf988b9424b435aa036017691
+source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 ---
 
 
-# 配置自动表单转换服务 {#about-this-help}
+# 配置自动化表单转换服务 {#about-this-help}
 
 此帮助介绍AEM管理员如何配置“自动表单转换”服务以自动将其PDF表单转换为自适应表单。 此帮助适用于贵组织的IT和AEM管理员。 提供的信息基于以下假设：阅读本帮助的任何人都熟悉以下技术：
 
-* 安装、配置和管理Adobe Experience manager和AEM包，
+* 安装、配置和管理Adobe Experience Manager和AEM包，
 
-* 使用Linux和Microsoft windows操作系统，
+* 使用Linux和Microsoft Windows操作系统，
 
 * 配置SMTP邮件服务器
 
@@ -21,11 +21,11 @@ source-git-commit: ef5789dabccc65dcf988b9424b435aa036017691
 
 **观看视频或阅读文章以配置自动表单转换服务**
 
-## 入职{#onboarding}
+## 入门{#onboarding}
 
-AEM 6.5 Forms和AEM 6.4 Forms内部部署定期客户以及Adobe Managed service企业客户可免费使用该服务。 您可以联系Adobe销售团队或Adobe代表以请求访问该服务。
+AEM 6.4 Forms和AEM 6.5 Forms内部部署定期客户以及Adobe Managed Service企业客户可免费使用该服务。 欲访问服务，请联系 Adobe 销售团队或 Adobe 代表。
 
-Adobe为您的组织启用了访问权限，并为您组织中指定为管理员的人员提供所需的权限。 管理员可以授予您单位的AEM Forms开发人员（用户）连接服务的访问权限。
+Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各种所需权限。 管理员可以向贵企业的 AEM Forms 开发人员（用户）授予权限并连接到该服务。 
 
 ## 前提条件 {#prerequisites}
 
@@ -33,32 +33,32 @@ Adobe为您的组织启用了访问权限，并为您组织中指定为管理员
 
 * 您的组织启用了自动表单转换服务
 * 具有转换服务管理员权限的Adobe ID帐户
-* 带有最新AEM Service pack的AEM 6.5或AEM 6.4作者实例正在运行
+* 带有最新AEM Service Pack的AEM 6.4或AEM 6.5作者实例正在运行
 * AEM用户（在AEM实例上），它是表单用户组的成员
 
-## 设置环境 {#setuptheservice}
+## Set up the environment {#setuptheservice}
 
-在使用服务之前，请准备AEM作者实例以连接到在Adobe cloud上运行的服务。 在所列序列中执行以下步骤以准备服务实例：
+在使用服务之前，请准备AEM作者实例以连接到在Adobe Cloud上运行的服务。 在所列序列中执行以下步骤以准备服务实例：
 
-1. [下载并安装AEM 6.5或AEM 6.4](#aemquickstart)
+1. [下载并安装AEM 6.4或AEM 6.5](#aemquickstart)
 1. [下载并安装最新的AEM Service Pack](#servicepack)
 1. [下载和安装最新的AEM Forms加载项包](#downloadaemformsaddon)
 1. [创建自定义主题和模板](#referencepackage)
 
-### 下载并安装AEM 6.5或AEM 6.4 {#aemquickstart}
+### 下载并安装AEM 6.4或AEM 6.5 {#aemquickstart}
 
 
-自动表单转换服务在AEM作者实例上运行。 您需要AEM 6.5或AEM 6.4来设置AEM作者实例。 如果尚未启动并运行AEM，请从以下位置下载它：
+自动表单转换服务在AEM作者实例上运行。 您需要AEM 6.4或AEM 6.5来设置AEM作者实例。 如果尚未启动并运行AEM，请从以下位置下载它：
 
-* 如果您是现有AEM客户，请从 [Adobe授权许可网站下载AEM 6.5或AEM 6.4](http://licensing.adobe.com)。
+* 如果您是现有AEM客户，请从 [Adobe授权许可网站下载AEM 6.4或AEM 6.5](http://licensing.adobe.com)。
 
-* 如果您是Adobe合作伙伴，请使用 [Adobe合作伙伴培训计划](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) ，请求AEM 6.5或AEM 6.4。
+* 如果您是Adobe合作伙伴，请使用 [Adobe合作伙伴培训计划](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) ，请求AEM 6.4或AEM 6.5。
 
 下载AEM后，有关设置AEM作者实例的说明，请参阅部署 [和维护](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)。
 
 ### 下载和安装AEM最新Service Pack {#servicepack}
 
-下载并安装最新的AEM Service Pack。 有关详细说明，请参 [阅AEM 6.5 Service Pack发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html) 或 [AEM 6.4 Service Pack发行说明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)。
+下载并安装最新的AEM Service Pack。 有关详细说明，请参阅 [AEM 6.4 Service Pack发行说明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html) 或 [AEM 6.5 Service Pack发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)。
 
 ### 下载和安装AEM Forms加载项包 {#downloadaemformsaddon}
 
@@ -75,23 +75,23 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完全功能�
 
 ## 配置服务 {#configure-the-service}
 
-在您继续配置服务并将本地实例与Adobe cloud上运行的服务连接之前，请了解连接到服务所需的角色和权限。 该服务使用两种不同类型的角色，管理员和开发人员：
+在您继续配置服务并将本地实例与Adobe Cloud上运行的服务连接之前，请了解连接到服务所需的角色和权限。 该服务使用两种不同类型的角色，管理员和开发人员：
 
-* **管理员**:管理员负责为其组织管理Adobe软件和服务。 管理员授予组织中的开发人员访问权限，以连接到Adobe cloud上运行的自动表单转换服务。 为组织设置管理员后，管理员将收到一封包含标题的电子邮件 **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**。 如果您是管理员，请检查邮箱中是否有前面提到的标题，然后继续向 [组织的开发人员授予访问权限](#adduseranddevs)。
+* **管理员**:管理员负责为其组织管理Adobe软件和服务。 管理员授予组织中的开发人员访问权限，以便连接到在Adobe Cloud上运行的自动表单转换服务。 为组织设置管理员后，管理员将收到一封包含标题的电子邮件 **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**。 如果您是管理员，请检查邮箱中是否有前面提到的标题，然后继续向 [组织的开发人员授予访问权限](#adduseranddevs)。
 
 ![管理员访问权限授予电子邮件](assets/admin-console-adobe-io-access-grantedx75.png)
 
-* **开发人员**:开发人员将本地AEM Forms作者实例连接到Adobe cloud上运行的自动表单转换服务。 当管理员授予开发人员连接到自动表单转换服务的权限时，将向开发人员发送一封电子邮件，其标题为“您现在拥有开发人员访问权限，可以管理组织的Adobe API集成。 如果您是开发人员，请检查邮箱中是否有前面提到的标题，然后继续将您的本地AEM实例连接到Adobe cloud上的“自动表单转换”服务。 [](#connectafcadobeio)
+* **开发人员**:开发人员将本地AEM Forms作者实例连接到Adobe Cloud上运行的自动表单转换服务。 当管理员授予开发人员连接到自动表单转换服务的权限时，将向开发人员发送一封电子邮件，其标题为“您现在拥有开发人员访问权限，可以管理组织的Adobe API集成。 如果您是开发人员，请检查邮箱中是否有前面提到的标题，然后继续将您的本地AEM实例连接到Adobe Cloud上的“自动表单转换”服务。 [](#connectafcadobeio)
 
 ![开发人员访问授权电子邮件](assets/email-developer-accessx94.png)
 
 ### （仅限管理员）授予组织的开发人员访问权限 {#adduseranddevs}
 
-在Adobe为您的组织启用访问权限并向管理员提供所需的权限后，管理员可以登录Admin Console（下面的详细说明），创建配置文件，并将开发人员添加到配置文件。 开发人员可以将AEM Forms的本地实例连接到Adobe cloud上的自动表单转换服务。
+在Adobe为您的组织启用访问权限并向管理员提供所需的权限后，管理员可以登录Admin Console（下面的详细说明），创建配置文件，并将开发人员添加到配置文件。 开发人员可以将AEM Forms的本地实例连接到Adobe Cloud上的自动表单转换服务。
 
 开发人员是指定用于运行转换服务的组织成员。 只有添加到Adobe自动表单转换服务配置文件的开发人员才有权使用自动表单转换服务。 执行以下步骤以创建配置文件并向其添加开发人员：
 
-1. 登录到 [Admin Console](https://adminconsole.adobe.com/)。 使用 **Adobe ID** （为使用自动表单转换服务提供的管理员）进行登录。 请勿使用任何其他ID或Federated ID进行登录。
+1. 登录到 [Admin Console](https://adminconsole.adobe.com/)。 使用 **Adobe ID** （提供管理员ID），以便使用自动表单转换服务登录。 请勿使用任何其他ID或Federated ID进行登录。
 1. 单击选 **[!UICONTROL Automated Forms Conversion]** 项。
 1. 单击 **[!UICONTROL New Profile]** 选项卡 **[!UICONTROL Products]** 中的。
 1. 为 **[!UICONTROL Name]**&#x200B;配置 **[!UICONTROL Display Name]**&#x200B;文件指 **[!UICONTROL Description]** 定、和。 单击 **[!UICONTROL Done]**. 此时会创建配置文件。
@@ -106,11 +106,11 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完全功能�
 
 为所有用户重复上述步骤。  有关添加开发人员的更多详细信息，请参阅 [管理开发人员](https://helpx.adobe.com/enterprise/using/manage-developers.html)。
 
-管理员将开发人员添加到Adobe I/O配置文件后，开发人员会通过电子邮件收到通知。 在收到电子邮件后，开发人员可以继续将 [本地AEM Forms实例与Adobe cloud上的“自动表单转换”服务连接起来](#connectafcadobeio)。
+管理员将开发人员添加到Adobe I/O配置文件后，开发人员会通过电子邮件收到通知。 在收到电子邮件后，开发人员可以继续将 [本地AEM Forms实例与Adobe Cloud上的“自动表单转换”服务连接起来](#connectafcadobeio)。
 
-### （仅限开发人员）将您的本地AEM Forms实例连接到Adobe cloud上的自动表单转换服务 {#connectafcadobeio}
+### （仅限开发人员）将您的本地AEM Forms实例连接到Adobe Cloud上的自动表单转换服务 {#connectafcadobeio}
 
-在管理员为您提供开发人员访问权限后，您可以将本地AEM Forms实例连接到Adobe cloud上运行的自动表单转换服务。 按照所列顺序执行以下步骤，将AEM Forms实例连接到服务：
+在管理员为您提供开发人员访问权限后，您可以将本地AEM Forms实例连接到Adobe Cloud上运行的自动表单转换服务。 按照所列顺序执行以下步骤，将AEM Forms实例连接到服务：
 
 * [配置电子邮件通知](configure-service.md#configureemailnotification)
 * [将用户添加到表单用户组](#adduserstousergroup)
@@ -120,10 +120,10 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完全功能�
 
 #### 配置电子邮件通知 {#configureemailnotification}
 
-自动表单转换服务使用Day CQ邮件服务发送电子邮件通知。 这些电子邮件通知包含有关成功或失败转换的信息。 如果选择不接收通知，请跳过这些步骤。 执行以下步骤以配置Day CQ mail服务：
+自动表单转换服务使用Day CQ邮件服务发送电子邮件通知。 这些电子邮件通知包含有关成功或失败转换的信息。 如果选择不接收通知，请跳过这些步骤。 执行以下步骤以配置Day CQ Mail服务：
 
 1. 转到AEM配置管理器，网址为 `http://localhost:4502/system/console/configMgr`
-1. 打开Day CQ mail服务配置。 指定、和字 **[!UICONTROL SMTP server host name]**&#x200B;段 **[!UICONTROL SMTP server port]**&#x200B;的 **[!UICONTROL From address]** 值。 单击 **[!UICONTROL Save]**.
+1. 打开Day CQ Mail服务配置。 指定、和字 **[!UICONTROL SMTP server host name]**&#x200B;段 **[!UICONTROL SMTP server port]**&#x200B;的 **[!UICONTROL From address]** 值。 单击 **[!UICONTROL Save]**.
 
    有关SMTP服务器的主机名和端口的信息，请与电子邮件服务提供商或IT管理员联系。 您可以在发件人字段中使用任何有效的电子邮件地址。 例如，notification@example.com或donotreply@example.com。
 
@@ -223,7 +223,7 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完全功能�
    | 标题 | 配置的唯一标题。 标题显示在用于开始转换的UI中。 |
    | 名称 | 配置的唯一名称。 此配置将使用指定的名称保存在CRX-Repository中。 名称可以与标题相同。 |
    | 缩略图位置 | 配置的缩略图位置。 |
-   | 服务 URL | Adobe cloud上的自动表单转换服务的URL。 使用 `https://aemformsconversion.adobe.io/` URL。 |
+   | 服务 URL | Adobe Cloud上的自动表单转换服务的URL。 使用 `https://aemformsconversion.adobe.io/` URL。 |
    | 模板 | 要应用于已转换表单的默认模板。 在开始转换之前，您始终可以指定其他模板。 模板包含自适应表单的基本结构和初始内容。 您可以从现成的模板中选择模板。 您还可以创建自定义模板。 |
    | 主题 | 要应用于转换表单的默认主题。 在开始转换之前，您始终可以指定不同的主题。  您可以单击该图标以选择现成的主题。 您还可以创建自定义主题。 |
    | 现有片段 | 现有片段的位置（如果有）。 |
