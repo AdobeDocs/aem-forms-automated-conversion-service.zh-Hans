@@ -5,14 +5,14 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: 040b0ddb489b5bdfd640a93b22cd7bc512a39aea
+source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 ---
 
 
 # 使用Forms Portal将自适应表单与数据库集成 {#submit-forms-to-database-using-forms-portal}
 
-自动表单转换服务允许您将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 在启动转换过程时，您可以选择生成包含或不包含数据绑定的自适应表单。
+自动表单转换服务允许您将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 在启动转换过程时，您可以选择生成带有或不带数据绑定的自适应表单。
 
 如果选择生成不带数据绑定的自适应表单，则转换后可以将转换后的自适应表单与表单数据模型、XML架构或JSON架构集成。 但是，如果生成具有数据绑定的自适应表单，则转换服务会自动将自适应表单与JSON架构关联，并在自适应表单和JSON架构中可用的字段之间创建数据绑定。 然后，您可以将自适应表单与您选择的数据库集成，在表单中填写数据，并使用表单门户将其提交到数据库。
 
@@ -26,10 +26,11 @@ source-git-commit: 040b0ddb489b5bdfd640a93b22cd7bc512a39aea
 
 ## Pre-requisites {#pre-requisites}
 
-* 带有最新AEM 6.5 Service pack的AEM 6.5作者实例
+* 设置AEM 6.4或6.5作者实例
+* 为您 [的AEM实例安装最](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) 新的Service Pack
 * AEM Forms加载项包的最新版本
-* [自动化表单转换服务](configure-service.md)
-* 要与之集成的数据库。 示例实现中使用的数据库是MySQL 5.6.24。但是，您可以将Forms Portal与您选择的任何数据库集成。
+* Configure [Automated Forms Conversion service](configure-service.md)
+* 设置数据库。 示例实现中使用的数据库是MySQL 5.6.24。但是，您可以将转换后的自适应表单与您选择的任何数据库集成。
 
 ## 在AEM实例与数据库之间设置连接 {#set-up-connection-aem-instance-database}
 
