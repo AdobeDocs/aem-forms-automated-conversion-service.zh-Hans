@@ -2,7 +2,7 @@
 title: 新增功能? 发行说明——自动表单转换服务
 description: '了解自动表单转换服务的最新功能和修复的错误 '
 translation-type: tm+mt
-source-git-commit: e88b9606878cb408c0369b5f20a644db93578f64
+source-git-commit: 01dfd20951314017d47713bfb1a2a5f2d563f434
 
 ---
 
@@ -40,4 +40,4 @@ source-git-commit: e88b9606878cb408c0369b5f20a644db93578f64
 
 您需要连接器软件包1.1.38或更高版本才能使用AFC-2020.03.1版中提供的最新功能和改进。您可以从 [AEM包共享下载连接器包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN)。
 
-如果您已经拥有运行中的自动表单转换服务环境，要使用转换服务的最新功能，请按上述顺序安装最新的服务包、最新的AEM Forms加载项包和最新的连接器包。 有关详细说明，请参阅 [配置自动表单转换服务文章](configure-service.md) 。
+如果您已经拥有并运行了Automated Forms Conversion服务环境，要使用转换服务的最新功能，请按上述顺序安装最新的服务包、最新的AEM Forms Add-on包和最新的连接器包。 有关详细说明，请参阅 [配置自动表单转换服务文章](configure-service.md) 。
