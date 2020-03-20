@@ -1,5 +1,5 @@
 ---
-title: 为自适应表单推荐的基于数据源的预填和提交工作流程
+title: 基于数据源的预填充和提交工作流建议（用于生成自适应表单）
 seo-title: 自适应表单的预填和提交选项
 description: 针对使用自动表单转换服务生成的自适应表单的基于数据源的预填和提交工作流程。
 seo-description: 针对使用自动表单转换服务生成的自适应表单的基于数据源的预填和提交工作流程。
@@ -9,12 +9,12 @@ topic-tags: forms
 discoiquuid: cad34fff-7f9f-4a27-8b5c-d0a523903eec
 privatebeta: true
 translation-type: tm+mt
-source-git-commit: f598871fd41c402f98d94d7b2174ab8b2e487075
+source-git-commit: caccb547a5741eb0e70ddf75630a661f8fe75cb3
 
 ---
 
 
-# 为自适应表单推荐的基于数据源的预填和提交工作流程 {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
+# 基于数据源的预填充和提交工作流建议（用于生成自适应表单） {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
 您可以将以下任意数据源与使用“自动表单转换”服务转换的自适应表单一起使用：
 
@@ -92,9 +92,9 @@ source-git-commit: f598871fd41c402f98d94d7b2174ab8b2e487075
 有关自动表单转换服务的详细信息，请参阅以下文章：
 
 * [自动化表单转换服务简介](introduction.md)
-* [配置自动表单转换服务](configure-service.md)
+* [配置自动化表单转换服务](configure-service.md)
 * [将打印表单转换为自适应表单](convert-existing-forms-to-adaptive-forms.md)
-* [审阅和更正转换的表单](review-correct-ui-edited.md)
+* [审阅并修正转换后的表单](review-correct-ui-edited.md)
 
 本文提供的信息基于以下假设：阅读该信息的任何人都具有关于自适应表单概念的基本知识。
 
@@ -252,7 +252,7 @@ CREATE TABLE `applicant` (
 
 >[!NOTE]
 >
->确保在执行 **用例****之前，向表单数据模型添加get和insert** services，配置和测试服务。
+>确保在执行 **用例****之前，向表单数据模型添加get** 和insert服务，配置和测试服务。
 
 执行以下步骤：
 
@@ -268,17 +268,17 @@ CREATE TABLE `applicant` (
    1. 在部 **[!UICONTROL Submission]** 分中，从 **[!UICONTROL Submit using Form Data Model]** 下拉列 **[!UICONTROL Submit Action]** 表中选择。
 
    1. 使用字段选择数据 **[!UICONTROL Data Model to submit]** 模型。
-   1. 点按 ![完成图标](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) ，以保存属性。
+   1. 点按 ![完成图标](assets/save_icon.svg) ，以保存属性。
 
-1. 点按申请人姓名文本框，然后选择 ![配置图标](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （配置）。
+1. 点按申请人姓名文本框，然后选择 ![配置图标](assets/configure_icon.svg) （配置）。
 
-   1. 在“绑定引用”字段中，选择“ **申请人** ”>“ **名称**”，然后点 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 按完成图标以保存属性。 同样，为地址、电话号码、电子邮 **件**、 **占领、年薪**（美元） **************、和否(No)创建数据绑定。 表单数据模型实体** ，包含从属族成员字段。
+   1. 在“绑定引用”字段中，选择“ **申请人** ”>“ **名称**”，然后点 ![](assets/save_icon.svg) 按完成图标以保存属性。 同样，为地址、电话号码、电子邮 **件**、 **占领、年薪(美元**) **************、和否(No)创建数据绑定。 表单数据模型实体** ，包含从属族成员字段。
    ![绑定引用](assets/bind_references.png)
 
 1. 点按 **[!UICONTROL Preview]** 以查看预填的自适应表单字段值。
 1. 根据需要修改字段值，然后提交自适应表单。 字段值将提交到MySQL数据库。 您可以刷新数据 **库中的** “申请人表”，以查看表中的更新值。
 
-**** 用例：使用“自动表单转换”服务生成没有数据绑定的自适应表单，并将MYSQL数据库配置为数据源。 您可以使用规则编辑器绑定自适应表单字段以预填字段值。 根据需要修改字段值，并将数据提交到crx-repository。
+**用例：** 使用“自动表单转换”服务生成没有数据绑定的自适应表单，并将MYSQL数据库配置为数据源。 您可以使用规则编辑器绑定自适应表单字段以预填字段值。 根据需要修改字段值，并将数据提交到crx-repository。
 
 执行以下步骤以使用规 [则编辑器](https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html) ，调用表单数据模型服务以绑定自适应表单中的字段和预填值：
 
@@ -319,7 +319,7 @@ CREATE TABLE `applicant` (
 
 ### 使用JSON架构作为数据源 {#jsondatasource}
 
-**** 用例：您可以使用自动表单转换服务生成没有数据绑定的自适应表单，并将JSON架构配置为数据源。 您可以手动将自适应表单字段绑定到JSON架构，并使用“ **预览数据** ”选项预填字段值。 根据需要修改字段值，并将数据提交到crx-repository。
+**用例：** 您可以使用自动表单转换服务生成没有数据绑定的自适应表单，并将JSON架构配置为数据源。 您可以手动将自适应表单字段绑定到JSON架构，并使用“ **预览数据** ”选项预填字段值。 根据需要修改字段值，并将数据提交到crx-repository。
 
 在执行用例之前，请确保您具有：
 
@@ -331,9 +331,9 @@ CREATE TABLE `applicant` (
 1. 选择输出文 **件夹中可用的已转换** 的贷款申请表 **,** 然后点按 **[!UICONTROL Properties]**。
 1. 点按选 **[!UICONTROL Form Model]** 项卡，从 **[!UICONTROL Schema]** 下拉列 **[!UICONTROL Select From]** 表中进行选择，然后点按以上 **[!UICONTROL Select Schema]** 传保存在本地文件系统上的 **** demo.schema JSON架构。 点 **[!UICONTROL Save & Close]** 按以保存表单。
 1. 选择示 **例贷款申请表** ，然后点按 **[!UICONTROL Edit]**。
-1. 点按申请人姓名文本框，然后选择 ![配置图标](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （配置）。
+1. 点按申请人姓名文本框，然后选择 ![配置图标](assets/configure_icon.svg) （配置）。
 
-   在“绑定引用”字段中，选择“ **申请人** ”>“ **名称**”，然后点 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 按完成图标以保存属性。 同样，为地址、电话号码、电子邮 **件**、 **占领、年薪**（美元） **************、和否(No)创建数据绑定。 具有JSON架构实体的** “从属系列成员”字段。
+   在“绑定引用”字段中，选择“ **申请人** ”>“ **名称**”，然后点 ![](assets/save_icon.svg) 按完成图标以保存属性。 同样，为地址、电话号码、电子邮 **件**、 **占领、年薪(美元**) **************、和否(No)创建数据绑定。 具有JSON架构实体的** “从属系列成员”字段。
 
 1. 再次选择文 **件夹中可用的转换的贷款申请表** , **[!UICONTROL output]** 然后选择 **[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**。</br>
 
@@ -347,7 +347,7 @@ CREATE TABLE `applicant` (
 
 ### 使用XSD架构作为数据源 {#xsddatasource}
 
-**** 用例：使用“自动表单转换”服务生成没有数据绑定的自适应表单，并将XSD架构配置为数据源。 您可以手动将自适应表单字段绑定到XSD架构，并使用带有数 **据的预览** 来预填字段值。 根据需要修改字段值，并将数据提交到crx-repository。
+**用例：** 使用“自动表单转换”服务生成没有数据绑定的自适应表单，并将XSD架构配置为数据源。 您可以手动将自适应表单字段绑定到XSD架构，并使用带有数 **据的预览** 来预填字段值。 根据需要修改字段值，并将数据提交到crx-repository。
 
 在执行用例之前，请确保您具有：
 
@@ -359,8 +359,8 @@ CREATE TABLE `applicant` (
 1. 选择文件夹中 **可用的转换的贷款申请表** ，然 **[!UICONTROL output]** 后点按 **[!UICONTROL Properties]**。
 1. 点按选 **[!UICONTROL Form Model]** 项卡，从 **[!UICONTROL Schema]** 下拉列 **[!UICONTROL Select From]** 表中选择，然后点按以上 **[!UICONTROL Select Schema]** 传保存在本地文件系统上的 **Loanapplication** XSD架构。 为XSD架构选择根元素，然后点 **[!UICONTROL Save & Close]** 按以保存表单。
 1. 选择示 **例贷款申请表** ，然后点按 **[!UICONTROL Edit]**。
-1. 点按申请人姓名文本框，然后选择 ![配置图标](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （配置）。
-在“绑定引用”字段中，选择“ **申请人** ”>“ **名称**”，然后点按 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 完成图标以保存属性。 同样，为地址、电话号码、电子邮 **件**、 **占领、年薪**（美元） **************、和否(No)创建数据绑定。 包含XSD架构实体的** “从属系列成员”字段。
+1. 点按申请人姓名文本框，然后选择 ![配置图标](assets/configure_icon.svg) （配置）。
+在“绑定引用”字段中，选择“ **申请人** ”>“ **名称**”，然后点按 ![](assets/save_icon.svg) 完成图标以保存属性。 同样，为地址、电话号码、电子邮 **件**、 **占领、年薪(美元**) **************、和否(No)创建数据绑定。 包含XSD架构实体的** “从属系列成员”字段。
 
 1. 再次选择输出 **文件夹中可用的已转换的示例贷** 款申请表 **，然后选择** > **[!UICONTROL Preview]****[!UICONTROL Preview with Data]**。</br>
 
@@ -381,7 +381,7 @@ CREATE TABLE `applicant` (
 
 ### 使用JSON架构作为数据源 {#jsonwithdatabinding}
 
-**** 用例：您可以使用自动表单转换服务生成具有JSON数据绑定的自适应表单。 预填服务和表单提交功能无缝衔接。 您不需要任何配置步骤。
+**用例：** 您可以使用自动表单转换服务生成具有JSON数据绑定的自适应表单。 预填服务和表单提交功能无缝衔接。 您不需要任何配置步骤。
 
 在执行用例之前，请确保您有一个具 [有数据绑定的自适应表单](#generate-adaptive-forms-with-json-binding)。
 
