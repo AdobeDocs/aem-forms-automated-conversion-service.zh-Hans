@@ -2,7 +2,7 @@
 title: 配置自动化表单转换服务
 description: 为AEM实例准备使用自动表单转换服务
 translation-type: tm+mt
-source-git-commit: 01dfd20951314017d47713bfb1a2a5f2d563f434
+source-git-commit: e01334d9a22ab95749e9b9b459da8886ae1ccd78
 
 ---
 
@@ -53,7 +53,7 @@ Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各�
 
 * 如果您是现有AEM客户，请从 [Adobe授权许可网站下载AEM 6.4或AEM 6.5](http://licensing.adobe.com)。
 
-* 如果您是Adobe合作伙伴，请使用 [Adobe合作伙伴培训计划](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) ，请求AEM 6.4或AEM 6.5。
+* 如果您是Adobe合作伙伴，请使用 [Adobe合作伙伴培训计划](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) ，以请求AEM 6.4或AEM 6.5。
 
 下载AEM后，有关设置AEM作者实例的说明，请参阅部署 [和维护](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)。
 
@@ -71,12 +71,7 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完全功能�
 
 ### 下载和安装连接器包 {#installConnectorPackage}
 
-您需要连接器软件包1.1.38或更高版本才能使用AFC-2020.03.1版中提供的最新功能和改进。您可以从AEM包共享下载连接器包。
-
-| 操作系统 | 连接器包下载链接 |
-| ------------- | ------------- |
-| Microsoft Windows | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
-| Linux | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
+您需要连接器软件包1.1.38或更高版本才能使用AFC-2020.03.1版中提供的最新功能和改进。您可以从 [AEM包共享下载连接器包](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
 
 >[!NOTE]
 > 如果您已经拥有并运行了Automated Forms Conversion服务环境，要使用转换服务的最新功能，请按上述顺序安装最新的服务包、最新的AEM Forms Add-on包和最新的连接器包。
