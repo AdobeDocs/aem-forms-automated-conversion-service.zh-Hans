@@ -5,7 +5,7 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
+source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
 
 ---
 
@@ -14,7 +14,7 @@ source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 自动表单转换服务允许您将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 在启动转换过程时，您可以选择生成带有或不带数据绑定的自适应表单。
 
-如果选择生成不带数据绑定的自适应表单，则转换后可以将转换后的自适应表单与表单数据模型、XML架构或JSON架构集成。 但是，如果生成具有数据绑定的自适应表单，则转换服务会自动将自适应表单与JSON架构关联，并在自适应表单和JSON架构中可用的字段之间创建数据绑定。 然后，您可以将自适应表单与您选择的数据库集成，在表单中填写数据，并使用表单门户将其提交到数据库。
+如果选择生成不带数据绑定的自适应表单，则转换后可以将转换后的自适应表单与表单数据模型、XML模式或JSON模式集成。 但是，如果生成具有数据绑定的自适应表单，转换服务会自动将自适应表单与JSON模式关联，并在自适应表单和JSON模式中可用的字段之间创建数据绑定。 然后，您可以将自适应表单与您选择的数据库集成，在表单中填写数据，并使用表单门户将其提交到数据库。
 
 下图描述了使用Forms Portal将经过转换的自适应表单与数据库集成的不同阶段：
 
@@ -38,7 +38,7 @@ source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 * [安装MYSQL连接器包](#install-mysql-connector-java-file)
 
-* [在数据库中创建架构和表](#create-schema-and-tables-in-database)
+* [在数据库中创建模式和表](#create-schema-and-tables-in-database)
 
 * [配置连接设置](#configure-connection-between-aem-instance-and-database)
 
@@ -55,19 +55,19 @@ source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 1. 单击 **[!UICONTROL Install]** 或 **[!UICONTROL Update]**。 完成后，重新启动服务器。
 1. （仅限Windows）关闭操作系统的系统防火墙。
 
-### 在数据库中创建架构和表 {#create-schema-and-tables-in-database}
+### 在数据库中创建模式和表 {#create-schema-and-tables-in-database}
 
-执行以下步骤以在数据库中创建架构和表：
+执行以下步骤以在数据库中创建模式和表：
 
-1. 使用以下SQL语句在数据库中创建架构：
+1. 使用以下SQL语句在数据库中创建模式:
 
    ```sql
    CREATE SCHEMA `formsportal` ;
    ```
 
-   其 **中** formsportal引用架构的名称。
+   其 **中** formsportal是指模式的名称。
 
-1. 使用以 **下SQL语句** ，在数据库架构中创建数据表：
+1. 使用以 **下SQL语句** ，在数据库模式中创建数据表：
 
    ```sql
     CREATE TABLE `data` (
@@ -79,7 +79,7 @@ source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 使用以 **下SQL语句** ，在数据库架构中创建元数据表：
+1. 在数据 **库模式中** ，使用以下SQL语句创建元数据表：
 
    ```sql
    CREATE TABLE `metadata` (
@@ -119,7 +119,7 @@ source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 使用以 **下SQL语句在数据库架构中** ，创建一个附加的元数据表：
+1. 在数据 **库模式中** ，使用以下SQL语句创建一个附加的可表：
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -131,7 +131,7 @@ source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 使用以 **下SQL语句** ，在数据库架构中创建可注释表：
+1. 在数据 **库模式中** ，使用以下SQL语句创建一个可注释表：
 
    ```sql
    CREATE TABLE `commenttable` (
@@ -208,7 +208,7 @@ source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
     </tr>
     <tr> 
     <td><p>JDBC连接URI</p></td> 
-    <td><p>jdbc:mysql://[主机]:[端口]/[schema_name]</p></td>
+    <td><p>jdbc:mysql://[host]:[port]/[模式名]</p></td>
     </tr>
     <tr> 
     <td><p>用户名</p></td> 
@@ -280,7 +280,7 @@ source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 1. [运行转换](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) ，将源表单转换为自适应表单。
 1. 在编辑模式下打开自适应表单。
 1. 点按表单容器，然后选择配置 ![自定义表单](assets/configure-adaptive-form.png)。
-1. 在部 **[!UICONTROL Submission]** 分中，从 **[!UICONTROL Forms Portal Submit Action]** 下拉列 **[!UICONTROL Submit Action]** 表中选择。
+1. 在部 **[!UICONTROL Submission]** 分中，从 **[!UICONTROL Forms Portal Submit Action]** 下拉 **[!UICONTROL Submit Action]** 列表中选择。
 1. 点按 ![保存模板策略](assets/edit_template_done.png) ，以保存设置。
 
 ## 创建和配置“表单门户”页面 {#create-configure-forms-portal-page}
