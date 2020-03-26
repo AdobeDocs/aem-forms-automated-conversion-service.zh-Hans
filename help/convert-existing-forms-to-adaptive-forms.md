@@ -8,7 +8,7 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: bcd55fa59f37b71b95b7cbfd80fcda368eaba408
+source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
 
 ---
 
@@ -42,7 +42,7 @@ AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可�
 * 使表单中的页数保持在15以下。
 * 请勿上传受保护的表单。 该服务不转换受口令保护和受保护的表单。
 * 请勿上传文件名中包含空格的源表单。 在上传表单之前，从文件名中删除空格。
-* 请勿上传 [PDF 产品组合](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将 PDF 产品组合转换为自适应表单。
+* 请勿上传 [PDF 产品组合](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务不会将PDF包转换为自适应表单。
 * 阅读“已 [知问题](known-issues.md) ”和“最 [佳实践和注意事项](styles-and-pattern-considerations-and-best-practices.md) ”部分，并对表单进行建议的更改。
 
 执行以下步骤，将要转换的表单上传到AEM Forms实例上的文件夹：
@@ -67,7 +67,7 @@ AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可�
 
    * **[!UICONTROL Select a cloud configuration]**. 选择配置时，已指定默认模板和主题。 您可以根据需要指定其他模板或主题。
    * 指定保存生成的自适应表单和相应模式的位置。 您可以使用默认路径或指定自定义路径。
-   * 使用 **生成不带数据模型绑定的自适应表单** ，以选择是否要生成带有或不带数据模型绑定的自适应表单。
+   * 使用“ **生成不带数据模型绑定的自适应表单** ”选项，选择是否要生成带有或不带数据模型绑定的自适应表单。
 如果不选择此选项，转换服务会自动将自适应表单与JSON模式关联，并在自适应表单和JSON模式中可用的字段之间创建数据绑定。 该字 **[!UICONTROL Save generated data model schema at]** 段显示保存生成的JSON模式的默认位置。 您还可以自定义位置以保存生成的模式。
 如果选择此选项，转换服务将生成一个没有数据模型绑定的自适应表单。 成功转换后，您可以将自适应表单与表单数据模型、XML模式或JSON模式关联。 有关详细信息，请参 [阅创建自适应表单](https://helpx.adobe.com/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
    <!--
@@ -91,7 +91,7 @@ AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可�
 
 
    * 选择该 **[!UICONTROL Auto-detect multi-column layout of input forms]** 选项可保留用于台式机和笔记本电脑等大屏幕的源表单的布局。 此选项在保留源表单的多列布局时很有帮助。 例如，当源PDF具有两列布局时，服务将生成一个输出自适应表单，该表单具有用于大屏幕显示的两列布局和用于诸如移动电话的小屏幕设备的单列布局。 该功能在数据源模式结构方面存在一些已知问题。 有关详细信息，请参 [阅已知问题文章](known-issues.md) 。
-   * 默认情况下，服务为PDF表单的每页创建单独的顶级面板。 现在，您可以使用该选 **[!UICONTROL Auto-detect logical sections]** 项拖放页面级面板（基于页码的面板）并仅创建逻辑面板。 它还会将不属于任何部分的字段归为俱乐部，前面有逻辑部分，而后面有跨两个相邻页面的逻辑部分的字段则归入单个逻辑部分。 例如，如果某个逻辑部分的某些字段位于第1页的末尾，而某些字段位于第2页的开头，则所有此类字段都会汇集到一个逻辑部分中。
+   * 默认情况下，服务为PDF表单的每页创建单独的顶级面板。 现在，您可以使用该选 **[!UICONTROL Auto-detect logical sections]** 项不创建页面级面板（基于页码的面板），而只创建逻辑面板。 它还将不属于具有前面逻辑部分的任何部分的字段和跨两个相邻页面的逻辑部分的字段限制为单个逻辑部分。 例如，如果某个逻辑部分的某些字段位于第1页的末尾，而某些字段位于第2页的开头，则所有此类字段都会汇集到一个逻辑部分中。
 
       >[!NOTE]
       > 您需要连接器包1.1.38或更高版本才能使用该 **[!UICONTROL Auto-detect logical sections]** 功能。
@@ -129,7 +129,7 @@ AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可�
 
    >[!NOTE]
    >
-   >如果转换过程需要60分钟以上，而PDF表单仍未转换为自适应表单，请在AEM Forms实例上创建新文件夹，将PDF表单上传到新创建的文件夹，然后重新开始转换。
+   >如果转换过程需要60分钟以上，而PDF表单仍未转换为自适应表单，请在AEM表单实例上创建一个文件夹，将PDF表单上传到新创建的文件夹，然后重新开始转换。
 
 ## Review and correct the converted forms {#review-and-correct-the-converted-forms}
 
