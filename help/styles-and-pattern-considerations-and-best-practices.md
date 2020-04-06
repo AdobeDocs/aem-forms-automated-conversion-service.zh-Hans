@@ -2,12 +2,12 @@
 title: '最佳实践和注意事项 '
 seo-title: '最佳实践和注意事项 '
 description: 自动表单转换服务的最佳实践和注意事项
-seo-description: 自动表单转换服务发现难以识别的源PDF表单中的样式和模式列表
+seo-description: 列表源PDF表单中的样式和模式，自动表单转换服务发现这些样式和模式难以识别
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 0f413a8bc0bb444b6faaddaf32f84f36e38438a5
+source-git-commit: 8e373b978535cd6616072cf50c223bd7f4f7c35a
 
 ---
 
@@ -18,14 +18,14 @@ source-git-commit: 0f413a8bc0bb444b6faaddaf32f84f36e38438a5
 
 ## 最佳实践
 
-转换服务将AEM Forms实例中可用的PDF表单转换为自适应表单。 您可以根据需要一次性或分阶段上传所有PDF表单。 在上传表单之前，请考虑以下事项：
+转换服务将AEM Forms实例中可用的PDF表单转换为自适应表单。 您可以根据需要一次性或分阶段上传所有PDF表单。 上传表单之前，请注意以下几点：
 
 * 将表单数保留在小于15的文件夹中，将总页数保留在小于50的文件夹中。
 * 将文件夹大小保持在10 MB以下。 请勿将表单保留在子文件夹中。
 * 使表单中的页数保持在15以下。
 * 请勿上传受保护的表单。 该服务不转换受口令保护和受保护的表单。
-* 请勿上传 [PDF包](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务不会将PDF包转换为自适应表单。
-* 请勿上传扫描的、彩色的、非英语的表单和填写的表单。 不支持此类表单。
+* Do not upload the [PDF Portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). 该服务无法将 PDF 产品组合转换为自适应表单。
+* 请勿上传扫描版、彩色、非英语和已填充的表单。 此类表单不受支持。
 * 请勿上传文件名中包含空格的源表单。 在上传表单之前，从文件名中删除空格。
 * 使用自适应表单模板为输出自适应表单指定页眉和页脚。 该服务忽略源PDF文档的页眉和页脚，并使用在自适应表单模板中指定的页眉和页脚。
 
@@ -35,13 +35,13 @@ AEM Forms Automated Conversion服务使用人工智能和机器学习算法来�
 
 自动表单转换服务是针对大量表单进行培训的。 它可轻松识别源表单中的字段并生成自适应表单。 但是，PDF表单中有一些字段和样式，这些字段和样式在人眼中很容易可见，但对于服务来说却难以理解。 服务可以为某些字段或样式分配不同于适用字段类型或面板。 以下列出了所有此类字段和样式模式。
 
-当该服务不断从源数据中学习时，它将开始识别正确的字段或面板并将其分配给这些模式。 目前，您可以使用“审阅”和“ [更正”编辑器](review-correct-ui-edited.md) ，修复此类问题。 在开始修复问题或进一步阅读之前，请先熟悉自适 [应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+该服务将开始识别正确的字段或面板并将其分配给这些模式，因为它会不断从源数据中学习。 目前，您可以使用“审阅”和“ [更正”编辑器](review-correct-ui-edited.md) ，修复此类问题。 在开始修复问题或进一步阅读之前，请先熟悉自 [适应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 ### 一般模式 {#general}
 
-| 图案 | 分辨率 |
+| 图案 | 示例 |
 |--- |--- |
-| **Pattern**<br> service不会将彩色PDF表单转换为自适应表单。 <br><br>**分辨率&#x200B;**<br>使用黑白或灰度PDF表单。 | ![彩色表单](assets/best-practice-coloured-forms.png) |
+| **Pattern**<br> Service不会将彩色PDF表单转换为自适应表单。 <br><br>**分辨率&#x200B;**<br>使用黑白或灰度PDF表单。 | ![彩色表单](assets/best-practice-coloured-forms.png) |
 | **Pattern** <br>Service不会将已填写的PDF表单转换为自适应表单。 <br><br>**分辨率&#x200B;**<br>使用空的自适应表单。 | ![填写的表单](assets/best-practice-filled-forms.png) |
 | **Pattern** <br>Service无法识别密集表单中的文本和字段。 <br><br>**分辨率&#x200B;**<br>在开始转换之前，增加密集表单的文本和字段之间的宽度。 |  |
 | **Pattern** <br>Service不支持扫描的表单。 <br><br>**分辨率&#x200B;**<br>请勿使用扫描的表单。 | ![扫描的表单](assets/scanned-forms.png) |
@@ -62,17 +62,17 @@ AEM Forms Automated Conversion服务使用人工智能和机器学习算法来�
 | 图案 | 分辨率 |
 |--- |--- |
 | **模式**<br> 服务不识别没有清晰边框的字段。 <br><br>**分辨率&#x200B;**<br>使用“审阅”和“正确”编辑器来标识此类字段。 | ![具有非清晰边界的域](assets/best-practice-fields-without-clear-borders.png) |
-| **Pattern**<br> service可能无法识别某些选择的组表单字段，这些字段在表单的底部或右侧带有字幕。 <br><br>**Resolution **Use<br>Review and Correct editor to identify the fields | ![选择字段](assets/best-practice-caption-bottom-right.png) |
-| **Pattern**<br> service会将错误类型合并或指定到某些表单字段，这些字段彼此非常靠近或没有清晰的边框。 <br><br>**分辨率&#x200B;**<br>使用“审阅”和“正确”编辑器来标识此类字段。 | ![选择字段](assets/best-practice-placed-very-near.png) |
+| **Pattern**<br> Service可能无法识别某些选择的组表单字段，这些字段在表单的底部或右侧带有字幕。 <br><br>**Resolution **Use<br>Review and Correct editor to identify the fields | ![选择字段](assets/best-practice-caption-bottom-right.png) |
+| **Pattern**<br> Service会将错误类型合并或指定到某些表单字段，这些字段彼此非常靠近或没有清晰的边框。 <br><br>**分辨率&#x200B;**<br>使用“审阅”和“正确”编辑器来标识此类字段。 | ![选择字段](assets/best-practice-placed-very-near.png) |
 | **模式**<br> 服务无法识别带有远距离字幕的字段或字幕和输入字段之间的虚线。 <br><br>**解决方&#x200B;**<br>案使用边界明确的表单字段，或使用“审阅并更正”编辑器修复此类问题。 | ![字幕字段之间的远距离字段或虚线](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
 
 ### 列表 {#lists}
 
 | 图案 | 分辨率 |
 |--- |--- |
-| **模式**<br><br><br>****<br>包含表单字段的列表会被合并或不会转换为相应的自适应表单组件解决方案使用具有清晰边界的表单字段，或使用“审阅并更正”编辑器来修复此类问题。 | ![包含选择组的列表](assets/best-practice-lists-containing-form-fields.png) |
-| **Pattern** <br>Service可以留下几个嵌套列表，但不能通过“ <br><br>**Resolution **<br>Use Review”（使用审阅）和“Correct”（更正）编辑器来修复此类问题。 | ![包含选择组的列表](assets/best-practice-nested-lists.png) |
-| **Pattern**<br> service将包含选择组的某些列表与彼此的“ <br><br>**Resolution **Use Review”(分辨率<br>)和“Correct”（正确）编辑器合并，以修复此类问题。 | ![包含选择组的列表](assets/best-practice-check-box-in-table-cells.png) |
+| **包含表** 单字段的模式列表会合并或不会转换为相应的自适应表单组件。解决方案 <br><br><br>****<br>使用具有清晰边界的表单字段，或使用“审阅并更正”编辑器来修复此类问题。 | ![包含选择组的列表](assets/best-practice-lists-containing-form-fields.png) |
+| **Pattern** <br>Service可能会留下一些嵌套的列表，但无法识别“ <br><br>**Resolution **Use Review（使用审阅）<br>”和“Correct（正确）”编辑器来修复此类问题。 | ![包含选择组的列表](assets/best-practice-nested-lists.png) |
+| **Pattern**<br> Service将包含选择组的某些列表与相互的“ <br><br>**Resolution **Use Review”(解决方案<br>)和“Correct”（正确）编辑器合并，以修复此类问题。 | ![包含选择组的列表](assets/best-practice-check-box-in-table-cells.png) |
 
 <!--
 Comment Type: draft
