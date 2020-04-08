@@ -7,7 +7,7 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: 5d4dba8fea7439b991a7a15872e6f4ed48156ac9
+source-git-commit: ffab4d916cbd545078f4b72b8de5c9968f23b0da
 
 ---
 
@@ -18,15 +18,15 @@ source-git-commit: 5d4dba8fea7439b991a7a15872e6f4ed48156ac9
 
 ![](assets/meta-model.gif)
 
-元模型是JSON架构。 在开始使用元模型之前，请确保您熟悉JSON。 您必须具有创建、编辑和读取以JSON格式保存的数据的经验。
+元模型是JSON模式。 在开始元模型之前，请确保您精通JSON。 您必须具有创建、编辑和读取以JSON格式保存的数据的经验。
 
 ## 默认元模型 {#default-meta-model}
 
-自动表单转换服务具有默认元模型。 它是JSON架构，驻留在Adobe cloud上并包含自动表单转换服务的其他组件。 您可以在本地AEM服务器上找到元模型的副本：
+自动表单转换服务具有默认元模型。 它是一个JSON模式，它驻留在Adobe Cloud上并包含自动表单转换服务的其他组件。 您可以在本地AEM服务器上找到元模型的副本：
 
 http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json。
 
-元模型的模式是从位于https://schema.org/docs/schemas.html的模式实体中派生的。 它有Person、PostalAddress、LocalBusiness和更多实体(定义见https://schema.org)。 元模型的每个实体都附于JSON架构对象类型。 以下代码表示示例元模型结构：
+元模型的模式源于https://schema.org/docs/schemas.html上的模式图元。 它有Person、PostalAddress、LocalBusiness和更多实体(定义见https://schema.org)。 元模型的每个实体都附于JSON模式对象类型。 以下代码表示示例元模型结构：
 
 ```
    "Entity": {
@@ -66,7 +66,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 ## 理解元模型 {#understanding-the-meta-model}
 
-元模型引用包含实体的JSON架构文件。 JSON架构文件中的所有实体都包括名称和ID。 每个实体可以包括多个属性。 实体及其属性可能因域而异。 您可以使用关键字和字段配置来扩充架构文件，以将架构属性映射到自适应表单组件。
+元模型引用包含实体的JSON模式文件。 JSON模式文件中的所有实体都包括名称和id。 每个实体可以包括多个属性。 实体及其属性可能因域而异。 您可以用关键字和字段配置来扩充模式文件，以将模式属性映射到自适应表单组件。
 
 ```
 "Event": {
@@ -97,7 +97,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
     }
 ```
 
-在此示例中， **Event** 表示实体的名称，该实体的 **id值为****Eventid**。 事件实体包括多个属性：
+在此示例中， **事件** ，表示实体的名称，该实体的 **id值为****Eventid**。 事件实体包括多个属性：
 
 * startDate
 * endDate
@@ -107,19 +107,19 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 每个属性还可以包括：
 
-* [JSON架构属性](#jsonschemaproperties)
+* [JSON模式属性](#jsonschemaproperties)
 * [将属性应用于生成的自适应表单字段的基于关键字的搜索](#keywordsearch)
 * [其他属性](#additionalproperties)
 
 ![元模型属性](assets/meta_model_elements.gif)
 
-根据使用aem:affKeyword引 **用的关键字**，转换服务对源表单字段执行搜索操作。 转换服务将JSON架构属性和其他属性应用到满足搜索条件的字段。
+根据使用aem:affKeyword引 **用的关键字**，转换服务对源表单字段执行搜索操作。 转换服务将JSON模式属性和其他属性应用到满足搜索条件的字段。
 
 在本例中，转换服务在源表单中搜索电话、电话、移动电话、工作电话、家庭电话、电话号码、电话号码和电话号码关键字。 基于包含这些关键字的字段，转换服务在转换后将类型、模式和aem:afProperties应用于自适应表单字段。
 
-### 生成的自适应表单字段的JSON架构属性 {#jsonschemaproperties}
+### 生成的自适应表单字段的JSON模式属性 {#jsonschemaproperties}
 
-元模型支持以下JSON架构通用属性，这些属性用于使用自动表单转换服务生成的自适应表单字段：
+元模型支持以下JSON模式通用属性，这些属性用于使用自动表单转换服务生成的自适应表单字段：
 
 <table> 
  <tbody> 
@@ -148,15 +148,15 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
   </tr>
   <td><p>图案</p></td> 
    <td> 
-    <p>模式属性基于正则表达式限制所生成的自适应表单字段的值。 例如，元模型中的以下代码将生成的自适应表单字段的值限制为十位数：<br>"pattern":"/\\d{10}/"同样，元模型中的以下代码将字段的值限制为特定的日期格式。<br><br> “图案”:"date{DD MMMM, YYYY}",</p> </td> 
+    <p>图案属性基于常规表达式限制所生成的自适应表单字段的值。 例如，元模型中的以下代码将生成的自适应表单字段的值限制为十位数：<br>"pattern":"/\\d{10}/"同样，元模型中的以下代码将字段的值限制为特定的日期格式。<br><br> “图案”:"date{DD MMMM, YYYY}",</p> </td> 
   </tr>
   <td><p>format</p></td> 
    <td> 
-    <p>format属性基于命名模式而不是正则表达式来限制生成的自适应表单字段的值。 format属性的可能值包括：<ul><li>电子邮件：生成电子邮件自适应表单组件。</li><li>主机名：生成文本框自适应表单组件。</li></ul>有关在元模型中使用format属性的详细信息，请参 <strong>阅自定义元模型示例中修改表单字段的</strong><a href="#custommetamodelexamples">格式。</a></p> </td> 
+    <p>format属性基于命名模式而不是常规表达式来限制生成的自适应表单字段的值。 format属性的可能值包括：<ul><li>电子邮件：生成电子邮件自适应表单组件。</li><li>主机名：生成文本框自适应表单组件。</li></ul>有关在元模型中使用format属性的详细信息，请参 <strong>阅自定义元模型示例中修改表单字段</strong><a href="#custommetamodelexamples">的格式。</a></p> </td> 
   </tr>
   <td><p>enum和enumNames</p></td> 
    <td> 
-    <p>enum和enumNames属性将下拉、复选框或单选按钮字段的值限制为固定集。 enumNames中列出的值显示在用户界面上。 使用enum属性列出的值用于计算。<br>有关详细信息，请参 <strong>阅将表单字段转换为自适应表单中的多选复选框</strong>，将文本字段转换为自适应表单中的下拉列表 <strong>，以及向</strong><strong></strong><a href="#custommetamodelexamples">Custom元模型示例中的下拉列表添加其他选项。</a></p> </td> 
+    <p>enum和enumNames属性将下拉、复选框或单选按钮字段的值限制为固定集。 enumNames中列出的值显示在用户界面上。 使用enum属性列出的值用于计算。<br>有关详细信息，请参 <strong>阅将表单字段转换为自适应表单中的多选复选框</strong>，将文本字段转换为自适应表单中的下拉列表 <strong>，以及向</strong><strong></strong><a href="#custommetamodelexamples">Custom meta-model示例中的下拉列表添加其他选项。</a></p> </td> 
   </tr>
  </tbody> 
 </table>
@@ -189,9 +189,9 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
    <th><strong>描述</strong></th> 
   </tr> 
   <tr> 
-   <td><p>多行</p></td> 
+   <td><p>multiLine</p></td> 
    <td> 
-    <p>多行属性在转换后将源表单字段转换为自适应表单中的多行字段。 有关详细信息，请 <strong>参阅自定义元模型示例中的将字符串字段转换</strong><a href="#custommetamodelexamples">为多行字段。</a></p> </td> 
+    <p>multiLine属性在转换后将源表单字段转换为自适应表单中的多行字段。 有关详细信息，请 <strong>参阅自定义元模型示例中的将字符串字段转换</strong><a href="#custommetamodelexamples">为多行字段。</a></p> </td> 
   </tr>
   <td><p>mandatory</p></td> 
    <td> 
@@ -200,7 +200,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>jcr:title属性（带有标题JSON架构属性）允许您在转换后修改自适应表单字段的标签。<br>有关详细信息，请参 <strong>阅自定义元模型示例中修改表单字段</strong><a href="#custommetamodelexamples">的标签。</a><br>有关可 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank"></a> 以使用JSON架构应用于自适应表单字段的更多属性的信息，请参阅使用JSON架构创建自适应表单。</p>
+    <p>jcr:title属性(带有标题JSON模式属性)允许您在转换后修改自适应表单字段的标签。<br>有关详细信息，请参 <strong>阅自定义元模型示例中修改表单字段</strong><a href="#custommetamodelexamples">的标签。</a><br>有关可 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">以使用JSON模式应用于自适应表单字段的更多属性的信息</a> ，请参阅使用JSON模式创建自适应表单。</p>
     <p></p></td> 
   </tr>
   <td><p>sling:resourceType和guideNodeClass</p></td> 
@@ -228,7 +228,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 执行以下步骤以在转换过程中使用自定义元模型：
 
-1. 在 **[!UICONTROL Forms]** >中创建一个 **[!UICONTROL Forms & Documents]** 文件夹，然后将自定义元模型JSON架构文件上传到该文件夹。
+1. 在 **[!UICONTROL Forms]** >中创建一 **[!UICONTROL Forms & Documents]** 个文件夹，并将自定义元模型JSON模式文件上传到该文件夹。
 1. 使用以下方式打开转换服务属性：
 
    **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]**> **&lt;选定配置的**&#x200B;属性&#x200B;**>**
@@ -247,12 +247,12 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 * 修改表单字段的格式
 * 向自适应表单字段添加验证
 * 将表单字段转换为自适应表单中的下拉列表选项
-* 向下拉列表中添加其他选项
+* 向下拉式列表添加其他选项
 * 将字符串字段转换为多行字段
 
 #### 修改表单字段的标签 {#modify-the-label-of-a-form-field}
 
-**** 示例：在转换后，将表单中的银行帐号标签修改为自适应表单中的自定义帐号。
+**示例：** 在转换后，将表单中的银行帐号标签修改为自适应表单中的自定义帐号。
 
 在此自定义元模型中，转换服务使用 **title** 属性作为搜索关键字。 检索表单中 **的银行帐号文本后** ，转换服务将文本替换为 **aem:af节中带有jcr:title********** 属性的Customer帐号字符串。
 
@@ -285,7 +285,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 将帮助文本添加到表单字段 {#add-help-text-to-a-form-field}
 
-**示例**:将“帮助”文本添加 **到自适应表单的** “银行帐号”字段。
+**示例**:将“帮助”文本添加到 **自适应表单的“银行帐号** ”字段。
 
 在此自定义元模型中，转换服务将 **aem:affKeyword中的文本用作搜索关键字** 。 检索表单中 **的银行帐号文本** ，转换服务使用description属性将帮助文本添加到自适应表单 **字段** 。
 
@@ -335,9 +335,9 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 修改表单字段的格式 {#modify-the-format-of-a-form-field}
 
-**示例**:将“电子邮件地址”字 **段的格式修改** 为电子邮件格式。
+**示例**:将“电子邮件地址”字 **段的格式** 修改为电子邮件格式。
 
-在此自定义元模型中，转换服务将 **aem:affKeyword中的文本用作搜** 索关键字。 检索表单中 **的“电子邮件地址** ”文本后，转换服务会使用format属性将字段转换为电子邮件 **格式** 。
+在此自定义元模型中，转换服务将 **aem:affKeyword中的文本用作搜** 索关键字。 检索表单中 **的“电子邮件地址** ”文本后，转换服务会使用format属性将字段转换为 **电子邮件格式** 。
 
 ```
 {
@@ -351,7 +351,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 向自适应表单字段添加验证 {#add-validations-to-adaptive-form-fields}
 
-**** 示例1:向自适应表单的“ **邮政编码** ”字段添加验证。
+**示例1:** 向自适应表单的“ **邮政编码** ”字段添加验证。
 
 在此自定义元模型中，转换服务使用 **aem:affKeyword中的文本作为搜** 索关键字。 检索表单中 **的邮政编码文本后** ，转换服务将使用aem:afProperties部分中定义的 **validatePictureClause** 属性向字段添 **** 加验证。 根据验证，您为转换后自适应表单中的“ **邮政编码** ”字段指定的输入必须包括六个字符。
 
@@ -367,7 +367,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-**** 示例2:向自适应表单的 **银行帐号字段** 添加验证。
+**示例2:** 向自适应表单的 **银行帐号字段** 添加验证。
 
 在此自定义元模型中，转换服务使用 **aem:affKeyword中的文本作为搜** 索关键字。 检索表单中 **的银行帐号文本** ，转换服务会使用aem:afProperties部分中定义的强制属性向字段添加一个验证 ******** 。 根据验证，您必须在转换后提交表单之前为“ **银行帐号** ”字段指定一个值。
 
@@ -387,7 +387,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 **示例**:转换 **前将表单中字符串类型的“国家** ”字段转换为转换后自适应表单中的下拉选项。
 
-在此自定义元模型中，转换服务使用 **aem:affKeyword中的文本作为搜** 索关键字。 检索表单 **中的Country** text后，转换服务使用enum属性将字段转换为以下下拉列表 **选项** :
+在此自定义元模型中，转换服务使用 **aem:affKeyword中的文本作为搜** 索关键字。 检索表单 **中的国家** /地区文本后，转换服务将使用enum属性将字段转换为以下下拉式列表 **选项** :
 
 * 印度
 * 英格兰
@@ -417,11 +417,11 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 向下拉列表中添加其他选项 {#add-additional-options-to-the-drop-down-list}
+#### 向下拉式列表添加其他选项 {#add-additional-options-to-the-drop-down-list}
 
-**** 示例：使 **用自定义元模型** ，将斯里兰卡添加为现有下拉列表的额外选项。
+**示例：** 使 **用自定义元模型** ，将斯里兰卡作为现有下拉框的额外选项添加。
 
-要添加其他选项，请使用新 **选项** ，更新enum属性。 在此示例中，将 **Sri Lanka** 作为额外选 **项更新enum属性** 。 enum属性中 **列出的** 值显示在下拉列表中。
+要添加其他选项，请使用新 **选项** ，更新enum属性。 在此示例中，将 **Sri Lanka** 作为额外选 **项更新enum属性** 。 enum属性中 **列出的值** ，显示在下拉列表中。
 
 ```
 {
@@ -447,19 +447,19 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 将字符串字段转换为多行字段 {#convert-a-string-field-to-a-multi-line-field}
 
-**** 示例：转换 **后** ，将字符串类型的地址字段转换为表单中的多行字段。
+**示例：** 转换 **后** ，将字符串类型的地址字段转换为表单中的多行字段。
 
-在此自定义元模型中，转换服务使用 **aem:affKeyword中的文本作为搜** 索关键字。 检索表单中 **的Address** text（地址）后，服务将使用aem:afProperties部分中定义的多行属性将文本字段转换为多行字段 ******** 。
+在此自定义元模型中，转换服务使用 **aem:affKeyword中的文本作为搜** 索关键字。 检索表单中 **的Address** 文本后，服务将使用aem:afProperties部分中定义的multiLine **属性将文本字段转换为多行****** 字段。
 
 ```
 {
- "multiline" : {
+ "multiLine" : {
    "aem:affKeyword": [
       "Address"
     ],
     "type" : "string",
     "aem:afProperties": {
-      "multiline": "true"
+      "multiLine": "true"
     }
   }
 }
