@@ -6,7 +6,7 @@ seo-description: 常见AFCS问题及其解决方案
 contentOwner: khsingh
 topic-tags: forms
 translation-type: tm+mt
-source-git-commit: aebfde420d02bd4184022ecb42496a379d66a3b5
+source-git-commit: 65dd07048b3cc7d9434568a8188dc08a1db66ada
 
 ---
 
@@ -16,7 +16,7 @@ source-git-commit: aebfde420d02bd4184022ecb42496a379d66a3b5
 
 本文提供有关自动表单转换服务生产环境中可能出现的安装、配置和管理问题的信息。 本文档还提供常见错误消息的基本疑难解答步骤和说明。
 
-### 常见错误 {#commonerrors}
+## 常见错误 {#commonerrors}
 
 | 错误 | 示例 |
 |--- |--- |
