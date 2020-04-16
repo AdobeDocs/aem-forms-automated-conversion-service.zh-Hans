@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: cab926fc408a1a680853ee557e36354938f7424a
+source-git-commit: a5d663c2a59895eb71eb5287586bc6b3862927fc
 
 ---
 
@@ -39,7 +39,7 @@ source-git-commit: cab926fc408a1a680853ee557e36354938f7424a
 * [在开始转换之前，将绑定添加到XDP表单](http://www.adobe.com/go/learn_aemforms_designer_65) 。 当源XDP表单中有绑定可用时，该服务在转换过程中会自动将绑定应用到相应的自适应表单字段。 它可节省手动应用绑定所需的时间。
 * [向XDP文件添加Adobe](https://helpx.adobe.com/sign/using/text-tag.html) Sign标记。 该服务会自动将Adobe Sign标记转换为相应的自适应表单字段。 自适应表单支持有限数量的Adobe Sign字段。 有关受支持字段的完整列表，请参 [阅在自适应表单文档中使用Adobe Sign](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html) 。
 * 在XDP文档中使用子表单在自适应表单中创建面板。 在转换过程中，服务将每个子表单转换为自适应表单面板。
-* 尽可能将XDP文档中的复杂表转换为简单表。
+* 尽可能将XDP文档中的复杂表转换为简单表。 表单元格中具有表单字段、大小不均匀的单元格、行或列跨越单元格、合并单元格、部分边框或没有可见边框的表被视为一个复杂表。 具有上述任一项的表被视为复杂表。
 
 ### 在开始转换之前
 
