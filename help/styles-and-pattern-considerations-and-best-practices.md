@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 12b4df8feb19fdc6e723c4d7301d299f26676716
+source-git-commit: cab926fc408a1a680853ee557e36354938f7424a
 
 ---
 
@@ -20,7 +20,8 @@ source-git-commit: 12b4df8feb19fdc6e723c4d7301d299f26676716
 
 转换服务将AEM Forms实例中可用的PDF表单转换为自适应表单。 下面列出的最佳实践可以帮助您提高转化率和准确性。 此外，这些最佳实践可帮助您节省在转化活动后花费的时间。
 
-### 上传源表单之前
+### 上传源之前
+
 您可以根据需要一次性或分阶段上传所有PDF表单。 上传表单之前，请注意以下几点：
 
 * 将表单数保留在小于15的文件夹中，将总页数保留在小于50的文件夹中。
