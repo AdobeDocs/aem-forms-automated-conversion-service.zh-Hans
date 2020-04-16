@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
+source-git-commit: 43b9b30e7e912081756050aa002a9e398d1d74fc
 
 ---
 
@@ -38,7 +38,7 @@ source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
 * 分析XDP表单并修复可视问题。 确保源文档使用预期的控件和结构。 例如，源表单可能具有复选框而不是单选按钮。 将复选框更改为单选按钮，以生成包含预期组件的自适应表单。
 * [在开始转换之前，将绑定添加到XDP表单](http://www.adobe.com/go/learn_aemforms_designer_65) 。 当源XDP表单中有绑定可用时，该服务在转换过程中会自动将绑定应用到相应的自适应表单字段。 它可节省手动应用绑定所需的时间。
 * [向XDP文件添加Adobe](https://helpx.adobe.com/sign/using/text-tag.html) Sign标记。 该服务会自动将Adobe Sign标记转换为相应的自适应表单字段。 自适应表单支持有限数量的Adobe Sign字段。 有关受支持字段的完整列表，请参 [阅在自适应表单文档中使用Adobe Sign](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html) 。
-* 尽可能将XDP文档中的复杂表转换为简单表。 表单元格中具有表单字段、大小不均匀的单元格、行或列跨越单元格、合并单元格、部分边框或没有可见边框的表被视为一个复杂表。 具有上述任一项的表被视为复杂表。
+* 尽可能将XDP文档中的复杂表转换为简单表。 表单元格中具有表单字段、大小不均匀的单元格、行或列跨越单元格、合并单元格、部分边框或没有可见边框的表被视为一个复杂表。 具有上述任何一个项目的表被视为复杂表。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
 ### 在开始转换之前
@@ -54,7 +54,7 @@ source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
 
 ## 了解复杂模式
 
-AEM Forms Automated Conversion服务使用人工智能和机器学习算法来了解源表单的布局和字段。 每项机器学习服务都会持续学习源数据，并在每次客户流失时生成更好的输出。 这些服务从人类的体验中学习。
+AEM Forms Automated Conversion服务使用人工智能和机器学习算法来了解源表单的布局和字段。 每项机器学习服务都会持续学习源数据，并在每次客户流失时生成更好的输出。 这些服务从人类经验中汲取经验。
 
 自动表单转换服务是针对大量表单进行培训的。 它可轻松识别源表单中的字段并生成自适应表单。 但是，PDF表单中有一些字段和样式，这些字段和样式在人眼中很容易可见，但对于服务来说却难以理解。 服务可以为某些字段或样式分配不同于适用字段类型或面板。 以下列出了所有此类字段和样式模式。
 
@@ -86,7 +86,7 @@ AEM Forms Automated Conversion服务使用人工智能和机器学习算法来�
 |--- |--- |
 | **模式**<br> 服务不识别没有清晰边框的字段。 <br><br>**分辨率&#x200B;**<br>使用“审阅”和“正确”编辑器来标识此类字段。 | ![具有非清晰边界的域](assets/best-practice-fields-without-clear-borders.png) |
 | **Pattern**<br> Service可能无法识别某些选择的组表单字段，这些字段在表单的底部或右侧带有字幕。 <br><br>**Resolution **Use<br>Review and Correct editor to identify the fields | ![选择字段](assets/best-practice-caption-bottom-right.png) |
-| **Pattern**<br> Service会将错误类型合并或指定到某些表单字段，这些字段彼此非常靠近或没有清晰的边框。 <br><br>**分辨率&#x200B;**<br>使用“审阅”和“正确”编辑器来标识此类字段。 | ![选择字段](assets/best-practice-placed-very-near.png) |
+| **Pattern**<br> Service会将错误类型合并或指定给彼此非常靠近或没有清晰边框的某些表单字段。 <br><br>**分辨率&#x200B;**<br>使用“审阅”和“正确”编辑器来标识此类字段。 | ![选择字段](assets/best-practice-placed-very-near.png) |
 | **模式**<br> 服务无法识别带有远距离字幕的字段或字幕和输入字段之间的虚线。 <br><br>**解决方&#x200B;**<br>案使用边界明确的表单字段，或使用“审阅并更正”编辑器修复此类问题。 | ![字幕字段之间的远距离字段或虚线](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
 
 ### 列表 {#lists}
