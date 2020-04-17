@@ -5,7 +5,7 @@ sub-product: 表单转换服务
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms Automated Conversion Service
 translation-type: tm+mt
-source-git-commit: 4b9f3f4fe3b3901cb99c9374ff40e8f49855237f
+source-git-commit: 90f577a3bc75afdb596ad1dea27cd833e1c996ce
 
 ---
 
@@ -23,5 +23,5 @@ source-git-commit: 4b9f3f4fe3b3901cb99c9374ff40e8f49855237f
 + [常见问题](frequently-asked-questions.md)
 + [最佳实践和注意事项](styles-and-pattern-considerations-and-best-practices.md)
 + [已知问题](known-issues.md)
-+ [服务疑难解答](troubleshoot-afcs.md)
++ [故障诊断](troubleshoot-afcs.md)
 
