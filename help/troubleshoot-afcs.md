@@ -6,7 +6,7 @@ seo-description: 常见AFCS问题及其解决方案
 contentOwner: khsingh
 topic-tags: forms
 translation-type: tm+mt
-source-git-commit: e905833e5b58c05aac612e3a8139eb7fb60ef4bf
+source-git-commit: 3a82102feffa7fc618dc37c9a745c254a46a0700
 
 ---
 
@@ -20,7 +20,10 @@ source-git-commit: e905833e5b58c05aac612e3a8139eb7fb60ef4bf
 
 | 错误 | 示例 |
 |--- |--- |
-| **错误消息**<br> :访问令牌标题不可用。 <br><br>**原因&#x200B;**<br>管理员已创建多个IMS配置，或者IMS配置无法在Adobe Cloud上访问AFCS服务。<br><br>**分辨率** 如果有多个配置，请删除所有配置并 <br> 创建新配置 [](configure-service.md#obtainpubliccertificates)。 <br> 如果有单一配置，请使 **[!UICONTROL Health Check]** 用检 [查连接](configure-service.md#createintegrationoption)。 | ![访问令牌标题不可用](assets/invalid-ims-configuration.png) |
+| **错误消息**<br> :访问令牌标题不可用。 <br><br> **原因**<br> 管理员已创建多个IMS配置，或者IMS配置无法在Adobe Cloud上访问AFCS服务。 <br><br>**分辨率&#x200B;**如果有多个配置，请删除所有配置并<br>创建新配置[](configure-service.md#obtainpubliccertificates)。<br>如果有单个配置，请使用“运行状**&#x200B;况检查&#x200B;**”[检查连接](configure-service.md#createintegrationoption)。 | ![访问令牌标题不可用](assets/invalid-ims-configurations.png) |
+
+| 错误 | 示例 |
+|--- |--- |
 | **错误消息**<br> ：无法连接到服务。  <br><br>**原因&#x200B;**<br>Automated Forms Conversion Service Cloud服务中提及错误的服务URL或没有服务URL。<br><br>**解析**<br> Automated Forms [](configure-service.md#configure-the-cloud-service) Conversion Service Cloud服务中的正确服务URL。 | ![无法连接到服务。](assets/wrong-endpoint-configured.png) |
 | **错误消息**<br> ：服务无法转换表单。  <br><br>**原因&#x200B;**<br>：您终端出现网络连接问题，服务因Adobe Cloud的定期维护或中断而关闭。<br><br>**解决**<br> ：解决您最终的网络连接问题，并检查https://status.adobe.com/上服务的状态，以确定计划内或计划外中断。 | ![无法连接到服务。](assets/service-failure.png) |
 | **错误消息**<br> ，页数大于15。  <br><br>**原因&#x200B;**<br>源表单的长度超过15页。<br><br>**解决方**<br> 案使用Adobe Acrobat拆分表单，页面超过15页。 将表单中的页数调整为少于15页。 | ![无法连接到服务。](assets/number-of-pages.png) |
