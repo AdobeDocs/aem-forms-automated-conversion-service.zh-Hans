@@ -17,7 +17,6 @@ source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 <!--The article provides information on installation, configuration and administration issues that may arise in an Automated Forms Conversion Service production environment. --> The document  provides basic troubleshooting steps for common errors.
 
 ## 常见错误 {#commonerrors}
-
 <!--
 |Error|Example|
 |--- |--- |
