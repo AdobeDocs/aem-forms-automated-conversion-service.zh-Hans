@@ -6,7 +6,7 @@ seo-description: 常见AFCS问题及其解决方案
 contentOwner: khsingh
 topic-tags: forms
 translation-type: tm+mt
-source-git-commit: 74ff988f097ae3ea90c802c8884a78ba330fcf58
+source-git-commit: 535267e20fb8e583e1c01f4160be378ffd31a4a4
 
 ---
 
