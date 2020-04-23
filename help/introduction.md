@@ -1,7 +1,7 @@
 ---
 title: 简介
 description: '加速打印表单向自适应表单的转换 '
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: ceff5cb56aa9896a28004628c5e26c262b7918bd
 
 ---
@@ -21,7 +21,7 @@ source-git-commit: ceff5cb56aa9896a28004628c5e26c262b7918bd
 
 ## 入门 {#onboarding}
 
-AEM 6.4 Forms和AEM 6.5 Forms内部部署定期客户以及Adobe Managed Service企业客户可免费使用该服务。 欲访问服务，请联系 Adobe 销售团队或 Adobe 代表。
+AEM 6.4 Forms 和 AEM 6.5 Forms 本地部署客户和 Adobe Managed Service 企业客户可免费使用此服务。欲访问服务，请联系 Adobe 销售团队或 Adobe 代表。
 
 Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各种所需权限。 管理员可以向贵企业的 AEM Forms 开发人员（用户）授予权限并连接到该服务。 有关详细信息，请参见[“配置自动化表单转换服务”](configure-service.md)。
 
