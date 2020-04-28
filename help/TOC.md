@@ -3,8 +3,8 @@ cloud: experience-cloud
 product: experience manager
 sub-product: 表单转换服务
 audience: end-user
-user-guide-title: Adobe Experience Manager Forms Automated Conversion Service
-translation-type: tm+mt
+user-guide-title: Adobe Experience Manager Forms 自动化表单转换服务
+translation-type: ht
 source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 
 ---
