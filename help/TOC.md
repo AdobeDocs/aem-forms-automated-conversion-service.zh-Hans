@@ -4,8 +4,8 @@ product: experience manager
 sub-product: 表单转换服务
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms 自动化表单转换服务
-translation-type: ht
-source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
+translation-type: tm+mt
+source-git-commit: 41fb68ef566f5bd44d6f47f31de0b0edeeb978f2
 
 ---
 
@@ -14,6 +14,7 @@ source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 
 + [发行说明](release-notes.md)
 + [简介](introduction.md)
++ [最佳实践和注意事项](styles-and-pattern-considerations-and-best-practices.md)
 + [配置服务](configure-service.md)
 + [将打印表单转换为自适应表单](convert-existing-forms-to-adaptive-forms.md)
 + [审阅并修正转换后的表单](review-correct-ui-edited.md)
@@ -22,6 +23,5 @@ source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 + [促进生成自适应表单记录文档的工作流建议](enable-document-of-record-generation.md)
 + [使用 AEM 工作流实现自适应表单与数据库集成](submit-converted-adaptive-form-to-database.md)
 + [常见问题](frequently-asked-questions.md)
-+ [最佳实践和注意事项](styles-and-pattern-considerations-and-best-practices.md)
 + [已知问题](known-issues.md)
 + [故障诊断](troubleshoot-afcs.md)
