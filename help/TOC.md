@@ -4,7 +4,7 @@ product: experience manager
 sub-product: 表单转换服务
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms 自动化表单转换服务
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 41fb68ef566f5bd44d6f47f31de0b0edeeb978f2
 
 ---
