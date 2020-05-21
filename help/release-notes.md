@@ -1,13 +1,16 @@
 ---
 title: 新增功能 发行说明 - 自动化表单转换服务
 description: '了解自动化表单转换服务的最新功能和错误修复 '
-translation-type: ht
-source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
+translation-type: tm+mt
+source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 100%
 
 ---
 
 
-# 自动化表单转换服务：发行说明
+# 发行说明
 
 自动化表单转换服务在不断改进。 要了解最新动态，请定期访问此页面。 此页面为您提供以下信息：
 
