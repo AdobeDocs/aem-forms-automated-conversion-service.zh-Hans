@@ -2,9 +2,9 @@
 title: 配置自动化表单转换服务
 description: 准备好AEM实例使用自动表单转换服务
 translation-type: tm+mt
-source-git-commit: e1ef5be14fd3f1ec7e6ccf569c8d76518dfc5c6b
+source-git-commit: 7e94acb29f30603d9b22fbee9dc8052fafa5704b
 workflow-type: tm+mt
-source-wordcount: '2519'
+source-wordcount: '2528'
 ht-degree: 8%
 
 ---
@@ -123,7 +123,7 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完整功能�
 * [配置电子邮件通知](configure-service.md#configureemailnotification)
 * [将用户添加到表单用户组](#adduserstousergroup)
 * [获取公共证书](#obtainpubliccertificates)
-* [创建 Adobe I/O 集成](#createintegration)
+* [在Adobe开发人员控制台上配置服务API](#createintegration)
 * [配置云服务](configure-service.md#configure-the-cloud-service)
 
 #### 配置电子邮件通知 {#configureemailnotification}
@@ -159,12 +159,12 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完整功能�
 
 1. 选中复 **[!UICONTROL Create new certificate]** 选框并指定别名。 别名将用作对话框的名称。点按 **[!UICONTROL Create certificate]**. 将显示一个对话框。单击 **[!UICONTROL OK]**. 将创建证书。
 
-1. 点 **[!UICONTROL Download Public Key]** 击并在 *您的计算机上保存AEM-Adobe-IMS* .crt证书文件。 The certificate file is used to [create integration on Adobe I/O Console](#createintegration). 点按 **[!UICONTROL Next]**.
+1. 点 **[!UICONTROL Download Public Key]** 击并在 *您的计算机上保存AEM-Adobe-IMS* .crt证书文件。 证书文件用于在Adobe [Devloper Console上配置服务API](#createintegration)。 点按 **[!UICONTROL Next]**.
 
 1. 指定以下内容：
 
    * 标题： 指定标题。
-   * 授权服务器： [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)
+   * 授权服务器： [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)\
    现在将其他字段留空（稍后提供）。 保持页面打开。
 
    <!--
@@ -179,9 +179,9 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完整功能�
    <li>Step text</li>
    -->
 
-#### 创建 Adobe I/O 集成 {#createintegration}
+#### 在Adobe Devloper Console上配置服务API {#createintegration}
 
-要使用自动表单转换服务，请在Adobe I/O中创建集成。 集成会生成API密钥、客户端机密、有效负荷(JWT)。
+要使用自动表单转换服务，请在Adobe开发人员控制台上创建一个项目并将自动表单配置服务API添加到该项目。 集成会生成API密钥、客户端机密、有效负荷(JWT)。
 
 1. 登录https://console.adobe.io/。 使用您的Adobe ID（管理员为登录Adobe I/O控制台而设置的开发人员帐户）进行登录。
 1. 从右上角选择您的组织。 如果您不了解您的组织，请与管理员联系。
@@ -203,8 +203,6 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完整功能�
    >对于有效负荷，请使用Adobe开发人员控制台的服务帐户(JWT)页面的“生成JWT”选项卡中提供的代码。
 
 1. 点按 **[!UICONTROL Save]**. 将创建IMS配置。
-
-   ![将JWT字段的值用于有效负荷字段](assets/jwt.png)
 
    >[!CAUTION]
    >
