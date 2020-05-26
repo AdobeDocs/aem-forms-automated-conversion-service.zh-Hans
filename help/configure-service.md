@@ -2,9 +2,9 @@
 title: 配置自动化表单转换服务
 description: 准备好AEM实例使用自动表单转换服务
 translation-type: tm+mt
-source-git-commit: 7e94acb29f30603d9b22fbee9dc8052fafa5704b
+source-git-commit: 117280695bfddad627e5f7bcb54ff019bbf2026a
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2531'
 ht-degree: 8%
 
 ---
@@ -139,7 +139,7 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完整功能�
 
 #### 将用户添加到表单用户组 {#adduserstousergroup}
 
-在指定用于运行服务的AEM用户的用户档案中指定电子邮件地址。 确保用户是表单用户组 [的成员](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) 。 电子邮件会发送到运行转换的用户的电子邮件地址。 要为用户指定电子邮件地址并将用户添加到表单用户组，请执行以下操作：
+在指定用于运行服务的AEM用户的用户档案中指定电子邮件地址。 确保用户是表单用户组 [的成员](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) 。 电子邮件会发送到运行转换的用户的电子邮件地址。 要为用户指定电子邮件地址并将用户添加到表单用户组：
 
 1. 以AEM管理员身份登录到您的AEM Forms作者实例。 使用本地AEM凭据登录。 请勿使用Adobe ID登录。 点按 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 
@@ -183,7 +183,7 @@ AEM实例包含基本表单功能。 转换服务需要AEM Forms的完整功能�
 
 要使用自动表单转换服务，请在Adobe开发人员控制台上创建一个项目并将自动表单配置服务API添加到该项目。 集成会生成API密钥、客户端机密、有效负荷(JWT)。
 
-1. 登录https://console.adobe.io/。 使用您的Adobe ID（管理员为登录Adobe I/O控制台而设置的开发人员帐户）进行登录。
+1. 登录 [https://console.adobe.io/](https://console.adobe.io/)。 使用您的Adobe ID（管理员为登录Adobe I/O控制台而设置的开发人员帐户）进行登录。
 1. 从右上角选择您的组织。 如果您不了解您的组织，请与管理员联系。
 1. 点按 **[!UICONTROL Create new project]**. 此时会显示一个开始处理新项目的屏幕。 点按 **[!UICONTROL Add API]**. 此时会出现一个屏幕，其中列表了您的帐户启用的所有API。
 1. 选择 **[!UICONTROL Automated Forms Conversion service]** 并点按 **[!UICONTROL Next]**。 此时会出现一个用于配置API的屏幕。
