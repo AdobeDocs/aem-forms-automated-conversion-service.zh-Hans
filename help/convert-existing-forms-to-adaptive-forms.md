@@ -1,16 +1,16 @@
 ---
-title: '将PDF表单转换为自适应表单 '
-seo-title: '将PDF表单转换为自适应表单 '
-description: 运行自动表单转换服务，将PDF表单转换为自适应表单
-seo-description: 运行自动表单转换服务，将PDF表单转换为自适应表单
+title: '将PDF forms转换为自适应表单 '
+seo-title: '将PDF forms转换为自适应表单 '
+description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
+seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
 uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
 contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
+source-git-commit: 019ae541117f037f11703a88162ec3ab4cb67947
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1480'
 ht-degree: 7%
 
 ---
@@ -18,27 +18,27 @@ ht-degree: 7%
 
 # Convert PDF forms to adaptive forms {#convert-print-forms-to-adaptive-forms}
 
-AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可自动将PDF表单转换为适合设备的响应式自适应表单。 无论您是使用非交互式PDF表单、Acro Forms还是基于XFA的PDF表单，自动表单转换服务都可以轻松地将这些表单转换为自适应表单。 有关功能、转换工作流程和入门信息的信息，请参 [阅自动表单转换](introduction.md) 服务。
+AEM Forms Automated Forms Conversion service, powered by Adobe Sensei, automatically converts your PDF forms to device-friendly and responsive adaptive forms. Whether you are using non-interactive PDF forms, Acro Forms, or XFA-based PDF forms, the Automated Forms Conversion service can easily convert these forms into adaptive forms. 有关功能、转换工作流程和入门信息的信息，请参 [阅自动表单转换](introduction.md) 服务。
 
 ## Pre-requisites {#pre-requisites}
 
 * [**配置转换服务&#x200B;**](configure-service.md)
 
-* **准备要[应用于](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已转换表单的模板：** 使用模板，您可以在所有自适应表单中应用一致的品牌。 此外，自动表单转换服务不提取和使用源PDF文档的页眉和页脚。 您可以使用自适应表单模板指定页眉和页脚。 在转换过程中，模板中指定的页眉和页脚将应用于自适应表单。
+* **准备要[应用于](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已转换表单的模板：** 使用模板，您可以在所有自适应表单中应用一致的品牌。 此外，自动表单转换服务不提取和使用源PDF文档的页眉和页脚。 您可以使用自适应表单模板指定页眉和页脚。 在转换过程中，模板中指定的页眉和页脚将应用于自适应表单。 为模板创建文件夹时，请为每个人选 **[!UIC择“控制浏览]** 配置”选项。
 
 * **准备要[应用](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)到转换表单的主题:** 通过使用主题，您可以将一致的样式应用于组织的所有自适应表单。
 
 ## 开始转换过程 {#start-the-conversion-process}
 
-在将AEM实例与AEM Forms Conversion Service连接后，可以将PDF表单转换为自适应表单。 按列出的顺序执行以下步骤来转换表单：
+将AEM实例与AEM Forms转换服务连接后，可以将PDF forms转换为自适应表单。 按列出的顺序执行以下步骤来转换表单：
 
-* [将PDF表单上传到AEM Forms服务器](convert-existing-forms-to-adaptive-forms.md#upload-pdf-forms-to-your-aem-forms-server)
+* [将PDF forms上传到AEM Forms服务器](convert-existing-forms-to-adaptive-forms.md#upload-pdf-forms-to-your-aem-forms-server)
 * [运行转换](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)
 * [检查并更正转换的表单](review-correct-ui-edited.md)
 
-### 将PDF表单上传到AEM Forms服务器 {#upload-pdf-forms-to-your-aem-forms-server}
+### 将PDF forms上传到AEM Forms服务器 {#upload-pdf-forms-to-your-aem-forms-server}
 
-转换服务将AEM Forms实例中可用的PDF表单转换为自适应表单。 您可以根据需要一次性或分阶段上传所有PDF表单。 上传表单之前，请注意以下几点：
+转换服务将AEM Forms实例上的可用PDF forms转换为自适应表单。 您可以根据需要一次性或分阶段上传所有PDF forms。 上传表单之前，请注意以下几点：
 
 * 将文件夹中的表单数保留在15以下，将文件夹中的页面总数保留在50以下。
 * 将文件夹大小保持在10 MB以下。 请勿将表单保留在子文件夹中。
@@ -48,7 +48,7 @@ AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可�
 * 请勿上传 [PDF 产品组合](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务不会将PDF包转换为自适应表单。
 * 阅读“ [已知问题](known-issues.md) ”、“ [最佳实践和注意事项](styles-and-pattern-considerations-and-best-practices.md) ”部分，并对表单进行建议的更改。
 
-请执行以下步骤，在AEM Forms实例上上传要转换为文件夹的表单：
+请执行以下步骤，将要转换的表单上传到AEM Forms实例上的文件夹：
 
 1. 登录到AEM Forms实例。
 
@@ -61,8 +61,8 @@ AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可�
 
 上传表单并配置服务后，请执行以下步骤来开始转换：
 
-1. 在AEM Forms实例中，点按转 **[!UICONTROL Adobe Experience Manager]** 换设 ![置对话框](assets/adobeexperiencemanager.png) > **[!UICONTROL Navigation]** ![](assets/compass.png) > **[!UICONTROL Forms]****[!UICONTROL Forms & Documents]**> 。
-1. 选择包含PDF表单（要转换的表单）的表单或文件夹，然后点按 **[!UICONTROL Start Automated Conversion]**。 将出 **[!UICONTROL Conversion Settings]** 现对话框。
+1. 在AEM Forms实例中，点按 **[!UICONTROL Adobe Experience Manager]** 转 ![换设置对话框](assets/adobeexperiencemanager.png) > **[!UICONTROL Navigation]** ![](assets/compass.png) > **[!UICONTROL Forms]****[!UICONTROL Forms & Documents]**> 。
+1. 选择包含PDF forms（要转换的表单）的表单或文件夹，然后点按 **[!UICONTROL Start Automated Conversion]**。 将出 **[!UICONTROL Conversion Settings]** 现对话框。
 
    ![指定配置](assets/conversion-settings-dialog.png)
 
@@ -84,12 +84,12 @@ AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可�
 
 1. 在“转换 **[!UICONTROL Additional]** 设置”对话框的选项卡中，
    * 选择选 **[!UICONTROL Extract fragment from adaptive forms]** 项可让转换服务识别、提取和下载转换表单的表单片段。 当您选择该选 **[!UICONTROL Extract fragment from adaptive forms]** 项时，将启用用于指定保存提取的表单片段和相应表单片段模式的路径的选项。
-   * 如果您有一些 **[!UICONTROL existing adaptive form fragments]**&#x200B;现有的基于JSON模式且模式较少的自适应表单片段，并且您计划在自动生成的自适应表单中使用这些片段，请指定其位置。 转换服务将可用的基于JSON模式的和模式较少的自适应表单片段与输入PDF表单（仅限非交互式PDF表单）匹配，如果存在匹配项，则匹配的自适应表单片段将用于相应的自适应表单。
+   * 如果您有一些 **[!UICONTROL existing adaptive form fragments]**&#x200B;现有的基于JSON模式且模式较少的自适应表单片段，并且您计划在自动生成的自适应表单中使用这些片段，请指定其位置。 转换服务将可用的基于JSON模式的和模式较少的自适应表单片段与输入PDF forms(仅非交互式PDF forms)匹配，如果存在匹配，则匹配的自适应表单片段将用于相应的自适应表单。
    >[!NOTE]
    >
    >
    > * 一次只能 **[!UICONTROL  Extract Fragment]** 使用 **[!UICONTROL Use existing adaptive form fragments]** 或选项。 不能同时使用这两个选项。
-   > * 您只能对非 **[!UICONTROL Use existing adaptive form fragments]** 交互式PDF表单使用此选项。 尚不支持其他表单类型。
+   > * 您只能对非 **[!UICONTROL Use existing adaptive form fragments]** 交互式PDF forms使用此选项。 尚不支持其他表单类型。
    > * 您只能使用绑定到自动转换服务的JSON模式的未绑定片段或片段。 请勿使用XFA片段。 不支持XFA片段。
 
 
@@ -101,7 +101,7 @@ AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可�
 
 
 
-1. 点按 **[!UICONTROL Start Conversion]**. 转换即会启动。 在转换进行之前，转换进度会显示在文件夹或表单上。 转换完成后，该消息将替换另一个状态消息（已转换、部分转换或转换失败）。 完成转换后，还会在配置的电子邮件地址上发送状态电子邮件：
+1. 点按 **[!UICONTROL Start Conversion]**. 转换即会启动。 在转换进行之前，转换进度会显示在文件夹或表单上。 转换完成后，该消息将替换另一个状态消息（已转换、部分转换或转换失败）。 转换完成后，还会在配置的电子邮件地址上发送状态电子邮件：
 
    * 成功转换后，转换后的自适应表单和相关模式将下载到转换对话框选项卡 **[!UICONTROL Basic]** 中指定的路径中。 只有在开始转换之前选择了“提取片段”选项，才会下载表单片段和相应的模式。
    * 在转换失败时，如 **[!UICONTROL Conversion Failed]** 果所有输入表单都无法转换，或当只有少数所有输入表单 **[!UICONTROL Partially Failed]** 都无法转换时，显示消息。 将在配置的电子邮件地 [址上发送状态](configure-service.md#configureemailnotification) 电子邮件，并将错误记录到error.log文件。
@@ -132,8 +132,8 @@ AEM Forms Automated Forms Conversion服务（由Adobe Sensei提供支持）可�
 
    >[!NOTE]
    >
-   >如果转换过程需要60分钟以上，而PDF表单仍未转换为自适应表单，请在AEM表单实例上创建一个文件夹，将PDF表单上传到新创建的文件夹，然后重新开始转换。
+   >如果转换过程需要60分钟以上，而PDF表单仍未转换为自适应表单，请在AEM Forms实例上创建文件夹，将PDF表单上传到新创建的文件夹，然后重新开始转换。
 
 ## Review and correct the converted forms {#review-and-correct-the-converted-forms}
 
-现实世界的表单具有复杂的数据捕获要求。 自动转换完成后，客户可以检查表单的转换质量并对表单进行必要的更新。 AEM Forms提供审 [阅和正确的编辑](review-correct-ui-edited.md) 器以进行所需的更改。 它允许您改进表单字段的自动识别，并将已识别的字段从一种类型转换为另一种类型。 例如，您可以帮助识别表单的两列布局，并将自动标识为单选按钮的字段更改为多个选择字段。
+现实世界的表单具有复杂的数据捕获要求。 自动转换完成后，客户可以检查表单的转换质量并对表单进行必要的更新。 AEM Forms提供审 [阅和正确的编辑](review-correct-ui-edited.md) 器来进行所需的更改。 它允许您改进表单字段的自动识别，并将已识别的字段从一种类型转换为另一种类型。 例如，您可以帮助识别表单的两列布局，并将自动标识为单选按钮的字段更改为多个选择字段。
