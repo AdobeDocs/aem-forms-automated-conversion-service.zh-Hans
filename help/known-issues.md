@@ -7,9 +7,9 @@ uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: 902131e27d458b88f7f5c5f85c90de89f77e4bd7
+source-git-commit: 1c48cc1b271bfea19ac2394eaf40be21060a349e
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '774'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
    * 不支持基于XFA的表单的可重复面板。
    * 如果使用“审阅并更正”编辑器修改表中的列表，则行宽不会自动调整，文本可能会溢出到表的下一行。
    * 该功 **[!UICONTROL Auto-detect multi-column layout from input forms]** 能不适用于“审阅”和“更正”编辑器和表单片段。
-   * 使用“审阅”和“正确”编辑器创建的涂写签名无法加载到已发布的自适应表单中。 用户无法使用此类徒手签名组件对自适应表单进行签名。
+   * 使用“审阅”和“正确”编辑器创建的涂写签名无法加载已发布的自适应表单。
 
 
 * 对于基于XFA的表单：
