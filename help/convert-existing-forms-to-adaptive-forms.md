@@ -1,16 +1,16 @@
 ---
 title: '将PDF forms转换为自适应表单 '
 seo-title: '将PDF forms转换为自适应表单 '
-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
-seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
+description: 运行自动表单转换服务，将PDF forms转换为自适应表单
+seo-description: 运行自动表单转换服务，将PDF forms转换为自适应表单
 uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
 contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 019ae541117f037f11703a88162ec3ab4cb67947
+source-git-commit: 5fdf997fdde07cc4546accebddb85a248f36e057
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1477'
 ht-degree: 7%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 7%
 
 # Convert PDF forms to adaptive forms {#convert-print-forms-to-adaptive-forms}
 
-AEM Forms Automated Forms Conversion service, powered by Adobe Sensei, automatically converts your PDF forms to device-friendly and responsive adaptive forms. Whether you are using non-interactive PDF forms, Acro Forms, or XFA-based PDF forms, the Automated Forms Conversion service can easily convert these forms into adaptive forms. 有关功能、转换工作流程和入门信息的信息，请参 [阅自动表单转换](introduction.md) 服务。
+AEM Forms自动表单转换服务（由Adobe Sensei提供支持）可自动将PDF forms转换为适合设备且响应迅速的自适应表单。 无论您是使用非交互式PDF forms、Acro Forms还是基于XFA的PDF forms，自动表单转换服务都可以轻松地将这些表单转换为自适应表单。 有关功能、转换工作流程和入门信息的信息，请参 [阅自动表单转换](introduction.md) 服务。
 
 ## Pre-requisites {#pre-requisites}
 
 * [**配置转换服务&#x200B;**](configure-service.md)
 
-* **准备要[应用于](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已转换表单的模板：** 使用模板，您可以在所有自适应表单中应用一致的品牌。 此外，自动表单转换服务不提取和使用源PDF文档的页眉和页脚。 您可以使用自适应表单模板指定页眉和页脚。 在转换过程中，模板中指定的页眉和页脚将应用于自适应表单。 为模板创建文件夹时，请为每个人选 **[!UIC择“控制浏览]** 配置”选项。
+* **准备要[应用于](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已转换表单的模板：** 使用模板，您可以在所有自适应表单中应用一致的品牌。 此外，自动表单转换服务不提取和使用源PDF文档的页眉和页脚。 您可以使用自适应表单模板指定页眉和页脚。 在转换过程中，模板中指定的页眉和页脚将应用于自适应表单。 为模板创建文件夹时，请为每个人选 **[!UICONTROL Browse configurations]** 择相应选项。
 
 * **准备要[应用](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)到转换表单的主题:** 通过使用主题，您可以将一致的样式应用于组织的所有自适应表单。
 
@@ -101,7 +101,7 @@ AEM Forms Automated Forms Conversion service, powered by Adobe Sensei, automatic
 
 
 
-1. 点按 **[!UICONTROL Start Conversion]**. 转换即会启动。 在转换进行之前，转换进度会显示在文件夹或表单上。 转换完成后，该消息将替换另一个状态消息（已转换、部分转换或转换失败）。 转换完成后，还会在配置的电子邮件地址上发送状态电子邮件：
+1. 点按 **[!UICONTROL Start Conversion]**. 转换即会启动。 在转换进行之前，转换进度会显示在文件夹或表单上。 转换完成后，该消息将替换另一个状态消息（已转换、部分转换或转换失败）。 完成转换后，还会在配置的电子邮件地址上发送状态电子邮件：
 
    * 成功转换后，转换后的自适应表单和相关模式将下载到转换对话框选项卡 **[!UICONTROL Basic]** 中指定的路径中。 只有在开始转换之前选择了“提取片段”选项，才会下载表单片段和相应的模式。
    * 在转换失败时，如 **[!UICONTROL Conversion Failed]** 果所有输入表单都无法转换，或当只有少数所有输入表单 **[!UICONTROL Partially Failed]** 都无法转换时，显示消息。 将在配置的电子邮件地 [址上发送状态](configure-service.md#configureemailnotification) 电子邮件，并将错误记录到error.log文件。
