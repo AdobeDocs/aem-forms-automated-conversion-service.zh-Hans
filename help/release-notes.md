@@ -1,11 +1,11 @@
 ---
 title: 新增功能 发行说明 - 自动化表单转换服务
 description: '了解自动化表单转换服务的最新功能和错误修复 '
-translation-type: ht
-source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
-workflow-type: ht
-source-wordcount: '305'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 054b6cb03843c28cea19cdbc68e439f86cb1625f
+workflow-type: tm+mt
+source-wordcount: '325'
+ht-degree: 94%
 
 ---
 
@@ -22,6 +22,13 @@ ht-degree: 100%
 * 弃用功能
 * 特别说明
 * 未来变更计划
+
+
+## 2020年7月16日(AFC-2020.07.1)
+
+### 改进内容
+
+改进了文本、表单和选择组字段自动转换为相应的自适应表单组件。
 
 ## 2020 年 3 月 20 日（AFC-2020.03.1）
 
