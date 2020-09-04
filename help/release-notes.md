@@ -24,7 +24,7 @@ ht-degree: 92%
 * 未来变更计划
 
 
-## 2020年7月16日(AFC-2020.07.0)
+## 2020 年 7 月 16 日 (AFC-2020.07.0)
 
 ### 改进内容
 
@@ -46,7 +46,7 @@ ht-degree: 92%
 
 ### 特别说明
 
-**安装Automated Forms Conversion Service连接器包**
+**安装自动Forms转换服务连接器包**
 
 要使用 AFC-2020.03.1 版中的最新功能和改进功能，需要安装连接器软件包 1.1.38 或更高版本。可从[“AEM 包共享”](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)下载。
 
