@@ -1,22 +1,22 @@
 ---
 title: 已知问题
 seo-title: 已知问题
-description: 自动表单转换服务的已知问题和限制
-seo-description: 在开始使用AEM Forms自动表单转换服务之前，请了解该服务的已知问题和限制
+description: forms自动化转化服务的已知问题和限制
+seo-description: 在开始使用AEM FormsForms自动转化服务之前，请了解该服务的已知问题和限制
 uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: 1c48cc1b271bfea19ac2394eaf40be21060a349e
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
 
 # 已知问题和限制 {#known-issues-limitations}
 
-在开始使用AEM Forms自动表单转换服务之前，请查看以下已知问题和限制：
+在开始使用AEM FormsForms自动转化服务之前，请查看以下已知问题和限制：
 
 ## 已知问题 {#known-issues}
 
@@ -69,12 +69,12 @@ ht-degree: 1%
 
 ## 限制 {#limitations}
 
-* 不支持具有复杂动态布局的PDF forms、带虚线轮廓的字段、填色字段或彩色字段。
+* 不支持具有复杂动态布局的PDF forms、带虚线轮廓的字段或已填充字段。
 * 图像中的图像和文本未被识别。 手动向转换的表单添加图像。
 * 不支持图稿XDP文档。
 * 不支持大于15页的PDF forms。
 * 加密的、受密码保护的和受保护的文档不会进行转换。 运行转换前，请删除加密或密码。
-* 不支持复杂表，如无边框表、嵌套表、带彩色行的表和具有占位符值的表。 转换后，使用自适应表单编辑器添加或修改复杂表。 仅支持带空字段、正确标题和清晰边界的简单表。
+* 不支持复杂表，如无边框表、嵌套表和具有占位符值的表。 转换后，使用自适应表单编辑器添加或修改复杂表。 仅支持带空字段、正确标题和清晰边界的简单表。
 * 该服务仅将英语表单转换为自适应表单。 You can translate converted adaptive forms to another language using [AEM translation workflow](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
-* AEM 6.4 Forms不支持自动检测输入表单的多列布局。
+* AEM 6.4Forms不支持多列输入表单布局自动检测。
 
