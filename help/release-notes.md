@@ -2,10 +2,10 @@
 title: 新增功能 发行说明 - 自动化表单转换服务
 description: '了解自动化表单转换服务的最新功能和错误修复 '
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: bf14583de678ef963b0f2084c3da4624c9304b30
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 88%
+source-wordcount: '338'
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 88%
 
 ### 新增功能
 
-您现在还可以使用该服务将彩色PDF表单转换为自适应表单。
+增加了将彩色PDF表单转换为自适应表单的支持。
 
 ### 改进内容
 
