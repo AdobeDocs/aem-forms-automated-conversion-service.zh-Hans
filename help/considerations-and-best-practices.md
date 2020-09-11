@@ -10,9 +10,9 @@ discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
 translation-type: tm+mt
-source-git-commit: 356eb083b889a1bf151c32bc5f01a6d263b96274
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '555'
 ht-degree: 3%
 
 ---
@@ -22,24 +22,11 @@ ht-degree: 3%
 
 AEM Forms自动转换服务将PDF表单转换为自适应表单。 该服务使用人工智能和机器学习算法来了解源表单的布局和字段。 每项机器学习服务都会不断学习源数据，并在每次客户流失时生成更好的输出。 这些服务从人类的体验中学习。
 
-自动表单转换服务是针对大量表单进行培训的。 它可轻松识别源表单中的字段并生成自适应表单。 但是，PDF forms中有一些领域和风格，它们在人眼中很容易看到，但在服务中却很难理解。 服务可以为某些字段或样式指定不同于适用字段类型或面板。 下面列出了所有此类字段和样式模式。
+自动化的Forms转化服务通过一系列表单进行培训。 它可轻松识别源表单中的字段并生成自适应表单。 但是，PDF forms中有一些领域和风格，它们在人眼中很容易看到，但在服务中却很难理解。 服务可以为某些字段或样式指定不同于适用字段类型或面板。 下面列出了所有此类字段和样式模式。
 
 该服务将开始识别正确的字段或面板并将其分配给这些模式，因为它会不断从源数据中学习。 目前，您可以使用“审阅” [和“更正](review-correct-ui-edited.md) ”编辑器修复此类问题。 在开始修复问题或进一步阅读之前，请先熟悉自 [适应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 ## 常规 {#general}
-
-<!--
-Comment Type: draft
-
-<ul>
-<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.Service does not convert colored PDF forms to adaptive form. Use  and white or grayscale adaptive forms. <br /> </li>
-<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.</li>
-<li>Service does not support scanned forms. Do not use scanned forms. </li>
-<li>Service can fail to recognize text and fields in a dense form. Increase the width between text and fields of a dense form before starting the conversion.</li>
-<li>Service does not extract images. Manually add images to converted forms.</li>
-<li>Service does not extract text present within an image. Manually add text to the adaptive form.</li>
-</ul>
--->
 
 <table border="1" cellpadding="1" cellspacing="0" style="border-collapse: separate; border-spacing: 0px;" width="100%"> 
  <tbody>
@@ -47,11 +34,6 @@ Comment Type: draft
    <td width="30%">已知模式和分辨率</td> 
    <td width="70%">示例</td> 
   </tr>
-  <tr>
-   <td><p><strong>图案</strong></p> <p>服务不会将彩色PDF forms转换为自适应表单。</p> <p> </p> <p><strong>分辨率</strong></p> <p>使用黑白或灰度PDF forms。 </p> </td> 
-   <td style="text-align: left;"> <img src="assets/coloured-form.png" /></td> 
-  </tr>
-  <tr>
    <td><p><strong>图案</strong></p> <p>服务不会将已填写的PDF forms转换为自适应表单。</p> <p> </p> <p><strong>分辨率</strong></p> <p>使用空的自适应表单。</p> </td> 
    <td style="text-align: left;"><img src="assets/pre-filled-form.png" /></td> 
   </tr>
