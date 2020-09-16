@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
 workflow-type: tm+mt
 source-wordcount: '338'
-ht-degree: 89%
+ht-degree: 97%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 89%
 
 ### 改进内容
 
-文本、表单和选择组字段自动转换为相应的自适应表单组件的改进。
+改进了文本、表单和选择组等字段向相应自适应表单组件的自动转换。
 
 
 ## 2020 年 3 月 20 日（AFC-2020.03.1）
@@ -51,7 +51,7 @@ ht-degree: 89%
 
 ### 特别说明
 
-**安装自动Forms转换服务连接器包**
+**安装自动化表单转换服务连接器软件包**
 
 要使用 AFC-2020.03.1 版中的最新功能和改进功能，需要安装连接器软件包 1.1.38 或更高版本。可从[“AEM 包共享”](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)下载。
 
