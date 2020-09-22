@@ -1,6 +1,5 @@
 ---
-title: '[请勿发布]最佳实践和注意事项 '
-seo-title: '[请勿发布]最佳实践和注意事项 '
+title: '最佳实践和注意事项 '
 description: 'null'
 seo-description: 'null'
 page-status-flag: never-activated
@@ -10,15 +9,19 @@ discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: bc7a0a86a211214d6e43e7c95809f6f40fe267f8
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 3%
+source-wordcount: '542'
+ht-degree: 4%
 
 ---
 
 
-# [请勿发布最佳实践] 和注意事项 {#do-not-publish-best-practices-and-considerations}
+# 最佳实践和注意事项 {#do-not-publish-best-practices-and-considerations}
+
+<!--
+[DO NOT PUBLISH]
+-->
 
 AEM Forms自动转换服务将PDF表单转换为自适应表单。 该服务使用人工智能和机器学习算法来了解源表单的布局和字段。 每项机器学习服务都会不断学习源数据，并在每次客户流失时生成更好的输出。 这些服务从人类的体验中学习。
 
