@@ -7,9 +7,9 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
 workflow-type: tm+mt
-source-wordcount: '1709'
+source-wordcount: '1822'
 ht-degree: 4%
 
 ---
@@ -132,4 +132,11 @@ ht-degree: 4%
    <br/>
 
 1. **如何自动更改自适应表单文本的大小写？**
+
    <p>您可以使用自适应主题或样式编辑器更改自适应表单字段的大小写。 例如，您可以打开主题编辑器并将表单所有文本的大小写属性值设置为大写、小写或驼峰大小写。 您还可以使用主题编辑器中的“CSS覆盖”选项创建不同类型的样式。</p>
+
+1. **我是否可以将Adobe Sign文本标记与自动Forms转换服务一起使用？**
+
+   <p> 当您使用自动Forms转换服务将PDF表单转换为自适应表单并且PDF表单包含Adobe Sign文本标签时，这些标签将转换为相应的自适应表单字段，并自动填充签名者详细信息。  该功能仅适用于AcroForms，自适应表单支持有限数量的Adobe Sign字段。</p>  </br>
+
+   <p> 要获得受支持标记的完整列表，请在自适应表单编辑器中打开表单并添加一个Adobe Sign块。 使用Adobe Sign块查找所有受支持的Adobe Sign字段。 它提供一个下拉框来选择所有支持的字段。</p>
