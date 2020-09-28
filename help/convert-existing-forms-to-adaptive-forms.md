@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
+source-git-commit: fa8a27021fbccdd1c6c0721a6e5c032db486e262
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1585'
 ht-degree: 6%
 
 ---
@@ -30,8 +30,8 @@ AEM Forms自动Forms转换服务由Adobe Sensei提供支持，可自动将您的
 
 * **向源PDF文档添加Adobe Sign文本标签：** 当源PDF表单具有 [Adobe Sign文本标签](https://helpx.adobe.com/sign/using/text-tag.html)，服务会自动将这些标签转换为相应的自适应表单字段，并自动填充签名者详细信息。 该功能仅适用于AcroForms，自适应表单支持有限数量的Adobe Sign字段。
 
-
-   要获得受支持标记的完整列表，请在自适应表单编辑器中打开表单并添加一个Adobe Sign块。 使用Adobe Sign块查找所有受支持的Adobe Sign字段。 它提供一个下拉框来选择所有支持的字段。
+   </br>
+    自适应表单仅支持签名、文本、编号、日期、下拉菜单、单选按钮、复选框、初始、签名块、数字签名、签署方标题、签署方电子邮件、签署方公司、签署日期和签署方全名Adobe Sign字段。 因此，该服务将上述字段的文本标记转换为相应的自适应表单字段。
 
 ## 开始转换过程 {#start-the-conversion-process}
 
