@@ -2,24 +2,26 @@
 cloud: experience-cloud
 product: experience manager
 sub-product: 表单转换服务
+solution: Experience Manager
+type: Documentation
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms 自动化表单转换服务
-user-guide-description: Speed up the conversion of print forms to adaptive forms.
-breadcrumb-title: Forms Automated Conversion Guide
+user-guide-description: 将PDF forms转换为响应式和移动就绪型HTMLForms。
+breadcrumb-title: Forms Automated Conversion 指南
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
 translation-type: tm+mt
-source-git-commit: 09f609f3a634e33270b94bd09da50f08d0ea0a6e
+source-git-commit: 49fff7234975daab051b5a0b887004c407be927a
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 100%
+source-wordcount: '90'
+ht-degree: 90%
 
 ---
 
 
 # Adobe Experience Manager Forms 自动化表单转换服务 {#using}
 
-+ [发行说明](release-notes.md)
 + [简介](introduction.md)
++ [发行说明](release-notes.md)
 + [最佳实践和注意事项](styles-and-pattern-considerations-and-best-practices.md)
 + [配置服务](configure-service.md)
 + [将打印表单转换为自适应表单](convert-existing-forms-to-adaptive-forms.md)
