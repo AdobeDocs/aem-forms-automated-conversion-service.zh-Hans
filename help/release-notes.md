@@ -1,9 +1,9 @@
 ---
 title: 新增功能 发行说明 - 自动化表单转换服务
 description: '了解自动化表单转换服务的最新功能和错误修复 '
-translation-type: ht
-source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
-workflow-type: ht
+translation-type: tm+mt
+source-git-commit: 8808e2d9c762617ba67e2f1ab4e103f828e11c58
+workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 100%
 
@@ -43,7 +43,7 @@ ht-degree: 100%
 
 默认情况下，该服务会为 PDF 表单每个页面单独创建顶层面板。 现在，您可以使用 **[!UICONTROL Auto-detect logical sections]** 选项拖放页面级别面板（基于页码的面板）并仅创建逻辑面板。 它还会将不属于任何之前逻辑部分的字段和跨页面逻辑部分的字段合并到一个逻辑部分中。 例如，如果某个逻辑部分的一部分字段位于第 1 页结尾而另一部分位于第 2 页开头，则所有此类字段会被合并到一个逻辑部分中。
 
-### 改进内容
+### 改进内容 {#improvements}
 
 **列表检测改进**
 
