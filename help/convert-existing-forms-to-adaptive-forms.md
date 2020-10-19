@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: fa8a27021fbccdd1c6c0721a6e5c032db486e262
+source-git-commit: 19c688ae925774c008683be8b92afcbfb9f2bcdb
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1599'
 ht-degree: 6%
 
 ---
@@ -24,14 +24,15 @@ AEM Forms自动Forms转换服务由Adobe Sensei提供支持，可自动将您的
 
 * [**配置转换服务**](configure-service.md)
 
-* **准备要[应用于](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已转换表单的模板：** 使用模板，您可以在所有自适应表单中应用一致的品牌。 此外，自动Forms转换服务不提取并使用源PDF文档的页眉和页脚。 您可以使用自适应表单模板指定页眉和页脚。 在转换过程中，模板中指定的页眉和页脚将应用于自适应表单。 为模板创建文件夹时，请为每个人选 **[!UICONTROL Browse configurations]** 择相应选项。
+* **准备要 [应用于](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) 已转换表单的模板：** 使用模板，您可以在所有自适应表单中应用一致的品牌。 此外，自动Forms转换服务不提取并使用源PDF文档的页眉和页脚。 您可以使用自适应表单模板指定页眉和页脚。 在转换过程中，模板中指定的页眉和页脚将应用于自适应表单。 为模板创建文件夹时，请为每个人选 **[!UICONTROL Browse configurations]** 择相应选项。
 
-* **准备要[应用](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)到转换表单的主题:** 通过使用主题，您可以将一致的样式应用于组织的所有自适应表单。
+* **准备要 [应用](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) 到转换表单的主题:** 通过使用主题，您可以将一致的样式应用于组织的所有自适应表单。
 
-* **向源PDF文档添加Adobe Sign文本标签：** 当源PDF表单具有 [Adobe Sign文本标签](https://helpx.adobe.com/sign/using/text-tag.html)，服务会自动将这些标签转换为相应的自适应表单字段，并自动填充签名者详细信息。 该功能仅适用于AcroForms，自适应表单支持有限数量的Adobe Sign字段。
+* **向源PDF文档添加Adobe Sign文本标签：** 当源PDF表单具有 [Adobe Sign文本标签](https://helpx.adobe.com/sign/using/text-tag.html)，服务将在转换过程中保留所有与签署方相关的信息。 生成的自适应表单在将自适应表单发送到Adobe Sign服务进行签名时填充所有签署方详细信息。 该功能仅适用于AcroForms，且自适应表单属性与AcroForm属性完全对齐。
 
-   </br>
-    自适应表单仅支持签名、文本、编号、日期、下拉菜单、单选按钮、复选框、初始、签名块、数字签名、签署方标题、签署方电子邮件、签署方公司、签署日期和签署方全名Adobe Sign字段。 因此，该服务将上述字段的文本标记转换为相应的自适应表单字段。
+要向源PDF文档添加Adobe Sign文本标签，请将源PDF文档中的字段名称替换为文 [本标签](https://helpx.adobe.com/sign/using/text-tag.html) ，或使用“转换为Adobe Sign表单”(如使用AcrobatDC [创建表单中所述](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) )。
+
+
 
 ## 开始转换过程 {#start-the-conversion-process}
 
