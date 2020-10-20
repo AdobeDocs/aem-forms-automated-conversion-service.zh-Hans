@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 773dae94d4e65b72de3518ebf5be4350db34fbb0
+source-git-commit: 1c4eb103b1d3b40ead4137f05e6af01d581365e5
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1616'
 ht-degree: 6%
 
 ---
@@ -28,10 +28,8 @@ AEM Forms自动Forms转换服务由Adobe Sensei提供支持，可自动将您的
 
 * **准备要 [应用](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) 到转换表单的主题:** 通过使用主题，您可以将一致的样式应用于组织的所有自适应表单。
 
-* **向源PDF文档添加Adobe Sign文本标签：** 当源PDF表单具有 [Adobe Sign文本标签](https://helpx.adobe.com/sign/using/text-tag.html)，服务将在转换过程中保留所有与Adobe Sign相关的信息。 生成的自适应表单使签署方信息相关的相应自适应表单字段保持不变，同时将自适应表单发送给Adobe Sign服务进行签名。 该功能仅适用于AcroForms，且自适应表单属性与AcroForm属性完全对齐。
-
+* **向源PDF文档添加Adobe Sign文本标签：** 当源PDF表单具有 [Adobe Sign文本标签](https://helpx.adobe.com/sign/using/text-tag.html)，服务将在转换过程中保留所有与Adobe Sign相关的信息。 生成的自适应表单将AcroForm中存在的签署方信息与自适应表单字段相关联，并保持与相应的自适应表单字段相关的数据完整，同时将自适应表单发送到Adobe签名服务进行签名。 该功能仅适用于AcroForms，且自适应表单属性与AcroForm属性完全对齐 <br>\
    要向源PDF文档添加Adobe Sign文本标签，请将源PDF文档中的字段名称替换为文 [本标签](https://helpx.adobe.com/sign/using/text-tag.html) ，或使用“转换为Adobe Sign表单”(如使用AcrobatDC [创建表单中所述](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) )。
-
 
 
 ## 开始转换过程 {#start-the-conversion-process}
