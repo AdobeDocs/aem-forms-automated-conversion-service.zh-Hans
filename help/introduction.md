@@ -1,8 +1,11 @@
 ---
 title: 简介
 description: '加速打印表单向自适应表单的转换 '
-translation-type: ht
-source-git-commit: ceff5cb56aa9896a28004628c5e26c262b7918bd
+translation-type: tm+mt
+source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
+workflow-type: tm+mt
+source-wordcount: '674'
+ht-degree: 92%
 
 ---
 
@@ -28,6 +31,8 @@ Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各�
 ## 支持的 PDF 表单和语言{#supported-languages-and-pdf-forms}
 
 此服务支持非交互式 PDF 表单、由 Adobe Acrobat 创建的 AcroForms 表单、以及由 AEM Forms 或 Adobe LiveCycle 创建的 XFA 表单。
+
+该服务还支持Adobe Sign支持的PDF forms。 如果源PDF表单具有Adobe Sign文本标签，则服务在转换过程中会保留所有Adobe Sign相关信息，并将源PDF中存在的签署方信息与相应的自适应表单字段相关联。 该功能仅对AcroForms可用。
 
 此服务仅限于将英语表单转换为自适应表单。 您可以通过 [AEM 翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将生成的自适应表单翻译成其他语言。
 
