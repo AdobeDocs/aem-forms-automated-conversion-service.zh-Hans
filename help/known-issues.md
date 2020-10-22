@@ -7,9 +7,9 @@ uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: 589eacfd6200f4336b7a4a7708e10f3dfe08406d
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '808'
 ht-degree: 1%
 
 ---
@@ -77,4 +77,7 @@ ht-degree: 1%
 * 不支持复杂表，如无边框表、嵌套表和具有占位符值的表。 转换后，使用自适应表单编辑器添加或修改复杂表。 仅支持带空字段、正确标题和清晰边界的简单表。
 * 该服务仅将英语表单转换为自适应表单。 You can translate converted adaptive forms to another language using [AEM translation workflow](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4Forms不支持多列输入表单布局自动检测。
+* 使用源PDF表单中的颜色编码的信息不会应用到自适应表单。
+* 源PDF表单的颜色将转移到自适应表单主题。
+* 彩色PDF forms被视为灰度表单，并相应地检测场。
 
