@@ -7,9 +7,9 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: 7b8e013af91430e86c0014c7a1695abb05c3c0f2
+source-git-commit: 92cd241915ef5818fb004a8982674b4f6753c171
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1825'
 ht-degree: 4%
 
 ---
@@ -138,8 +138,6 @@ ht-degree: 4%
 1. **我是否可以将Adobe Sign文本标记与自动Forms转换服务一起使用？**
 
    <p> 当您使用自动Forms转换服务将PDF表单转换为自适应表单并且PDF表单包含Adobe Sign文本标签时，这些标签将转换为相应的自适应表单字段，并自动填充签名者详细信息。  该功能仅适用于AcroForms，自适应表单支持有限数量的Adobe Sign字段。</p>  </br>
-
-   <p> 要获得受支持标记的完整列表，请在自适应表单编辑器中打开表单并添加一个Adobe Sign块。 使用Adobe Sign块查找所有受支持的Adobe Sign字段。 它提供一个下拉框来选择所有支持的字段。</p>
 
 1. **如何创建支持Adobe Sign的PDF表单？**
 
