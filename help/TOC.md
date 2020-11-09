@@ -9,9 +9,9 @@ user-guide-title: Adobe Experience Manager Forms 自动化表单转换服务
 user-guide-description: 将 PDF Forms 转换为响应式和移动就绪型 HTML Forms。
 breadcrumb-title: Forms Automated Conversion 指南
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: ab178dd8d1786c6c341d4a1a3da0aecebead31dd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '90'
 ht-degree: 100%
 
