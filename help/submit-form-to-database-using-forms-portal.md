@@ -1,6 +1,6 @@
 ---
 title: 使用Forms门户将自适应表单提交到数据库
-description: 扩展默认元模型以添加特定于您组织的模式、验证和实体，并在运行自动化Forms转换服务时将配置应用到自适应表单字段。
+description: 扩展默认元模型，以添加特定于您的组织的模式、验证和实体，并在运行Automated forms conversion服务时将配置应用到自适应表单字段。
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
@@ -13,9 +13,9 @@ ht-degree: 1%
 ---
 
 
-# 使用Forms门户将自适应表单与数据库集成 {#submit-forms-to-database-using-forms-portal}
+# 使用Forms门户{#submit-forms-to-database-using-forms-portal}将自适应表单与数据库集成
 
-自动化的Forms转换服务允许您将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 启动转换过程时，您可以选择生成带有或不带数据绑定的自适应表单。
+automated forms conversion服务允许您将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 启动转换过程时，您可以选择生成带有或不带数据绑定的自适应表单。
 
 如果选择生成不带数据绑定的自适应表单，则转换后可以将转换后的自适应表单与表单数据模型、XML模式或JSON模式集成。 但是，如果您生成具有数据绑定的自适应表单，转换服务会自动将自适应表单与JSON模式关联，并在自适应表单和JSON模式中可用的字段之间创建数据绑定。 然后，您可以将自适应表单与您选择的数据库集成，在表单中填写数据，并使用Forms门户将其提交到数据库。
 
@@ -27,15 +27,15 @@ ht-degree: 1%
 
 本文讨论的示例是定制数据和元数据服务的参考实现，以将Forms门户网页与数据库集成。 示例实现中使用的数据库是MySQL 5.6.24。但是，可以将Forms门户页面与您选择的任何数据库集成。
 
-## Pre-requisites {#pre-requisites}
+## 先决条件{#pre-requisites}
 
 * 设置AEM 6.4或6.5作者实例
-* 为AEM [实例安装最](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html) 新的服务包
+* 为AEM实例安装[最新的Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)
 * 最新版本的AEM Forms加载项包
-* Configure [Automated Forms Conversion service](configure-service.md)
+* 配置[Automated forms conversion服务](configure-service.md)
 * 设置数据库。 示例实现中使用的数据库是MySQL 5.6.24。但是，可以将转换后的自适应表单与您选择的任何数据库集成。
 
-## 在AEM实例和数据库之间设置连接 {#set-up-connection-aem-instance-database}
+## 在AEM实例和数据库{#set-up-connection-aem-instance-database}之间设置连接
 
 在AEM实例和MYSQL数据库之间设置连接由以下部分组成：
 
@@ -47,18 +47,18 @@ ht-degree: 1%
 
 * [为Forms门户集成设置和配置示例包](#set-up-and-configure-sample)
 
-### 安装mysql-connector-java-5.1.39-bin.jar文件 {#install-mysql-connector-java-file}
+### 安装mysql-connector-java-5.1.39-bin.jar文件{#install-mysql-connector-java-file}
 
 对所有作者实例和发布实例执行以下步骤以安装mysql-connector-java-5.1.39-bin.jar文件：
 
-1. 导航到http://[服务器]:[port]/system/console/depfinder并搜索com.mysql.jdbc包。
+1. 导航到http://[server]:[port]/system/console/depfinder并搜索com.mysql.jdbc包。
 1. 在“导出依据”列中，检查包是否由任何捆绑导出。 如果包未由任何包导出，请继续。
-1. 导航到http://[server]:[port]/system **[!UICONTROL Install/Update]**/console/bundles并单击。
-1. 单 **[!UICONTROL Choose File]** 击并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选择 **[!UICONTROL Start Bundle]** 和复 **[!UICONTROL Refresh Packages]** 选框。
-1. 单击 **[!UICONTROL Install]** 或 **[!UICONTROL Update]**。 完成后，重新启动服务器。
+1. 导航到http://[server]:[port]/system/console/bundles，然后单击&#x200B;**[!UICONTROL Install/Update]**。
+1. 单击&#x200B;**[!UICONTROL Choose File]**&#x200B;并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选择&#x200B;**[!UICONTROL Start Bundle]**&#x200B;和&#x200B;**[!UICONTROL Refresh Packages]**&#x200B;复选框。
+1. 单击&#x200B;**[!UICONTROL Install]**&#x200B;或&#x200B;**[!UICONTROL Update]**。 完成后，重新启动服务器。
 1. （仅限Windows）关闭操作系统的系统防火墙。
 
-### 在模式库中创建和表 {#create-schema-and-tables-in-database}
+### 在模式库{#create-schema-and-tables-in-database}中创建和表
 
 执行以下步骤以在模式库中创建数据和表：
 
@@ -68,9 +68,9 @@ ht-degree: 1%
    CREATE SCHEMA `formsportal` ;
    ```
 
-   其 **中** formsportal是指模式的名称。
+   其中&#x200B;**formsportal**&#x200B;指模式的名称。
 
-1. 使用以 **下SQL语** 句，在数据库模式中创建数据表：
+1. 使用以下SQL语句在数据库模式中创建&#x200B;**data**&#x200B;表：
 
    ```sql
     CREATE TABLE `data` (
@@ -82,7 +82,7 @@ ht-degree: 1%
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 在数据 **库模式** 中使用以下SQL语句创建元数据表：
+1. 使用以下SQL语句在数据库模式中创建&#x200B;**元数据**&#x200B;表：
 
    ```sql
    CREATE TABLE `metadata` (
@@ -122,7 +122,7 @@ ht-degree: 1%
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 在数据 **库模式中** ，使用以下SQL语句创建一个附加的元数据表：
+1. 使用以下SQL语句在数据库模式中创建&#x200B;**additionalmetadatatable**&#x200B;表：
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -134,7 +134,7 @@ ht-degree: 1%
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 在数据 **库模式** 中使用以下SQL语句创建可注释表：
+1. 使用以下SQL语句在数据库模式中创建&#x200B;**commenttable**&#x200B;表：
 
    ```sql
    CREATE TABLE `commenttable` (
@@ -145,12 +145,12 @@ ht-degree: 1%
        `time` varchar(255) DEFAULT NULL);
    ```
 
-### 配置AEM实例与数据库之间的连接 {#configure-connection-between-aem-instance-and-database}
+### 配置AEM实例与数据库{#configure-connection-between-aem-instance-and-database}之间的连接
 
 执行以下配置步骤以在AEM实例和MYSQL数据库之间创建连接：
 
-1. 转到AEM Web Console“配置”页 *面[:][http://]host*:port/system/console/configMgr。
-1. 单击以在编 **[!UICONTROL Forms Portal Draft and Submission Configuration]** 辑模式下打开。
+1. 转至AEM Web控制台配置页，网址为&#x200B;*http://[host]:[port]/system/console/configMgr*。
+1. 单击以在编辑模式下打开&#x200B;**[!UICONTROL Forms Portal Draft and Submission Configuration]**。
 1. 如下表所述，指定属性的值：
 
    <table> 
@@ -192,8 +192,8 @@ ht-degree: 1%
     </tr>
     </tbody> 
     </table>
-1. 保留其他配置，然后单击 **[!UICONTROL Save]**。
-1. 在Web控制台配置中 **[!UICONTROL Apache Sling Connection Pooled DataSource]** 查找并单击以在编辑模式下打开。 如下表所述，指定属性的值：
+1. 保留其他配置，然后单击&#x200B;**[!UICONTROL Save]**。
+1. 查找并单击以在Web控制台配置的编辑模式下打开&#x200B;**[!UICONTROL Apache Sling Connection Pooled DataSource]**。 如下表所述，指定属性的值：
 
    <table> 
     <tbody> 
@@ -264,39 +264,39 @@ ht-degree: 1%
     </tbody> 
     </table>
 
-### 设置和配置示例 {#set-up-and-configure-sample}
+### 设置并配置示例{#set-up-and-configure-sample}
 
 对所有作者和发布实例执行以下步骤以安装和配置示例：
 
-1. 将以下 **aem-fp-db-integration-sample-pkg-6.1.2.zip包下载到您的** 文件系统。
+1. 将以下&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;软件包下载到您的文件系统。
 
    [获取文件](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. 转到AEM包管理器 *[,][位于]http://* host:port/crx/packmgr/。
+1. 转到位于&#x200B;*http://[host]的AEM包管理器：[port]/crx/packmgr/*。
 1. 单击 **[!UICONTROL Upload Package]**.
-1. 浏览以选 **择aem-fp-db-integration-sample-pkg-6.1.2.zip包** ，然后单击 **[!UICONTROL OK]**。
-1. 单 **[!UICONTROL Install]** 击包旁边的以安装包。
+1. 浏览以选择&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;包，然后单击&#x200B;**[!UICONTROL OK]**。
+1. 单击程序包旁的&#x200B;**[!UICONTROL Install]**&#x200B;以安装该程序包。
 
-## 为Forms门户集成配置转换的自适应表单 {#configure-converted-adaptive-form-for-forms-portal-integration}
+## 为Forms门户集成配置转换的自适应表单{#configure-converted-adaptive-form-for-forms-portal-integration}
 
 执行以下步骤，以启用使用Forms门户页面提交自适应表单：
-1. [运行转换](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) ，将源表单转换为自适应表单。
+1. [运行转](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) 换，将源表单转换为自适应表单。
 1. 在编辑模式下打开自适应表单。
-1. 点按表单容器，然后选择配置 ![自定义表单](assets/configure-adaptive-form.png)。
-1. 在部 **[!UICONTROL Submission]** 分中， **[!UICONTROL Forms Portal Submit Action]** 从下 **[!UICONTROL Submit Action]** 拉列表中选择。
-1. 点按 ![保存模板策略](assets/edit_template_done.png) ，以保存设置。
+1. 点按表单容器，然后选择配置![配置自适应表单](assets/configure-adaptive-form.png)。
+1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;部分，从&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms Portal Submit Action]**。
+1. 点按![保存模板策略](assets/edit_template_done.png)以保存设置。
 
-## 创建和配置Forms门户页面 {#create-configure-forms-portal-page}
+## 创建和配置Forms门户页面{#create-configure-forms-portal-page}
 
 请执行以下步骤创建Forms门户页面并进行配置，以便您可以使用此页提交自适应表单：
 
-1. 登录到AEM作者实例，然后点 **[!UICONTROL Adobe Experience Manager]** 按> **[!UICONTROL Sites]**。
-1. 选择要保存新的Forms门户页面的位置，然后点按 **[!UICONTROL Create]** > **[!UICONTROL Page]**。
-1. 选择页面的模板，点 **[!UICONTROL Next]**&#x200B;按，指定页面的标题，然后点按 **[!UICONTROL Create]**。
-1. 点 **[!UICONTROL Edit]** 按以配置页面。
-1. 在页面标题中，点 ![按编辑](assets/edit_template_sites.png) > **[!UICONTROL Edit Template]** 以打开页面的模板。
-1. 点按布局容器，然 ![后点按编辑模板策略](assets/edit_template_policy.png)。 在选项 **[!UICONTROL Allowed Components]** 卡中，启用和 **[!UICONTROL Document Services]** 选 **[!UICONTROL Document Services Predicates]** 项，然后点按保 ![存模板策略](assets/edit_template_done.png)。
-1. 在页 **[!UICONTROL Search & Lister]** 面中插入组件。 因此，页面上会列出AEM实例上可用的所有现有自适应表单。
-1. 在页 **[!UICONTROL Drafts & Submissions]** 面中插入组件。 两个选项卡 **[!UICONTROL Draft Forms]** ，和 **[!UICONTROL Submitted Forms]**&#x200B;显示在Forms门户网页上。 该选 **[!UICONTROL Draft Forms]** 项卡还显示已转换的自适应表单，该表单使用配置已转换的自适应表单 [以进行Forms门户集成中所述的步骤生成](#configure-converted-adaptive-form-for-forms-portal-integration)
+1. 登录到AEM作者实例，然后点按&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Sites]**。
+1. 选择要保存新的Forms门户页面的位置，然后点按&#x200B;**[!UICONTROL Create]** > **[!UICONTROL Page]**。
+1. 选择页面的模板，点按&#x200B;**[!UICONTROL Next]**，指定页面的标题，然后点按&#x200B;**[!UICONTROL Create]**。
+1. 点按&#x200B;**[!UICONTROL Edit]**&#x200B;以配置页面。
+1. 在页面标题中，点按![编辑模板](assets/edit_template_sites.png) > **[!UICONTROL Edit Template]**&#x200B;以打开页面的模板。
+1. 点按布局容器，然后点按![编辑模板策略](assets/edit_template_policy.png)。 在&#x200B;**[!UICONTROL Allowed Components]**&#x200B;选项卡中，启用&#x200B;**[!UICONTROL Document Services]**&#x200B;和&#x200B;**[!UICONTROL Document Services Predicates]**&#x200B;选项，然后点按![保存模板策略](assets/edit_template_done.png)。
+1. 在页面中插入&#x200B;**[!UICONTROL Search & Lister]**&#x200B;组件。 因此，页面上会列出AEM实例上可用的所有现有自适应表单。
+1. 在页面中插入&#x200B;**[!UICONTROL Drafts & Submissions]**&#x200B;组件。 两个选项卡&#x200B;**[!UICONTROL Draft Forms]**&#x200B;和&#x200B;**[!UICONTROL Submitted Forms]**&#x200B;显示在Forms门户页面上。 **[!UICONTROL Draft Forms]**&#x200B;选项卡还显示使用[为Forms门户集成配置转换的自适应表单中所述的步骤生成的转换的自适应表单。](#configure-converted-adaptive-form-for-forms-portal-integration)
 
-1. 点按 **[!UICONTROL Preview]**、点按转换的自适应表单、指定自适应表单字段的值并提交它。 您为自适应表单字段指定的值将提交到集成数据库。
+1. 点按&#x200B;**[!UICONTROL Preview]**，点按转换的自适应表单，指定自适应表单字段的值并提交。 您为自适应表单字段指定的值将提交到集成数据库。
