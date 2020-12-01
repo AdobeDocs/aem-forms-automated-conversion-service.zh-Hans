@@ -25,9 +25,9 @@ ht-degree: 4%
 
 AEM Forms自动转换服务将PDF表单转换为自适应表单。 该服务使用人工智能和机器学习算法来了解源表单的布局和字段。 每项机器学习服务都会不断学习源数据，并在每次客户流失时生成更好的输出。 这些服务从人类的体验中学习。
 
-自动化的Forms转化服务通过一系列表单进行培训。 它可轻松识别源表单中的字段并生成自适应表单。 但是，PDF forms中有一些领域和风格，它们在人眼中很容易看到，但在服务中却很难理解。 服务可以为某些字段或样式指定不同于适用字段类型或面板。 下面列出了所有此类字段和样式模式。
+automated forms conversion服务是在大量表单上进行培训的。 它可轻松识别源表单中的字段并生成自适应表单。 但是，PDF forms中有一些领域和风格，它们在人眼中很容易看到，但在服务中却很难理解。 服务可以为某些字段或样式指定不同于适用字段类型或面板。 下面列出了所有此类字段和样式模式。
 
-该服务将开始识别正确的字段或面板并将其分配给这些模式，因为它会不断从源数据中学习。 目前，您可以使用“审阅” [和“更正](review-correct-ui-edited.md) ”编辑器修复此类问题。 在开始修复问题或进一步阅读之前，请先熟悉自 [适应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+该服务将开始识别正确的字段或面板并将其分配给这些模式，因为它会不断从源数据中学习。 目前，您可以使用[Review and Correct](review-correct-ui-edited.md)编辑器修复此类问题。 在开始修复问题或进一步阅读之前，请先熟悉[自适应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 ## 常规 {#general}
 
@@ -59,7 +59,7 @@ AEM Forms自动转换服务将PDF表单转换为自适应表单。 该服务使�
  </tbody>
 </table>
 
-## 选择组  {#choice-group}
+## 选择组{#choice-group}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
@@ -74,7 +74,7 @@ AEM Forms自动转换服务将PDF表单转换为自适应表单。 该服务使�
  </tbody>
 </table>
 
-## 表单字段 {#form-fields}
+## 表单字段{#form-fields}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
