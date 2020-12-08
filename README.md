@@ -1,16 +1,12 @@
 ---
-source-git-commit: d2af4611e68447253a818e0c83ff3ec519056373
+source-git-commit: c8489a521f35c60ee28227f499e9a0a7541960b9
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '517'
-ht-degree: 21%
+source-wordcount: '435'
+ht-degree: 23%
 
 ---
 # Contribute文章
-
-| EXL-PR | EXL | 预览 | 激活 | 发布时间 | 帮助 |
-|--- |--- |--- |--- |--- |--- |
-| [![生成状态](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/lastBuild/) | [![生成状态](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/lastBuild) | [预览URL](https://experienceleague.corp.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [实时URL](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [Authoring 指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 我们欢迎来自我们社区和文档团队外的Adobe员工的内容贡献。
 
@@ -20,15 +16,15 @@ ht-degree: 21%
 
 ## 关于您对Adobe内容的贡献
 
-请参阅 [Adobe文档参与者指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
+请参阅[Adobe文档参与者指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
 
 您的贡献方式取决于您是谁以及您希望贡献的更改类型：
 
 ### 次要更改或请求
 
-要提交请求，请单击文 **章中的** “记录问题”链接，该链接在GitHub中打开问题。 指定标题和说明，然后单击“提 **交新期刊”**。
+要提交请求，请单击文章中的&#x200B;**记录问题**&#x200B;链接，该链接在GitHub中打开问题。 指定标题和说明，然后单击&#x200B;**提交新期刊**。
 
-要请求次要更新，请单 **击文章中的** “编辑此页面”链接，该链接在GitHub中打开源文章。 使用GitHub UI进行更新。 有关详细信息，请 [参阅“常规Adobe文档](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) ”提供者指南。
+要请求次要更新，请单击文章中的&#x200B;**编辑此页**&#x200B;链接，该链接在GitHub中打开源文章。 使用GitHub UI进行更新。 有关详细信息，请参阅常规[Adobe文档参与者指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
 
 您为此回购协议中的文档和代码示例提交的细微更正或说明均受Adobe使用条款的约束。
 
@@ -42,7 +38,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Adobe员工的主要变化
 
-如果您是解决方案的技术撰稿人、项目经理或产品团队的开发 [!UICONTROL Adobe Experience Cloud] 人员，并且您的工作是贡献技术文章或创作技术文章，则应使用上的专用存储库 `https://git.corp.adobe.com/AdobeDocs`。 请参阅 [内部协作指南](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)。
+如果您是[!UICONTROL Adobe Experience Cloud]解决方案的技术撰稿人、项目经理或产品团队的开发人员，并且您的工作是撰写或创作技术文章，则应使用`https://git.corp.adobe.com/AdobeDocs`的专用存储库。 请参阅[内部协作指南](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
@@ -50,7 +46,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 社区参与者可以使用GitHub UI进行基本编辑，或者将回购区分类，做出重大贡献。
 
-有关详细 [信息，请参阅Adobe文档](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) Contributor Guide。
+有关详细信息，请参阅[Adobe文档参与者指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
 
 ## 如何使用标记设置主题格式
 
