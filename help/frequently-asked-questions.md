@@ -49,8 +49,8 @@ ht-degree: 4%
 
    <p>否，服务不会将Microsoft Word表单转换为自适应表单。 您可以将Microsoft Word表单保存为PDF表单，并将PDF表单转换为自适应表单。 整个过程是 </p> <br>
 
-   1. 使用Adobe Acrobat将Word文档转换为非交互式PDF[。](https://helpx.adobe.com/acrobat/how-to/create-pdf-files-word-excel-website.html)
-   1. 使用Adobe Acrobat将生成的PDF forms转换为可填写的PDF表单[。](https://helpx.adobe.com/acrobat/how-to/convert-word-excel-paper-pdf-forms.html)
+   1. 使用Adobe Acrobat将Word文档转换为非交互式PDF](https://helpx.adobe.com/acrobat/how-to/create-pdf-files-word-excel-website.html)。[
+   1. 使用Adobe Acrobat将生成的PDF forms转换为可填写的PDF表单](https://helpx.adobe.com/acrobat/how-to/convert-word-excel-paper-pdf-forms.html)。[
    1. 使用Adobe Acrobat手动更新和修复表单字段。
    1. 保存PDF表单。 现在，您可以将表单与转换服务结合使用以生成自适应表单。 您还可以将表单用作记录模板的文档。
 
