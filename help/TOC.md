@@ -3,7 +3,7 @@ cloud: experience-cloud
 product: experience manager
 sub-product: 表单转换服务
 solution: Experience Manager, Experience Manager Forms
-type: Documentation
+type: 文档
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms 自动化表单转换服务
 user-guide-description: 将 PDF Forms 转换为响应式和移动就绪型 HTML Forms。
@@ -12,8 +12,8 @@ breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.
 translation-type: tm+mt
 source-git-commit: ab178dd8d1786c6c341d4a1a3da0aecebead31dd
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
