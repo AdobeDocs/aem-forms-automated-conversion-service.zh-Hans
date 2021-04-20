@@ -1,7 +1,7 @@
 ---
 title: 配置自动化表单转换服务
 description: 准备好AEM实例以使用Automated forms conversion服务
-role: 业务从业者，管理员
+role: Business Practitioner, Administrator
 translation-type: tm+mt
 source-git-commit: a9bab62fbe5ecc4b233e9bc55b9e461a5967b471
 workflow-type: tm+mt
