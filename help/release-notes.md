@@ -1,14 +1,13 @@
 ---
 title: 新增功能 发行说明 - 自动化表单转换服务
-description: '了解自动化表单转换服务的最新功能和错误修复 '
-translation-type: tm+mt
-source-git-commit: 70dc18347e072ccd7c1625f6831554ecfc13f2fb
+description: 了解自动化表单转换服务的最新功能和错误修复
+exl-id: fccafbc9-28c1-4736-922c-24d675b25213
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '386'
+ht-degree: 88%
 
 ---
-
 
 # 发行说明
 
@@ -27,13 +26,13 @@ ht-degree: 0%
 
 ### 改进内容 {#march-2021-improvements}
 
-改进了将源表单转换为自适应表单时将表单内容组织到选择组和字段的功能。
+改进了在将源表单转换为自适应表单时，将表单内容组织为选择组和字段的功能。
 
 ## 2021年2月02日(AFC-2021.01.2){#feb-2021}
 
 ### 改进内容 {#feb-2021-improvements}
 
-改进了将表单内容组织到面板中以及在将源表单转换为自适应表单时为面板生成标题的功能。
+改进了在将源表单转换为自适应表单时，将表单内容组织到面板以及为面板生成标题的功能。
 
 ## 2020 年 7 月 16 日 (AFC-2020.07.2) {#jul-2020}
 
