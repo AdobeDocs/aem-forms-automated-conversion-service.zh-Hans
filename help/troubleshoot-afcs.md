@@ -5,14 +5,13 @@ description: 'AFCS 常见问题及解决办法 '
 seo-description: AFCS 常见问题及解决办法
 contentOwner: khsingh
 topic-tags: forms
-translation-type: tm+mt
-source-git-commit: c413c5dc2da3a3e7e116b3355c63620f9dab17f8
+exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 100%
 
 ---
-
 
 # 自动化表单转换服务故障诊断
 
@@ -20,7 +19,7 @@ ht-degree: 100%
 
 <!--The article provides information on installation, configuration and administration issues that may arise in an Automated Forms Conversion Service production environment. -->
 
-## 常见错误{#commonerrors}
+## 常见错误 {#commonerrors}
 
 | 错误 | 示例 |
 |--- |--- |
