@@ -7,14 +7,14 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 17d1c447d8aa68341214270932fb076b512422af
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 3%
 
 ---
 
-# 最佳实践和已知的复杂模式{#Best-practices-and-considerations2}
+# 最佳实践和已知的复杂模式 {#Best-practices-and-considerations2}
 
 本文档提供了管理员、作者和开发人员在使用[!DNL Automated Forms Conversion service]时可从中受益的准则和建议。 它讨论了从准备源表单到修复复杂模式（自动化转换需要额外努力）的最佳实践。 这些最佳做法对[!DNL Automated Forms Conversion service]的整体性能和输出有共同的贡献。
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 * 分析XDP表单并修复可视化问题。 确保源文档使用预期的控件和结构。 例如，源表单可能包含复选框，而不是单选按钮。 将复选框更改为单选按钮，以生成包含预期组件的自适应表单。
 * [在开始转换之前，将](http://www.adobe.com/go/learn_aemforms_designer_65) 绑定添加到XDP格式。当源XDP表单中有绑定可用时，服务会在转换期间自动将绑定应用到相应的自适应表单字段。 它可节省手动应用绑定所需的时间。
-* [将Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) 标记添加到XDP文件。该服务会自动将Adobe Sign标记转换为相应的自适应表单字段。 自适应Forms支持有限数量的Adobe Sign字段。 有关受支持字段的完整列表，请参阅[在自适应表单中使用Adobe Sign](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html)文档。
+* [将Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) 标记添加到XDP文件。该服务会自动将Adobe Sign标记转换为相应的自适应表单字段。 自适应Forms支持有限数量的Adobe Sign字段。 有关受支持字段的完整列表，请参阅[在自适应表单中使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en)文档。
 * 尽可能将XDP文档中的复杂表转换为简单表。 表格单元格中具有表单字段、大小不均的单元格、行或列跨越的单元格、合并的单元格、部分边框或无可见边框的表格被视为复杂表格。 包含上述任何一项的表被视为复杂表。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
@@ -75,13 +75,13 @@ AEM [!DNL Forms Automated Conversion service]使用人工智能和机器学习�
 
 
 
-### 选择组{#choice-group}
+### 选择组  {#choice-group}
 
 | 图案 | 分辨率 |
 |--- |--- |
 | **** <br> 除框或圆以外形状的PatternChoice组选项不会转换为相应的自适应表单组件。<br><br>**** <br> 分辨率将选择的形状更改为框或圆，或使用“审阅并更正”编辑器来识别形状。 | ![选择字段  ](assets/best-practice-choice-group-options.png) |
 
-### 表单字段{#form-fields}
+### 表单字段 {#form-fields}
 
 | 图案 | 分辨率 |
 |--- |--- |
