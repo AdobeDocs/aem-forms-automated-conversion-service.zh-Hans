@@ -3,7 +3,7 @@ title: 配置自动化表单转换服务
 description: 准备好AEM实例以使用Automated forms conversion服务
 role: Business Practitioner, Administrator
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 17d1c447d8aa68341214270932fb076b512422af
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 7%
@@ -147,7 +147,7 @@ automated forms conversion服务使用Day CQ邮件服务发送电子邮件通知
 
 #### 将用户添加到表单用户组 {#adduserstousergroup}
 
-在指定用于运行服务的AEM用户的配置文件中指定电子邮件地址。 确保用户是[forms user](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html)组的成员。 电子邮件会发送到运行转化的用户的电子邮件地址。 要为用户指定电子邮件地址并将用户添加到表单用户群组，请执行以下操作：
+在指定用于运行服务的AEM用户的配置文件中指定电子邮件地址。 确保用户是[forms user](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html)组的成员。 电子邮件会发送到运行转化的用户的电子邮件地址。 要为用户指定电子邮件地址并将用户添加到表单用户群组，请执行以下操作：
 
 1. 以AEM管理员身份登录到AEM Forms创作实例。 使用您的本地AEM凭据登录。 请勿使用Adobe ID登录。 点按 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
 
@@ -223,7 +223,7 @@ automated forms conversion服务使用Day CQ邮件服务发送电子邮件通知
 
    <br/> <br/>
 
-#### 配置Cloud Service{#configure-the-cloud-service}
+#### 配置Cloud Service {#configure-the-cloud-service}
 
 创建Cloud Service配置以将AEM实例连接到转换服务。 它还允许您为转化指定模板、主题和表单片段。 您可以为每组表单分别创建多个云服务配置。 例如，您可以为销售部门表单提供单独的配置，并为客户支持表单提供单独的配置。 执行以下步骤以创建云服务配置：
 
