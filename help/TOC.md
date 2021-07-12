@@ -10,8 +10,8 @@ user-guide-description: 将 PDF Forms 转换为响应式和移动就绪型 HTML 
 breadcrumb-title: Forms Automated Conversion 指南
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
 feature: 自适应表单
-role: Business Practitioner
-source-git-commit: 8c4cf4ff72e9ca7e8daa76f495abd75a865cd2f7
+role: User
+source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 100%
