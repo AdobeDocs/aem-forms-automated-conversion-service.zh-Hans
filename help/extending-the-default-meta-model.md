@@ -7,9 +7,9 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
 workflow-type: tm+mt
-source-wordcount: '2372'
+source-wordcount: '2569'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ automated forms conversion服务从源表单中标识和提取表单对象。 �
 
 元模型是JSON模式。 在开始使用元模型之前，请确保您精通JSON。 您必须具有创建、编辑和读取JSON格式保存的数据的经验。
 
-## 缺省元模型{#default-meta-model}
+## 缺省元模型 {#default-meta-model}
 
-automated forms conversion服务具有默认的元模型。 它是JSON架构，并且与Adobe服务的其他组件一起驻留在Automated forms conversion云中。 您可以在本地AEM服务器上找到元模型的副本：http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json。 您也可以[单击此处](assets/global.schema.json)访问或下载默认架构。
+automated forms conversion服务具有默认的元模型。 它是JSON架构，并且与Adobe服务的其他组件一起驻留在Automated forms conversion云中。 您可以在本地AEM服务器上找到元模型的副本：http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`。 您也可以[单击此处](assets/en.globalschema.json)访问或下载英语架构。 [法语](assets/fr.globalschema.json)、[德语](assets/de.globalschema.json)和[西班牙语](assets/es.globalschema.json)语言的元模型也可供下载。
 
 元模型的模式是从https://schema.org/docs/schemas.html上的模式实体派生的。 它具有人员、邮政地址、本地业务和更多实体，定义在https://schema.org上。 元模型的每个实体都与JSON模式对象类型相符。 以下代码表示一个示例元模型结构：
 
@@ -44,7 +44,7 @@ automated forms conversion服务具有默认的元模型。 它是JSON架构，�
     }
 ```
 
-## 下载默认元模型{#download-the-default-meta-model}
+## 下载默认元模型 {#download-the-default-meta-model}
 
 执行以下步骤，将默认元模型下载到本地文件系统：
 
@@ -64,7 +64,7 @@ automated forms conversion服务具有默认的元模型。 它是JSON架构，�
    <li>Step text</li>
    -->
 
-## 了解元模型{#understanding-the-meta-model}
+## 了解元模型 {#understanding-the-meta-model}
 
 元模型是指包含实体的JSON架构文件。 JSON架构文件中的所有实体都包含名称和ID。 每个实体可以包含多个属性。 实体及其属性可能因域而异。 您可以使用关键字和字段配置来扩充架构文件，以将架构属性映射到自适应表单组件。
 
@@ -214,7 +214,46 @@ automated forms conversion服务在转换期间对源表单执行关键词搜索
  </tbody> 
 </table>
 
-## 使用自定义元模型{#modify-adaptive-form-fields-using-custom-meta-model}修改自适应表单字段
+## 使用您自己的语言创建自定义元模型{#language-specific-meta-model}
+
+可以创建语言特定的元模型。 此类元模型可帮助您使用所选语言创建映射规则。 automated forms conversion服务允许您创建以下语言的元模型：
+
+* 英语(en)
+* 法语(fr)
+* 德语(de)
+* 西班牙语()
+
+将&#x200B;*aem:Language*&#x200B;元标记添加到元模型顶部以指定其语言。 例如，
+
+```JSON
+"metaTags": {
+        "aem:Language": "de"
+    }
+```
+
+英语是元模型的默认语言。
+
+### 创建语言特定元模型的注意事项
+
+* 确保每个键的名称都使用英语。 例如， emailAddress。
+* 确保所有&#x200B;*id*&#x200B;键的所有实体引用和预定义值均使用英语。 例如“id”：&quot;ContactPoint&quot; / &quot;$ref&quot;:“实体”。
+* 确保以下键的元模型中包含的描述或消息与元模型的语言相对应：
+   * aem:affKeyword
+   * 页面
+   * 描述
+   * enumNames
+   * shortDescription
+   * validatePictureClauseMessage
+
+   例如，当元模型的语言为法语(&quot;aem:Language&quot;)时：“fr”)，确保所有说明和消息都使用法语。
+
+* 确保所有[JSON架构属性](#jsonschemaproperties)仅使用受支持的值。
+
+下图显示了英语元模型和相应法语元模型的示例：
+
+![](assets/language-specific-meta-model-comparison.png)
+
+## 使用自定义元模型修改自适应表单字段 {#modify-adaptive-form-fields-using-custom-meta-model}
 
 除了默认元模型中列出的模式和验证之外，您的组织还可以具有这些模式和验证。 您可以扩展默认元模型，以添加特定于贵组织的模式、验证和实体。 automated forms conversion服务在转换期间将自定义元模型应用到表单字段。 您可以随着发现特定于贵组织的新模式、验证和实体而不断更新元模型。
 
@@ -224,7 +263,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 
 但是，您可以将自定义元模型保存在文件夹中，并修改转换服务属性以在转换期间使用自定义元模型。
 
-### 在转换期间使用自定义元模型{#use-custom-meta-model-during-conversion}
+### 在转换期间使用自定义元模型 {#use-custom-meta-model-during-conversion}
 
 执行以下步骤以在转换期间使用自定义元模型：
 
@@ -250,7 +289,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 * 向下拉列表中添加其他选项
 * 将字符串字段转换为多行字段
 
-#### 修改表单字段{#modify-the-label-of-a-form-field}的标签
+#### 修改表单字段的标签 {#modify-the-label-of-a-form-field}
 
 **示例：** 在转换后，将表单中的银行帐号标签修改为自适应表单中的自定义帐号。
 
@@ -268,7 +307,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 }
 ```
 
-#### 修改表单字段{#modify-the-type-of-a-form-field}的类型
+#### 修改表单字段的类型 {#modify-the-type-of-a-form-field}
 
 **示例**:在转换 **后** ，将表单中文本类型的“银行帐号”字段修改为自适应表单中的数字类型字段。
 
@@ -283,7 +322,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 }
 ```
 
-#### 向表单字段{#add-help-text-to-a-form-field}添加帮助文本
+#### 将帮助文本添加到表单字段 {#add-help-text-to-a-form-field}
 
 **示例**:在自适应表单的“银 **行帐** 号”字段中添加帮助文本。
 
@@ -299,7 +338,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 }
 ```
 
-#### 将表单字段转换为自适应表单{#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}中的多选复选框
+#### 将表单字段转换为自适应表单中的多选复选框 {#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
 
 **示例**:在转换 **** 前，将表单中字符串类型的Countryfield转换为转换后自适应表单中的复选框。
 
@@ -333,7 +372,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 }
 ```
 
-#### 修改表单字段{#modify-the-format-of-a-form-field}的格式
+#### 修改表单字段的格式 {#modify-the-format-of-a-form-field}
 
 **示例**:将“电子邮件地址” **的** 格式修改为电子邮件格式。
 
@@ -349,7 +388,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 }
 ```
 
-#### 向自适应表单字段{#add-validations-to-adaptive-form-fields}添加验证
+#### 向自适应表单字段添加验证 {#add-validations-to-adaptive-form-fields}
 
 **示例1:** 向自适应表单的“邮 **政** 代码”字段添加验证。
 
@@ -383,7 +422,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 }
 ```
 
-#### 在自适应表单{#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}中将文本字段转换为下拉列表
+#### 在自适应表单中将文本字段转换为下拉列表 {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
 
 **示例**:在转换 **** 前，将表单中字符串类型的Countryfield转换为自适应表单中的下拉选项。
 
@@ -417,7 +456,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 }
 ```
 
-#### 向下拉列表中添加其他选项{#add-additional-options-to-the-drop-down-list}
+#### 向下拉列表中添加其他选项 {#add-additional-options-to-the-drop-down-list}
 
 **示例：** 使用 **自** 定义元模型将Sri Lankaas作为额外选项添加到现有下拉列表中。
 
@@ -445,7 +484,7 @@ http://&lt;服务器>:&lt;端口>/aem/forms.html/content/dam/formsanddocuments/m
 }
 ```
 
-#### 将字符串字段转换为多行字段{#convert-a-string-field-to-a-multi-line-field}
+#### 将字符串字段转换为多行字段 {#convert-a-string-field-to-a-multi-line-field}
 
 **示例：** 转换 **** 后，将字符串类型的地址字段转换为表单中的多行字段。
 
