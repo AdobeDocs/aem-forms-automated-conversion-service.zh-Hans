@@ -2,10 +2,10 @@
 title: 简介
 description: 加速打印表单向自适应表单的转换
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: fed54ea64e19c77868e8e58e29e909cf4447f696
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 75%
+source-wordcount: '690'
+ht-degree: 71%
 
 ---
 
@@ -27,13 +27,13 @@ AEM 6.4 Forms和AEM 6.5 Forms内部部署客户和Adobe管理服务企业客户�
 
 Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各种所需权限。 管理员可以向贵企业的 AEM Forms 开发人员（用户）授予权限并连接到该服务。 有关详细信息，请参见[“配置自动化表单转换服务”](configure-service.md)。
 
-## 支持的PDF forms和语言{#supported-languages-and-pdf-forms}
+## 支持的PDF forms和语言 {#supported-languages-and-pdf-forms}
 
 此服务支持非交互式 PDF 表单、由 Adobe Acrobat 创建的 AcroForms 表单、以及由 AEM Forms 或 Adobe LiveCycle 创建的 XFA 表单。
 
 该服务还支持启用Adobe Sign的PDF forms。 如果源 PDF 表单具有 Adobe Sign 文本标记，则该服务将在转换期间保留所有与 Adobe Sign 相关的信息，并将源 PDF 中的签名者信息与相应的自适应表单字段相关联。 该功能仅适用于 AcroForms。
 
-此服务仅限于将英语表单转换为自适应表单。 您可以通过 [AEM 翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将生成的自适应表单翻译成其他语言。
+该服务可将英语、法语、德语和西班牙语表单转换为自适应表单。 您还可以使用[AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将生成的自适应表单翻译成其他语言。
 
 ## 转换工作流  {#conversion-workflow}
 
@@ -41,11 +41,11 @@ Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各�
 
 ![工作流](assets/conversion-workflow.png)
 
-### 1. 搭建环境{#set-up-the-environment}
+### 1. 搭建环境 {#set-up-the-environment}
 
 自动化表单转换服务在 Adobe Cloud 上运行。 [配置贵企业的 Adobe I/O 帐户，然后将本地 AEM 实例](configure-service.md)连接到 Adobe Cloud 上运行的转换服务。
 
-### 2. 将 PDF 表单转换为自适应表单{#use-the-conversion-service}
+### 2. 将 PDF 表单转换为自适应表单 {#use-the-conversion-service}
 
 配置好 AEM 表单环境后，若要将 PDF 表单转换为自适应表单，先[将 PDF 表单](convert-existing-forms-to-adaptive-forms.md)上传到 AEM 实例，然后[开始转换](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 上传表单之前，请注意以下几点：
 
@@ -56,7 +56,7 @@ Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各�
 * 对 PDF 表单进行修改，详情参见[“最佳实践和注意事项”](styles-and-pattern-considerations-and-best-practices.md)文章。
 * 阅读[“已知问题”](known-issues.md)避免出现意外故障。
 
-### 3. 查看转换后的表单{#review-converted-forms}
+### 3. 查看转换后的表单 {#review-converted-forms}
 
 真实世界表单在字段布局、命名或隐式建议方面可能具有复杂的数据捕获要求，而基于AI/ML的检测逻辑可能无法准确捕获这些要求。 自动化转换完成后，您可使用[审阅和修正编辑器](review-correct-ui-edited.md)对转换后的表单进行审核并作必要更新，生成更符合要求的输出效果。 完成必要更改后，再次发送表单进行转换。
 
