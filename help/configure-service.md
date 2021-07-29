@@ -3,9 +3,9 @@ title: 配置自动化表单转换服务
 description: 准备好AEM实例以使用Automated forms conversion服务
 role: User, Admin
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
+source-git-commit: 264208305996e98ff2dbccf0e63027b4c757754c
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2682'
 ht-degree: 7%
 
 ---
@@ -241,9 +241,7 @@ automated forms conversion服务使用Day CQ邮件服务发送电子邮件通知
    | 模板 | 要应用于已转换表单的默认模板。 在开始转换之前，您始终可以指定其他模板。 模板包含自适应表单的基本结构和初始内容。 您可以从现成提供的模板中选择模板。 您还可以创建自定义模板。 |
    | 主题 | 要应用于转换表单的默认主题。 在开始转换之前，您始终可以指定不同的主题。  您可以单击图标以选择现成提供的主题。 您还可以创建自定义主题。 |
    | 现有片段 | 现有片段的位置（如果有）。 |
-   | 自定义元模型 | 自定义元模型的.schema.json文件的路径。 |
-
-
+   | 自定义元模型 | 自定义元模型的.schema.json文件的路径。 您可以为英语、法语、德语和西班牙语创建单独的元模型。 |
 
 1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;页面的&#x200B;**[!UICONTROL Advanced]**&#x200B;选项卡中，为以下字段指定值：
 
