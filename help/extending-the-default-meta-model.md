@@ -7,9 +7,9 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
+source-git-commit: 28e07a0264edaaeef22d211f411f7908ca0abaed
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2591'
 ht-degree: 1%
 
 ---
@@ -221,23 +221,23 @@ automated forms conversion服务在转换期间对源表单执行关键词搜索
 * 英语(en)
 * 法语(fr)
 * 德语(de)
-* 西班牙语()
+* 西班牙语(es)
 
 将&#x200B;*aem:Language*&#x200B;元标记添加到元模型顶部以指定其语言。 例如，
 
 ```JSON
 "metaTags": {
-        "aem:Language": "de"
+        "aem:Language": "fr"
     }
 ```
 
-英语是元模型的默认语言。
+当未指定任何语言时，服务会认为元模型是英语。
 
 ### 创建语言特定元模型的注意事项
 
 * 确保每个键的名称都使用英语。 例如， emailAddress。
-* 确保所有&#x200B;*id*&#x200B;键的所有实体引用和预定义值均使用英语。 例如“id”：&quot;ContactPoint&quot; / &quot;$ref&quot;:“实体”。
-* 确保以下键的元模型中包含的描述或消息与元模型的语言相对应：
+* 确保所有ID键的所有实体引用和预定义值仅包含ASCII字符。 例如“id”：&quot;ContactPoint&quot; / &quot;$ref&quot;:“#ContactPoint”。
+* 确保与以下键对应的所有值都使用指定的元模型语言：
    * aem:affKeyword
    * 页面
    * 描述
@@ -247,7 +247,7 @@ automated forms conversion服务在转换期间对源表单执行关键词搜索
 
    例如，当元模型的语言为法语(&quot;aem:Language&quot;)时：“fr”)，确保所有说明和消息都使用法语。
 
-* 确保所有[JSON架构属性](#jsonschemaproperties)仅使用受支持的值。
+* 确保所有[JSON架构属性](#jsonschemaproperties)仅使用受支持的值。 例如，type属性只能跨选定的字符串、数字、整数和布尔值。
 
 下图显示了英语元模型和相应法语元模型的示例：
 
