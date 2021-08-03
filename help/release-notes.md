@@ -2,9 +2,9 @@
 title: 新增功能 发行说明 - 自动化表单转换服务
 description: 了解自动化表单转换服务的最新功能和错误修复
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
+source-git-commit: 3bf065a754d8e8f97a660eb2ae39f37341bb4668
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '428'
 ht-degree: 80%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 80%
 
 ## 2021年7月29日(AFC-2021.07.2) {#july-2021}
 
-* 添加了将法语、德语和西班牙语PDF forms转换为自适应表单的功能。
+* 添加了将法语、德语和西班牙语版本的PDF表单转换为自适应表单的功能。
 
 ## 2021年6月24日(AFC-2021.06.2) {#june-2021}
 
