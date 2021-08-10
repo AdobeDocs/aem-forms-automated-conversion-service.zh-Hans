@@ -7,10 +7,10 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
 workflow-type: tm+mt
-source-wordcount: '1825'
-ht-degree: 4%
+source-wordcount: '1830'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 4%
    <p>该服务可以将非交互式PDF forms、基于XFA的XDP和PDF forms以及AcroForms转换为自适应表单。 该服务不支持扫描或填写的表单。 有关其他限制，请参阅<a href="known-issues.md">已知问题</a>一文。<br /> </p> 
     <p>我们将定期添加对其他源类型的支持。 将<a href="introduction.md">受支持的PDF表单</a>部分保留在您的观看列表中，以定期更新新添加的特性和功能。</p>
 
-   此服务仅限于将英语表单转换为自适应表单。 您可以使用[AEM翻译工作流将生成的自适应表单翻译成其他语言。](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   该服务只能将英语、法语、德语和西班牙语表单转换为自适应表单。 您可以使用[AEM翻译工作流将生成的自适应表单翻译成其他语言。](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **该服务能否生成XDP而不是自适应表单？**
 
