@@ -2,10 +2,10 @@
 title: 简介
 description: 加速打印表单向自适应表单的转换
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: fed54ea64e19c77868e8e58e29e909cf4447f696
+source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 71%
+source-wordcount: '699'
+ht-degree: 70%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各�
 配置好 AEM 表单环境后，若要将 PDF 表单转换为自适应表单，先[将 PDF 表单](convert-existing-forms-to-adaptive-forms.md)上传到 AEM 实例，然后[开始转换](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 上传表单之前，请注意以下几点：
 
 * 请勿上传受保护的表单。 该服务无法转换受密码保护和加密的表单。
-* 请勿上传扫描版、彩色、非英语和已填充的表单。 此类表单不受支持。
+* 请勿以英语、法语、德语和西班牙语以外的任何语言上传扫描的、彩色的、已填充的表单和表单。 此类表单不受支持。
 * 请勿上传文件名中带空格的 PDF 表单。
 * 请勿上传 [PDF 产品组合](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将PDFPortfolio转换为自适应表单。
 * 对 PDF 表单进行修改，详情参见[“最佳实践和注意事项”](styles-and-pattern-considerations-and-best-practices.md)文章。
