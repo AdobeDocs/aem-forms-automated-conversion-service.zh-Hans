@@ -7,9 +7,9 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 86ffe3a6aa0257afe06310dbbc7a5ff8db3060e2
+source-git-commit: 65b0d6f6568ce7915b1a8bd85981bead967d869c
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1267'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 3%
 * 将源文档整理成一批8-15个文档。 在单个批次中保留具有通用自适应表单片段的源表单。
 * 请勿上载受保护的表单。 该服务无法转换受密码保护和安全的表单。
 * 请勿上传[PDFPortfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将PDFPortfolio转换为自适应表单。
-* 请勿上载扫描的和已填充的表单。 此类表单不受支持。
+* 请勿以英语、法语、德语和西班牙语以外的任何语言上传扫描、填写和表单。 此类表单不受支持。
 * 请勿上载文件名中带空格的源表单。 在上传表单之前，从文件名中删除空格。
 
 使用XDP表单进行转换时，请在上载源XPD表单之前执行以下步骤：
