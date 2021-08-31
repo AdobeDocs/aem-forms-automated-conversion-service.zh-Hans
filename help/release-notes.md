@@ -2,10 +2,10 @@
 title: 新增功能 发行说明 - 自动化表单转换服务
 description: 了解自动化表单转换服务的最新功能和错误修复
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 3bf065a754d8e8f97a660eb2ae39f37341bb4668
+source-git-commit: 19412c37f354fd47b661de114f286147c93c5b9e
 workflow-type: tm+mt
-source-wordcount: '428'
-ht-degree: 80%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -73,6 +73,6 @@ ht-degree: 80%
 
 **安装自动化表单转换服务连接器软件包**
 
-要使用 AFC-2020.03.1 版中的最新功能和改进功能，需要安装连接器软件包 1.1.38 或更高版本。可从[“AEM 包共享”](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)下载。
+要使用AFC-2020.03.1版中的最新功能和改进功能，需要安装连接器软件包1.1.38或更高版本。
 
 如果已有正常运行的自动化表单转换服务环境，要使用最新的转换服务功能，请按顺序安装最新版服务包、最新版 AEM 表单附加组件包和最新版连接器软件包。 有关详细说明，请参阅[“配置自动化表单转换服务”](configure-service.md)文章。
