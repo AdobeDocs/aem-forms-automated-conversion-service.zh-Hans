@@ -1,15 +1,15 @@
 ---
 title: '最佳实践和注意事项 '
-seo-title: '最佳实践和注意事项 '
+seo-title: Best practices and considerations
 description: 有关Automated forms conversion服务的最佳实践和注意事项
-seo-description: 源PDF forms中Automated forms conversion服务发现难以识别的样式和模式列表
+seo-description: List of styles and patterns in source PDF forms which Automated Forms Conversion service finds difficult to identify
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 9d107d2dfc64fd84d4f734ded5898612ce9a3295
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1247'
 ht-degree: 3%
 
 ---
@@ -33,12 +33,12 @@ ht-degree: 3%
 * 请勿上载受保护的表单。 该服务无法转换受密码保护和安全的表单。
 * 请勿上传[PDFPortfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将PDFPortfolio转换为自适应表单。
 * 请勿上载文件名中带空格的源表单。 在上传表单之前，从文件名中删除空格。
-* 请勿以英语、法语、德语和西班牙语以外的任何语言上传扫描、填写和表单。 此类表单不受支持。
+* 请勿以英语、法语、德语、西班牙语、意大利语和葡萄牙语以外的任何语言上传扫描、填写和表单。 此类表单不受支持。
 
 使用XDP表单进行转换时，请在上载源XPD表单之前执行以下步骤：
 
 * 分析XDP表单并修复可视化问题。 确保源文档使用预期的控件和结构。 例如，源表单可能包含复选框，而不是单选按钮。 将复选框更改为单选按钮，以生成包含预期组件的自适应表单。
-* [在开始转换之前，将](http://www.adobe.com/go/learn_aemforms_designer_65) 绑定添加到XDP格式。当源XDP表单中有绑定可用时，服务会在转换期间自动将绑定应用到相应的自适应表单字段。 它可节省手动应用绑定所需的时间。
+* [在开始转换之前，将](http://www.adobe.com/go/learn_aemforms_designer_65_cn) 绑定添加到XDP格式。当源XDP表单中有绑定可用时，服务会在转换期间自动将绑定应用到相应的自适应表单字段。 它可节省手动应用绑定所需的时间。
 * [将Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) 标记添加到XDP文件。该服务会自动将Adobe Sign标记转换为相应的自适应表单字段。 自适应Forms支持有限数量的Adobe Sign字段。 有关受支持字段的完整列表，请参阅[在自适应表单中使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en)文档。
 * 尽可能将XDP文档中的复杂表转换为简单表。 表格单元格中具有表单字段、大小不均的单元格、行或列跨越的单元格、合并的单元格、部分边框或无可见边框的表格被视为复杂表格。 包含上述任何一项的表被视为复杂表。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
@@ -77,13 +77,13 @@ AEM [!DNL Forms Automated Conversion service]使用人工智能和机器学习�
 
 ### 选择组  {#choice-group}
 
-| 图案 | 分辨率 |
+| 图案 | 解决方法 |
 |--- |--- |
 | **** <br> 除框或圆以外形状的PatternChoice组选项不会转换为相应的自适应表单组件。<br><br>**** <br> 分辨率将选择的形状更改为框或圆，或使用“审阅并更正”编辑器来识别形状。 | ![选择字段  ](assets/best-practice-choice-group-options.png) |
 
 ### 表单字段 {#form-fields}
 
-| 图案 | 分辨率 |
+| 图案 | 解决方法 |
 |--- |--- |
 | **** <br> PatternService不识别没有明确边框的字段。<br><br>**** <br> 解决办法使用审阅和更正编辑器来标识此类字段。 | ![具有非清除边界的字段](assets/best-practice-fields-without-clear-borders.png) |
 | **** <br> PatternService可能无法识别表单底部或右侧带有字幕的某些选择组表单字段。<br><br>**** <br> 解决办法使用审阅和更正编辑器来标识此类字段 | ![选择字段](assets/best-practice-caption-bottom-right.png) |
@@ -92,7 +92,7 @@ AEM [!DNL Forms Automated Conversion service]使用人工智能和机器学习�
 
 ### 列表 {#lists}
 
-| 图案 | 分辨率 |
+| 图案 | 解决方法 |
 |--- |--- |
 | **** <br>包含表单字段的模式列表会合并或不会转换为相应的自适应表单组件解决方案使用具有清晰边界的表 <br><br>**** <br>单字段，或使用“审阅并更正”编辑器来修复此类问题。 | ![包含选择组的列表](assets/best-practice-lists-containing-form-fields.png) |
 | **** <br>PatternService可以保留一些未识别的嵌套列表，使用 <br><br>**** <br> “审阅”和“更正”编辑器来修复此类问题。 | ![包含选择组的列表](assets/best-practice-nested-lists.png) |

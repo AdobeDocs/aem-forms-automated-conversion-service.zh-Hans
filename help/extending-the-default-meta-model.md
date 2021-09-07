@@ -1,15 +1,15 @@
 ---
 title: 扩展默认元模型
-seo-title: 扩展默认元模型
+seo-title: Extend the default meta-model
 description: 扩展默认元模型以添加特定于贵组织的模式、验证和实体，并在运行Automated forms conversion服务时将配置应用到自适应表单字段。
-seo-description: 扩展默认元模型以添加特定于贵组织的模式、验证和实体，并在运行Automated forms conversion服务时将配置应用到自适应表单字段。
+seo-description: Extend the default meta-model to add pattern, validations, and entities specific to your organization and apply configurations to adaptive form fields while running the Automated Forms Conversion service.
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 28e07a0264edaaeef22d211f411f7908ca0abaed
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '2591'
+source-wordcount: '2565'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ automated forms conversion服务从源表单中标识和提取表单对象。 �
 
 ## 缺省元模型 {#default-meta-model}
 
-automated forms conversion服务具有默认的元模型。 它是JSON架构，并且与Adobe服务的其他组件一起驻留在Automated forms conversion云中。 您可以在本地AEM服务器上找到元模型的副本：http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`。 您也可以[单击此处](assets/en.globalschema.json)访问或下载英语架构。 [法语](assets/fr.globalschema.json)、[德语](assets/de.globalschema.json)和[西班牙语](assets/es.globalschema.json)语言的元模型也可供下载。
+automated forms conversion服务具有默认的元模型。 它是JSON架构，并且与Adobe服务的其他组件一起驻留在Automated forms conversion云中。 您可以在本地AEM服务器上找到元模型的副本：http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`。 您也可以[单击此处](assets/en.globalschema.json)访问或下载英语架构。 此外，还可以下载[法语](assets/fr.globalschema.json)、[德语](assets/de.globalschema.json) [西班牙语](assets/es.globalschema.json)、[意大利语](assets/it.globalschema.json)和[葡萄牙语](assets/pt_br.globalschema.json)语言的元模型。
 
 元模型的模式是从https://schema.org/docs/schemas.html上的模式实体派生的。 它具有人员、邮政地址、本地业务和更多实体，定义在https://schema.org上。 元模型的每个实体都与JSON模式对象类型相符。 以下代码表示一个示例元模型结构：
 
@@ -222,6 +222,8 @@ automated forms conversion服务在转换期间对源表单执行关键词搜索
 * 法语(fr)
 * 德语(de)
 * 西班牙语(es)
+* 意大利语(it)
+* 葡萄牙语(pt-br)
 
 将&#x200B;*aem:Language*&#x200B;元标记添加到元模型顶部以指定其语言。 例如，
 

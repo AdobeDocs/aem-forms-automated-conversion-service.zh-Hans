@@ -1,15 +1,15 @@
 ---
 title: 已知问题
-seo-title: 已知问题
+seo-title: Known Issues
 description: automated forms conversion服务的已知问题和限制
-seo-description: 在开始使用AEM FormsAutomated forms conversion服务之前，请了解该服务的已知问题和限制
+seo-description: Before you begin using AEM Forms Automated Forms Conversion service, learn about the known issues and limitations of the service
 uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 1%
 * 不支持大于15页的PDF forms。
 * 加密的、受密码保护的和安全的文档不会进行转换。 在运行转换之前，请删除加密或密码。
 * 不支持诸如无边距表、嵌套表和具有占位符值的表之类的复杂表。 转换后，使用自适应表单编辑器添加或修改复杂表。 仅支持具有空字段、正确标题和清除边界的简单表。
-* 该服务仅将英语、法语、德语和西班牙语表单转换为自适应表单。 您可以使用[AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将转换后的自适应表单翻译成其他语言。
+* 该服务仅将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您可以使用[AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将转换后的自适应表单翻译成其他语言。
 * AEM 6.4 Forms不支持自动检测输入表单的多列布局。
 * 使用源PDF表单中的颜色编码的信息不会传递到自适应表单。
 * 源PDF表单的颜色不会传递到自适应表单主题。

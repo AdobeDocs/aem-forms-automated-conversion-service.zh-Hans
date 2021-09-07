@@ -1,15 +1,15 @@
 ---
 title: 常见问题
-seo-title: 常见问题
+seo-title: Frequently asked questions
 description: 常见查询或常见问题解答
-seo-description: automated forms conversion服务常见问题解答
+seo-description: frequently asked questions for Automated Forms Conversion Service
 uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1821'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ ht-degree: 3%
    <p>该服务可以将非交互式PDF forms、基于XFA的XDP和PDF forms以及AcroForms转换为自适应表单。 该服务不支持扫描或填写的表单。 有关其他限制，请参阅<a href="known-issues.md">已知问题</a>一文。<br /> </p> 
     <p>我们将定期添加对其他源类型的支持。 将<a href="introduction.md">受支持的PDF表单</a>部分保留在您的观看列表中，以定期更新新添加的特性和功能。</p>
 
-   该服务只能将英语、法语、德语和西班牙语表单转换为自适应表单。 您可以使用[AEM翻译工作流将生成的自适应表单翻译成其他语言。](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   该服务只能将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您可以使用[AEM翻译工作流将生成的自适应表单翻译成其他语言。](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **该服务能否生成XDP而不是自适应表单？**
 
@@ -126,7 +126,7 @@ ht-degree: 3%
    1. 停止AEM实例。 导航到`[AEM installation directory]\crx-quickstart\conf\`文件夹。 打开sling.properties文件进行编辑。 如果您使用`[AEM installation directory]\crx-quickstart\bin\start.bat`启动AEM实例，请编辑位于`[AEM_root]\crx-quickstart\`的sling.properties。
    1. 将以下属性添加到sling.properties文件：<br/> `sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*`<br />  `sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*`<br /> `sling.bootdelegation.xerces=org.apache.xerces.*`
    1. 保存并关闭文件。<br/>
-   1. 启动AEM实例。<br/>
+   1. 启动 AEM 实例。<br/>
 
    <br/>
 
