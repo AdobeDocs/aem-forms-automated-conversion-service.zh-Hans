@@ -1,13 +1,13 @@
 ---
-source-git-commit: 2f85c45eda63751a60997d670804c34e21634359
+source-git-commit: 1cef5bea746a63d0c8f8819f919c75f5d6aa96e9
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-# Contributing to Adobe Experience Manager Cloud Service Documentation
+# 为AEM Forms自动转换服务文档贡献内容
 
-感谢您选择向 Adobe Experience Manager Cloud Service 文档贡献内容！我们由衷欢迎整个读者社区以及 Adobe 员工贡献内容。
+感谢您选择贡献AEM Forms自动转换服务文档！ 我们由衷欢迎整个读者社区以及 Adobe 员工贡献内容。
 
 本文将介绍如何贡献内容，并列出了贡献内容时应遵循的准则。
 
