@@ -2,10 +2,10 @@
 title: 新增功能 发行说明 - 自动化表单转换服务
 description: 了解自动化表单转换服务的最新功能和错误修复
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 833cada8efcc3f0a0e5788c1ab99a95d814e0153
+source-git-commit: eab71506513605728d8f925ab6e7e9bead7ca6fc
 workflow-type: tm+mt
-source-wordcount: '421'
-ht-degree: 71%
+source-wordcount: '451'
+ht-degree: 66%
 
 ---
 
@@ -22,13 +22,17 @@ ht-degree: 71%
 * 特别说明
 * 未来变更计划
 
-## 2021年7月29日(AFC-2021.08.0) {#aug-2021}
+## 2022年2月24日(AFC-2022.02.0) {#feb-2022}
+
+* 向 [自动将区段转换为片段](convert-existing-forms-to-adaptive-forms.md) 以帮助提高已转换表单的渲染速度，并更便于在自适应表单编辑器中加载大型表单。
+
+## 2021年8月29日(AFC-2021.08.0) {#aug-2021}
 
 * 添加了将意大利语和葡萄牙语PDF forms转换为自适应表单的功能。
 
 ## 2021年7月29日(AFC-2021.07.2) {#july-2021}
 
-* 添加了将法语、德语和西班牙语版本的PDF表单转换为自适应表单的功能。
+* 添加了将法语、德语和西班牙语PDF表单转换为自适应表单的功能。
 
 ## 2021年6月24日(AFC-2021.06.2) {#june-2021}
 
@@ -57,7 +61,6 @@ ht-degree: 71%
 ### 改进内容 {#jul-2020-improvements}
 
 改进了文本、表单和选择组等字段向相应自适应表单组件的自动转换。
-
 
 ## 2020 年 3 月 20 日（AFC-2020.03.1） {#mar-2020}
 
