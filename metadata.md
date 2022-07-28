@@ -1,10 +1,9 @@
 ---
 cloud: Experience Cloud
 mini-toc-levels: 2
-git-repo: https://git.corp.adobe.com/AdobeDocs/aem-forms-automated-conversion-service.zh-Hans
+git-repo: https://github.com/AdobeDocs/aem-forms-automated-conversion-service.zh-Hans
 index: y
 feature-set: Experience Manager Forms
-translation-type: tm+mt
 source-git-commit: 8c4cf4ff72e9ca7e8daa76f495abd75a865cd2f7
 workflow-type: tm+mt
 source-wordcount: '130'
