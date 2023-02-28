@@ -32,4 +32,4 @@ ht-degree: 100%
 + [使用 AEM 工作流实现自适应表单与数据库集成](submit-converted-adaptive-form-to-database.md)
 + [常见问题](frequently-asked-questions.md)
 + [已知问题](known-issues.md)
-+ [故障诊断](troubleshoot-afcs.md)
++ [疑难解答](troubleshoot-afcs.md)
