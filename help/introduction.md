@@ -16,24 +16,24 @@ ht-degree: 70%
 * 省去采用人工方式将打印表单转换为自适应表单时的繁琐过程
 * 在转换期间自动应用相应模式和适当验证
 * 在转换期间生成记录文件
-* 将常见字段分组为可重用表单片段
+* 將常見欄位分組為可重複使用的表單片段
 * 在转换期间启用 Adobe Analytics
 
-![操作很简单。 您为我们提供源表单，并将所有内容留给我们。 我们为您提供漂亮的自适应表单。 您始终可以对输出内容进行修改，直至满意为止。](assets/pdf-to-adaptive-form-gitx50.gif)
+![操作很简单。 您提供來源表單，其餘一切交給我們。 我們為您提供美觀的最適化表單。 您可以隨時修改成果以致完美。 ](assets/pdf-to-adaptive-form-gitx50.gif)
 
-## 入门 {#onboarding}
+## 入门培训 {#onboarding}
 
-AEM 6.4 Forms和AEM 6.5 Forms内部部署客户和Adobe管理服务企业客户可免费使用此服务。 欲访问服务，请联系 Adobe 销售团队或 Adobe 代表。此外，AEM Forms作为Cloud Service客户，还可免费使用并预启用该服务。
+AEM 6.4 Forms和AEM 6.5 Forms內部部署定期客戶和Adobe管理服務企業客戶可免費使用該服務。 欲访问服务，请联系 Adobe 销售团队或 Adobe 代表。AEM Formsas a Cloud Service客戶也可以免費使用此服務並預先啟用該服務。
 
 Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各种所需权限。 管理员可以向贵企业的 AEM Forms 开发人员（用户）授予权限并连接到该服务。 有关详细信息，请参见[“配置自动化表单转换服务”](configure-service.md)。
 
-## 支持的PDF forms和语言 {#supported-languages-and-pdf-forms}
+## 支援的PDF forms和語言 {#supported-languages-and-pdf-forms}
 
 此服务支持非交互式 PDF 表单、由 Adobe Acrobat 创建的 AcroForms 表单、以及由 AEM Forms 或 Adobe LiveCycle 创建的 XFA 表单。
 
-该服务还支持启用Adobe Sign的PDF forms。 如果源 PDF 表单具有 Adobe Sign 文本标记，则该服务将在转换期间保留所有与 Adobe Sign 相关的信息，并将源 PDF 中的签名者信息与相应的自适应表单字段相关联。 该功能仅适用于 AcroForms。
+此服務也支援啟用Adobe Sign的PDF forms。 如果源 PDF 表单具有 Adobe Sign 文本标记，则该服务将在转换期间保留所有与 Adobe Sign 相关的信息，并将源 PDF 中的签名者信息与相应的自适应表单字段相关联。 该功能仅适用于 AcroForms。
 
-该服务可将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您还可以使用[AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将生成的自适应表单翻译成其他语言。
+此服務可將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您也可以使用將產生的調適型表單翻譯成其他語言 [AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 
 ## 转换工作流  {#conversion-workflow}
 
@@ -50,14 +50,14 @@ Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各�
 配置好 AEM 表单环境后，若要将 PDF 表单转换为自适应表单，先[将 PDF 表单](convert-existing-forms-to-adaptive-forms.md)上传到 AEM 实例，然后[开始转换](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 上传表单之前，请注意以下几点：
 
 * 请勿上传受保护的表单。 该服务无法转换受密码保护和加密的表单。
-* 请勿以英语、法语、德语、西班牙语、意大利语和葡萄牙语以外的任何语言上传扫描的、彩色的、已填充的表单和表单。 此类表单不受支持。
+* 請勿上傳英文、法文、德文、西班牙文、義大利文和葡萄牙文以外任何語言的掃描、彩色、填寫的表單和表單。 此类表单不受支持。
 * 请勿上传文件名中带空格的 PDF 表单。
-* 请勿上传 [PDF 产品组合](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将PDFPortfolio转换为自适应表单。
+* 请勿上传 [PDF 产品组合](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將PDFPortfolio轉換為最適化表單。
 * 对 PDF 表单进行修改，详情参见[“最佳实践和注意事项”](styles-and-pattern-considerations-and-best-practices.md)文章。
 * 阅读[“已知问题”](known-issues.md)避免出现意外故障。
 
 ### 3. 查看转换后的表单 {#review-converted-forms}
 
-真实世界表单在字段布局、命名或隐式建议方面可能具有复杂的数据捕获要求，而基于AI/ML的检测逻辑可能无法准确捕获这些要求。 自动化转换完成后，您可使用[审阅和修正编辑器](review-correct-ui-edited.md)对转换后的表单进行审核并作必要更新，生成更符合要求的输出效果。 完成必要更改后，再次发送表单进行转换。
+現實世界的表單在欄位配置、命名或隱含建議方面可能具有複雜的資料擷取需求，而基於AI/ML的檢測邏輯可能無法準確擷取這些表單。 自动化转换完成后，您可使用[审阅和修正编辑器](review-correct-ui-edited.md)对转换后的表单进行审核并作必要更新，生成更符合要求的输出效果。 完成必要更改后，再次发送表单进行转换。
 
-自动转换所花费的时间取决于各种因素，如输入表单的大小、表单的复杂性、服务处理队列的借出。 文件夹/文件上的状态指示器会定期向用户发送转换进度通知。 转换完成后，系统还会向配置的电子邮件地址发送通知。
+自動轉換所需的時間取決於多種因素，例如輸入表單的大小、表單的複雜性，以及服務的處理佇列上所缺的時間。 文件夹/文件上的状态指示器会定期向用户发送转换进度通知。 转换完成后，系统还会向配置的电子邮件地址发送通知。

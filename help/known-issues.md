@@ -1,7 +1,7 @@
 ---
 title: 已知问题
 seo-title: Known Issues
-description: automated forms conversion服务的已知问题和限制
+description: automated forms conversion服務的已知問題和限制
 seo-description: Before you begin using AEM Forms Automated Forms Conversion service, learn about the known issues and limitations of the service
 uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
@@ -14,69 +14,69 @@ ht-degree: 1%
 
 ---
 
-# 已知问题和限制 {#known-issues-limitations}
+# 已知問題和限制 {#known-issues-limitations}
 
-在开始使用AEM FormsAutomated forms conversion服务之前，请查看以下已知问题和限制：
+開始使用AEM FormsAutomated forms conversion服務之前，請檢閱下列已知問題和限制：
 
 ## 已知问题 {#known-issues}
 
-* 包含表单进行转换的文件夹，其表单总数不应超过15个，页面应不超过50个。 源文件夹的大小不应超过10 MB。 请勿在源文件夹中创建子文件夹。
-* 某些形式的对象在人眼中很容易看到，但是[难以识别服务](styles-and-pattern-considerations-and-best-practices.md)。 使用[Review and recort editor](review-correct-ui-edited.md)标识和转换此类表单对象。
-* 审阅和更正编辑器：
+* 包含轉換表單的資料夾的表單和頁面總數不應超過15個。 來源資料夾的大小不應超過10 MB。 請勿在來源資料夾中建立子資料夾。
+* 某些表單物件很容易被肉眼看見，但是 [難以識別服務](styles-and-pattern-considerations-and-best-practices.md). 使用 [檢閱並修正編輯器](review-correct-ui-edited.md) 以識別及轉換這類表單物件。
+* 檢閱並修正編輯器：
 
-   * 没有撤消操作。 保存按钮可永久保存更改。
-   * 不支持基于XFA的表单的可重复面板。
-   * 如果使用“审阅并修正”编辑器修改表中的列表，则行宽不会自动调整，文本可能会溢出到表的下一行。
-   * **[!UICONTROL Auto-detect multi-column layout from input forms]**&#x200B;功能不适用于审阅和更正编辑器及表单片段。
-   * 为已发布的自适应表单加载使用审阅和更正编辑器创建的涂写签名失败。
+   * 沒有復原動作。 「儲存」按鈕會永久儲存變更。
+   * 不支援XFA型表單的可重複面板。
+   * 如果您使用「稽核並修正」編輯器修改表格中的清單，列寬不會自動調整，且文字可能會溢位到表格的下一列。
+   * 此 **[!UICONTROL Auto-detect multi-column layout from input forms]** 功能無法用於檢閱和修正編輯器和表單片段。
+   * 使用「稽核並修正」編輯器建立的手寫簽名無法載入已發佈的最適化表單。
 
 
-* 对于基于XFA的表单：
-   * 不支持从基于XFA的表单中提取片段。
-   * 不支持XFA脚本。 例如，用于为下拉组件自动生成值的脚本。
-   * 元模型不适用于选择组
-   * 单个字符的“选择组”选项未被识别
-   * 如果源文档是动态XFA(.XDP)，并且[定义自适应表单](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)中XFA属性的行为，则源文档的存在属性将不受支持。 例如，源文档中的字段被标记为隐藏，并且脚本使该字段可见，然后该字段在输出自适应表单中保持可见。
+* 對於XFA型表單：
+   * 不支援從XFA型表單擷取片段。
+   * 不支援XFA指令碼。 例如，自動為下拉式元件產生值的指令碼。
+   * 中繼模型不適用於選擇群組
+   * 無法識別含有單一字元的「選擇群組」選項
+   * 當來原始檔是動態XFA (.XDP)並且它是 [定義最適化表單中XFA屬性的行為](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)，則不會遵循來原始檔的presence屬性。 例如，來原始檔中的欄位標籤為隱藏，而指令碼使欄位可見，則欄位在輸出最適化表單中保持可見。
 
-* 对生成的自适应表单&#x200B;**使用**&#x200B;使用输入AcroForm作为记录文档(DoR)选项时，请考虑以下事项：
+* 當您使用 **針對產生的最適化表單，使用輸入AcroForm作為記錄檔案(DoR)** 選項，請考量下列事項：
 
 <table>
     <tr>
-        <td>复合文本字段的绑定和数据将丢失。 复合文本字段具有多个彼此对齐的文本框。 例如，在AcroForm中，信用卡号被拆分为多个文本框，每个文本框都有单独的绑定。 当AcroForm转换为自适应表单时，转换后的自适应表单对所有文本框都有一个绑定。 作为解决方法，在将AcroForm转换为自适应表单之前，请修改AcroForm以使用单个文本框来接受信用卡号。</td>
+        <td>複合文字欄位的繫結和資料遺失。 複合文字欄位有多個文字方塊彼此對齊。 例如，在AcroForm中，信用卡號碼會分割成多個文字方塊，而每個文字方塊都有個別的繫結。 當AcroForm轉換為最適化表單時，轉換後的最適化表單具有適用於所有文字方塊的單一繫結。 做為因應措施，在將AcroForm轉換為最適化表單之前，請修改AcroForm以使用單一文字方塊來接受信用卡號碼。</td>
         <td><img  src="assets/creditCard_Composite.png"/>                                                            </td>
     </tr>
     <tr>
-        <td>复合日期字段的绑定和数据将丢失。 复合日期字段由三个不同的字段组成。 例如，AcroForm中的出生日期字段被拆分为三个单独的字段。 自适应表单提供了一个现成的日期选取器组件。 要在保留AcroForm绑定的同时使用自适应表单的日期选取器组件，请在将AcroForm转换为自适应表单之前，修改AcroForm以使用单个日期字段。</td>
+        <td>複合日期欄位的繫結和資料遺失。 複合日期欄位由三個不同的欄位組成。 例如，AcroForm中的出生日期欄位會分割為三個個別的欄位。 最適化表單提供現成的日期選擇器元件。 若要使用最適化表單的日期選擇器元件同時保留AcroForm的繫結，在將AcroForm轉換為最適化表單之前，請修改AcroForm以使用單一日期欄位。</td>
         <td><img  src="assets/CompositeDateField.png"/></td>
     </tr>
     <tr>
-        <td>如果复选框的大小大于随附文本，则不会检测到复选框，并且AcroForm中的绑定将丢失。 修改AcroForm以使复选框的大小小于随附文本。</td>
+        <td>如果核取方塊的大小大於隨附的文字，則不會偵測到核取方塊，且AcroForm中的繫結會遺失。 修改AcroForm，使核取方塊的大小小於隨附的文字。</td>
         <td><img  src="assets/large-text-box.png"/><br/><img  src="assets/small-text-box.png"/></td>
     </tr>
     <tr>
-        <td>如果输入字段与相应的文本字段不对齐，则不会检测输入字段。  </td>
+        <td>如果輸入欄位未對齊對應的文字欄位，則不會偵測到輸入欄位。  </td>
         <td><img  src="assets/non-alingned-fields.png"/></td>
     </tr>
     <tr >
-        <td>该服务将AcroForm的所有复选框转换为单独的选择组。 将创建单独的选择组以保留与AcroForm的绑定。 请勿在自适应表单中合并选择组。 这会导致绑定丢失。 如果合并选择组，请再次转换表单以重新获得丢失的绑定。 </td>
+        <td>此服務會將AcroForm的所有核取方塊轉換為個別的選擇群組。 會建立個別的選擇群組以保留與AcroForm的繫結。 請勿在最適化表單中合併選擇群組。 這會導致連結遺失。 如果您合併選擇群組，請再次轉換表單以重新取得遺失的繫結。 </td>
         <td></td>
     </tr>
     <tr >
-        <td>某些表格的边界在自动生成的记录文档(DoR)中从页面外扩展。 </td>
+        <td>某些表格的邊界會延伸出自動產生的記錄檔案(DoR)中的頁面。 </td>
         <td></td>
     </tr>
 </table>
 
 ## 限制 {#limitations}
 
-* 不支持具有复杂动态布局的PDF forms、具有虚线轮廓的字段或已填充的字段。
-* 图像内的图像和文本未被识别。 手动将图像添加到已转换的表单。
-* 不支持图稿XDP文档。
-* 不支持大于15页的PDF forms。
-* 加密的、受密码保护的和安全的文档不会进行转换。 在运行转换之前，请删除加密或密码。
-* 不支持诸如无边距表、嵌套表和具有占位符值的表之类的复杂表。 转换后，使用自适应表单编辑器添加或修改复杂表。 仅支持具有空字段、正确标题和清除边界的简单表。
-* 该服务仅将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您可以使用[AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将转换后的自适应表单翻译成其他语言。
-* AEM 6.4 Forms不支持自动检测输入表单的多列布局。
-* 使用源PDF表单中的颜色编码的信息不会传递到自适应表单。
-* 源PDF表单的颜色不会传递到自适应表单主题。
-* 彩色PDF forms被视为灰度形式，并相应地检测字段。
+* 不支援具有複雜動態版面的PDF forms、具有虛線外框的欄位或填滿的欄位。
+* 無法識別影像內的影像和文字。 手動將影像新增至轉換後的表單。
+* 不支援圖稿XDP檔案。
+* 不支援超過15頁的PDF forms。
+* 加密、密碼保護及安全檔案不會轉換。 執行轉換前，請先移除加密或密碼。
+* 不支援複雜表格，例如無邊框表格、巢狀表格和具有預留位置值的表格。 轉換後，使用最適化表單編輯器新增或修改複雜表格。 僅支援具有空白欄位、適當標題和清除邊界的簡單表格。
+* 此服務僅能將英文、法文、德文、西班牙文、義大利文和葡萄牙文的語言表單轉換為最適化表單。 您可以使用將已轉換的最適化表單翻譯成另一種語言 [AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+* AEM 6.4 Forms不支援自動偵測輸入表單的多欄配置。
+* 使用來源PDF表單中的顏色編碼的資訊不會轉存至最適化表單。
+* 來源PDF表單的顏色不會移轉至最適化表單主題。
+* 會將彩色PDF forms視為灰階表單，並據此偵測欄位。

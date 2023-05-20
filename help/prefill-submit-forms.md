@@ -1,8 +1,8 @@
 ---
 title: 基于数据源的预填充和提交工作流建议（用于生成自适应表单）
-seo-title: 自适应表单的预填和提交选项
-description: 基于数据源的预填充和提交工作流，用于使用Automated forms conversion服务生成的自适应表单。
-seo-description: 基于数据源的预填充和提交工作流，用于使用Automated forms conversion服务生成的自适应表单。
+seo-title: Prefill and submit options for adaptive forms
+description: 針對使用Automated forms conversion服務產生的最適化表單，以資料來源為基礎的預填和提交工作流程。
+seo-description: Data-source based prefill and submit workflows for adaptive forms generated using Automated Forms Conversion Service.
 uuid: 91409a82-141c-4233-82b1-1539a0b250f8
 contentOwner: khsingh
 topic-tags: forms
@@ -11,121 +11,121 @@ privatebeta: true
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
 source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
-source-wordcount: '2459'
+source-wordcount: '2437'
 ht-degree: 2%
 
 ---
 
 # 基于数据源的预填充和提交工作流建议（用于生成自适应表单） {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
-您可以将以下任何数据源与使用Automated forms conversion服务转换的自适应表单一起使用：
+您可以透過Automated forms conversion服務轉換的最適化表單來使用下列任何資料來源：
 
-* 表单数据模型、OData或任何其他第三方服务
-* JSON架构
-* XSD架构
+* 表單資料模型、OData或任何其他協力廠商服務
+* JSON結構
+* XSD結構描述
 
-根据数据源，您可以选择生成包含或不包含数据模型的自适应表单。
+根據資料來源，您可以選擇產生含有或不含資料模型的最適化表單。
 
-本文介绍了在选择数据源并使用转换服务生成自适应表单后，用于预填字段值和提交选项的推荐工作流。
+本文說明在選取資料來源並使用轉換服務產生最適化表單後，要預先填入欄位值和提交選項的建議工作流程。
 
 <table> 
  <tbody> 
   <tr> 
    <th><strong>数据源</strong></th> 
-   <th><strong>推荐的工作流</strong></th> 
+   <th><strong>建議的工作流程</strong></th> 
   </tr> 
   <tr> 
-   <td><p>表单数据模型、OData或任何其他第三方服务</p></td> 
+   <td><p>表單資料模型、OData或任何其他協力廠商服務</p></td> 
    <td> 
-    <p><strong>选项1</strong>:选择表单数据模型、OData或任何其他第三方服务作为数据源。您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服务生成一个没有数据绑定的自适应表单</a>。 您可以绑定自适应表单字段以手动形成数据模型实体，并使用表单数据模型预填充服务选项来预填充字段值。 使用使用表单数据模型提交选项提交自适应表单。</p></td> 
+    <p><strong>選項1</strong>：您選取表單資料模型、OData或任何其他協力廠商服務作為資料來源。 您 <a href="#generate-adaptive-forms-with-no-data-binding">產生無資料繫結的最適化表單</a> 使用Automated forms conversion服務。 您可以手動將最適化表單欄位繫結至表單資料模型實體，並使用「表單資料模型預填服務」選項來預填欄位值。 您可以使用「使用表單資料模型提交」選項來提交最適化表單。</p></td> 
   </tr>
   <tr> 
    <td></td> 
    <td> 
-   <p><strong>选项2</strong>:选择表单数据模型、OData或任何其他第三方服务作为数据源。您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服务生成一个没有数据绑定的自适应表单</a>。 您可以使用规则编辑器绑定自适应表单字段以预填充字段值。 根据需要修改字段值，并将数据提交到crx-repository。</p>
+   <p><strong>選項2</strong>：您選取表單資料模型、OData或任何其他協力廠商服務作為資料來源。 您 <a href="#generate-adaptive-forms-with-no-data-binding">產生無資料繫結的最適化表單</a> 使用Automated forms conversion服務。 您可以使用規則編輯器繫結最適化表單欄位以預填欄位值。 如有必要，請修改欄位值，並將資料提交到crx-repository。</p>
     </td> 
   </tr>
   <tr> 
    <td></td> 
    <td> 
-    <p>有关执行这些工作流的分步说明，请参阅<a href="#sqldatasource">使用数据库、OData或任何第三方服务作为数据源。</a></p> </td> 
+    <p>如需執行這些工作流程的逐步指示，請參閱 <a href="#sqldatasource">使用資料庫、OData或任何協力廠商服務做為資料來源。</a></p> </td> 
   </tr>
   <tr>
-  <td><p>JSON架构</p></td> 
+  <td><p>JSON結構描述</p></td> 
    <td> 
-    <p>您选择JSON架构作为数据源。 基于选定的数据源：</p></td> 
-  </tr>
-  <tr>
-  <td></td> 
-   <td> 
-    <p><strong>选项1</strong>:您可 <a href="#generate-adaptive-forms-with-no-data-binding">以使用Automated forms conversion服务生成无数</a> 据绑定的自适应表单，并将JSON模式配置为数据源。手动将自适应表单字段绑定到JSON模式，并<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支持的协议</a>来预填充字段值。 根据需要修改字段值，并将数据提交到crx-repository。</p></td> 
+    <p>您可以選取JSON結構描述作為資料來源。 根據選取的資料來源：</p></td> 
   </tr>
   <tr>
   <td></td> 
    <td> 
-    <p>有关执行工作流的分步说明，请参阅<a href="#jsondatasource">使用JSON模式作为数据源。</p></td> 
+    <p><strong>選項1</strong>：您 <a href="#generate-adaptive-forms-with-no-data-binding">產生無資料繫結的最適化表單</a> 使用Automated forms conversion服務並設定JSON結構描述作為資料來源。 您可以手動將最適化表單欄位繫結到JSON結構描述，並且 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a> 以預填欄位值。 如有必要，請修改欄位值，並將資料提交到crx-repository。</p></td> 
   </tr>
   <tr>
   <td></td> 
    <td> 
-    <p><strong>选项2</strong>:您可 <a href="#generate-adaptive-forms-with-json-binding">以使用Automated forms conversion服务生成包含</a> JSON数据的自适应表单。预填充服务和表单提交功能无缝。 您无需执行任何配置步骤。</p> </td> 
+    <p>如需執行工作流程的逐步指示，請參閱 <a href="#jsondatasource">使用JSON結構描述作為資料來源。</p></td> 
+  </tr>
+  <tr>
+  <td></td> 
+   <td> 
+    <p><strong>選項2</strong>：您 <a href="#generate-adaptive-forms-with-json-binding">產生具有JSON資料繫結的最適化表單</a> 使用Automated forms conversion服務。 預填服務與表單提交功能可順暢運作。 您不需要任何設定步驟。</p> </td> 
   </tr>
    <tr>
   <td></td> 
    <td> 
-    <p>有关执行工作流的分步说明，请参阅<a href="#jsonwithdatabinding">使用JSON模式作为数据源。</a></p> </td> 
+    <p>如需執行工作流程的逐步指示，請參閱 <a href="#jsonwithdatabinding">使用JSON結構描述作為資料來源。</a></p> </td> 
   </tr>
   <tr>
-  <td><p>XSD架构</p></td> 
+  <td><p>XSD結構描述</p></td> 
    <td> 
-    <p>选择XSD架构作为数据源。 根据选定的数据源，使用Automated forms conversion服务<a href="#generate-adaptive-forms-with-no-data-binding">生成没有数据绑定的自适应表单</a>，并配置XSD架构作为数据源。 您可以手动将自适应表单字段绑定到XSD架构，并且<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支持的协议</a>来预填充字段值。 根据需要修改字段值，并将数据提交到crx-repository。</p>
+    <p>選取XSD結構描述作為資料來源。 根據所選的資料來源，您 <a href="#generate-adaptive-forms-with-no-data-binding">產生無資料繫結的最適化表單</a> 使用Automated forms conversion服務並設定XSD結構描述作為資料來源。 您手動將最適化表單欄位繫結到XSD結構描述，並且 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a> 以預填欄位值。 如有必要，請修改欄位值，並將資料提交到crx-repository。</p>
     </td> 
   </tr>
   <tr>
   <td></td> 
    <td> 
-    <p>有关执行工作流的分步说明，请参阅<a href="#xsddatasource">使用XSD架构作为数据源。</a></p>
+    <p>如需執行工作流程的逐步指示，請參閱 <a href="#xsddatasource">使用XSD結構描述作為資料來源。</a></p>
     </td> 
   </tr>
  </tbody> 
 </table>
 
 
-有关Automated forms conversion服务的更多信息，请参阅以下文章：
+如需Automated forms conversion服務的詳細資訊，請參閱下列文章：
 
 * [自动化表单转换服务简介](introduction.md)
 * [配置自动化表单转换服务](configure-service.md)
 * [将打印表单转换为自适应表单](convert-existing-forms-to-adaptive-forms.md)
 * [审阅并修正转换后的表单](review-correct-ui-edited.md)
 
-本文提供的信息基于以下假设：阅读该信息的任何人都具有自适应表单概念的基本知识。
+本文提供的資訊是根據以下假設，即任何閱讀者都具備調適型表單概念的基本知識。
 
-## 先决条件{#pre-requisites}
+## 先決條件 {#pre-requisites}
 
-* 配置[AEM创作实例](https://helpx.adobe.com/cn/experience-manager/6-5/sites/deploying/using/deploy.html)
-* 在AEM创作实例](configure-service.md)上配置[Automated forms conversion服务
+* 設定 [AEM作者執行個體](https://helpx.adobe.com/cn/experience-manager/6-5/sites/deploying/using/deploy.html)
+* 設定 [在AEM編寫執行個體上Automated forms conversion服務](configure-service.md)
 
-## 自适应表单{#sample-adaptive-form}示例
+## 最適化表單範例 {#sample-adaptive-form}
 
-要执行用例以在自适应表单中预填充字段值并将其提交到数据源，请下载以下示例PDF文件。
+若要執行使用案例以預先填入最適化表單中的欄位值並將它們提交至資料來源，請下載以下範例PDF檔案。
 
-贷款申请表样例
+貸款申請表範例
 
 [获取文件](assets/sample_loan_application_form.pdf)
 
-PDF文件用作Automated forms conversion服务的输入。 该服务将此文件转换为自适应表单。 下图描述了PDF格式的示例贷款应用程序。
+PDF檔案可作為Automated forms conversion服務的輸入。 此服務會將此檔案轉換為最適化表單。 下圖以PDF格式說明範例貸款申請。
 
-![贷款申请表样本](assets/sample_form_new.png)
+![貸款申請表範例](assets/sample_form_new.png)
 
-## 为表单模型{#prepare-data-for-form-model}准备数据
+## 為表單模型準備資料 {#prepare-data-for-form-model}
 
-AEM Forms数据集成允许您配置不同的数据源并将其连接到不同的数据源。 使用转换过程生成自适应表单后，您可以根据表单数据模型、XSD或JSON架构定义表单模型。 您可以使用数据库、Microsoft Dynamics或任何其他第三方服务来创建表单数据模型。
+AEM Forms資料整合可讓您設定並連線至不同的資料來源。 使用轉換程式產生最適化表單後，您可以根據表單資料模型、XSD或JSON結構描述定義表單模型。 您可以使用資料庫、Microsoft Dynamics或任何其他協力廠商服務來建立表單資料模型。
 
-本教程使用MySQL数据库作为创建表单数据模型的源。 在数据库中创建&#x200B;**loanapplication**&#x200B;架构，并根据自适应表单中可用的字段向架构添加&#x200B;**applicant**&#x200B;表。
+本教學課程使用MySQL資料庫作為建立表單資料模型的來源。 建立 **loanapplication** 資料庫中的綱要並新增 **應徵者** 根據最適化表單中可用的欄位，將表格變更為結構描述。
 
-![示例数据mysql](assets/sample_data_mysql.png)
+![範例資料mysql](assets/sample_data_mysql.png)
 
-可以使用以下DDL语句在数据库中创建&#x200B;**applicant**&#x200B;表。
+您可以使用下列DDL陳述式來建立 **應徵者** 資料庫的資料表。
 
 ```sql
 CREATE TABLE `applicant` (
@@ -140,7 +140,7 @@ CREATE TABLE `applicant` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-如果您使用XSD架构作为表单模型来执行用例，请使用以下文本创建XSD文件：
+如果您使用XSD結構描述作為表單模型來執行使用案例，請建立包含以下文字的XSD檔案：
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -165,15 +165,15 @@ CREATE TABLE `applicant` (
   </xs:schema>
 ```
 
-或将XSD架构下载到本地文件系统。
+或將XSD結構描述下載至本機檔案系統。
 
-贷款应用程序XSD架构的示例
+範例貸款應用程式XSD結構描述
 
 [获取文件](assets/loanapplication.xsd)
 
-有关在自适应表单中使用XSD架构作为表单模型的更多信息，请参阅[使用XML架构创建自适应表单](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html)。
+如需有關在最適化表單中使用XSD結構描述作為表單模型的詳細資訊，請參閱 [使用XML結構描述建立調適型表單](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html).
 
-如果您使用JSON模式作为表单模型来执行用例，请使用以下文本创建JSON文件：
+如果您使用JSON結構描述作為表單模型來執行使用案例，請建立包含以下文字的JSON檔案：
 
 ```JSON
 {
@@ -215,195 +215,194 @@ CREATE TABLE `applicant` (
 }
 ```
 
-或者，将JSON模式下载到本地文件系统。
+或將JSON結構描述下載至本機檔案系統。
 
-贷款应用程序JSON模式示例
+範例貸款應用程式JSON結構描述
 
 [获取文件](assets/demo_schema.json)
 
-有关在自适应表单中使用JSON模式作为表单模型的更多信息，请参阅[使用JSON模式创建自适应表单](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html)。
+如需有關在最適化表單中使用JSON結構描述作為表單模型的詳細資訊，請參閱 [使用JSON結構描述建立調適型表單](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html).
 
-## 生成没有数据绑定的自适应表单{#generate-adaptive-forms-with-no-data-binding}
+## 產生無資料繫結的最適化表單 {#generate-adaptive-forms-with-no-data-binding}
 
-使用[Automated forms conversion服务将](convert-existing-forms-to-adaptive-forms.md)示例贷款申请表](#sample-adaptive-form)转换为没有数据绑定的自适应表单。 [确保选中&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;复选框以生成没有数据绑定的自适应表单。
+使用 [要轉換的Automated forms conversion服務](convert-existing-forms-to-adaptive-forms.md) 此 [貸款申請表範例](#sample-adaptive-form) 至沒有資料繫結的最適化表單。 請務必選取 **[!UICONTROL Generate adaptive form(s) without data bindings]** 核取方塊以產生無資料繫結的最適化表單。
 
-![没有数据绑定的自适应表单](assets/generate_af_without_binding.png)
+![無資料繫結的最適化表單](assets/generate_af_without_binding.png)
 
-在生成没有数据绑定的自适应表单后，为自适应表单选择数据源：
+產生無資料繫結的最適化表單後，請為最適化表單選取資料來源：
 
-* [数据库、OData或任何第三方服务](#sqldatasource)
-* [JSON架构](#jsondatasource)
-* [XSD架构](#xsddatasource)
+* [資料庫、OData或任何協力廠商服務](#sqldatasource)
+* [JSON結構](#jsondatasource)
+* [XSD結構描述](#xsddatasource)
 
 >[!NOTE]
-> 如果您使用Automated forms conversion服务转换的自适应表单包含多个同名字段，请确保这些字段绑定到数据源实体，以避免提交期间可能丢失数据。
+> 如果您使用Automated forms conversion服務轉換的最適化表單包含多個同名欄位，請確保這些欄位已繫結至資料來源實體，以避免在提交期間可能遺失資料。
 
+### 使用資料庫、OData或任何協力廠商服務做為資料來源 {#sqldatasource}
 
-### 使用数据库、OData或任何第三方服务作为数据源 {#sqldatasource}
+使用案例：您可以使用Automated forms conversion服務產生無資料繫結的最適化表單，並將MYSQL資料庫設定為資料來源。 您可以手動將最適化表單欄位繫結到表單資料模型實體，並使用 **[!UICONTROL Form Data Model Prefill Service]** 預填欄位值的選項。 您使用 **[!UICONTROL Submit using Form Data Model]** 提交最適化表單的選項。
 
-用例：使用Automated forms conversion服务生成不带数据绑定的自适应表单，并将MYSQL数据库配置为数据源。 可以手动绑定自适应表单字段以形成数据模型实体，并使用&#x200B;**[!UICONTROL Form Data Model Prefill Service]**&#x200B;选项预填充字段值。 使用&#x200B;**[!UICONTROL Submit using Form Data Model]**&#x200B;选项提交自适应表单。
+執行使用案例之前：
 
-在执行用例之前：
+* [將MySQL資料庫設定為資料來源](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
+* [建立表單資料模型](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html)
 
-* [将MySQL数据库配置为数据源](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
-* [创建表单数据模型](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html)
+根據使用案例，建立 **loanapplication** 表單資料模型並將讀取服務引數繫結到 **[!UICONTROL Literal]** 值。 電話號碼常值必須是中設定的其中一個記錄 **應徵者** MySQL資料庫的綱要。 服務會使用值作為引數，從資料來源擷取詳細資料。 您也可以選取 [使用者設定檔屬性或請求屬性](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument) 從 **[!UICONTROL Binding To]** 下拉式清單
 
-根据用例，创建&#x200B;**loanapplication**&#x200B;表单数据模型，并将读取服务参数绑定到&#x200B;**[!UICONTROL Literal]**&#x200B;值。 电话号码文字值必须是在MySQL数据库的&#x200B;**申请人**&#x200B;架构中配置的记录之一。 服务会将值用作参数，以从数据源获取详细信息。 您还可以从&#x200B;**[!UICONTROL Binding To]**&#x200B;下拉列表中选择[用户配置文件属性或请求属性](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument)
-
-![配置表单数据模型](assets/configure_model_object.png)
+![設定表單資料模型](assets/configure_model_object.png)
 
 >[!NOTE]
 >
->确保在执行用例之前，向表单数据模型中添加&#x200B;**get**&#x200B;和&#x200B;**insert**&#x200B;服务，配置并测试服务。
+>確定您已新增 **get** 和 **插入** 服務至表單資料模型，在執行使用案例前設定及測試服務。
 
-执行以下步骤：
+執行以下步驟：
 
-1. 选择&#x200B;**[!UICONTROL output]**&#x200B;文件夹中提供的已转换的&#x200B;**示例贷款申请表**，然后点按&#x200B;**[!UICONTROL Properties]**。
-1. 点按&#x200B;**[!UICONTROL Form Model]**&#x200B;选项卡，从&#x200B;**[!UICONTROL Select From]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Form Data Model]**，然后点按&#x200B;**[!UICONTROL Select Form Data Model]**&#x200B;以选择&#x200B;**loanapplication**&#x200B;表单数据模型。 点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存表单。
-1. 选择&#x200B;**示例贷款申请表**，然后点按&#x200B;**[!UICONTROL Edit]**。
-1. 在&#x200B;**[!UICONTROL Content]**&#x200B;选项卡中，点按配置图标：
+1. 選取已轉換的 **貸款申請表範例** 可在 **[!UICONTROL output]** 資料夾並點選 **[!UICONTROL Properties]**.
+1. 點選 **[!UICONTROL Form Model]** 索引標籤，選取 **[!UICONTROL Form Data Model]** 從 **[!UICONTROL Select From]** 下拉式清單，然後點選 **[!UICONTROL Select Form Data Model]** 以選取 **loanapplication** 表單資料模型。 點選 **[!UICONTROL Save & Close]** 以儲存表單。
+1. 選取 **貸款申請表範例** 並點選 **[!UICONTROL Edit]**.
+1. 在 **[!UICONTROL Content]** 索引標籤，點選「設定」圖示：
 
-   ![配置表单容器](assets/configure_form_container.png)
+   ![設定表單容器](assets/configure_form_container.png)
 
-   1. 在&#x200B;**[!UICONTROL Basic]**&#x200B;部分中，从&#x200B;**[!UICONTROL Prefill Service]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Form Data Model Prefill service]**。
+   1. 在 **[!UICONTROL Basic]** 區段，選取 **[!UICONTROL Form Data Model Prefill service]** 從 **[!UICONTROL Prefill Service]** 下拉式清單。
 
-   1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;部分中，从&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Submit using Form Data Model]**。
+   1. 在 **[!UICONTROL Submission]** 區段，選取 **[!UICONTROL Submit using Form Data Model]** 從 **[!UICONTROL Submit Action]** 下拉式清單。
 
-   1. 使用&#x200B;**[!UICONTROL Data Model to submit]**&#x200B;字段选择数据模型。
-   1. 点按![完成图标](assets/save_icon.svg)以保存属性。
+   1. 使用選取資料模型 **[!UICONTROL Data Model to submit]** 欄位。
+   1. 點選 ![完成圖示](assets/save_icon.svg) 以儲存屬性。
 
-1. 点按申请人名称文本框，然后选择![配置图标](assets/configure_icon.svg)（配置）。
+1. 點選「應徵者名稱」文字方塊並選取 ![設定圖示](assets/configure_icon.svg) （設定）。
 
-   1. 在“绑定引用”字段中，选择&#x200B;**Applicant** > **Name**，然后点按![完成图标](assets/save_icon.svg)以保存属性。 同样，为&#x200B;**地址**、**电话号码**、**电子邮件**、**职业**、**年薪（美元）**&#x200B;和&#x200B;**否创建数据绑定。 具有表单数据模型图元的从属族成员**&#x200B;字段。
+   1. 在「繫結參考」欄位中，選取 **應徵者** > **名稱**，然後點選 ![完成圖示](assets/save_icon.svg) 以儲存屬性。 同樣地，為建立資料繫結 **地址**， **電話號碼**， **電子郵件**， **職業**， **年薪（以美元計）**、和 **否。 家屬成員** 具有表單資料模型實體的欄位。
 
-   ![绑定引用](assets/bind_references.png)
+   ![繫結參考](assets/bind_references.png)
 
-1. 点按&#x200B;**[!UICONTROL Preview]**&#x200B;以查看预填充的自适应表单字段值。
-1. 根据需要修改字段值，并提交自适应表单。 字段值将提交到MySQL数据库。 您可以刷新数据库中的&#x200B;**申请人**&#x200B;表，以查看表中的更新值。
+1. 點選 **[!UICONTROL Preview]** 以檢視預先填寫的最適化表單欄位值。
+1. 如有需要，請修改欄位值，並提交最適化表單。 欄位值會提交至MySQL資料庫。 您可以重新整理 **應徵者** 資料庫中的表格，以檢視表格中更新的值。
 
-**用例：** 使用Automated forms conversion服务生成不带数据绑定的自适应表单，并将MYSQL数据库配置为数据源。您可以使用规则编辑器绑定自适应表单字段以预填充字段值。 根据需要修改字段值，并将数据提交到crx-repository。
+**使用案例：** 您可以使用Automated forms conversion服務產生無資料繫結的最適化表單，並將MYSQL資料庫設定為資料來源。 您可以使用規則編輯器繫結最適化表單欄位以預填欄位值。 如有必要，請修改欄位值，並將資料提交到crx-repository。
 
-执行以下步骤以使用[规则编辑器](https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html)调用表单数据模型服务，以在自适应表单中绑定字段和预填充值：
+執行以下步驟以使用 [規則編輯器](https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html) 若要叫用表單資料模型服務以繫結最適化表單中的欄位和預填值：
 
-1. 在&#x200B;**[!UICONTROL output]**&#x200B;文件夹中选择&#x200B;**示例贷款申请表**，然后点按&#x200B;**[!UICONTROL Edit]**。
-1. 在&#x200B;**[!UICONTROL Content]**&#x200B;选项卡中，点按配置图标：
+1. 選取 **貸款申請表範例** 在 **[!UICONTROL output]** 資料夾並點選 **[!UICONTROL Edit]**.
+1. 在 **[!UICONTROL Content]** 索引標籤，點選「設定」圖示：
 
-   ![配置表单容器](assets/configure_form_container.png)
+   ![設定表單容器](assets/configure_form_container.png)
 
-   在&#x200B;**[!UICONTROL Basic]**&#x200B;部分中，从&#x200B;**[!UICONTROL Prefill Service]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Form Data Model Prefill service]**。
+   在 **[!UICONTROL Basic]** 區段，選取 **[!UICONTROL Form Data Model Prefill service]** 從 **[!UICONTROL Prefill Service]** 下拉式清單。
 
-1. 点按&#x200B;**[!UICONTROL Applicant Name]**&#x200B;文本框，然后点按&#x200B;**[!UICONTROL Edit Rules]**。
+1. 點選 **[!UICONTROL Applicant Name]** 文字方塊並點選 **[!UICONTROL Edit Rules]**.
 
-   ![编辑规则以创建数据绑定](assets/edit_rules_bind_reference.png)
+   ![編輯規則以建立資料繫結](assets/edit_rules_bind_reference.png)
 
-1. 在规则编辑器页面中点按&#x200B;**[!UICONTROL Create]**。
-1. 在&#x200B;**[!UICONTROL Rule Editor]**&#x200B;页面上：
+1. 點選 **[!UICONTROL Create]** 在「規則編輯器」頁面上。
+1. 於 **[!UICONTROL Rule Editor]** 頁面：
 
-   1. 选择“申请人名称”文本框的状态。 例如， **[!UICONTROL is initialized]**，在&#x200B;**[!UICONTROL Preview]**&#x200B;模式下渲染表单时，会导致执行&#x200B;**[!UICONTROL Then]**&#x200B;条件。
+   1. 選取「應徵者姓名」文字方塊的州。 例如， **[!UICONTROL is initialized]**，這會導致 **[!UICONTROL Then]** 當您在中轉譯表單時的條件 **[!UICONTROL Preview]** 模式。
 
-   1. 在&#x200B;**[!UICONTROL Then]**&#x200B;部分中，从&#x200B;**[!UICONTROL Select Action]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Invoke Service]**。 您的Forms实例上的所有服务都会显示在下拉列表中。
+   1. 在 **[!UICONTROL Then]** 區段，選取 **[!UICONTROL Invoke Service]** 從 **[!UICONTROL Select Action]** 下拉式清單。 Forms執行個體上的所有服務都會顯示在下拉式清單中。
 
-   1. 从列出表单数据模型的部分中选择&#x200B;**[!UICONTROL Get]**&#x200B;服务。 “输入”字段显示&#x200B;**phonenumber**，该键是为&#x200B;**申请人**&#x200B;数据模型定义的主键。 系统会根据此字段，在自适应表单中为“输出”部分中的字段检索和预填充值。
+   1. 選取 **[!UICONTROL Get]** 服務來自列出表單資料模型的區段。 輸入欄位隨即顯示 **電話號碼**，此為為定義的主索引鍵 **應徵者** 資料模型。 系統會根據此欄位擷取並預填輸出區段中欄位的最適化表單的值。
 
-   1. 使用“输出”部分为具有表单数据模型实体的自适应表单字段创建绑定。 例如，将&#x200B;**[!UICONTROL Applicant Name]**&#x200B;自适应表单字段与&#x200B;**name**&#x200B;实体绑定。
+   1. 使用「輸出」區段，以表單資料模型實體建立最適化表單欄位的繫結。 例如，繫結 **[!UICONTROL Applicant Name]** 使用的最適化表單欄位 **名稱** 實體。
 
-   1. 点按 **[!UICONTROL Done]**. 再次在规则编辑器页面上点按&#x200B;**[!UICONTROL Done]**。
+   1. 点击&#x200B;**[!UICONTROL Done]**。點選 **[!UICONTROL Done]** 再次在規則編輯器頁面上。
 
-   ![用于绑定引用的规则编辑器](assets/rule_editor_bind_references.png)
+   ![用於繫結參考的規則編輯器](assets/rule_editor_bind_references.png)
 
-1. 点按&#x200B;**[!UICONTROL Preview]**&#x200B;以查看预填充的自适应表单字段值。
+1. 點選 **[!UICONTROL Preview]** 以檢視預先填寫的最適化表單欄位值。
 
    >[!NOTE]
    >
-   >在与自适应表单关联的表单数据模型中，确保将&#x200B;**[!UICONTROL Return Array]** Service属性的&#x200B;**get**&#x200B;设置为OFF。
+   >確保 **[!UICONTROL Return Array]** 下列專案的屬性設定為OFF **get** 與最適化表單關聯的表單資料模型中的服務屬性。
 
-1. 根据需要修改字段值，并提交自适应表单。 提交的数据位于crx-repository中的以下位置：
+1. 如有需要，請修改欄位值，並提交最適化表單。 提交的資料可在crx-repository中的以下位置找到：
 
    `http://host name:port/crx/de/index.jsp#/content/forms/fp/admin/submit/data/latest file available in the folder`
 
-### 使用JSON架构作为数据源 {#jsondatasource}
+### 使用JSON結構描述作為資料來源 {#jsondatasource}
 
-**用例：** 使用Automated forms conversion服务生成不带数据绑定的自适应表单，并将JSON模式配置为数据源。您可以手动将自适应表单字段绑定到JSON模式，然后使用&#x200B;**Preview with data**&#x200B;选项预填充字段值。 根据需要修改字段值，并将数据提交到crx-repository。
+**使用案例：** 您可以使用Automated forms conversion服務產生無資料繫結的最適化表單，並將JSON結構描述設定為資料來源。 您可以手動將最適化表單欄位繫結至JSON結構描述，並使用 **使用資料預覽** 預填欄位值的選項。 如有必要，請修改欄位值，並將資料提交到crx-repository。
 
-在执行用例之前，请确保您具有：
+在執行使用案例之前，請確定您具備：
 
-* [与JSON架构结构兼容的有效JSON架构](#prepare-data-for-form-model)
-* [没有数据绑定的自适应表单](#generate-adaptive-forms-with-no-data-binding)
+* [符合JSON結構描述結構的有效JSON結構描述](#prepare-data-for-form-model)
+* [無資料繫結的最適化表單](#generate-adaptive-forms-with-no-data-binding)
 
-执行以下步骤：
+執行以下步驟：
 
-1. 选择&#x200B;**转换后的贷款申请表**&#x200B;示例，该表单位于&#x200B;**output**&#x200B;文件夹中，然后点按&#x200B;**[!UICONTROL Properties]**。
-1. 点按&#x200B;**[!UICONTROL Form Model]**&#x200B;选项卡，从&#x200B;**[!UICONTROL Select From]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Schema]**，然后点按&#x200B;**[!UICONTROL Select Schema]**&#x200B;以上传保存在本地文件系统上的&#x200B;**demo.schema JSON**&#x200B;架构。 点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存表单。
-1. 选择&#x200B;**示例贷款申请表**，然后点按&#x200B;**[!UICONTROL Edit]**。
-1. 点按申请人名称文本框，然后选择![配置图标](assets/configure_icon.svg)（配置）。
+1. 選取已轉換的 **貸款申請表範例** 可在 **輸出** 資料夾並點選 **[!UICONTROL Properties]**.
+1. 點選 **[!UICONTROL Form Model]** 索引標籤，選取 **[!UICONTROL Schema]** 從 **[!UICONTROL Select From]** 下拉式清單，然後點選 **[!UICONTROL Select Schema]** 上傳 **demo.schema JSON** 結構描述儲存在本機檔案系統上。 點選 **[!UICONTROL Save & Close]** 以儲存表單。
+1. 選取 **貸款申請表範例** 並點選 **[!UICONTROL Edit]**.
+1. 點選「應徵者名稱」文字方塊並選取 ![設定圖示](assets/configure_icon.svg) （設定）。
 
-   在“绑定引用”字段中，选择&#x200B;**Applicant** > **Name**，然后点按![完成图标](assets/save_icon.svg)以保存属性。 同样，为&#x200B;**地址**、**电话号码**、**电子邮件**、**职业**、**年薪（美元）**&#x200B;和&#x200B;**否创建数据绑定。 具有JSON架构实体的从属家族成员**&#x200B;字段。
+   在「繫結參考」欄位中，選取 **應徵者** > **名稱**，然後點選 ![完成圖示](assets/save_icon.svg) 以儲存屬性。 同樣地，為建立資料繫結 **地址**， **電話號碼**， **電子郵件**， **職業**， **年薪（以美元計）**、和 **否。 家屬成員** 具有JSON結構描述實體的欄位。
 
-1. 再次选择&#x200B;**转换后的**&#x200B;示例贷款申请表单可在&#x200B;**[!UICONTROL output]**&#x200B;文件夹中使用，然后选择&#x200B;**[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**。</br>
+1. 選取已轉換的 **貸款申請表範例** 可在 **[!UICONTROL output]** 資料夾並選取 **[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**.</br>
 
-   下载示例数据文件</br>
+   下載範例資料檔案</br>
 
    [获取文件](assets/json_data_file.txt)</br>
 
-1. 根据需要修改字段值，并提交自适应表单。 提交的数据位于crx-repository中的以下位置：
+1. 如有需要，請修改欄位值，並提交最適化表單。 提交的資料可在crx-repository中的以下位置找到：
 
    `http://host name:port/crx/de/index.jsp#/content/forms/fp/admin/submit/data/latest file available in the folder`
 
-### 使用XSD架构作为数据源 {#xsddatasource}
+### 使用XSD結構描述作為資料來源 {#xsddatasource}
 
-**用例：** 您可以使用Automated forms conversion服务生成没有数据绑定的自适应表单，并将XSD架构配置为数据源。您可以手动将自适应表单字段绑定到XSD架构，然后使用&#x200B;**Preview with data**&#x200B;预填充字段值。 根据需要修改字段值，并将数据提交到crx-repository。
+**使用案例：** 您可以使用Automated forms conversion服務產生無資料繫結的最適化表單，並將XSD結構描述設定為資料來源。 您可以手動將最適化表單欄位繫結到XSD結構描述，並使用 **使用資料預覽** 以預填欄位值。 如有必要，請修改欄位值，並將資料提交到crx-repository。
 
-在执行用例之前，请确保您具有：
+在執行使用案例之前，請確定您具備：
 
-* [与XML架构结构兼容的有效XSD架构](#prepare-data-for-form-model)
-* [没有数据绑定的自适应表单](#generate-adaptive-forms-with-no-data-binding)
+* [符合XML結構描述結構的有效XSD結構描述](#prepare-data-for-form-model)
+* [無資料繫結的最適化表單](#generate-adaptive-forms-with-no-data-binding)
 
-执行以下步骤：
+執行以下步驟：
 
-1. 选择&#x200B;**[!UICONTROL output]**&#x200B;文件夹中提供的已转换的&#x200B;**示例贷款申请表**，然后点按&#x200B;**[!UICONTROL Properties]**。
-1. 点按&#x200B;**[!UICONTROL Form Model]**&#x200B;选项卡，从&#x200B;**[!UICONTROL Select From]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Schema]**，然后点按&#x200B;**[!UICONTROL Select Schema]**&#x200B;以上传保存在本地文件系统上的&#x200B;**loanapplication** XSD架构。 为XSD架构选择根元素，然后点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存表单。
-1. 选择&#x200B;**示例贷款申请表**，然后点按&#x200B;**[!UICONTROL Edit]**。
-1. 点按申请人名称文本框，然后选择![配置图标](assets/configure_icon.svg)（配置）。
-在“绑定引用”字段中，选择**Applicant** > **Name**，然后点按![完成图标](assets/save_icon.svg)以保存属性。 同样，为&#x200B;**地址**、**电话号码**、**电子邮件**、**职业**、**年薪（美元）**&#x200B;和&#x200B;**否创建数据绑定。 具有XSD架构实体的从属族成员**&#x200B;字段。
+1. 選取已轉換的 **貸款申請表範例** 可在 **[!UICONTROL output]** 資料夾並點選 **[!UICONTROL Properties]**.
+1. 點選 **[!UICONTROL Form Model]** 索引標籤，選取 **[!UICONTROL Schema]** 從 **[!UICONTROL Select From]** 下拉式清單，然後點選 **[!UICONTROL Select Schema]** 上傳 **loanapplication** XSD結構描述儲存在本機檔案系統上。 選取XSD架構的根元素並點選 **[!UICONTROL Save & Close]** 以儲存表單。
+1. 選取 **貸款申請表範例** 並點選 **[!UICONTROL Edit]**.
+1. 點選「應徵者名稱」文字方塊並選取 ![設定圖示](assets/configure_icon.svg) （設定）。
+在「繫結參考」欄位中，選取 **應徵者** > **名稱**，然後點選 ![完成圖示](assets/save_icon.svg) 以儲存屬性。 同樣地，為建立資料繫結 **地址**， **電話號碼**， **電子郵件**， **職業**， **年薪（以美元計）**、和 **否。 家屬成員** 具有XSD結構描述實體的欄位。
 
-1. 再次选择&#x200B;**转换后的**&#x200B;示例贷款申请表单可在&#x200B;**output**&#x200B;文件夹中使用，然后选择&#x200B;**[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**。</br>
+1. 選取已轉換的 **貸款申請表範例** 可在 **輸出** 資料夾並選取 **[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**.</br>
 
-   下载示例数据文件</br>
+   下載範例資料檔案</br>
 
    [获取文件](assets/loan-application-data-xml-data.zip)</br>
 
 
-1. 根据需要修改字段值，并提交自适应表单。 提交的数据位于crx-repository中的以下位置：
+1. 如有需要，請修改欄位值，並提交最適化表單。 提交的資料可在crx-repository中的以下位置找到：
 
    `http://host name:port/crx/de/index.jsp#/content/forms/fp/admin/submit/data/latest file available in the folder`
 
-## 生成具有JSON绑定{#generate-adaptive-forms-with-json-binding}的自适应表单
+## 產生具有JSON繫結的最適化表單 {#generate-adaptive-forms-with-json-binding}
 
-使用[Automated forms conversion服务将](convert-existing-forms-to-adaptive-forms.md)示例贷款申请表](#sample-adaptive-form)转换为具有数据绑定的自适应表单。 [确保在生成自适应表单时不选中&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;复选框。
+使用 [要轉換的Automated forms conversion服務](convert-existing-forms-to-adaptive-forms.md) 此 [貸款申請表範例](#sample-adaptive-form) 變更為具有資料繫結的最適化表單。 請確定您沒有選取 **[!UICONTROL Generate adaptive form(s) without data bindings]** 產生最適化表單時勾選此方塊。
 
-![具有JSON绑定的自适应表单](assets/generate_af_with_data_bindings.png)
+![具有JSON繫結的最適化表單](assets/generate_af_with_data_bindings.png)
 
-### 使用JSON架构作为数据源 {#jsonwithdatabinding}
+### 使用JSON結構描述作為資料來源 {#jsonwithdatabinding}
 
-**用例：** 您可以使用Automated forms conversion服务生成具有JSON数据绑定的自适应表单。预填充服务和表单提交功能无缝。 您无需执行任何配置步骤。
+**使用案例：** 您可以使用Automated forms conversion服務產生具有JSON資料繫結的最適化表單。 預填服務與表單提交功能可順暢運作。 您不需要任何設定步驟。
 
-在执行用例之前，请确保您具有[具有数据绑定的自适应表单](#generate-adaptive-forms-with-json-binding)。
+在執行使用案例之前，請確定您已 [具有資料繫結的最適化表單](#generate-adaptive-forms-with-json-binding).
 
-执行以下步骤：
+執行以下步驟：
 
-1. 再次选择&#x200B;**转换后的**&#x200B;示例贷款申请表单可在&#x200B;**[!UICONTROL output]**&#x200B;文件夹中使用，然后选择&#x200B;**[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**。</br>
+1. 選取已轉換的 **貸款申請表範例** 可在 **[!UICONTROL output]** 資料夾並選取 **[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**.</br>
 
-   下载示例数据文件</br>
+   下載範例資料檔案</br>
 
    [获取文件](assets/loan_application_data_source_json_data_binding.txt)</br>
 
-1. 根据需要修改字段值，并提交自适应表单。 提交的数据位于crx-repository中的以下位置：
+1. 如有需要，請修改欄位值，並提交最適化表單。 提交的資料可在crx-repository中的以下位置找到：
 
    `http://host name:port/crx/de/index.jsp#/content/forms/fp/admin/submit/data/latest file available in the folder`
 
-## 将提交的自适应表单JSON数据转换为XML格式{#convert-submitted-adaptive-form-data-to-xml}
+## 將提交的最適化表單JSON資料轉換為XML格式 {#convert-submitted-adaptive-form-data-to-xml}
 
-在自适应表单字段中输入值并提交它后，数据将在crx-repository中以JSON格式提供。 您可以使用[org.apache.sling.commons.json.xml](https://sling.apache.org/apidocs/sling5/org/apache/sling/commons/json/xml/XML.html#toString) API或以下示例代码将JSON数据格式转换为XML:
+當您在最適化表單欄位中輸入值並提交時，crx-repository中的資料會以JSON格式提供。 您可以使用以下任一方法將格式的JSON資料轉換為XML [org.apache.sling.commons.json.xml](https://sling.apache.org/apidocs/sling5/org/apache/sling/commons/json/xml/XML.html#toString) API或以下範常式式碼：
 
 ```
 import org.apache.sling.commons.json.JSONException;

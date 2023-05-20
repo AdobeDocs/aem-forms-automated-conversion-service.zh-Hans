@@ -1,8 +1,8 @@
 ---
 title: 在转换期间生成记录文件
-seo-title: 在转换期间生成记录文件
-description: 根据用于转换的源表单类型生成DoR的推荐路径。
-seo-description: 根据用于转换的源表单类型生成DoR的推荐路径。
+seo-title: Generate Document of Record during conversion
+description: 根據用於轉換的來源表單型別來產生DoR的建議路徑。
+seo-description: Recommended paths to generate a DoR based on the type of source forms used for conversion.
 page-status-flag: never-activated
 uuid: 7f0f5bf3-21be-449a-b23e-5946a9fd7ed4
 contentOwner: khsingh
@@ -10,142 +10,142 @@ discoiquuid: 75f6e6bc-7636-4b40-919c-8b20a6ccbb1f
 exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
 source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 3%
+source-wordcount: '856'
+ht-degree: 2%
 
 ---
 
 # 促进生成自适应表单记录文档的工作流建议 {#recommended-workflows-dor-generation}
 
-记录文档(DoR)允许您保留您提供并以自适应形式提交的信息的记录，以便您以后可以参考它。
-DoR使用基本模板来定义其布局。 您可以使用默认模板或将任何其他模板与自适应表单关联来生成DoR。
+記錄檔案(DoR)可讓您以最適化表單來記錄您提供和提交的資訊，以便您稍後參考它。
+DoR會使用基本範本來定義其版面。 您可以使用預設範本或將任何其他範本與最適化表單建立關聯來產生DoR。
 
-![生成的记录文档](assets/document_of_record.gif)
+![產生的記錄檔案](assets/document_of_record.gif)
 
-有关生成DoR的更多信息，请参阅[为自适应表单生成记录文档](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
+如需產生DoR的詳細資訊，請參閱 [產生最適化表單的記錄檔案](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html).
 
-[Automated forms conversion服务](../help/introduction.md)将以下源表单转换为自适应表单：
+此 [automated forms conversion服務](../help/introduction.md) 將下列來源表單轉換為最適化表單：
 
-* 非交互式PDF forms
-* 阿克罗Forms
-* 基于XFA的PDF forms
+* 非互動式PDF forms
+* Acro Forms
+* XFA型PDF forms
 
-根据您用于转换的源表单，您可以使用以下方式生成DoR:
+根據您用於轉換的來源表單，您可以使用以下方式產生DoR：
 
-* 默认模板
-* 源表单作为模板 — 如果选择此选项，转换服务会自动将源表单与转换后的自适应表单关联为DoR模板。
-* 将任何其他模板与已转换的自适应表单相关联
+* 預設範本
+* 將來源表單設為範本 — 如果您選取此選項，轉換服務會自動將來源表單與轉換後的最適化表單建立關聯，做為DoR範本。
+* 將任何其他範本與轉換後的自適應表單建立關聯
 
-下表说明了您使用的DoR模板如何影响生成的DoR的布局的示例：
+下表說明您使用的DoR範本如何影響所產生DoR的版面配置範例：
 
 <table> 
  <tbody>
  <tr>
-  <td><p><strong>源表单</strong></p></td>
-  <td><p><strong>生成的DoR</strong></p></td> 
+  <td><p><strong>來源表單</strong></p></td>
+  <td><p><strong>產生的DoR</strong></p></td> 
    </tr>
   <tr>
    <td><img src="assets/source_xdp_updated.png"/></td>
-   <td><p>如果使用默认模板生成DoR:</br><img src="assets/source_form_default_updated.png"/></td>
+   <td><p>如果您使用預設範本來產生DoR：</br><img src="assets/source_form_default_updated.png"/></td>
    </tr>
    <tr>
    <td></td>
-   <td><p>如果使用源表单作为模板来生成DoR:</br></p><img src="assets/source_form_dor_updated.png"/></td>
+   <td><p>如果您使用來源表單作為產生DoR的範本：</br></p><img src="assets/source_form_dor_updated.png"/></td>
    </tr>
   </tbody>
 </table>
 
-如表所示，如果使用源表单作为模板，DoR将保留源表单的布局。
-本文介绍了根据三种源表单类型生成DoR的建议路径。
+如表格所示，如果您使用來源表單作為範本，DoR會保留來源表單的版面。
+本文介紹根據三種來源表單型別產生DoR的建議路徑。
 
 <table> 
  <tbody> 
   <tr> 
-   <th><strong>源表单</strong></th> 
-   <th><strong>生成DoR的方法</strong></th> 
+   <th><strong>來源表單</strong></th> 
+   <th><strong>產生DoR的方法</strong></th> 
   </tr> 
   <tr> 
-   <td><p>非交互式PDF forms</p></td> 
+   <td><p>非互動式PDF forms</p></td> 
    <td> 
     <ul> 
-     <li><a href="#generate-document-of-record-using-cloud-configuration">在自适应表单转换之前启用DoR生成，以使用默认模板生成DoR</a></li> 
-     <li><a href="#edit-adaptive-form-properties-generate-document-of-record">在自适应表单转换后编辑自适应表单属性，以启用使用默认或任何其他表单模板生成DoR的功能</a></li> 
+     <li><a href="#generate-document-of-record-using-cloud-configuration">啟用最適化表單轉換前的DoR產生，以使用預設範本產生DoR</a></li> 
+     <li><a href="#edit-adaptive-form-properties-generate-document-of-record">編輯最適化表單轉換後的最適化表單屬性，以使用預設或任何其他表單範本產生DoR</a></li> 
     </ul> </td> 
   </tr>
   <tr> 
-   <td><p>Acro Forms或基于XFA的PDF forms</p></td> 
+   <td><p>Acro Forms或XFA型PDF forms</p></td> 
    <td> 
     <ul> 
-     <li><a href="#use-input-form-as-template-to-generate-document-of-record">在自适应表单转换之前启用DoR生成，以使用源表单作为模板生成DoR</a></li> 
-     <li><a href="#edit-adaptive-form-properties-to-generate-document-of-record">在自适应表单转换后编辑自适应表单属性，以启用使用默认模板、源表单作为模板或任何其他表单模板生成DoR的功能</a></li> 
+     <li><a href="#use-input-form-as-template-to-generate-document-of-record">啟用最適化表單轉換前的DoR產生，以使用來源表單作為範本來產生DoR</a></li> 
+     <li><a href="#edit-adaptive-form-properties-to-generate-document-of-record">編輯最適化表單轉換後的最適化表單屬性，以啟用使用預設範本、來源表單作為範本或任何其他表單範本產生DoR</a></li> 
     </ul> </td> 
   </tr>    
  </tbody> 
 </table>
 
-## 为非交互式PDF forms生成记录文档{#generate-document-of-record-non-interactive-pdf}
+## 為非互動式PDF forms產生記錄檔案 {#generate-document-of-record-non-interactive-pdf}
 
-如果您使用非交互式PDF表单作为Automated forms conversion服务的源表单，则可以：
+如果您使用非互動式PDF表單做為Automated forms conversion服務的來源表單，您可以：
 
-* 在自适应表单转换之前启用DoR生成，以使用默认模板生成DoR
-* 或在自适应表单转换后编辑自适应表单属性，以启用使用默认或任何其他表单模板生成DoR的功能
+* 啟用最適化表單轉換前的DoR產生，以使用預設範本產生DoR
+* 或在最適化表單轉換後編輯最適化表單屬性，以使用預設或任何其他表單範本產生DoR
 
-### 在转换前启用DoR生成，以使用默认模板{#generate-document-of-record-using-cloud-configuration}生成DoR
+### 啟用轉換前的DoR產生，以使用預設範本產生DoR {#generate-document-of-record-using-cloud-configuration}
 
-1. 选择&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** >用于转化的云配置属性> **[!UICONTROL Advanced]** > **[!UICONTROL Generate Document of Record]**&#x200B;选项。
+1. 選取 **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** >用於轉換的雲端設定屬性> **[!UICONTROL Advanced]** > **[!UICONTROL Generate Document of Record]** 選項。
 
-   ![使用云配置生成记录文档](assets/generate_dor_cloud_config.gif)
+   ![使用雲端設定產生記錄檔案](assets/generate_dor_cloud_config.gif)
 
-1. 点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存设置。
+1. 點選 **[!UICONTROL Save & Close]** 以儲存設定。
 
-1. [运行转化](../help/convert-existing-forms-to-adaptive-forms.md)。确保使用在这些说明的步骤1中编辑的云配置。
-提交转换后的自适应表单时，DoR将使用默认模板自动生成。
+1. [執行轉換](../help/convert-existing-forms-to-adaptive-forms.md). 確保您使用這些指示步驟1中編輯的雲端設定。
+提交轉換後的自適應表單時，會使用預設範本自動產生DoR。
 
-### 在转换后编辑自适应表单属性以启用DoR生成{#edit-adaptive-form-properties-generate-document-of-record}
+### 在轉換後編輯最適化表單屬性以啟用DoR產生 {#edit-adaptive-form-properties-generate-document-of-record}
 
-如果在将源表单转换为自适应表单之前未启用DoR生成，则在转换后仍可以启用。
+如果您在將來源表單轉換為最適化表單之前未啟用DoR產生功能，轉換後您仍可這麼做。
 
-1. [在非交](../help/convert-existing-forms-to-adaptive-forms.md) 互式PDF表单上运行转换以生成自适应表单。
+1. [執行轉換](../help/convert-existing-forms-to-adaptive-forms.md) 在非互動式PDF表單上以產生最適化表單。
 
-1. 在&#x200B;**[!UICONTROL output]**&#x200B;文件夹中选择自适应表单，然后点按&#x200B;**[!UICONTROL Properties]**。
+1. 選擇最適化表單于 **[!UICONTROL output]** 資料夾並點選 **[!UICONTROL Properties]**.
 
-1. 在&#x200B;**[!UICONTROL Form Model]**&#x200B;选项卡中，展开&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;部分，然后选择&#x200B;**[!UICONTROL Generate Document of Record]**。
+1. 在 **[!UICONTROL Form Model]** 標籤中，展開 **[!UICONTROL Document of Record Template Configuration]** 區段並選取 **[!UICONTROL Generate Document of Record]**.
 
    ![生成记录文档](assets/generate_dor_af_properties.png)
 
-1. 点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存设置。
+1. 點選 **[!UICONTROL Save & Close]** 以儲存設定。
 
-提交转换后的自适应表单时，DoR将使用默认模板自动生成。 如果要将任何其他DoR模板与转换后的自适应表单相关联，则可以选择&#x200B;**[!UICONTROL Associate form template as the Document of Record template]**&#x200B;选项。
+提交轉換後的自適應表單時，會使用預設範本自動產生DoR。 如果您想要將任何其他DoR範本與轉換後的最適化表單建立關聯，您可以選取 **[!UICONTROL Associate form template as the Document of Record template]** 選項。
 
-## 为Acro Forms或基于XFA的PDF forms生成记录文档{#generate-document-of-record-acroform-xfaform}
+## 為Acro Forms或XFA型PDF forms產生記錄檔案 {#generate-document-of-record-acroform-xfaform}
 
-如果您使用Acro表单或基于XFA的PDF表单作为Automated forms conversion服务的源表单，则可以：
+如果您使用Acro表單或XFA型PDF表單作為Automated forms conversion服務的來源表單，您可以：
 
-* 在自适应表单转换之前启用DoR生成，以使用源表单作为模板生成DoR
+* 啟用最適化表單轉換前的DoR產生，以使用來源表單作為範本來產生DoR
 
-* 或在自适应表单转换后编辑自适应表单属性，以启用使用默认模板、源表单作为模板或任何其他表单模板生成DoR的功能
+* 或編輯最適化表單轉換後的最適化表單屬性，以使用預設範本、來源表單作為範本或任何其他表單範本來產生DoR
 
-### 在转换前启用DoR生成，以使用源表单模板{#use-input-form-as-template-to-generate-document-of-record}生成DoR
+### 啟用轉換前的DoR產生，以使用來源表單範本產生DoR {#use-input-form-as-template-to-generate-document-of-record}
 
-1. 选择&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** >用于转化的云配置属性> **[!UICONTROL Advanced]** > **[!UICONTROL Generate Document of Record]**&#x200B;选项。
+1. 選取 **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** >用於轉換的雲端設定屬性> **[!UICONTROL Advanced]** > **[!UICONTROL Generate Document of Record]** 選項。
 
-1. 点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存设置。
+1. 點選 **[!UICONTROL Save & Close]** 以儲存設定。
 
-1. [运行转化](../help/convert-existing-forms-to-adaptive-forms.md)。确保使用在这些说明的步骤1中编辑的云配置。
-转换服务会自动将Acro表单或基于XFA的PDF表单与转换后的自适应表单关联为DoR模板。
-您可以打开自适应表单属性，以在**[!UICONTROL Form Model]**&#x200B;选项卡的&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;部分中查看DoR模板。
+1. [執行轉換](../help/convert-existing-forms-to-adaptive-forms.md). 確保您使用這些指示步驟1中編輯的雲端設定。
+轉換服務會自動將Acro表單或XFA型PDF表單與已轉換的最適化表單建立關聯，做為DoR範本。
+您可以開啟最適化表單屬性來檢視DoR範本(在 **[!UICONTROL Document of Record Template Configuration]** 部分 **[!UICONTROL Form Model]** 標籤。
 
-   ![编辑自适应表单属性以生成记录文档](assets/generate_dor_af_properties_xdp_acro.png)
+   ![編輯最適化表單屬性以產生記錄檔案](assets/generate_dor_af_properties_xdp_acro.png)
 
-   提交转换后的自适应表单时，DoR将使用源表单模板自动生成。
+   提交轉換後的適用性表單時，會使用來源表單範本自動產生DoR。
 
-### 在转换后编辑自适应表单属性以启用DoR生成{#edit-adaptive-form-properties-to-generate-document-of-record}
+### 在轉換後編輯最適化表單屬性以啟用DoR產生 {#edit-adaptive-form-properties-to-generate-document-of-record}
 
-1. [在非交](../help/convert-existing-forms-to-adaptive-forms.md) 互式PDF表单上运行转换以生成自适应表单。
+1. [執行轉換](../help/convert-existing-forms-to-adaptive-forms.md) 在非互動式PDF表單上以產生最適化表單。
 
-1. 在&#x200B;**[!UICONTROL output]**&#x200B;文件夹中选择自适应表单，然后点按&#x200B;**[!UICONTROL Properties]**。
+1. 選擇最適化表單于 **[!UICONTROL output]** 資料夾並點選 **[!UICONTROL Properties]**.
 
-1. 在&#x200B;**[!UICONTROL Form Model]**&#x200B;选项卡中，展开&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;部分，然后选择&#x200B;**[!UICONTROL Generate Document of Record]**以使用默认模板启用DoR生成。
-您还可以选择**[!UICONTROL Associate form template as the Document of Record template]**&#x200B;选项，并选择模板以启用使用源表单模板或任何其他表单模板生成DoR。
+1. 在 **[!UICONTROL Form Model]** 標籤中，展開 **[!UICONTROL Document of Record Template Configuration]** 區段並選取 **[!UICONTROL Generate Document of Record]** 以啟用使用預設範本產生DoR。
+您也可以選取 **[!UICONTROL Associate form template as the Document of Record template]** 選項並選取範本，以啟用使用來源表單範本或任何其他表單範本產生DoR。
 
-1. 点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存设置。
+1. 點選 **[!UICONTROL Save & Close]** 以儲存設定。

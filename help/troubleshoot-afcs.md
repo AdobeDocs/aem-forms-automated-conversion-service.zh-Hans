@@ -1,14 +1,14 @@
 ---
-title: '自动化表单转换服务故障诊断 '
-seo-title: '自动化表单转换服务 (AFCS) 故障诊断 '
-description: 'AFCS 常见问题及解决办法 '
-seo-description: AFCS 常见问题及解决办法
+title: 自动化表单转换服务故障诊断
+seo-title: Troubleshoot Automated Forms Conversion Service (AFCS)
+description: AFCS 常见问题及解决办法
+seo-description: Common AFCS issues and their solutions
 contentOwner: khsingh
 topic-tags: forms
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
 source-git-commit: 5353a071f8633b36fc73c34c5d7629228659e2ba
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '649'
 ht-degree: 89%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 89%
 | **错误消息** <br>扫描的表单不受支持。  <br><br>**原因** <br>PDF 表单仅包含表单的扫描图像，不包含内容结构。 <br><br>**解决办法** <br>本服务不支持直接将扫描的表单或表单图像转换为自适应表单。 但您可以使用 Adobe Acrobat 将表单图像转换为 PDF 表单。 然后再使用本服务将 PDF 表单转换为自适应表单。 对于 Acrobat，请务必使用高质量的表单图像进行转换。 这样可以提高转换质量。 | ![无法连接到服务。](assets/scanned-forms-error.png) |
 | **错误消息** <br>加密的 PDF 表单不受支持。  <br><br>**原因** <br>文件夹包含加密的 PDF 表单。 <br><br>**解决办法** <br>本服务不支持将加密的 PDF 表单转换为自适应表单。 删除加密，上传未加密表单，然后运行转换。 | ![无法连接到服务。](assets/secured-pdf-form.png) |
 | **错误消息** <br>无法解析元模型 JSON 架构。  <br><br>**原因** <br>提供给本服务的 JSON 架构格式不正确，其中包含无效字符或用于映射组件的语法无效。  <br><br>**解决办法** <br>检查 JSON 文件格式。 可使用任何在线 JSON 验证器来检查架构格式和结构。 请参阅[“扩展默认的元模型”](extending-the-default-meta-model.md)一文，了解有关元模型语法的信息。 | ![无法连接到服务。](assets/invalid-meta-model-schema.png) |
-| **错误（仅限内部部署环境）** <br>  **[!UICONTROL Source Language]** 选项未列出自适应表单的正确语言。<br><br>**** <br> 原因未正确设置自适应表单的jcr:language属性。<br><br>**** <br> ResolutionOpen CRX-DE lite，导航到， `/content/forms/af/`打开 `jcr:content` 节点，并将节点的值设置为正确的语言。有关支持的语言列表，请参阅[添加对不支持的区域设置的本地化支持](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html#add-localization-support-for-non-supported-locales)。 | ![无法连接到服务。](assets/aem-forms-translation-project-language-unavailable.png) |
+| **錯誤（僅限內部部署環境）** <br> 此 **[!UICONTROL Source Language]** 選項未列出最適化表單的正確語言。 <br><br>**原因** <br> 未正確設定最適化表單的jcr：language屬性。  <br><br>**解析度** <br> 開啟CRX-DE LITE，導覽至 `/content/forms/af/`，開啟 `jcr:content` 節點，並將節點的值設定為正確的語言。 如需支援的語言清單，請參閱 [新增不支援地區設定的本地化支援](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html#add-localization-support-for-non-supported-locales). | ![无法连接到服务。](assets/aem-forms-translation-project-language-unavailable.png) |
 
 <!--
 

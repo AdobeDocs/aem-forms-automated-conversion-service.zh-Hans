@@ -1,7 +1,7 @@
 ---
-title: '最佳实践和注意事项 '
-description: 不发布
-seo-description: 不发布
+title: 最佳实践和注意事项
+description: 不要發佈
+seo-description: DO NOT PUBLISH
 page-status-flag: never-activated
 uuid: c2821264-39e2-44f8-b234-835c46f33fd5
 topic-tags: introduction
@@ -10,8 +10,8 @@ privatebeta: true
 index: false
 source-git-commit: b2d29c22a275f2dc6a82593cf5e441c8da0bba13
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 4%
+source-wordcount: '543'
+ht-degree: 7%
 
 ---
 
@@ -22,43 +22,43 @@ ht-degree: 4%
 [DO NOT PUBLISH]
 -->
 
-AEM Forms自动转换服务将PDF表单转换为自适应表单。 该服务使用人工智能和机器学习算法来了解源表单的布局和领域。 每项机器学习服务都会不断学习源数据，并在每次流失时产生改进的输出。 这些服务从人类的体验中学习。
+AEM Forms自動轉換服務會將PDF表單轉換為最適化表單。 此服務使用人工智慧和機器學習演演算法來瞭解來源表單的版面和欄位。 每個機器學習服務都會持續學習來源資料，並在每次流失時產生改善的輸出。 這些服務像人類一樣從經驗中學習。
 
-automated forms conversion服务是在大量表单上进行培训的。 它可轻松识别源表单中的字段并生成自适应表单。 但是，PDF forms中有一些字段和样式很容易被人们看到，但很难理解这些字段和样式。 该服务可以为某些字段或样式分配与适用字段类型或面板不同的内容。 下面列出了所有此类字段和样式模式。
+automated forms conversion服務會接受大量表單的訓練。 它可輕鬆識別來源表單中的欄位並產生調適型表單。 不過，PDF forms中有些欄位和樣式肉眼很容易看到，但此服務卻難以理解。 此服務可將與適用欄位型別或面板不同的欄位型別或面板指派給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
 
-该服务将开始识别并为这些模式分配正确的字段或面板，因为它会不断从源数据中学习。 目前，您可以使用[Review and Crect](review-correct-ui-edited.md)编辑器来修复此类问题。 在开始修复问题或进一步阅读之前，请熟悉[自适应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+當服務不斷從來源資料學習時，就會開始識別並指派正確的欄位或面板給這些模式。 目前，您可以使用 [檢閱並更正](review-correct-ui-edited.md) 編輯器以修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉 [最適化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ## 常规 {#general}
 
 <table border="1" cellpadding="1" cellspacing="0" style="border-collapse: separate; border-spacing: 0px;" width="100%"> 
  <tbody>
   <tr>
-   <td width="30%">已知模式和分辨率</td> 
+   <td width="30%">已知的模式和解析度</td> 
    <td width="70%">示例</td> 
   </tr>
-   <td><p><strong>图案</strong></p> <p>服务不会将已填充的PDF forms转换为自适应表单。</p> <p> </p> <p><strong>分辨率</strong></p> <p>使用空的自适应表单。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服務無法將填入的PDF forms轉換為最適化表單。</p> <p> </p> <p><strong>解决方法</strong></p> <p>使用空白的最適化表單。</p> </td> 
    <td style="text-align: left;"><img src="assets/pre-filled-form.png" /></td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务无法识别密集形式的文本和字段。</p> <p> </p> <p><strong>分辨率</strong></p> <p>在开始转换之前，增加密集表单的文本和字段之间的宽度。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服務可能無法識別密集表單中的文字和欄位。</p> <p> </p> <p><strong>解决方法</strong></p> <p>在開始轉換之前，增加密集表單的文字和欄位之間的寬度。</p> </td> 
    <td style="text-align: left;"><img src="assets/dense%20form.png" /></td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务不支持扫描的表单。</p> <p> </p> <p><strong>分辨率</strong></p> <p>请勿使用扫描的表单。 </p> </td> 
+   <td><p><strong>图案</strong></p> <p>服務不支援掃描的表單。</p> <p> </p> <p><strong>解决方法</strong></p> <p>請勿使用掃描的表單。 </p> </td> 
    <td><img src="assets/scanned-form.jpg" /></td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务不会提取图像和图像内的文本。 </p> <p> </p> <p><strong>分辨率</strong></p> <p>手动向转换的表单添加图像或文本。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服務不會擷取影像中的影像和文字。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>手動將影像或文字新增至轉換後的表單。</p> </td> 
    <td><img src="assets/image-in-adaptive-form.png" /></td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>具有点线或非清除边界和边框的表将不会转换。</p> <p><strong>分辨率</strong></p> <p>使用具有清晰明确边界和边界的表。 受支持。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>具有虛線或非清除邊界與邊界的表格不會轉換。</p> <p><strong>解决方法</strong></p> <p>使用具有明確邊界和框線的表格。 支援。</p> </td> 
    <td><img src="assets/border-less-tables.png" /></td> 
   </tr>
  </tbody>
 </table>
 
-## 选择组{#choice-group}
+## 選擇群組  {#choice-group}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
@@ -67,13 +67,13 @@ automated forms conversion服务是在大量表单上进行培训的。 它可�
    <td width="70%">示例</td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>除框或圆以外形状的选择组选项不会转换为相应的自适应表单组件。 </p> <p> </p> <p><strong>分辨率</strong></p> <p>将选择选项形状更改为框或圆，或使用“审阅并更正”编辑器来识别形状。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>具有方塊或圓圈以外形狀的選擇群組選項不會轉換為對應的最適化表單元件。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>將選擇選項形狀變更為方塊或圓形，或使用「檢閱並修正」編輯器來識別形狀。</p> </td> 
    <td><img src="assets/shaded-box-patterns.png" /> </td> 
   </tr>
  </tbody>
 </table>
 
-## 表单字段{#form-fields}
+## 表單欄位 {#form-fields}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
@@ -82,19 +82,19 @@ automated forms conversion服务是在大量表单上进行培训的。 它可�
    <td width="70%">示例</td> 
   </tr>
   <tr>
-   <td width="25%"><p><strong>图案</strong></p> <p>服务不会识别没有明确边框的字段。</p> <p> </p> <p><strong>分辨率</strong></p> <p>使用审阅和更正编辑器来标识此类字段。</p> <p> </p> <p> </p> </td> 
+   <td width="25%"><p><strong>图案</strong></p> <p>沒有清晰的邊界，服務無法識別欄位。</p> <p> </p> <p><strong>解决方法</strong></p> <p>使用「稽核並修正」編輯器來識別此類欄位。</p> <p> </p> <p> </p> </td> 
    <td width="50%"><br /> <img src="assets/fields-without-clear-borders.png" /></td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务会在某些表单字段的底部或右侧留下未识别字幕的字段。</p> <p> </p> <p><strong>分辨率</strong></p> <p>使用审阅和更正编辑器来标识此类字段</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服務會留下一些表單欄位，其底部或右側的字幕未識別。</p> <p> </p> <p><strong>解决方法</strong></p> <p>使用「稽核並修正」編輯器來識別此類欄位</p> </td> 
    <td><br /> <img src="assets/forms-with-clear-borders-scale.png" /><br /> </td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务会合并或为某些表单字段分配错误类型，这些字段彼此非常接近或没有清晰的边框。 </p> <p> </p> <p><strong>分辨率</strong></p> <p>使用审阅和更正编辑器来标识此类字段。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服務會合併或指派錯誤的型別給一些彼此非常接近或沒有明確邊界的表單欄位。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>使用「稽核並修正」編輯器來識別此類欄位。</p> </td> 
    <td><img src="assets/forms-with-fields-placed-nearby.png" /></td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务无法识别带有远距离字幕的字段或字幕与输入字段之间的虚线。</p> <p> </p> <p><strong>分辨率</strong></p> <p>使用边界清晰的表单字段，或使用“审阅并更正”编辑器来修复此类问题。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服務可能無法識別字幕很遠的欄位或字幕與輸入欄位之間的虛線。</p> <p> </p> <p><strong>解决方法</strong></p> <p>使用具有明確界限的表單欄位，或使用檢閱和修正編輯器來修正此類問題。</p> </td> 
    <td><img src="assets/form-fields-with-far-away-captions.png" /></td> 
   </tr>
  </tbody>
@@ -109,15 +109,15 @@ automated forms conversion服务是在大量表单上进行培训的。 它可�
    <td width="70%">示例</td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>包含表单字段的列表会被合并或不会转换为相应的自适应表单组件</p> <p><strong>分辨率</strong></p> <p>使用边界清晰的表单字段，或使用“审阅并更正”编辑器来修复此类问题。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>包含表單欄位的清單會合併或未轉換為對應的最適化表單元件</p> <p><strong>解决方法</strong></p> <p>使用具有明確界限的表單欄位，或使用檢閱和修正編輯器來修正此類問題。</p> </td> 
    <td><img src="assets/lists-with-fields.png" /></td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务可能会将一些嵌套列表保留为未识别状态</p> <p> </p> <p><strong>分辨率</strong></p> <p>使用“审阅”和“更正”编辑器来修复此类问题。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服務可能會保留一些無法識別的巢狀清單</p> <p> </p> <p><strong>解决方法</strong></p> <p>使用檢閱和修正編輯器來修正此類問題。</p> </td> 
    <td><img src="assets/nested-lists.png" /> </td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务会合并一些包含选择组的列表</p> <p><strong>分辨率</strong></p> <p>使用“审阅”和“更正”编辑器来修复此类问题。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服務會合併一些包含選擇群組的清單</p> <p><strong>解决方法</strong></p> <p>使用檢閱和修正編輯器來修正此類問題。</p> </td> 
    <td><img src="assets/lists-containing-choice-groups.png" /> </td> 
   </tr>
  </tbody>
