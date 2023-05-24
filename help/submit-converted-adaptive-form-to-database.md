@@ -1,6 +1,6 @@
 ---
-title: 將轉換後的最適化表單與JSON結構描述提交至資料庫
-description: 透過建立表單資料模型並在AEM工作流程中參照它，將轉換後的適用性表單與JSON結構描述提交到資料庫。
+title: 将带有JSON架构的转换后的自适应表单提交到数据库
+description: 通过创建表单数据模型并在AEM Workflow中引用它，将带有JSON架构的转换后的自适应表单提交到数据库。
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
@@ -14,56 +14,56 @@ ht-degree: 2%
 
 # 使用 AEM 工作流实现自适应表单与数据库集成 {#submit-forms-to-database-using-forms-portal}
 
-automated forms conversion服務可讓您將非互動式PDF表單、Acro表單或XFA型PDF表單轉換為最適化表單。 啟動轉換程式時，您可以選擇產生具有或不具有資料繫結的最適化表單。
+automated forms conversion服务允许您将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 启动转换过程时，您可以选择生成带有或不带有数据绑定的自适应表单。
 
-如果您選擇產生沒有資料繫結的最適化表單，則可以在轉換後將轉換的最適化表單與表單資料模型、XML結構描述或JSON結構描述整合。 對於表單資料模型，您需要手動將最適化表單欄位與表單資料模型繫結。 不過，如果您產生具有資料繫結的最適化表單，轉換服務會自動將最適化表單與JSON結構描述建立關聯，並在最適化表單和JSON結構描述中可用的欄位之間建立資料繫結。 然後，您可以將最適化表單與您選擇的資料庫整合、在表單中填寫資料，然後將其提交到資料庫。 同樣地，成功與資料庫整合後，您可以在轉換後的最適化表單中設定欄位，以從資料庫擷取值並預填最適化表單欄位。
+如果选择生成不带数据绑定的自适应表单，则可以在转换后将转换后的自适应表单与表单数据模型、XML架构或JSON架构集成。 对于表单数据模型，您需要手动将自适应表单字段与表单数据模型绑定。 但是，如果生成带有数据绑定的自适应表单，转换服务会自动将自适应表单与JSON架构相关联，并在自适应表单中可用的字段与JSON架构之间创建数据绑定。 然后，您可以将自适应表单与所选数据库集成，在表单中填写数据，然后将其提交到数据库。 同样，成功与数据库集成后，您可以在转换后的自适应表单中配置字段，以从数据库中检索值并预填充自适应表单字段。
 
-下圖說明將轉換後的適用性表單與資料庫整合的不同階段：
+下图描述了将已转换的自适应表单与数据库集成的不同阶段：
 
-![資料庫整合](assets/integrate-adaptive-form-with-database.png)
+![数据库集成](assets/integrate-adaptive-form-with-database.png)
 
-本文會說明如何成功執行所有這些整合階段的逐步指示。
+本文介绍了成功执行所有这些集成阶段的分步说明。
 
-## 先決條件 {#pre-requisites}
+## 先决条件 {#pre-requisites}
 
-* 設定AEM 6.4或6.5編寫執行個體
-* 安裝 [最新Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html) 適用於您的AEM執行個體
-* 最新版本的AEM Forms附加元件套件
-* 設定 [automated forms conversion服務](configure-service.md)
-* 設定資料庫。 範例實作中使用的資料庫是MySQL 5.6.24。不過，您可以將轉換後的最適化表單與您選擇的任何資料庫整合。
+* 设置AEM 6.4或6.5创作实例
+* 安装 [最新Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html) (对于您的AEM实例)
+* 最新版本的AEM Forms附加组件包
+* 配置 [automated forms conversion服务](configure-service.md)
+* 设置数据库。 示例实施中使用的数据库是MySQL 5.6.24。但是，您可以将转换后的自适应表单与您选择的任何数据库集成。
 
-## 最適化表單範例 {#sample-adaptive-form}
+## 自适应表单示例 {#sample-adaptive-form}
 
-若要執行使用案例，以使用AEM工作流程將轉換後的最適化表單與資料庫整合，請下載以下範例PDF檔案。
+要执行用例以使用AEM工作流将转换后的自适应表单与数据库集成，请下载以下示例PDF文件。
 
-您可以使用以下下載範例「聯絡我們」表單：
+您可以使用以下地址下载示例联系我们表单：
 
 [获取文件](assets/sample_contact_us_form.pdf)
 
-PDF檔案可作為Automated forms conversion服務的輸入。 此服務會將此檔案轉換為最適化表單。 下圖說明以PDF格式與我們連絡的範例表單。
+PDF文件用作Automated forms conversion服务的输入。 服务会将此文件转换为自适应表单。 下图描述了PDF格式的示例联系我们表单。
 
-![貸款申請表範例](assets/sample_contact_us_form.png)
+![贷款申请表样例](assets/sample_contact_us_form.png)
 
-## 安裝mysql-connector-java-5.1.39-bin.jar檔案 {#install-mysql-connector-java-file}
+## 安装mysql-connector-java-5.1.39-bin.jar文件 {#install-mysql-connector-java-file}
 
-在所有作者和發佈執行個體上執行下列步驟，安裝mysql-connector-java-5.1.39-bin.jar檔案：
+在所有创作实例和发布实例上执行以下步骤，安装mysql-connector-java-5.1.39-bin.jar文件：
 
-1. 導覽至 `http://server:port/system/console/depfinder` 和搜尋com.mysql.jdbc套件。
-1. 在「匯出者」欄中，檢查封裝是否已由任何束匯出。 如果套件未由任何套件組合匯出，請繼續。
-1. 導覽至 `http://server:port/system/console/bundles` 並按一下 **[!UICONTROL Install/Update]**.
-1. 按一下 **[!UICONTROL Choose File]** 並瀏覽以選取mysql-connector-java-5.1.39-bin.jar檔案。 此外，請選取 **[!UICONTROL Start Bundle]** 和 **[!UICONTROL Refresh Packages]** 核取方塊。
-1. 按一下 **[!UICONTROL Install]** 或 **[!UICONTROL Update]**. 完成後，請重新啟動伺服器。
-1. （僅限Windows）關閉作業系統的系統防火牆。
+1. 导航到 `http://server:port/system/console/depfinder` 和搜索com.mysql.jdbc包。
+1. 在“导出方式”列中，检查是否按任意包导出包。 如果包未由任何捆绑包导出，请继续。
+1. 导航到 `http://server:port/system/console/bundles` 并单击 **[!UICONTROL Install/Update]**.
+1. 单击 **[!UICONTROL Choose File]** 并浏览以选择mysql-connector-java-5.1.39-bin.jar文件。 此外，选择 **[!UICONTROL Start Bundle]** 和 **[!UICONTROL Refresh Packages]** 复选框。
+1. 单击 **[!UICONTROL Install]** 或 **[!UICONTROL Update]**. 完成后，重新启动服务器。
+1. （仅限Windows）关闭操作系统的系统防火墙。
 
-## 為表單模型準備資料 {#prepare-data-for-form-model}
+## 为表单模型准备数据 {#prepare-data-for-form-model}
 
-AEM Forms資料整合可讓您設定並連線至不同的資料來源。 使用轉換程式產生最適化表單後，您可以根據表單資料模型、XSD或JSON結構描述定義表單模型。 您可以使用資料庫、Microsoft Dynamics或任何其他協力廠商服務來建立表單資料模型。
+AEM Forms数据集成允许您配置并连接到不同的数据源。 使用转换过程生成自适应表单后，您可以根据表单数据模型、XSD或JSON架构定义表单模型。 您可以使用数据库、Microsoft Dynamics或任何其他第三方服务来创建表单数据模型。
 
-本教學課程使用MySQL資料庫作為建立表單資料模型的來源。 在資料庫中建立結構描述並新增 **contactus** 根據最適化表單中可用的欄位，將表格變更為結構描述。
+本教程使用MySQL数据库作为创建表单数据模型的源。 在数据库中创建架构并添加 **contactact** 表根据自适应表单中可用的字段添加到架构。
 
-![範例資料mysql](assets/db_entries_sample_form.png)
+![示例数据mysql](assets/db_entries_sample_form.png)
 
-您可以使用下列DDL陳述式來建立 **contactus** 資料庫的資料表。
+您可以使用以下DDL语句创建 **contactact** 表中的数据。
 
 ```sql
 CREATE TABLE `contactus` (
@@ -75,12 +75,12 @@ CREATE TABLE `contactus` (
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
 ```
 
-## 設定AEM執行個體與資料庫之間的連線 {#configure-connection-between-aem-instance-and-database}
+## 配置AEM实例与数据库之间的连接 {#configure-connection-between-aem-instance-and-database}
 
-執行以下設定步驟來建立AEM執行處理與MYSQL資料庫之間的連線：
+执行以下配置步骤以创建AEM实例与MYSQL数据库之间的连接：
 
-1. 前往AEM Web主控台組態頁面，網址為 `http://server:port/system/console/configMgr`.
-1. 尋找並按一下以開啟 **[!UICONTROL Apache Sling Connection Pooled DataSource]** 在「Web主控台設定」的編輯模式中。 依照下表的說明，指定屬性的值：
+1. 转到AEM Web Console的“配置”页，网址为 `http://server:port/system/console/configMgr`.
+1. 查找并单击以打开 **[!UICONTROL Apache Sling Connection Pooled DataSource]** 在“Web控制台配置”的编辑模式下。 按照下表中的说明指定属性的值：
 
    <table> 
     <tbody> 
@@ -89,39 +89,39 @@ CREATE TABLE `contactus` (
     <th><strong>价值</strong></th> 
     </tr> 
     <tr> 
-    <td><p>資料來源名稱</p></td> 
-    <td><p>從資料來源集區篩選驅動程式的資料來源名稱。</p></td>
+    <td><p>数据源名称</p></td> 
+    <td><p>用于从数据源池筛选驱动程序的数据源名称。</p></td>
     </tr>
     <tr> 
-    <td><p>JDBC驅動程式類別</p></td> 
+    <td><p>JDBC驱动程序类</p></td> 
     <td><p>com.mysql.jdbc.Driver</p></td>
     </tr>
     <tr> 
-    <td><p>JDBC連線URI</p></td> 
-    <td><p>jdbc:mysql://[host]：[port]/[schema_name]</p></td>
+    <td><p>JDBC连接URI</p></td> 
+    <td><p>jdbc:mysql://[主机]：[端口]/[模式名称]</p></td>
     </tr>
     <tr> 
     <td><p>用户名</p></td> 
-    <td><p>用於驗證資料庫表格並執行動作的使用者名稱</p></td>
+    <td><p>用于对数据库表进行身份验证和执行操作的用户名</p></td>
     </tr>
     <tr> 
     <td><p>密码</p></td> 
-    <td><p>與使用者名稱相關聯的密碼</p></td>
+    <td><p>与用户名关联的密码</p></td>
     </tr>
     <tr> 
-    <td><p>交易隔離</p></td> 
+    <td><p>事务隔离</p></td> 
     <td><p>READ_COMMITTED</p></td>
     </tr>
     <tr> 
-    <td><p>最大使用中連線數</p></td> 
+    <td><p>最大活动连接数</p></td> 
     <td><p>1000</p></td>
     </tr>
     <tr> 
-    <td><p>最大閒置連線</p></td> 
+    <td><p>最大空闲连接数</p></td> 
     <td><p>100</p></td>
     </tr>
     <tr> 
-    <td><p>最小閒置連線</p></td> 
+    <td><p>最小空闲连接数</p></td> 
     <td><p>10</p></td>
     </tr>
     <tr> 
@@ -129,65 +129,65 @@ CREATE TABLE `contactus` (
     <td><p>10</p></td>
     </tr>
     <tr> 
-    <td><p>最長等待</p></td> 
+    <td><p>最大等待</p></td> 
     <td><p>100000</p></td>
     </tr>
      <tr> 
-    <td><p>借入時測試</p></td> 
+    <td><p>借入测试</p></td> 
     <td><p>已选中</p></td>
     </tr>
      <tr> 
-    <td><p>閒置時測試</p></td> 
+    <td><p>空闲时测试</p></td> 
     <td><p>已选中</p></td>
     </tr>
      <tr> 
-    <td><p>驗證查詢</p></td> 
-    <td><p>範例值為SELECT 1(mysql)、select 1 from dual(oracle)、SELECT 1(MS Sql Server) (validationQuery)</p></td>
+    <td><p>验证查询</p></td> 
+    <td><p>示例值为SELECT 1(mysql)，从dual(oracle)中选择1，SELECT 1(MS Sql Server) (validationQuery)</p></td>
     </tr>
      <tr> 
-    <td><p>驗證查詢逾時</p></td> 
+    <td><p>验证查询超时</p></td> 
     <td><p>10000</p></td>
     </tr>
     </tbody> 
     </table>
 
-## 建立表單資料模型 {#create-form-data-model}
+## 创建表单数据模型 {#create-form-data-model}
 
-設定MYSQL作為資料來源後，請執行以下步驟來建立表單資料模型：
+将MYSQL配置为数据源后，请执行以下步骤以创建表单数据模型：
 
-1. 在AEM編寫執行個體中，導覽至 **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
+1. 在AEM创作实例中，导航到 **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
 
-1. 點選 **[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**.
+1. 点按 **[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**.
 
-1. 在 **[!UICONTROL Create Form Data Model]** 精靈，指定 **workflow_submit** 作為表單資料模型的名稱。 点击&#x200B;**[!UICONTROL Next]**。
+1. 在 **[!UICONTROL Create Form Data Model]** 向导，指定 **workflow_submit** 作为表单数据模型的名称。 点击&#x200B;**[!UICONTROL Next]**。
 
-1. 選取您在上一節中設定的MYSQL資料來源，然後點選 **[!UICONTROL Create]**.
+1. 选择您在上一部分中配置的MYSQL数据源，然后点击 **[!UICONTROL Create]**.
 
-1. 點選 **[!UICONTROL Edit]** 並展開左側窗格中列出的資料來源以選取 **contactus** 表格， **[!UICONTROL get]**、和 **[!UICONTROL insert]** 服務，然後點選 **[!UICONTROL Add Selected]**.
+1. 点按 **[!UICONTROL Edit]** 并展开左侧窗格中列出的数据源以选择 **contactact** 表格， **[!UICONTROL get]**、和 **[!UICONTROL insert]** 服务，然后点按 **[!UICONTROL Add Selected]**.
 
-   ![範例資料mysql](assets/fdm_details_workfdlow_submit.png)
+   ![示例数据mysql](assets/fdm_details_workfdlow_submit.png)
 
-1. 在右窗格中選取資料模型物件，然後點選 **[!UICONTROL Edit Properties]**. 選取 **[!UICONTROL get]** 和 **[!UICONTROL insert]** 從 **[!UICONTROL Read Service]** 和 **[!UICONTROL Write Service]** 下拉式清單。 指定讀取服務的引數，然後點選 **[!UICONTROL Done]**.
+1. 在右窗格中选择数据模型对象并点按 **[!UICONTROL Edit Properties]**. 选择 **[!UICONTROL get]** 和 **[!UICONTROL insert]** 起始日期 **[!UICONTROL Read Service]** 和 **[!UICONTROL Write Service]** 下拉列表。 指定读取服务的参数，然后点按 **[!UICONTROL Done]**.
 
-1. 在 **[!UICONTROL Services]** 索引標籤中，選取 **[!UICONTROL get]** 服務並點選 **[!UICONTROL Edit Properties]**. 選取 **[!UICONTROL Output Model Object]**，停用 **[!UICONTROL Return array]** 切換，然後點選 **[!UICONTROL Done]**.
+1. 在 **[!UICONTROL Services]** 选项卡，选择 **[!UICONTROL get]** 服务和点击 **[!UICONTROL Edit Properties]**. 选择 **[!UICONTROL Output Model Object]**，禁用 **[!UICONTROL Return array]** 切换并点按 **[!UICONTROL Done]**.
 
-1. 選取 **[!UICONTROL Insert]** 服務並點選 **[!UICONTROL Edit Properties]**. 選取 **[!UICONTROL Input Model Object]** 並點選 **[!UICONTROL Done]**.
+1. 选择 **[!UICONTROL Insert]** 服务和点击 **[!UICONTROL Edit Properties]**. 选择 **[!UICONTROL Input Model Object]** 并点按 **[!UICONTROL Done]**.
 
-1. 點選 **[!UICONTROL Save]** 以儲存表單資料模型。
+1. 点按 **[!UICONTROL Save]** 以保存表单数据模型。
 
-您可以使用以下下載範例表單資料模型：
+您可以使用以下内容下载示例表单数据模型：
 
 [获取文件](assets/DownloadedFormsPackage_1497728018502500.zip)
 
-## 產生具有JSON繫結的最適化表單 {#generate-adaptive-forms-with-json-binding}
+## 生成具有JSON绑定的自适应表单 {#generate-adaptive-forms-with-json-binding}
 
-使用 [要轉換的Automated forms conversion服務](convert-existing-forms-to-adaptive-forms.md) 此 [聯絡我們表單](#sample-adaptive-form) 變更為具有資料繫結的最適化表單。 請確定您沒有選取 **[!UICONTROL Generate adaptive form(s) without data bindings]** 產生最適化表單時勾選此方塊。
+使用 [要转换的Automated forms conversion服务](convert-existing-forms-to-adaptive-forms.md) 此 [联系我们表单](#sample-adaptive-form) 到具有数据绑定的自适应表单。 确保不选择 **[!UICONTROL Generate adaptive form(s) without data bindings]** 复选框。
 
-![具有JSON繫結的最適化表單](assets/generate_af_with_data_bindings.png)
+![具有JSON绑定的自适应表单](assets/generate_af_with_data_bindings.png)
 
-選取已轉換的 **聯絡我們表單** 可在 **[!UICONTROL output]** 資料夾位於 **[!UICONTROL Forms & Documents]** 並點選 **[!UICONTROL Edit]**. 點選 **[!UICONTROL Preview]**，在最適化表單欄位中輸入值，然後點選 **[!UICONTROL Submit]**.
+选择已转换的 **联系我们表单** 中提供 **[!UICONTROL output]** 文件夹位置 **[!UICONTROL Forms & Documents]** 并点按 **[!UICONTROL Edit]**. 点按 **[!UICONTROL Preview]**，在自适应表单字段中输入值并点按 **[!UICONTROL Submit]**.
 
-登入 **crx-repository** 並導覽至 */content/forms/fp/admin/submit/data* 以檢視JSON格式提交的值。 以下是當您提交轉換後的檔案時，JSON格式的範例資料 **聯絡我們** 最適化表單：
+登录 **crx存储库** 并导航到 */content/forms/fp/admin/submit/data* 查看以JSON格式提交的值。 以下是提交转换后的格式时JSON格式的示例数据 **联系我们** 自适应表单：
 
 ```json
 {
@@ -214,62 +214,62 @@ CREATE TABLE `contactus` (
 }
 ```
 
-您需要立即建立工作流程模型，以便處理此資料，並使用您在前幾節中建立的表單資料模型將其提交至MYSQL資料庫。
+您需要立即创建一个工作流模型，以便能够处理此数据，并使用在前几节中创建的表单数据模型将其提交到MYSQL数据库。
 
-## 建立工作流程模型以處理JSON資料 {#create-workflow-model}
+## 创建工作流模型以处理JSON数据 {#create-workflow-model}
 
-執行以下步驟來建立工作流程模型，以將最適化表單資料提交至資料庫：
+执行以下步骤来创建工作流模型，以将自适应表单数据提交到数据库：
 
-1. 開啟「工作流程模型」主控台。 預設URL為 `https://server:port/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`.
+1. 打开工作流模型控制台。 默认URL为 `https://server:port/libs/cq/workflow/admin/console/content/models.html/etc/workflow/models`.
 
-1. 選取 **[!UICONTROL Create]**，則 **[!UICONTROL Create Model]**. 此 **[!UICONTROL Add Workflow Model]** 對話方塊隨即顯示。
+1. 选择 **[!UICONTROL Create]**，则 **[!UICONTROL Create Model]**. 此 **[!UICONTROL Add Workflow Model]** 对话框。
 
-1. 輸入 **[!UICONTROL Title]** 和 **[!UICONTROL Name]** （選擇性）。 例如， **workflow_json_submit**. 點選 **[!UICONTROL Done]** 以建立模型。
+1. 输入 **[!UICONTROL Title]** 和 **[!UICONTROL Name]** （可选）。 例如， **workflow_json_submit**. 点按 **[!UICONTROL Done]** 以创建模型。
 
-1. 選取工作流程模型並點選 **[!UICONTROL Edit]** 以在編輯模式中開啟模型。 點選+並新增 **[!UICONTROL Invoke Form Data Model Service]** 步驟至工作流程模型。
+1. 选择工作流模型并点按 **[!UICONTROL Edit]** 以在编辑模式下打开模型。 点按+并添加 **[!UICONTROL Invoke Form Data Model Service]** 步骤到工作流模型。
 
-1. 點選 **[!UICONTROL Invoke Form Data Model Service]** 步驟並點選 ![設定](assets/configure_icon.png).
+1. 点按 **[!UICONTROL Invoke Form Data Model Service]** 步骤并点按 ![配置](assets/configure_icon.png).
 
-1. 在 **[!UICONTROL Form Data Model]** 標籤中，選取您在中建立的表單資料模型 **[!UICONTROL Form Data Model path]** 欄位並選取 **[!UICONTROL insert]** 從 **[!UICONTROL Service]** 下拉式清單。
+1. 在 **[!UICONTROL Form Data Model]** 选项卡中，选择之前创建的表单数据模型 **[!UICONTROL Form Data Model path]** 字段并选择 **[!UICONTROL insert]** 从 **[!UICONTROL Service]** 下拉列表。
 
-1. 在 **[!UICONTROL Input for Service]** 索引標籤，選取 **[!UICONTROL Provide input data using literal, variable, or a workflow metadata, and a JSON file]** 從下拉式清單中選取 **[!UICONTROL Map input fields from input JSON]** 核取方塊，選取 **[!UICONTROL Relative to payload]**，並提供 **data.xml** 作為 **[!UICONTROL Select input JSON document using]** 欄位。
+1. 在 **[!UICONTROL Input for Service]** 选项卡，选择 **[!UICONTROL Provide input data using literal, variable, or a workflow metadata, and a JSON file]** 从下拉列表中，选择 **[!UICONTROL Map input fields from input JSON]** 复选框，选择 **[!UICONTROL Relative to payload]**，并提供 **data.xml** 作为 **[!UICONTROL Select input JSON document using]** 字段。
 
-1. 在 **[!UICONTROL Service Arguments]** 區段，為表單資料模型引數提供下列值：
+1. 在 **[!UICONTROL Service Arguments]** 部分，为表单数据模型参数提供以下值：
 
    ![调用表单数据模型服务](assets/invoke_form_data_model_service.png)
 
-   請注意，表單資料模型欄位（例如接觸點名稱）會對應至 **afData.afBoundData.data.name1**，指已提交的最適化表單的JSON結構描述繫結。
+   请注意，表单数据模型字段（例如，接触点名称）将映射到 **afData.afBoundData.data.name1**，表示已提交的自适应表单的JSON架构绑定。
 
-## 設定最適化表單提交 {#configure-adaptive-form-submission}
+## 配置自适应表单提交 {#configure-adaptive-form-submission}
 
-執行以下步驟，將最適化表單提交至您在上一節中建立的工作流程模型：
+执行以下步骤，将自适应表单提交到您在上一节中创建的工作流模型：
 
-1. 選取中可用的轉換後聯絡我們表單 **[!UICONTROL output]** 資料夾位於 **[!UICONTROL Forms & Documents]** 並點選 **[!UICONTROL Edit]**.
+1. 选择中可用的已转换的“联系我们”表单 **[!UICONTROL output]** 文件夹位置 **[!UICONTROL Forms & Documents]** 并点按 **[!UICONTROL Edit]**.
 
-1. 點選以開啟最適化表單屬性 **[!UICONTROL Form Container]** 然後點選 ![設定](assets/configure_icon.png).
+1. 通过点按打开自适应表单属性 **[!UICONTROL Form Container]** 然后点按 ![配置](assets/configure_icon.png).
 
-1. 在 **[!UICONTROL Submission]** 區段，選取 **[!UICONTROL Invoke an AEM workflow]** 從 **[!UICONTROL Submit Action]** 下拉式清單，選取您在上一節建立的工作流程模型，並指定 **data.xml** 在 **[!UICONTROL Data File Path]** 欄位。
+1. 在 **[!UICONTROL Submission]** 部分，选择 **[!UICONTROL Invoke an AEM workflow]** 从 **[!UICONTROL Submit Action]** 下拉列表，选择您在上一部分中创建的工作流模型，并指定 **data.xml** 在 **[!UICONTROL Data File Path]** 字段。
 
-1. 點選 ![儲存](assets/save_icon.png) 以儲存屬性。
+1. 点按 ![保存](assets/save_icon.png) 以保存属性。
 
-1. 點選 **[!UICONTROL Preview]**，在最適化表單欄位中輸入值，然後點選 **[!UICONTROL Submit]**. MYSQL資料庫表格現在會顯示提交的值，而非 **crx-repository**.
+1. 点按 **[!UICONTROL Preview]**，在自适应表单字段中输入值并点按 **[!UICONTROL Submit]**. 现在，提交的值将显示在MYSQL数据库表中，而不是 **crx存储库**.
 
-## 設定最適化表單以預填資料庫中的值
+## 配置自适应表单以预填充数据库中的值
 
-執行以下步驟來設定最適化表單，以根據表格中定義的主索引鍵從MYSQL資料庫預先填入值（在此案例中是電子郵件）：
+执行以下步骤来配置自适应表单，以根据表中定义的主键从MYSQL数据库中预填充值（本例中为Email）：
 
-1. 點選 **電子郵件** 最適化表單中的欄位並點選 ![編輯規則](assets/edit-rules.png).
+1. 点按 **电子邮件** 自适应表单中的字段并点按 ![编辑规则](assets/edit-rules.png).
 
-1. 點選 **[!UICONTROL Create]** 並選取 **[!UICONTROL is changed]** 從 **[!UICONTROL Select State]** 中的下拉式清單 **[!UICONTROL When]** 區段。
+1. 点按 **[!UICONTROL Create]** 并选择 **[!UICONTROL is changed]** 从 **[!UICONTROL Select State]** 中的下拉列表 **[!UICONTROL When]** 部分。
 
-1. 在 **[!UICONTROL Then]** 區段，選取 **[!UICONTROL Invoke Service]** 和 **get** 作為您在前一節建立的表單資料模型的服務。
+1. 在 **[!UICONTROL Then]** 部分，选择 **[!UICONTROL Invoke Service]** 和 **get** 作为您在本文前一部分中创建的表单数据模型的服务。
 
-1. 選取 **電子郵件** 在 **[!UICONTROL Input]** 區段和表單資料模型的其餘三個欄位， **名稱**， **電話號碼**、和 **問題說明** 在 **[!UICONTROL Output]** 區段。 點選 **[!UICONTROL Done]** 以儲存設定。
+1. 选择 **电子邮件** 在 **[!UICONTROL Input]** 以及表单数据模型的其余三个字段， **名称**， **电话号码**、和 **问题描述** 在 **[!UICONTROL Output]** 部分。 点按 **[!UICONTROL Done]** 以保存设置。
 
-   ![設定電子郵件預填設定](assets/email_prefill_settings.png)
+   ![配置电子邮件预填充设置](assets/email_prefill_settings.png)
 
-   因此，您可以根據MYSQL資料庫中現有的Email專案，預先填入 **[!UICONTROL Preview]** 最適化表單的模式。 aya.tan@xyz.com例如，如果您在 **電子郵件** 欄位（根據中的現有資料） [準備表單資料模型](#prepare-data-for-form-model) 區段)並跳出欄位，其餘三個欄位， **名稱**， **電話號碼**、和 **問題說明** 會在最適化表單中自動顯示。
+   因此，您可以根据MYSQL数据库中的现有Email条目，预填充 **[!UICONTROL Preview]** 自适应表单的模式。 aya.tan@xyz.com例如，如果您在 **电子邮件** 字段（基于中的现有数据） [准备表单数据模型](#prepare-data-for-form-model) 部分)和跳出字段，其余三个字段， **名称**， **电话号码**、和 **问题描述** 在自适应表单中自动显示。
 
-您可以使用以下下載範例轉換後的最適化表單：
+您可以使用以下内容下载示例转换后的自适应表单：
 
 [获取文件](assets/DownloadedFormsPackage_1498226829041200.zip)

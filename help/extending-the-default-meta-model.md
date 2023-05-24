@@ -1,7 +1,7 @@
 ---
 title: 扩展默认元模型
 seo-title: Extend the default meta-model
-description: 擴充預設中繼模型以新增特定於貴組織的模式、驗證和實體，並在執行Automated forms conversion服務時將設定套用至調適型表單欄位。
+description: 扩展默认元模型以添加特定于贵组织的模式、验证和实体，并在运行Automated forms conversion服务时将配置应用于自适应表单字段。
 seo-description: Extend the default meta-model to add pattern, validations, and entities specific to your organization and apply configurations to adaptive form fields while running the Automated Forms Conversion service.
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
@@ -16,17 +16,17 @@ ht-degree: 1%
 
 # 扩展默认元模型 {#extend-the-default-meta-model}
 
-automated forms conversion服務會識別並擷取來源表單中的表單物件。 語意對應程式可協助服務決定如何以最適化表單呈現擷取的物件。 例如，來源表單可以有許多不同型別的日期表示。 語意對應程式有助於將來源表單的日期表單物件與適用性表單的日期元件對應到所有表示方式。 語意對應程式也可讓服務在轉換期間預先設定並套用驗證、規則、資料模式、說明文字和協助工具屬性至最適化表單元件。
+automated forms conversion服务识别源表单中的表单对象并将其从中提取。 语义映射器可帮助服务确定提取的对象如何以自适应形式表示。 例如，源表单可以有许多不同类型的日期表示形式。 语义映射器帮助将源表单的日期表单对象的所有表示形式映射到自适应表单的日期组件。 语义映射器还允许该服务在转换期间预配置验证、规则、数据模式、帮助文本和可访问性属性并将其应用于自适应表单组件。
 
 ![](assets/meta-model.gif)
 
-中繼模型是JSON結構描述。 開始使用中繼模型之前，請確定您已精通JSON。 您必須具備建立、編輯和讀取以JSON格式儲存之資料的經驗。
+元模型是一个JSON架构。 在开始使用元模型之前，请确保您熟悉JSON。 您必须具有创建、编辑和读取以JSON格式保存的数据的经验。
 
-## 預設元模型 {#default-meta-model}
+## 默认元模型 {#default-meta-model}
 
-automated forms conversion服務有預設的中繼模型。 它是JSON結構描述，並與Adobe服務的其他元件一起駐留在Automated forms conversion雲端。 您可以在下列網址，在本機AEM伺服器上找到中繼模型的副本： http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. 您也可以 [按一下這裡](assets/en.globalschema.json) 以存取或下載英文結構描述。 的中繼模型 [法文](assets/fr.globalschema.json)， [德文](assets/de.globalschema.json) [西班牙文](assets/es.globalschema.json)， [義大利文](assets/it.globalschema.json)、和 [葡萄牙文](assets/pt_br.globalschema.json) 語言也可供下載。
+automated forms conversion服务具有默认的元模型。 它是一个JSON架构，通过Automated forms conversion服务的其他组件驻留在Adobe云上。 您可在本地AEM服务器上找到元模型的副本，网址为：http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`. 您还可以 [单击此处](assets/en.globalschema.json) 访问或下载英语架构。 的元模型 [法语](assets/fr.globalschema.json)， [德语](assets/de.globalschema.json) [西班牙语](assets/es.globalschema.json)， [意大利语](assets/it.globalschema.json)、和 [葡萄牙语](assets/pt_br.globalschema.json) 语言也可供下载。
 
-中繼模型的結構描述衍生自位於https://schema.org/docs/schemas.html的結構描述實體。 它有Person、PostalAddress、LocalBusiness和https://schema.org上定義的更多實體。 中繼模型的每個實體都會遵守JSON結構描述物件型別。 下列程式碼代表範例元模型結構：
+元模型的模式源自https://schema.org/docs/schemas.html上的模式实体。 它具有Person、PostalAddress、LocalBusiness和https://schema.org上定义的更多实体。 元模型的每个实体都遵循JSON架构对象类型。 以下代码表示一个元模型结构示例：
 
 ```
    "Entity": {
@@ -44,13 +44,13 @@ automated forms conversion服務有預設的中繼模型。 它是JSON結構描�
     }
 ```
 
-## 下載預設的中繼模型 {#download-the-default-meta-model}
+## 下载默认元模型 {#download-the-default-meta-model}
 
-執行以下步驟，將預設元模型下載至本機檔案系統：
+执行以下步骤以将默认元模型下载到本地文件系统：
 
-1. 登入您的AEM Forms執行個體。
-1. 導覽至 **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** **>** **[!UICONTROL Meta Model]** 資料夾。
-1. 選取 **[!UICONTROL global.schema.json]** 檔案並點選 **[!UICONTROL Download]**. 下載對話方塊隨即顯示。 選取 **[!UICONTROL Download asset(s) as binary files]** 選項。 点击&#x200B;**[!UICONTROL Download]**。已下載封存。
+1. 登录到您的AEM Forms实例。
+1. 导航到 **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** **>** **[!UICONTROL Meta Model]** 文件夹。
+1. 选择 **[!UICONTROL global.schema.json]** 文件并点按 **[!UICONTROL Download]**. 此时将显示下载对话框。 选择 **[!UICONTROL Download asset(s) as binary files]** 选项。 点击&#x200B;**[!UICONTROL Download]**。已下载存档。
 
    <!--
    Comment Type: draft
@@ -64,9 +64,9 @@ automated forms conversion服務有預設的中繼模型。 它是JSON結構描�
    <li>Step text</li>
    -->
 
-## 瞭解中繼模型 {#understanding-the-meta-model}
+## 了解元模型 {#understanding-the-meta-model}
 
-元模型是指包含實體的JSON結構描述檔案。 JSON結構描述檔案中的所有實體都包含名稱和ID。 每個實體可以包含多個屬性。 圖元及其屬性會因領域而異。 您可以使用關鍵字和欄位設定來擴充結構描述檔案，以將結構描述屬性對應至最適化表單元件。
+元模型是指包含实体的JSON架构文件。 JSON架构文件中的所有实体都包含名称和ID。 每个实体可以包含多个属性。 图元及其属性可因域而异。 您可以使用关键字和字段配置来扩充架构文件，以将架构属性映射到自适应表单组件。
 
 ```
 "Event": {
@@ -97,29 +97,29 @@ automated forms conversion服務有預設的中繼模型。 它是JSON結構描�
     }
 ```
 
-在此範例中， **事件** 代表實體名稱，其值為 **id** 作為 **Eventid**. 事件實體包含多個屬性：
+在此示例中， **事件** 表示实体的名称，其值为 **id** 作为 **Eventid**. 事件实体包括多个属性：
 
 * startDate
 * endDate
 * 位置
 
-此 **allOf** 元模型中的建構可啟用實體之間的繼承。
+此 **allOf** 元模型中的构造实现了实体间的继承。
 
-每個屬性可進一步包含：
+每个属性还可以包括：
 
-* [JSON結構描述屬性](#jsonschemaproperties)
-* [關鍵字式搜尋，將屬性套用至產生的最適化表單欄位](#keywordsearch)
-* [其他屬性](#additionalproperties)
+* [JSON架构属性](#jsonschemaproperties)
+* [基于关键字的搜索，用于将属性应用于生成的自适应表单字段](#keywordsearch)
+* [其他属性](#additionalproperties)
 
-![中繼模型屬性](assets/meta_model_elements.gif)
+![元模型属性](assets/meta_model_elements.gif)
 
-根據所使用的參照關鍵字 **aem：affKeyword**，轉換服務會對來源表單欄位執行搜尋操作。 轉換服務會將JSON結構描述屬性和其他屬性套用至符合搜尋條件的欄位。
+基于使用的引用关键词 **aem：affKeyword**，转换服务对源表单字段执行搜索操作。 转换服务将JSON架构属性和其他属性应用于符合搜索条件的字段。
 
-在此範例中，轉換服務會在來源表單中搜尋電話、電話、行動電話、公司電話、住家電話、電話號碼、電話號碼和電話號碼關鍵字。 轉換服務會根據包含這些關鍵字的欄位，在轉換後將型別、模式和aem：afProperties套用至調適型表單欄位。
+在此示例中，转换服务在源表单中搜索电话、电话、移动电话、工作电话、家庭电话、电话号码、电话号码和电话号码关键字。 转换服务会根据包含这些关键字的字段，在转换后将类型、模式和aem：afProperties应用于自适应表单字段。
 
-### 產生的最適化表單欄位的JSON結構描述屬性 {#jsonschemaproperties}
+### 生成的自适应表单字段的JSON架构属性 {#jsonschemaproperties}
 
-中繼模型支援使用Automated forms conversion服務產生的最適化表單欄位的下列JSON結構描述共同屬性：
+元模型支持使用Automated forms conversion服务生成的自适应表单字段的以下JSON架构通用属性：
 
 <table> 
  <tbody> 
@@ -130,42 +130,42 @@ automated forms conversion服務有預設的中繼模型。 它是JSON結構描�
   <tr> 
    <td><p>标题</p></td> 
    <td> 
-    <p>中繼模型中title屬性中提到的文字會作為搜尋關鍵字，以對產生的調適型表單欄位執行動作。 例如，修改最適化表單欄位的標籤。 如需詳細資訊，請參閱 <strong>修改表單欄位的標籤</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</a></p> </td> 
+    <p>元模型中的标题属性中提到的文本用作搜索关键字，以对生成的自适应表单字段执行操作。 例如，修改自适应表单字段的标签。 有关更多信息，请参阅 <strong>修改表单字段的标签</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</a></p> </td> 
   </tr>
   <td><p>说明</p></td> 
    <td> 
-    <p>description屬性會設定所產生的最適化表單欄位的說明文字。 如需詳細資訊，請參閱 <strong>新增說明文字至表單欄位</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</a></p> </td> 
+    <p>description属性为生成的自适应表单字段设置帮助文本。 有关更多信息，请参阅 <strong>将帮助文本添加到表单字段</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</a></p> </td> 
   </tr>
   <td><p>类型</p></td> 
    <td> 
-    <p>type屬性會定義所產生的最適化表單欄位的資料型別。 標題屬性的可能值包括：</p>
+    <p>type属性定义生成的自适应表单字段的数据类型。 标题属性的可能值包括：</p>
     <ul> 
-     <li>字串：產生文字資料型別的自適應表單欄位。</li> 
-     <li>number：產生數值資料型別的自適應表單欄位。</li>
-     <li>integer：產生數值資料型別的自適應表單欄位，其子型別設定為integer。</li>
-     <li>布林值：產生切換最適化表單元件。</li>
-     </ul><p>如需在元模型中使用型別屬性的詳細資訊，請參閱 <strong>修改表單欄位的型別</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</a></p></td> 
+     <li>字符串：生成文本数据类型的自适应表单字段。</li> 
+     <li>数字：生成数值数据类型的自适应表单字段。</li>
+     <li>integer：生成子类型设置为integer的numeric数据类型的自适应表单字段。</li>
+     <li>布尔值：生成切换自适应表单组件。</li>
+     </ul><p>有关在元模型中使用类型属性的更多信息，请参阅 <strong>修改表单字段的类型</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</a></p></td> 
   </tr>
-  <td><p>圖樣</p></td> 
+  <td><p>模式</p></td> 
    <td> 
-    <p>pattern屬性會根據規則運算式來限制產生的最適化表單欄位的值。 例如，中繼模型中的下列程式碼會將所產生的最適化表單欄位的值限製為10位數：<br>"pattern"： "/\\d{10}/"<br>同樣地，下列中繼模型中的程式碼會將欄位的值限製為特定日期格式。<br> "pattern"： "date{DD MMMM， YYYY}"，</p> </td> 
+    <p>pattern属性根据正则表达式来限制生成的自适应表单字段的值。 例如，元模型中的以下代码将生成的自适应表单字段的值限制为10位数：<br>"pattern"： "/\\d{10}/"<br>同样，元模型中的以下代码将字段的值限制为特定的日期格式。<br> "pattern"： "date{DD MMMM， YYYY}"，</p> </td> 
   </tr>
   <td><p>格式</p></td> 
    <td> 
-    <p>format屬性會根據具名模式而非規則運算式來限制產生的最適化表單欄位的值。 format屬性的可能值包括：<ul><li>電子郵件：產生電子郵件最適化表單元件。</li><li>hostname：產生文字方塊最適化表單元件。</li></ul>如需在元模型中使用format屬性的詳細資訊，請參閱 <strong>修改表單欄位的格式</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</a></p> </td> 
+    <p>format属性根据命名模式而不是正则表达式来限制生成的自适应表单字段的值。 format属性的可能值包括：<ul><li>电子邮件：生成电子邮件自适应表单组件。</li><li>hostname：生成文本框自适应表单组件。</li></ul>有关在元模型中使用format属性的更多信息，请参阅 <strong>修改表单字段的格式</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</a></p> </td> 
   </tr>
-  <td><p>列舉和列舉名稱</p></td> 
+  <td><p>枚举和枚举名称</p></td> 
    <td> 
-    <p>enum和enumNames屬性將下拉清單、核取方塊或選項按鈕欄位的值限製為固定集。 enumNames中列出的值會顯示在使用者介面上。 使用enum屬性列出的值會用於計算。<br>如需詳細資訊，請參閱 <strong>將表單欄位轉換為最適化表單中的多選核取方塊</strong>， <strong>將文字欄位轉換為最適化表單中的下拉式清單</strong>、和 <strong>新增其他選項至下拉式清單</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</a></p> </td> 
+    <p>enum和enumNames属性将下拉列表、复选框或单选按钮字段的值限制为固定集。 enumNames中列出的值将显示在用户界面上。 使用enum属性列出的值用于计算。<br>有关更多信息，请参阅 <strong>将表单字段转换为自适应表单中的多选复选框</strong>， <strong>将文本字段转换为自适应表单中的下拉列表</strong>、和 <strong>向下拉列表添加其他选项</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</a></p> </td> 
   </tr>
  </tbody> 
 </table>
 
-### 關鍵字式搜尋，將屬性套用至產生的最適化表單欄位 {#keywordsearch}
+### 基于关键字的搜索，用于将属性应用于生成的自适应表单字段 {#keywordsearch}
 
-automated forms conversion服務會在轉換期間在來源表單上執行關鍵字搜尋。 篩選符合搜尋條件的欄位後，轉換服務會將中繼模型中為這些欄位定義的屬性套用至產生的調適型表單欄位。
+automated forms conversion服务在转换期间对源表单执行关键词搜索。 筛选满足搜索条件的字段后，转换服务将为元模型中的这些字段定义的属性应用于生成的自适应表单字段。
 
-關鍵字的參照方式 **aem：affKeyword** 屬性。
+关键字的引用方式 **aem：affKeyword** 属性。
 
 ```
 {
@@ -176,11 +176,11 @@ automated forms conversion服務會在轉換期間在來源表單上執行關鍵
 }
 ```
 
-在此範例中，轉換服務會使用中的文字 **aem：affKeyword** 作為搜尋關鍵字。 擷取 **銀行帳號** 表單中的文字，轉換服務會將欄位轉換為 **數字** 使用 **type** 屬性。
+在此示例中，转换服务使用中的文本 **aem：affKeyword** 作为搜索关键词。 检索 **银行帐号** 文本，转换服务会将字段转换为 **数字** 使用键入 **type** 属性。
 
-### 產生的最適化表單欄位的其他屬性 {#additionalproperties}
+### 生成的自适应表单字段的其他属性 {#additionalproperties}
 
-您可以使用 **aem：afProperties** 中繼模型中的屬性，可為使用Automated forms conversion服務產生的最適化表單欄位定義下列其他屬性：
+您可以使用 **aem：afProperties** 元模型中的属性，以便为使用Automated forms conversion服务生成的自适应表单字段定义以下附加属性：
 
 <table> 
  <tbody> 
@@ -191,41 +191,41 @@ automated forms conversion服務會在轉換期間在來源表單上執行關鍵
   <tr> 
    <td><p>多行</p></td> 
    <td> 
-    <p>multiLine屬性會在轉換後，將來源表單欄位轉換為最適化表單中的多行欄位。 如需詳細資訊，請參閱 <strong>將字串欄位轉換為多行欄位</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</a></p> </td> 
+    <p>multiLine属性在转换后将源表单字段转换为自适应表单中的多行字段。 有关更多信息，请参阅 <strong>将字符串字段转换为多行字段</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</a></p> </td> 
   </tr>
-  <td><p>強制</p></td> 
+  <td><p>必需</p></td> 
    <td> 
-    <p>強制屬性會將轉換後的最適化表單欄位的輸入設定為強制。<br>如需詳細資訊，請參閱 <strong>將驗證新增至最適化表單欄位</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</a></p>
+    <p>Mandatory属性将转换后的自适应表单字段输入设置为必需。<br>有关更多信息，请参阅 <strong>向自适应表单字段添加验证</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</a></p>
     </td> 
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>jcr：title屬性搭配title JSON結構描述屬性，可讓您在轉換後修改最適化表單欄位的標籤。<br>如需詳細資訊，請參閱 <strong>修改表單欄位的標籤</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</a><br>另請參閱 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON結構描述建立調適型表單</a> 瞭解更多可使用JSON結構描述套用至最適化表單欄位的屬性。</p>
+    <p>使用jcr：title属性和title JSON架构属性，您可以在转换后修改自适应表单字段的标签。<br>有关更多信息，请参阅 <strong>修改表单字段的标签</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</a><br>参见 <a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON架构创建自适应表单</a> 有关使用JSON架构可应用于自适应表单字段的更多属性的信息。</p>
     <p></p></td> 
   </tr>
   <td><p>sling：resourceType和guideNodeClass</p></td> 
    <td> 
-    <p>sling：resourceType和guideNodeClass屬性可讓您將表單欄位對應到對應的調適型表單元件。<br>如需詳細資訊，請參閱 <strong>將表單欄位轉換為最適化表單中的多選核取方塊</strong> 和 <strong>將文字欄位轉換為最適化表單中的下拉式清單</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</a></p> </td> 
+    <p>sling：resourceType和guideNodeClass属性允许您将表单字段映射到相应的自适应表单组件。<br>有关更多信息，请参阅 <strong>将表单字段转换为自适应表单中的多选复选框</strong> 和 <strong>将文本字段转换为自适应表单中的下拉列表</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</a></p> </td> 
   </tr>
   <td><p>validatePictureClause</p></td> 
    <td> 
-    <p>validatePictureClause屬性會針對轉換後的最適化表單欄位中允許的格式設定驗證。<br>如需詳細資訊，請參閱 <strong>將驗證新增至最適化表單欄位</strong> 在 <a href="#custommetamodelexamples">自訂中繼模型範例。</p> </td> 
+    <p>validatePictureClause属性对转换后自适应表单字段中允许的格式设置验证。<br>有关更多信息，请参阅 <strong>向自适应表单字段添加验证</strong> 在 <a href="#custommetamodelexamples">自定义元模型示例。</p> </td> 
   </tr>
  </tbody> 
 </table>
 
-## 以您自己的語言建立自訂元模型{#language-specific-meta-model}
+## 用您自己的语言创建自定义元模型{#language-specific-meta-model}
 
-您可以建立特定語言的中繼模型。 這類中繼模型可協助您以所選語言建立對應規則。 automated forms conversion服務可讓您使用下列語言建立中繼模型：
+您可以创建特定于语言的元模型。 此类元模型可帮助您使用所选语言创建映射规则。 automated forms conversion服务允许您使用以下语言创建元模型：
 
 * 英语(en)
 * 法语 (fr)
 * 德语 (de)
 * 西班牙语 (es)
 * 意大利语 (it)
-* 葡萄牙文(pt-br)
+* 葡萄牙语(pt-br)
 
-新增 *aem：Language* 將元標籤標籤標籤到元模型頂端，以指定其語言。 例如，
+添加 *aem：Language* 元模型顶部的metatag标记可指定其语言。 例如，
 
 ```JSON
 "metaTags": {
@@ -233,69 +233,69 @@ automated forms conversion服務會在轉換期間在來源表單上執行關鍵
     }
 ```
 
-未指定語言時，服務會認為中繼模型為英文。
+当未指定语言时，服务会认为元模型是英语的。
 
-### 建立特定語言中繼模型的注意事項
+### 创建语言特定元模型的注意事项
 
-* 確定每個索引鍵的名稱都是英文名稱。 例如，emailAddress。
-* 請確定所有ID鍵的所有實體參照和預先定義的值都只包含ASCII字元。 例如「id」：「ContactPoint」/「$ref」：「#ContactPoint」。
-* 請確定與下列索引鍵對應的所有值都使用指定的元模型語言：
+* 确保每个键的名称都使用英语。 例如，emailAddress。
+* 确保所有id键的所有实体引用和预定义值只包含ASCII字符。 例如，“id”：“ContactPoint”/“$ref”：“#ContactPoint”。
+* 确保与以下键对应的所有值都使用指定的元模型语言：
    * aem：affKeyword
    * 标题
    * 说明
    * enumName
-   * shortDescription
+   * shortdescription
    * validatePictureClauseMessage
 
-   例如，當中繼模型的語言是法文(「aem：Language」：「fr」)時，請確定所有說明和訊息都是法文。
+   例如，当元模型的语言是法语(“aem：Language”：“fr”)时，请确保所有描述和消息都使用法语。
 
-* 確認全部 [JSON結構描述屬性](#jsonschemaproperties) 僅使用支援的值。 例如，type屬性只能跨越選取的String、Number、Integer和Boolean值。
+* 确保全部 [JSON架构属性](#jsonschemaproperties) 仅使用支持的值。 例如，type属性只能跨选定的String、Number、Integer和Boolean值。
 
-下圖顯示英語中繼模型與對應的法語中繼模型範例：
+下图显示了英语元模型和相应的法语元模型的示例：
 
 ![](assets/language-specific-meta-model-comparison.png)
 
-## 使用自訂中繼模型修改最適化表單欄位 {#modify-adaptive-form-fields-using-custom-meta-model}
+## 使用自定义元模型修改自适应表单字段 {#modify-adaptive-form-fields-using-custom-meta-model}
 
-除了預設元模型中列出的模式與驗證之外，您的組織還可以有這些模式與驗證。 您可以擴充預設元模型，以新增特定於貴組織的陣列、驗證和圖元。 automated forms conversion服務會在轉換期間將自訂中繼模型套用至表單欄位。 當發現組織特定的新陣列、驗證和圖元時，您可以不斷更新元模型。
+除了默认元模型中列出的模式和验证之外，您的组织还可以具有这些模式和验证。 可以扩展缺省元模型，以添加特定于贵组织的阵列、验证和图元。 automated forms conversion服务在转换期间将自定义元模型应用于表单字段。 当发现特定于您组织的新模式、验证和图元时，可以不断更新元模型。
 
-automated forms conversion服務會使用儲存在下列位置的預設中繼模型，在轉換期間將來源表單欄位對應到調適型表單欄位：
+automated forms conversion服务使用保存在以下位置的默认元模型，在转换期间将源表单字段映射到自适应表单字段：
 
 http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
 
-不過，您可以將自訂中繼模型儲存在資料夾中，並修改轉換服務屬性，以便在轉換期間使用自訂中繼模型。
+但是，您可以将自定义元模型保存在文件夹中，并修改转换服务属性以在转换期间使用自定义元模型。
 
-### 在轉換期間使用自訂中繼模型 {#use-custom-meta-model-during-conversion}
+### 在转换期间使用自定义元模型 {#use-custom-meta-model-during-conversion}
 
-執行以下步驟以在轉換期間使用自訂中繼模型：
+执行以下步骤以在转换期间使用自定义元模型：
 
-1. 在中建立資料夾 **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** 並將自訂中繼模型JSON結構描述檔案上傳至資料夾。
-1. 使用以下專案開啟轉換服務屬性：
+1. 在中创建文件夹 **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** 并将自定义元模型JSON架构文件上传到文件夹。
+1. 使用以下方式打开转换服务属性：
 
    **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > **&lt;properties of=&quot;&quot; selected=&quot;&quot; configuration=&quot;&quot;>**
 
-1. 在 **[!UICONTROL Basic]** 索引標籤中，指定自訂中繼模型在 **[!UICONTROL Custom Meta-model]** 欄位並點選 **[!UICONTROL Save & Close]**.
-1. [執行轉換](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) 將自訂中繼模型套用至轉換程式。
+1. 在 **[!UICONTROL Basic]** 选项卡中，指定自定义元模型在 **[!UICONTROL Custom Meta-model]** 字段并点按 **[!UICONTROL Save & Close]**.
+1. [运行转换](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) 将自定义元模型应用于转换过程。
 
-### 自訂中繼模型範例 {#custommetamodelexamples}
+### 自定义元模型示例 {#custommetamodelexamples}
 
-使用自訂中繼模型修改最適化表單欄位屬性的常見範例包括：
+使用自定义元模型修改自适应表单字段属性的常见示例包括：
 
-* 修改表單欄位的標籤
-* 修改表單欄位的型別
-* 新增說明文字至表單欄位
-* 將表單欄位轉換為最適化表單中的多選單選按鈕
-* 修改表單欄位的格式
-* 將驗證新增至最適化表單欄位
-* 將表單欄位轉換為最適化表單中的下拉式清單選項
-* 新增其他選項至下拉式清單
-* 將字串欄位轉換為多行欄位
+* 修改表单字段的标签
+* 修改表单字段的类型
+* 将帮助文本添加到表单字段
+* 将表单字段转换为自适应表单中的多选单选按钮
+* 修改表单字段的格式
+* 向自适应表单字段添加验证
+* 将表单字段转换为自适应表单中的下拉列表选项
+* 向下拉列表添加其他选项
+* 将字符串字段转换为多行字段
 
-#### 修改表單欄位的標籤 {#modify-the-label-of-a-form-field}
+#### 修改表单字段的标签 {#modify-the-label-of-a-form-field}
 
-**範例：** 在轉換後，將表單中的「銀行帳號」標籤修改為最適化表單中的「自訂帳號」。
+**示例：** 在转换后，将表单中的银行帐号标签修改为自适应表单中的自定义帐号。
 
-在此自訂中繼模型中，轉換服務使用 **標題** 屬性做為搜尋關鍵字。 擷取 **銀行帳號** 表單中的文字，轉換服務會以 **客戶帳號** 以提及的字串 **jcr：title** 中的屬性 **aem：afProperties** 區段。
+在此自定义元模型中，转换服务使用 **标题** 属性作为搜索关键词。 检索 **银行帐号** 文本，转换服务会将该文本替换为 **客户帐号** 字符串中提及了 **jcr：title** 中的属性 **aem：afProperties** 部分。
 
 ```
 {
@@ -309,11 +309,11 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 }
 ```
 
-#### 修改表單欄位的型別 {#modify-the-type-of-a-form-field}
+#### 修改表单字段的类型 {#modify-the-type-of-a-form-field}
 
-**範例**：修改 **銀行帳號** 轉換前表單中文字型別的欄位轉換為轉換後自適應表單中的數字型別欄位。
+**示例**：修改 **银行帐号** 表单中文本类型的字段，在转换为自适应表单中的数字类型字段之前，在转换之后。
 
-在此自訂中繼模型中，轉換服務會使用中的文字 **aem：affKeyword** 作為搜尋關鍵字。 擷取 **銀行帳號** 文字的表單中，轉換服務會使用將欄位轉換為數字型別 **type** 屬性。
+在此自定义元模型中，转换服务使用中的文本 **aem：affKeyword** 作为搜索关键词。 检索 **银行帐号** 文本，转换服务将使用以下代码将字段转换为数字类型 **type** 属性。
 
 ```
 {
@@ -324,11 +324,11 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 }
 ```
 
-#### 新增說明文字至表單欄位 {#add-help-text-to-a-form-field}
+#### 将帮助文本添加到表单字段 {#add-help-text-to-a-form-field}
 
-**範例**：將說明文字新增至 **銀行帳號** 最適化表單的欄位。
+**示例**：将帮助文本添加到 **银行帐号** 自适应表单的字段。
 
-在此自訂中繼模型中，轉換服務會使用中的文字 **aem：affKeyword** 作為搜尋關鍵字。 擷取 **銀行帳號** 文字於表單中，轉換服務會使用將說明文字新增至最適化表單欄位 **說明** 屬性。
+在此自定义元模型中，转换服务使用中的文本 **aem：affKeyword** 作为搜索关键词。 检索 **银行帐号** 文本，转换服务使用将帮助文本添加到自适应表单字段 **描述** 属性。
 
 ```
 {
@@ -340,18 +340,18 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 }
 ```
 
-#### 將表單欄位轉換為最適化表單中的多選核取方塊 {#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
+#### 将表单字段转换为自适应表单中的多选复选框 {#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
 
-**範例**：轉換 **國家** 字串型別欄位（在轉換前於表單中）轉換為最適化表單中的核取方塊（在轉換後）。
+**示例**：转换 **国家/地区** 表单中字符串类型的字段，转换为自适应表单中的复选框。
 
-在此自訂中繼模型中，轉換服務使用中的文字 **aem：affKeyword** 作為搜尋關鍵字。 擷取 **國家** 文字時，轉換服務會使用將欄位轉換為以下核取方塊 **列舉** 屬性：
+在此自定义元模型中，转换服务使用中的文本 **aem：affKeyword** 作为搜索关键词。 检索 **国家/地区** 文本时，转换服务会使用将字段转换为以下复选框 **枚举** 属性：
 
 * 印度
-* 英國
+* 英国
 * 澳大利亚
 * 新西兰
 
-**sling：resourceType** 和 **guideNodeClass** 屬性會將表單欄位對應至最適化表單元件核取方塊。
+**sling：resourceType** 和 **guideNodeClass** 属性将表单字段映射到自适应表单组件复选框。
 
 ```
 {
@@ -374,11 +374,11 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 }
 ```
 
-#### 修改表單欄位的格式 {#modify-the-format-of-a-form-field}
+#### 修改表单字段的格式 {#modify-the-format-of-a-form-field}
 
-**範例**：修改格式 **電子郵件地址** 欄位轉換為電子郵件格式。
+**示例**：修改格式 **电子邮件地址** 字段转换为电子邮件格式。
 
-在此自訂中繼模型中，轉換服務使用中的文字 **aem：affKeyword** 作為搜尋關鍵字。 擷取 **電子郵件地址** 表單中的文字，轉換服務會使用 **格式** 屬性。
+在此自定义元模型中，转换服务使用中的文本 **aem：affKeyword** 作为搜索关键词。 检索 **电子邮件地址** 文本，转换服务使用将字段转换为电子邮件格式 **格式** 属性。
 
 ```
 {
@@ -390,11 +390,11 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 }
 ```
 
-#### 將驗證新增至最適化表單欄位 {#add-validations-to-adaptive-form-fields}
+#### 向自适应表单字段添加验证 {#add-validations-to-adaptive-form-fields}
 
-**範例1：** 將驗證新增至 **郵遞區號** 最適化表單的欄位。
+**示例1：** 将验证添加到 **邮政编码** 自适应表单的字段。
 
-在此自訂中繼模型中，轉換服務使用中的文字 **aem：affKeyword** 做為搜尋關鍵字。 擷取 **郵遞區號** 文字於表單中，轉換服務會使用將驗證新增至欄位 **validatePictureClause** 屬性定義於 **aem：afProperties** 區段。 根據驗證，您為指定的輸入 **郵遞區號** 轉換後最適化表單中的欄位必須包含6個字元。
+在此自定义元模型中，转换服务使用中的文本 **aem：affKeyword** 作为搜索关键词。 检索 **邮政编码** 文本，转换服务将使用以下内容向字段添加验证 **validatePictureClause** 在中定义的属性 **aem：afProperties** 部分。 根据验证，您为 **邮政编码** 自适应表单中的字段在转换后必须包含六个字符。
 
 ```
 {
@@ -408,9 +408,9 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 }
 ```
 
-**範例2：** 將驗證新增至 **銀行帳號** 最適化表單的欄位。
+**示例2：** 将验证添加到 **银行帐号** 自适应表单的字段。
 
-在此自訂中繼模型中，轉換服務使用中的文字 **aem：affKeyword** 做為搜尋關鍵字。 擷取 **銀行帳號** 文字於表單中，轉換服務會使用將驗證新增至欄位 **強制** 屬性定義於 **aem：afProperties** 區段。 根據驗證，您必須指定 **銀行帳號** 轉換後提交表單前的欄位。
+在此自定义元模型中，转换服务使用中的文本 **aem：affKeyword** 作为搜索关键词。 检索 **银行帐号** 文本，转换服务将使用以下内容向字段添加验证 **必需** 在中定义的属性 **aem：afProperties** 部分。 根据验证，必须为 **银行帐号** 字段。
 
 ```
 {
@@ -424,18 +424,18 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 }
 ```
 
-#### 將文字欄位轉換為最適化表單中的下拉式清單 {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
+#### 将文本字段转换为自适应表单中的下拉列表 {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
 
-**範例**：轉換 **國家** 轉換前表單中字串型別的欄位轉換為轉換後最適化表單中的下拉式選項。
+**示例**：转换 **国家/地区** 表单中字符串类型的字段，在转换为自适应表单中的下拉选项之前，在转换之后。
 
-在此自訂中繼模型中，轉換服務使用中的文字 **aem：affKeyword** 做為搜尋關鍵字。 擷取 **國家** 文字於表單中，轉換服務會使用將欄位轉換為以下下拉式清單選項 **列舉** 屬性：
+在此自定义元模型中，转换服务使用中的文本 **aem：affKeyword** 作为搜索关键词。 检索 **国家/地区** 文本时，转换服务会使用将字段转换为以下下拉列表选项 **枚举** 属性：
 
 * 印度
-* 英國
+* 英国
 * 澳大利亚
 * 新西兰
 
-**sling：resourceType** 和 **guideNodeClass** 屬性會將表單欄位對應至下拉式最適化表單元件。
+**sling：resourceType** 和 **guideNodeClass** 属性将表单字段映射到下拉自适应表单组件。
 
 ```
 {
@@ -458,11 +458,11 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 }
 ```
 
-#### 新增其他選項至下拉式清單 {#add-additional-options-to-the-drop-down-list}
+#### 向下拉列表添加其他选项 {#add-additional-options-to-the-drop-down-list}
 
-**範例：** 新增 **斯里蘭卡** 作為使用自訂中繼模型的現有下拉式清單的額外選項。
+**示例：** 添加 **斯里兰卡** 作为使用自定义元模型的现有下拉列表的额外选项。
 
-若要新增額外選項，請更新 **列舉** 屬性與新選項。 在此範例中，更新 **列舉** 屬性與 **斯里蘭卡** 作為額外選項。 下列清單中的值 **列舉** 屬性會顯示在下拉式清單中。
+要添加额外选项，请更新 **枚举** 属性。 在此示例中，更新 **枚举** 属性 **斯里兰卡** 作为额外选项。 中列出的值 **枚举** 属性显示在下拉列表中。
 
 ```
 {
@@ -486,11 +486,11 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 }
 ```
 
-#### 將字串欄位轉換為多行欄位 {#convert-a-string-field-to-a-multi-line-field}
+#### 将字符串字段转换为多行字段 {#convert-a-string-field-to-a-multi-line-field}
 
-**範例：** 轉換 **地址** 字串型別的欄位轉換為表單中的多行欄位後。
+**示例：** 转换 **地址** 字符串类型的字段转换为表单中的多行字段。
 
-在此自訂中繼模型中，轉換服務使用中的文字 **aem：affKeyword** 做為搜尋關鍵字。 擷取 **地址** 表單中的文字，此服務會使用將文字欄位轉換為多行欄位 **多行** 屬性定義於 **aem：afProperties** 區段。
+在此自定义元模型中，转换服务使用中的文本 **aem：affKeyword** 作为搜索关键词。 检索 **地址** 文本，该服务将使用以下内容将文本字段转换为多行字段 **多行** 在中定义的属性 **aem：afProperties** 部分。
 
 ```
 {
