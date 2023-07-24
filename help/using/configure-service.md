@@ -1,9 +1,14 @@
 ---
 title: 配置自动化表单转换服务
 description: 准备好您的AEM实例以使用Automated forms conversion服务
-role: User, Admin
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
+topic-tags: forms
+role: Admin, Developer, User
+level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
 source-wordcount: '2684'
 ht-degree: 7%
@@ -265,7 +270,7 @@ automated forms conversion服务使用Day CQ邮件服务发送电子邮件通知
    </table>
 
    * 如果源是扩展名为.XDP的基于XFA的表单，则输出DOR将保留XFA布局，否则转换服务将使用现成的模板为其他XFA表单生成DOR。
-   * 在提交XFA表单时，表单的提交数据将另存为XML元素或属性。 例如， `<Amount currency="USD"> 10.00 </Amount>`. 货币另存为属性和货币金额，10.00另存为元素。 自适应表单的提交数据没有属性，只有元素。 因此，当基于XFA的表单转换为自适应表单时，自适应表单提交数据将包含每个此类属性的元素。 例如，
+   * 在提交XFA表单时，表单的提交数据将另存为XML元素或属性。 例如：`<Amount currency="USD"> 10.00 </Amount>`。货币另存为属性和货币金额，10.00另存为元素。 自适应表单的提交数据没有属性，只有元素。 因此，当基于XFA的表单转换为自适应表单时，自适应表单提交数据将包含每个此类属性的元素。 例如，
 
    ```css
       {

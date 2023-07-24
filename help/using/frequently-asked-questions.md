@@ -1,13 +1,14 @@
 ---
 title: 常见问题
-seo-title: Frequently asked questions
 description: 常见问题或常见问题
-seo-description: frequently asked questions for Automated Forms Conversion Service
-uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
 topic-tags: introduction
-discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
+role: Admin, Developer
+level: Beginner, Intermediate
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
 source-wordcount: '1799'
 ht-degree: 3%

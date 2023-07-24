@@ -1,12 +1,15 @@
 ---
 title: 自动化表单转换服务故障诊断
-seo-title: Troubleshoot Automated Forms Conversion Service (AFCS)
 description: AFCS 常见问题及解决办法
-seo-description: Common AFCS issues and their solutions
-contentOwner: khsingh
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
 topic-tags: forms
+role: Admin, Developer
+level: Beginner, Intermediate
+contentOwner: khsingh
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 89%

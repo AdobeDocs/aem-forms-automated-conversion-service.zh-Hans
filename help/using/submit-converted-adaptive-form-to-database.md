@@ -1,11 +1,14 @@
 ---
 title: 将带有JSON架构的转换后的自适应表单提交到数据库
 description: 通过创建表单数据模型并在AEM Workflow中引用它，将带有JSON架构的转换后的自适应表单提交到数据库。
-uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
 topic-tags: forms
-discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
+role: Admin, Developer
+level: Beginner, Intermediate
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
 source-wordcount: '1504'
 ht-degree: 2%
@@ -30,7 +33,7 @@ automated forms conversion服务允许您将非交互式PDF表单、Acro表单�
 * 安装 [最新Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html) (对于您的AEM实例)
 * 最新版本的AEM Forms附加组件包
 * 配置 [automated forms conversion服务](configure-service.md)
-* 设置数据库。 示例实施中使用的数据库是MySQL 5.6.24。但是，您可以将转换后的自适应表单与您选择的任何数据库集成。
+* 设置数据库。 示例实施中使用的数据库是MySQL 5.6.24。但是，您可以将转换后的自适应表单与所选的任何数据库集成。
 
 ## 自适应表单示例 {#sample-adaptive-form}
 

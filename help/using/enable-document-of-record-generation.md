@@ -1,14 +1,16 @@
 ---
 title: 在转换期间生成记录文件
-seo-title: Generate Document of Record during conversion
 description: 根据用于转换的源表单类型生成DoR的建议路径。
-seo-description: Recommended paths to generate a DoR based on the type of source forms used for conversion.
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
+topic-tags: forms
+role: Admin, Developer
+level: Beginner, Intermediate
 page-status-flag: never-activated
-uuid: 7f0f5bf3-21be-449a-b23e-5946a9fd7ed4
 contentOwner: khsingh
-discoiquuid: 75f6e6bc-7636-4b40-919c-8b20a6ccbb1f
 exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
 source-wordcount: '856'
 ht-degree: 2%
