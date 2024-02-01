@@ -4,10 +4,11 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/aem-forms-automated-conversion-service.zh-Hans
 index: y
 feature-set: Experience Manager Forms
-source-git-commit: 8c4cf4ff72e9ca7e8daa76f495abd75a865cd2f7
+recommendations: noDisplay
+source-git-commit: 1373f17cab404bcf0384f22d717cc2aef6d213bf
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 96%
+source-wordcount: '128'
+ht-degree: 99%
 
 ---
 
