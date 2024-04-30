@@ -1,27 +1,28 @@
 ---
 title: 将PDF forms转换为自适应表单
 seo-title: Convert PDF forms to adaptive forms
-description: 运行Automated forms conversion服务将PDF forms转换为自适应表单
-seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
+description: 运行Automated forms conversion服务(AFCS)以将PDF forms转换为自适应表单
+seo-description: Run the Automated Forms Conversion service (AFCS) to convert PDF forms to adaptive forms
 contentOwner: khsingh
 topic-tags: forms
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 444cc37ec6fa2af2d8d2952efd18368a5725e881
+exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1616'
 ht-degree: 7%
 
 ---
 
 # 将PDF forms转换为自适应表单 {#convert-print-forms-to-adaptive-forms}
 
-AEM FormsAutomated forms conversion服务由Adobe Sensei提供支持，可自动将您的PDF forms转换为设备友好型且响应迅速的自适应表单。 无论您使用的是非交互式PDF forms、Acro Forms还是基于XFA的PDF forms，Automated forms conversion服务都可以轻松将这些表单转换为自适应表单。 有关功能、转化工作流和载入的信息，请参阅 [automated forms conversion](introduction.md) 服务。
+AEM FormsAutomated forms conversion服务(AFCS)由Adobe Sensei提供支持，可自动将您的PDF forms转换为设备友好型且响应迅速的自适应表单。 无论您使用的是非交互式PDF forms、Acro Forms还是基于XFA的PDF forms，Automated forms conversion服务(AFCS)都可以轻松将这些表单转换为自适应表单。 有关功能、转化工作流和载入的信息，请参阅 [automated forms conversion](introduction.md) 服务。
 
 ## 先决条件 {#pre-requisites}
 
 * [**配置转换服务**](configure-service.md)
 
-* **准备 [模板](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) 要应用于转换后的表单，请执行以下操作：** 使用模板可以跨所有自适应表单应用一致的品牌策略。 此外，Automated forms conversion服务不提取和使用源PDF文件的页眉和页脚。 您可以使用自适应表单模板指定页眉和页脚。 在转换期间，模板中指定的页眉和页脚将应用于自适应表单。 在为模板创建文件夹时，选择 **[!UICONTROL Browse configurations]** 每个人的选项。
+* **准备 [模板](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) 要应用于转换后的表单，请执行以下操作：** 使用模板可以跨所有自适应表单应用一致的品牌策略。 此外，Automated forms conversion服务(AFCS)不提取和使用源PDF文件的页眉和页脚。 您可以使用自适应表单模板指定页眉和页脚。 在转换期间，模板中指定的页眉和页脚将应用于自适应表单。 在为模板创建文件夹时，选择 **[!UICONTROL Browse configurations]** 每个人的选项。
 
 * **准备 [主题](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) 要应用于转换后的表单，请执行以下操作：** 使用主题可以将一致的样式应用于组织的所有自适应表单。
 
@@ -67,7 +68,7 @@ AEM FormsAutomated forms conversion服务由Adobe Sensei提供支持，可自动
 
 1. 在 **[!UICONTROL Basic]** “转换设置”对话框的选项卡：
 
-   * **[!UICONTROL Select a cloud configuration]**. 选择配置时，已指定默认模板和主题。 如果需要，您可以指定其他模板或主题。
+   * **[!UICONTROL Select a cloud configuration]**。选择配置时，已指定默认模板和主题。 如果需要，您可以指定其他模板或主题。
    * 指定用于保存生成的自适应表单和相应架构的位置。 您可以使用默认路径或指定自定义路径。
    * 使用 **生成无数据模型绑定的自适应表单** 选项来选择是否要生成具有或不具有数据模型绑定的自适应表单。
 如果不选择此选项，转换服务会自动将自适应表单与JSON架构相关联，并在自适应表单中可用的字段与JSON架构之间创建数据绑定。 此 **[!UICONTROL Save generated data model schema at]** 字段显示保存生成的JSON架构的默认位置。 您还可以自定义保存生成的架构的位置。

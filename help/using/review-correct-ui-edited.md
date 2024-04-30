@@ -1,6 +1,6 @@
 ---
 title: 查看并更正转换后的表单
-description: 查看并更正由Automated forms conversion服务转换的自适应表单。
+description: 查看并更正由Automated forms conversion服务(AFCS)转换的自适应表单。
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
-source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '2510'
+source-wordcount: '2512'
 ht-degree: 0%
 
 ---
 
 # 查看并更正转换后的表单{#review-and-correct-converted-forms}
 
-AEM FormsAutomated forms conversion服务标识输入PDF文档的字段、内容和布局，并将PDF文档转换为自适应表单。 输出自适应表单可能缺少一些字段或字段转换不正确。 您可以使用审阅和修正编辑器对已识别字段进行改进，并重新生成自适应表单，使输出更接近所需体验。 首次转换后，您可以在编辑器中打开输入PDF文档，以：
+AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、内容和布局，并将PDF文档转换为自适应表单。 输出自适应表单可能缺少一些字段或字段转换不正确。 您可以使用审阅和修正编辑器对已识别字段进行改进，并重新生成自适应表单，使输出更接近所需体验。 首次转换后，您可以在编辑器中打开输入PDF文档，以：
 
 * 查看转换期间标识的所有字段和内容
 * 识别转换期间缺少的字段和内容

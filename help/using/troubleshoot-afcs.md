@@ -1,5 +1,5 @@
 ---
-title: 自动化表单转换服务故障诊断
+title: 自动化表单转换服务 (AFCS) 故障诊断
 description: AFCS 常见问题及解决办法
 solution: Experience Manager Forms
 feature: Adaptive Forms
@@ -9,14 +9,14 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 89%
+source-wordcount: '655'
+ht-degree: 85%
 
 ---
 
-# 自动化表单转换服务故障诊断
+# 自动化表单转换服务 (AFCS) 故障诊断
 
 本文档提供常见错误的基本故障诊断步骤。
 
@@ -27,7 +27,7 @@ ht-degree: 89%
 | 错误 | 示例 |
 |--- |--- |
 | **错误消息** <br>访问令牌标头不可用。<br><br> **原因** <br>管理员创建了多个 IMS 配置，或 IMS 配置无法在 Adobe Cloud 上连接 AFCS 服务。 <br><br>**解决办法** <br>如果有多个配置，请删除所有配置，[然后创建新的配置](configure-service.md#obtainpubliccertificates)。 <br>如果是单个配置，请使用 **“运行状况检查”** [检查连接](configure-service.md#createintegrationoption)。 | ![访问令牌标头不可用](assets/invalid-ims-configurations.png) |
-| **错误消息** <br>无法连接到服务。  <br><br>**原因** <br>在“自动化表单转换服务”云中使用的服务 URL 不正确或没有使用服务 URL。 <br><br>**解决办法** <br>更正“自动化表单转换服务”云服务中的[服务 URL](configure-service.md#configure-the-cloud-service)。 | ![无法连接到服务。](assets/wrong-service-url-configured.png) |
+| **错误消息** <br>无法连接到服务。  <br><br>**原因** <br> automated forms conversion服务(AFCS)云服务中提及的服务URL不正确或没有提及服务URL。 <br><br>**分辨率** <br> 正确 [服务URL](configure-service.md#configure-the-cloud-service) 在Automated forms conversion服务(AFCS)云服务中。 | ![无法连接到服务。](assets/wrong-service-url-configured.png) |
 | **错误消息** <br>服务无法转换表单。  <br><br>**原因** <br>您的网络连接有问题、服务因定期维护停止或 Adobe Cloud 中断。 <br><br>**解决办法** <br>解决您的网络连接问题，并在 https://status.adobe.com/ 上检查服务状态，确定是否有计划的或意外的中断。 | ![无法连接到服务。](assets/conversion-failure.png) |
 | **错误消息** <br>页面超过 15 页。  <br><br>**原因** <br>源表单超过 15 页。  <br><br>**解决办法** <br>使用 Adobe Acrobat 对超过 15 页的表单进行拆分。 将表单缩减到 15 页以下。 | ![无法连接到服务。](assets/number-of-pages.png) |
 | **错误消息** <br>文件数超过 15 个。  <br><br>**原因** <br>  本文件夹包含的表单超过 15 个。 <br><br>**解决办法** <br>将文件夹中的表单数量缩减到 15 个或 15 个以下。 将文件夹中的总页数缩减到 50 页以下。 将文件夹的大小缩减到 10 MB 以下。 请勿将表单放在子文件夹中。 以 8 到 15 个表单为一个批次整理表单。 | ![无法连接到服务。](assets/number-of-pages.png) |
@@ -52,7 +52,7 @@ ht-degree: 89%
 <td><img alt="The access token header is not available" src="assets/invalid-ims-configuration.png" /></td>
 </tr>
 <tr>
-<td><strong>Error Message</strong> <br> Unable to connect to the service.  <br><br><strong>Reason</strong> <br> Incorrect service URL or no service URL is mentioned in Automated Forms Conversion Service cloud services. <br><br><strong>Resolution</strong> <br> Correct <a href="configure-service.md#configure-the-cloud-service">Service URL</a> in Automated Forms Conversion Service Cloud services.</td>
+<td><strong>Error Message</strong> <br> Unable to connect to the service.  <br><br><strong>Reason</strong> <br> Incorrect service URL or no service URL is mentioned in Automated Forms Conversion Service (AFCS) cloud services. <br><br><strong>Resolution</strong> <br> Correct <a href="configure-service.md#configure-the-cloud-service">Service URL</a> in Automated Forms Conversion Service (AFCS) Cloud services.</td>
 <td><img alt="Unable to connect to the service." src="assets/wrong-endpoint-configured.png" /></td>
 </tr>
 <tr>
