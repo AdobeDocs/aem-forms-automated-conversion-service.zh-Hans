@@ -1,6 +1,6 @@
 ---
 title: 最佳实践和注意事项
-description: 不发布
+description: 不要PUBLISH
 seo-description: DO NOT PUBLISH
 page-status-flag: never-activated
 uuid: c2821264-39e2-44f8-b234-835c46f33fd5
@@ -26,7 +26,7 @@ AEM Forms Automated Conversion服务可将PDF表单转换为自适应表单。 �
 
 automated forms conversion服务(AFCS)接受大量表单培训。 它可以轻松识别源表单中的字段并生成自适应表单。 然而，PDF forms中有些领域和风格是肉眼容易看到，但服务起来却很难理解的。 该服务可以为某些字段或样式分配与适用的字段类型或面板不同的类型。 下面列出了所有此类字段和样式模式。
 
-当该服务不断从源数据中学习时，它将开始为这些模式标识和分配正确的字段或面板。 目前，您可以使用 [查看并更正](review-correct-ui-edited.md) 编辑器以修复此类问题。 在开始修复问题或进一步阅读之前，请熟悉 [自适应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+当该服务不断从源数据中学习时，它将开始为这些模式标识和分配正确的字段或面板。 目前，您可以使用[查看和更正](review-correct-ui-edited.md)编辑器来修复此类问题。 在开始修复问题或进一步阅读之前，请熟悉[自适应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 ## 常规 {#general}
 

@@ -22,13 +22,13 @@ ht-degree: 1%
 ## 已知问题 {#known-issues}
 
 * 包含待转换表单的文件夹中的表单不应超过15个，并且总页数不应超过50页。 源文件夹的大小不应超过10 MB。 不要在源文件夹中创建子文件夹。
-* 某些形式的对象易于人眼看到，但 [服务难以识别](styles-and-pattern-considerations-and-best-practices.md). 使用 [查看并更正编辑器](review-correct-ui-edited.md) 标识和转换此类表单对象。
+* 某些形式的对象易于被人眼看到，但[对于服务](styles-and-pattern-considerations-and-best-practices.md)很难识别。 使用[查看并更正编辑器](review-correct-ui-edited.md)来标识和转换此类表单对象。
 * 查看并更正编辑器：
 
    * 没有撤消操作。 “保存”按钮将永久保存更改。
    * 不支持基于XFA表单的可重复面板。
    * 如果使用“审阅并更正”编辑器修改表格中的列表，则行宽不会自动调整，并且文本可能会溢出到表格的下一行。
-   * 此 **[!UICONTROL Auto-detect multi-column layout from input forms]** 功能不适用于审阅和更正编辑器和表单片段。
+   * **[!UICONTROL Auto-detect multi-column layout from input forms]**&#x200B;功能不适用于审阅和更正编辑器和表单片段。
    * 无法为发布的自适应表单加载使用审阅和更正编辑器创建的涂写签名。
 
 
@@ -37,9 +37,9 @@ ht-degree: 1%
    * 不支持XFA脚本。 例如，用于为下拉组件自动生成值的脚本。
    * 元模型不适用于选择组
    * 带有单个字符的“选择组”选项无法识别
-   * 当源文档是动态XFA (.XDP)并且它是 [在自适应表单中定义XFA属性的行为](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)，则不遵循源文档的presence属性。 例如，源文档中的某个字段被标记为隐藏，并且脚本使该字段可见，则该字段在输出自适应表单中保持可见。
+   * 当源文档是动态XFA (.XDP)并且它[在自适应表单](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)中定义XFA属性的行为时，将不会遵循源文档的存在属性。 例如，源文档中的某个字段被标记为隐藏，并且脚本使该字段可见，则该字段在输出自适应表单中保持可见。
 
-* 当您使用 **将输入AcroForm用作所生成自适应表单的记录文档(DoR)** 选项，请考虑以下事项：
+* 使用&#x200B;**将输入AcroForm用作生成的自适应表单的记录文档(DoR)**&#x200B;选项时，请考虑以下事项：
 
 <table>
     <tr>
@@ -76,7 +76,7 @@ ht-degree: 1%
 * 不支持大于15页的PDF forms。
 * 加密的、受密码保护的安全文档不会转换。 在运行转换之前删除加密或密码。
 * 不支持诸如无边框表、嵌套表和带有占位符值的表等复杂表。 在转换之后，使用自适应表单编辑器添加或修改复杂表。 仅支持具有空字段、适当标题和清除边界的简单表。
-* 此服务仅将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您可以使用将转换后的自适应表单翻译为其他语言 [AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+* 此服务仅将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您可以使用[AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将转换后的自适应表单翻译成其他语言。
 * AEM 6.4 Forms不支持自动检测输入表单的多列布局。
 * 使用源PDF表单中的颜色编码的信息不会传递到自适应表单中。
 * 源PDF表单的颜色不会传递到自适应表单主题中。

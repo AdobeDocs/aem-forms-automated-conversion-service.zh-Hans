@@ -25,7 +25,7 @@ automated forms conversion服务(AFCS)通过将PDF forms自动转换为自适应
 * 将常见字段分组为可重用的表单片段
 * 在转换期间启用 Adobe Analytics
 
-![操作很简单。 您向我们提供源表单，其余一切交给我们。 我们为您提供美观的自适应表单。 您可以随时对输出内容进行修改，直至满意为止。 ](assets/pdf-to-adaptive-form-gitx50.gif)
+![操作很简单。 您向我们提供源表单，其余一切交给我们。 我们为您提供美观的自适应表单。 您可以随时对输出内容进行修改，直至满意为止。](assets/pdf-to-adaptive-form-gitx50.gif)
 
 ## 入门培训 {#onboarding}
 
@@ -39,7 +39,7 @@ Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各�
 
 该服务还支持已启用Adobe Sign的PDF forms。 如果源 PDF 表单具有 Adobe Sign 文本标记，则该服务将在转换期间保留所有与 Adobe Sign 相关的信息，并将源 PDF 中的签名者信息与相应的自适应表单字段相关联。 该功能仅适用于 AcroForms。
 
-该服务可将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您还可以使用将生成的自适应表单翻译成另一种语言 [AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+该服务可将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您还可以使用[AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将生成的自适应表单翻译成其他语言。
 
 ## 转化工作流  {#conversion-workflow}
 
