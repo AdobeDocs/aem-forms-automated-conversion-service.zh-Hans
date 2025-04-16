@@ -1,6 +1,6 @@
 ---
 title: 已知问题
-description: automated forms conversion服务(AFCS)的已知问题和限制
+description: 自动化表单转换服务(AFCS)的已知问题和限制
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: a2472d5a1a66ffada7be485415f50f32643e03fc
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '821'
 ht-degree: 1%
 
 ---
 
 # 已知问题和限制 {#known-issues-limitations}
 
-在开始使用AEM FormsAutomated forms conversion服务(AFCS)之前，请查看以下已知问题和限制：
+在开始使用AEM Forms自动表单转换服务(AFCS)之前，请查看以下已知问题和限制：
 
 ## 已知问题 {#known-issues}
 
@@ -70,7 +70,7 @@ ht-degree: 1%
 
 ## 限制 {#limitations}
 
-* 不支持具有复杂动态布局、具有虚线轮廓或填充字段的PDF forms。
+* 不支持具有复杂动态布局的PDF forms、具有虚线轮廓的字段或填充的字段。
 * 未识别图像内的图像和文本。 手动将图像添加到转换后的表单。
 * 不支持图稿XDP文档。
 * 不支持大于15页的PDF forms。
@@ -80,4 +80,6 @@ ht-degree: 1%
 * AEM 6.4 Forms不支持自动检测输入表单的多列布局。
 * 使用源PDF表单中的颜色编码的信息不会传递到自适应表单中。
 * 源PDF表单的颜色不会传递到自适应表单主题中。
-* 将彩色PDF forms作为灰度形式处理，并相应地检测场。
+* 将彩色PDF forms视为灰度形式，并相应地检测字段。
+* 数据绑定或数据模型架构等属性不适用于基于核心组件的自适应表单。
+* 查看并更正转换后的表单不适用于基于核心组件的表单。
