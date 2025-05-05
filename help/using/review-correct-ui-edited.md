@@ -63,7 +63,7 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
 ### 开始之前 {#before-you-start}
 
-* “查看并更正”编辑器不支持片段。 请勿使用编辑器查看在转换期间启用了&#x200B;**提取片段**&#x200B;选项的转换。 您可以使用[自适应表单编辑器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)进行此类转换。
+* “查看并更正”编辑器不支持片段。 请勿使用编辑器查看在转换期间启用了&#x200B;**提取片段**&#x200B;选项的转换。 您可以使用[自适应表单编辑器](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/introduction-forms-authoring.html)进行此类转换。
 
 * “检查并更正”编辑器没有撤消操作。 仅使用“保存”按钮永久保存更改。
 
@@ -187,7 +187,7 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
 在“审核并更正”编辑器中完成所有必需的更改后，您可以重新发送表单以进行转换。 若要发送表单进行转换，请点按&#x200B;**[!UICONTROL Save & Convert]**。 **[!UICONTROL Sent for conversion label]**&#x200B;应用于包含源文档的文件夹，并且更新的源表单已上载到在Adobe I/O上运行的转换服务。
 
-根据表单的复杂性，转换服务可能需要一些时间来转换表单。 转换完成后，转换后的自适应表单和相关资产将下载到您的计算机。 转换完成后，您可以在编辑器中查看表单，并根据需要在[自适应表单编辑器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中打开自适应表单以获取最终修复集。
+根据表单的复杂性，转换服务可能需要一些时间来转换表单。 转换完成后，转换后的自适应表单和相关资产将下载到您的计算机。 转换完成后，您可以在编辑器中查看表单，并根据需要在[自适应表单编辑器](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中打开自适应表单以获取最终修复集。
 
 如果在自适应表单编辑器中更新表单后重新发送表单进行转换，则自适应表单中所做的所有更改都将丢失。 只有在成功转换之后，您才能在审阅和更正编辑器中打开表单。
 

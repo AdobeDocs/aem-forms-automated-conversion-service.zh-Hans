@@ -39,7 +39,7 @@ Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各�
 
 该服务还支持已启用Adobe Sign的PDF forms。 如果源 PDF 表单具有 Adobe Sign 文本标记，则该服务将在转换期间保留所有与 Adobe Sign 相关的信息，并将源 PDF 中的签名者信息与相应的自适应表单字段相关联。 该功能仅适用于 AcroForms。
 
-该服务可将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您还可以使用[AEM翻译工作流](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将生成的自适应表单翻译成其他语言。
+该服务可将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您还可以使用[AEM翻译工作流](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)将生成的自适应表单翻译成其他语言。
 
 ## 转化工作流  {#conversion-workflow}
 
@@ -58,7 +58,7 @@ automated forms conversion服务(AFCS)在Adobe云上运行。 [配置贵企业�
 * 请勿上传受保护的表单。 该服务无法转换受密码保护和加密的表单。
 * 除英语、法语、德语、西班牙语、意大利语和葡萄牙语外，请勿上传任何语言的扫描、彩色、已填充表单和表单。 此类表单不受支持。
 * 请勿上传文件名中带空格的 PDF 表单。
-* 请勿上传 [PDF 产品组合](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将PDFPortfolio转换为自适应表单。
+* 请勿上传 [PDF 产品组合](https://helpx.adobe.com/cn/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将PDFPortfolio转换为自适应表单。
 * 对 PDF 表单进行修改，详情参见[“最佳实践和注意事项”](styles-and-pattern-considerations-and-best-practices.md)文章。
 * 阅读[“已知问题”](known-issues.md)避免出现意外故障。
 

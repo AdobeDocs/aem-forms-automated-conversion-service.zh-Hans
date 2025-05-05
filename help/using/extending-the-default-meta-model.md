@@ -201,7 +201,7 @@ automated forms conversion服务(AFCS)在转换期间对源表单执行关键字
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>使用jcr：title属性和title JSON架构属性，可在转换后修改自适应表单字段的标签。<br>有关详细信息，请参阅<a href="#custommetamodelexamples">自定义元模型示例中的<strong>修改表单字段的标签</strong>。</a><br>有关可使用JSON架构应用于自适应表单字段的更多属性的信息，请参阅<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON架构创建自适应表单</a>。</p>
+    <p>使用jcr：title属性和title JSON架构属性，可在转换后修改自适应表单字段的标签。<br>有关详细信息，请参阅<a href="#custommetamodelexamples">自定义元模型示例中的<strong>修改表单字段的标签</strong>。</a><br>有关可使用JSON架构应用于自适应表单字段的更多属性的信息，请参阅<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON架构创建自适应表单</a>。</p>
     <p></p></td> 
   </tr>
   <td><p>sling：resourceType和guideNodeClass</p></td> 

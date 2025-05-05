@@ -29,7 +29,7 @@ ht-degree: 3%
    <p>该服务可以将非交互式PDF forms、基于XFA的XDP和PDF forms以及AcroForms转换为自适应表单。 该服务不支持扫描或填写的表单。 有关其他限制，请参阅<a href="known-issues.md">已知问题</a>文章。<br /> </p> 
     <p>我们定期添加对其他源类型的支持。 请将<a href="introduction.md">supportedPDF forms</a>部分保留在您的监视列表中，以定期更新新添加的特性和功能。</p>
 
-   该服务只能将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您可以使用[AEM翻译工作流将生成的自适应表单翻译成其他语言。](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   该服务只能将英语、法语、德语、西班牙语、意大利语和葡萄牙语表单转换为自适应表单。 您可以使用[AEM翻译工作流将生成的自适应表单翻译成其他语言。](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **该服务能否生成XDP而不是自适应表单？**
    <p>该服务未生成XDP输出。 我们定期为该服务添加功能和特性。 将您的<a href="introduction.md">支持的语言和PDF forms</a>部分保留在监视列表中，以定期更新新添加的特性和功能。</p> <br>
@@ -43,8 +43,8 @@ ht-degree: 3%
 1. **该服务能否将Microsoft Word表单转换为自适应表单？**
    <p>否，该服务无法将Microsoft Word表单转换为自适应表单。 您可以将Microsoft Word表单保存为PDF表单，并将PDF表单转换为自适应表单。 完整的过程是 </p> <br>
 
-   1. 使用Adobe Acrobat将Word文档[转换为非交互式PDF](https://helpx.adobe.com/acrobat/how-to/create-pdf-files-word-excel-website.html)。
-   1. 使用Adobe Acrobat将生成的PDF forms[转换为可填写的PDF表单](https://helpx.adobe.com/acrobat/how-to/convert-word-excel-paper-pdf-forms.html)。
+   1. 使用Adobe Acrobat将Word文档[转换为非交互式PDF](https://helpx.adobe.com/cn/acrobat/how-to/create-pdf-files-word-excel-website.html)。
+   1. 使用Adobe Acrobat将生成的PDF forms[转换为可填写的PDF表单](https://helpx.adobe.com/cn/acrobat/how-to/convert-word-excel-paper-pdf-forms.html)。
    1. 使用Adobe Acrobat手动更新和修复表单字段。
    1. 保存PDF表单。 现在，您可以将该表单与转换服务结合使用，以生成自适应表单。 您还可以将表单用作记录文档模板。
 
@@ -77,10 +77,10 @@ ht-degree: 3%
     <p> </p> <br>
 
 1. **该服务是否识别并在输出的自适应表单中使用源PDF的字体？**
-   <p>响应HTML表单的样式和布局通常与PDF表单或纸质表单不同。 为了支持组织间一致的布局和样式，自适应表单使用<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html">主题来设置表单</a>的样式。 转换服务使用转换期间应用的主题中指定的字体和字体样式。 您可以更改主题的字体和字体样式，为自适应表单的组件提供独特的外观。</p> <br>
+   <p>响应HTML表单的样式和布局通常与PDF表单或纸质表单不同。 为了支持组织间一致的布局和样式，自适应表单使用<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/themes.html">主题来设置表单</a>的样式。 转换服务使用转换期间应用的主题中指定的字体和字体样式。 您可以更改主题的字体和字体样式，为自适应表单的组件提供独特的外观。</p> <br>
 
 1. **该服务是否自动从基于XDP的表单中提取JavaScript并将其应用于相应的自适应表单？**
-   <p>该服务不会自动将基于XFA的表单或Acro Forms的脚本转换为相应的自适应表单规则。 您（表单作者）可以使用<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html">规则编辑器</a>将交互性添加到自适应表单。</p> <br>
+   <p>该服务不会自动将基于XFA的表单或Acro Forms的脚本转换为相应的自适应表单规则。 您（表单作者）可以使用<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/rule-editor.html">规则编辑器</a>将交互性添加到自适应表单。</p> <br>
 
 1. **某些表单对象未正确转换为自适应表单组件。 如何解决此问题？**
    <p>automated forms conversion服务(AFCS)接受大量表单培训。 但基于AI/ML的应用程序受到训练数据和模式的限制。 可能存在多种字段类型、布局、模式和上下文，人类感知可分辨但难以自动识别。 该服务可能无法识别此类对象，或者可能无法正确识别它们。 您可以使用<a href="review-correct-ui-edited.md" target="_blank">审阅并更正</a>编辑器在输入表单的基于纸面表单的熟悉布局中进行必要的修改。</p> <br/>
@@ -121,4 +121,4 @@ ht-degree: 3%
 1. **如何创建启用Adobe Sign的PDF表单？**
    </p>要创建启用Adobe Sign的PDF表单，请执行以下操作：</p>
 
-   将[Adobe Sign文本标记](https://helpx.adobe.com/sign/using/text-tag.html)添加到字段名称或使用[转换为Adobe Sign表单](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html)选项。
+   将[Adobe Sign文本标记](https://helpx.adobe.com/cn/sign/using/text-tag.html)添加到字段名称或使用[转换为Adobe Sign表单](https://helpx.adobe.com/cn/sign/using/create-forms-with-acrobat.html)选项。

@@ -24,7 +24,7 @@ DoR使用基本模板来定义其布局。 您可以使用默认模板或将任�
 
 ![生成的记录文档](assets/document_of_record.gif)
 
-有关生成DoR的详细信息，请参阅[生成自适应表单的记录文档](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
+有关生成DoR的详细信息，请参阅[生成自适应表单的记录文档](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
 
 [Automated forms conversion服务(AFCS)](/help/using/introduction.md)将以下源表单转换为自适应表单：
 

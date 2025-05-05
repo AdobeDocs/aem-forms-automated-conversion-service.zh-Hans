@@ -32,7 +32,7 @@ ht-degree: 2%
 * 将表单中的页数保持在15页以下。
 * 将源文档整理成一批8-15个文档。 将带有通用自适应表单片段的源表单保留在单个批次中。
 * 请勿上传受保护的表单。 该服务无法转换受密码保护和受保护的表单。
-* 请勿上传[PDFPortfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将PDFPortfolio转换为自适应表单。
+* 请勿上传[PDFPortfolio](https://helpx.adobe.com/cn/acrobat/using/overview-pdf-portfolios.html)。 该服务无法将PDFPortfolio转换为自适应表单。
 * 请勿上载文件名中带有空格的源表单。 在上传表单之前，从文件名称中删除空格。
 * 除英语、法语、德语、西班牙语、意大利语和葡萄牙语外，请勿上传任何语言的扫描、填写和表单。 此类表单不受支持。
 
@@ -40,7 +40,7 @@ ht-degree: 2%
 
 * 分析XDP表单并修复视觉问题。 确保源文档使用预期的控制和结构。 例如，源表单可能具有复选框而不是单选单选按钮。 将复选框更改为单选按钮以生成具有预期组件的自适应表单。
 * [在开始转换之前将绑定添加到XDP表单](http://www.adobe.com/go/learn_aemforms_designer_65_cn)。 当绑定在源XDP表单中可用时，该服务在转换期间自动将绑定应用于相应的自适应表单字段。 这样可节省手动应用绑定所需的时间。
-* [将Adobe Sign标记](https://helpx.adobe.com/sign/using/text-tag.html)添加到XDP文件。 该服务会自动将Adobe Sign标签转换为相应的自适应表单字段。 自适应Forms支持有限数量的Adobe Sign字段。 有关支持的字段的完整列表，请参阅[在自适应表单中使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en)文档。
+* [将Adobe Sign标记](https://helpx.adobe.com/cn/sign/using/text-tag.html)添加到XDP文件。 该服务会自动将Adobe Sign标签转换为相应的自适应表单字段。 自适应Forms支持有限数量的Adobe Sign字段。 有关支持的字段的完整列表，请参阅[在自适应表单中使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=zh-Hans)文档。
 * 如果可能，将XDP文档中的复杂表转换为简单表。 如果表格单元格中有表单字段、大小不一的单元格、跨行或跨列单元格、合并的单元格、部分边框或没有可见边框，则这些表格被视为复杂表格。 具有上述任一项目的表被视为复杂表。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
@@ -61,7 +61,7 @@ AEM [!DNL Forms Automated Conversion service]使用人工智能和机器学习�
 
 [!DNL Automated Forms Conversion service]已接受大量表单培训。 它可以轻松识别源表单中的字段并生成自适应表单。 然而，PDF forms中有些领域和风格是肉眼容易看到，但服务起来却很难理解的。 该服务可以为某些字段或样式分配与适用的字段类型或面板不同的类型。 下面列出了所有此类字段和样式模式。
 
-当该服务不断从源数据中学习时，它将开始为这些模式标识和分配正确的字段或面板。 目前，您可以使用[查看和更正](review-correct-ui-edited.md)编辑器来修复此类问题。 在开始修复问题或进一步阅读之前，请熟悉[自适应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+当该服务不断从源数据中学习时，它将开始为这些模式标识和分配正确的字段或面板。 目前，您可以使用[查看和更正](review-correct-ui-edited.md)编辑器来修复此类问题。 在开始修复问题或进一步阅读之前，请熟悉[自适应表单组件](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 ### 常规模式 {#general}
 
