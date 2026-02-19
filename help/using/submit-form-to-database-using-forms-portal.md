@@ -1,12 +1,12 @@
 ---
 title: 使用Forms Portal将自适应表单提交到数据库
-description: 扩展默认元模型以添加特定于贵组织的模式、验证和实体，并在运行Automated forms conversion服务(AFCS)时将配置应用于自适应表单字段。
+description: 扩展默认元模型以添加特定于贵组织的模式、验证和实体，并在运行自动化表单转换服务(AFCS)时将配置应用于自适应表单字段。
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1161'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 使用Forms Portal集成自适应表单与数据库 {#submit-forms-to-database-using-forms-portal}
 
-automated forms conversion服务(AFCS)允许您将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 启动转换过程时，您可以选择生成带数据绑定或不带数据绑定的自适应表单。
+利用自动表单转换服务(AFCS)，您可以将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 启动转换过程时，您可以选择生成带数据绑定或不带数据绑定的自适应表单。
 
 如果选择生成无数据绑定的自适应表单，则可以在转换后将已转换的自适应表单与表单数据模型、XML架构或JSON架构集成。 但是，如果生成具有数据绑定的自适应表单，则转换服务会自动将自适应表单与JSON架构相关联，并在自适应表单中的可用字段与JSON架构之间创建数据绑定。 然后，您可以将自适应表单与所选的数据库集成，在表单中填写数据，并使用Forms门户将其提交到数据库。
 
@@ -28,15 +28,15 @@ automated forms conversion服务(AFCS)允许您将非交互式PDF表单、Acro�
 
 ## 先决条件 {#pre-requisites}
 
-* 设置AEM 6.4或6.5创作实例
+* 设置AEM 6.5或AEM 6.5 LTS创作实例
 * 为您的AEM实例安装[最新的Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)
 * 最新版本的AEM Forms附加组件包
-* 配置[Automated forms conversion服务(AFCS)](configure-service.md)
+* 配置[自动表单转换服务(AFCS)](configure-service.md)
 * 设置数据库。 示例实施中使用的数据库是MySQL 5.6.24。但是，您可以将转换后的自适应表单与所选的任何数据库集成。
 
-## 设置AEM实例和数据库之间的连接 {#set-up-connection-aem-instance-database}
+## 设置AEM实例与数据库之间的连接 {#set-up-connection-aem-instance-database}
 
-在AEM实例和MYSQL数据库之间建立连接包括：
+在AEM实例和MYSQL数据库之间设置连接包括：
 
 * [安装MYSQL连接器包](#install-mysql-connector-java-file)
 
@@ -144,11 +144,11 @@ automated forms conversion服务(AFCS)允许您将非交互式PDF表单、Acro�
        `time` varchar(255) DEFAULT NULL);
    ```
 
-### 配置AEM实例和数据库之间的连接 {#configure-connection-between-aem-instance-and-database}
+### 配置AEM实例与数据库之间的连接 {#configure-connection-between-aem-instance-and-database}
 
 执行以下配置步骤以创建AEM实例与MYSQL数据库之间的连接：
 
-1. 转到&#x200B;*http://[主机]：[端口]/system/console/configMgr*&#x200B;处的“AEM Web控制台配置”页。
+1. 转到&#x200B;*http://[host]：[port]/system/console/configMgr*&#x200B;处的AEM Web控制台配置页面。
 1. 单击以在编辑模式下打开&#x200B;**[!UICONTROL Forms Portal Draft and Submission Configuration]**。
 1. 按照下表所述指定属性的值：
 
@@ -157,7 +157,7 @@ automated forms conversion服务(AFCS)允许您将非交互式PDF表单、Acro�
     <tr> 
     <th><strong>属性</strong></th> 
     <th><strong>描述</strong></th>
-    <th><strong>价值</strong></th> 
+    <th><strong>值</strong></th> 
     </tr> 
     <tr> 
     <td><p>Forms Portal草稿数据服务</p></td> 
@@ -198,7 +198,7 @@ automated forms conversion服务(AFCS)允许您将非交互式PDF表单、Acro�
     <tbody> 
     <tr> 
     <th><strong>属性</strong></th> 
-    <th><strong>价值</strong></th> 
+    <th><strong>值</strong></th> 
     </tr> 
     <tr> 
     <td><p>数据源名称</p></td> 
@@ -254,7 +254,7 @@ automated forms conversion服务(AFCS)允许您将非交互式PDF表单、Acro�
     </tr>
      <tr> 
     <td><p>验证查询</p></td> 
-    <td><p>示例值为SELECT 1(mysql)，从dual(oracle)中选择1，选择1(MS Sql Server) (validationQuery)</p></td>
+    <td><p>示例值为SELECT 1(mysql)，从dual(oracle)中选择1，从SELECT 1(MS Sql Server) (validationQuery)</p></td>
     </tr>
      <tr> 
     <td><p>验证查询超时</p></td> 
@@ -282,7 +282,7 @@ automated forms conversion服务(AFCS)允许您将非交互式PDF表单、Acro�
 1. [运行转换](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process)以将源表单转换为自适应表单。
 1. 在编辑模式下打开自适应表单。
 1. 点按表单容器，然后选择配置![配置自适应表单](assets/configure-adaptive-form.png)。
-1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;部分中，从&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms Portal Submit Action]**。
+1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;部分中，从&#x200B;**[!UICONTROL Forms Portal Submit Action]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Submit Action]**。
 1. 点按![保存模板策略](assets/edit_template_done.png)以保存设置。
 
 ## 创建和配置Forms门户页面 {#create-configure-forms-portal-page}

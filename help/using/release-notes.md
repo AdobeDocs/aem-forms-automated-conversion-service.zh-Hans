@@ -8,10 +8,10 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 64%
+source-wordcount: '504'
+ht-degree: 54%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 64%
 
 ## 2021年8月29日(AFC-2021.08.0) {#aug-2021}
 
-* 添加了将意大利语和葡萄牙语的PDF forms转换为自适应表单的功能。
+* 添加了将意大利语和葡萄牙语版本的PDF forms转换为自适应表单的功能。
 
 ## 2021 年 7 月 29 日 (AFC-2021.07.2) {#july-2021}
 
@@ -88,4 +88,4 @@ ht-degree: 64%
 
 要使用AFC-2020.03.1版中的最新功能和改进功能，需要安装连接器软件包1.1.38或更高版本。
 
-如果已有正常运行的自动化表单转换服务环境，要使用最新的转换服务功能，请按顺序安装最新版服务包、最新版 AEM 表单附加组件包和最新版连接器软件包。 有关详细说明，请参阅[“配置自动化表单转换服务”](configure-service.md)文章。
+如果您已有正常运行的自动表单转换服务环境(AEM 6.5或AEM 6.5 LTS)，要使用转换服务的最新功能，请按顺序安装最新的服务包、最新的AEM Forms附加组件包和最新的连接器包。 对于AEM Forms as a Cloud Service，会自动交付更新。 有关详细说明，请参阅[“配置自动化表单转换服务”](configure-service.md)文章。
