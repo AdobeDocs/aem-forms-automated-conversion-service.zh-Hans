@@ -8,9 +8,9 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1507'
 ht-degree: 2%
 
 ---
@@ -276,3 +276,4 @@ CREATE TABLE `contactus` (
 您可以使用以下方式下载示例转换后的自适应表单：
 
 [获取文件](assets/DownloadedFormsPackage_1498226829041200.zip)
+

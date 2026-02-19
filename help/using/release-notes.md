@@ -8,10 +8,10 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 54%
+source-wordcount: '503'
+ht-degree: 52%
 
 ---
 
@@ -89,3 +89,4 @@ ht-degree: 54%
 要使用AFC-2020.03.1版中的最新功能和改进功能，需要安装连接器软件包1.1.38或更高版本。
 
 如果您已有正常运行的自动表单转换服务环境(AEM 6.5或AEM 6.5 LTS)，要使用转换服务的最新功能，请按顺序安装最新的服务包、最新的AEM Forms附加组件包和最新的连接器包。 对于AEM Forms as a Cloud Service，会自动交付更新。 有关详细说明，请参阅[“配置自动化表单转换服务”](configure-service.md)文章。
+

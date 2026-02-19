@@ -4,9 +4,9 @@ description: 扩展默认元模型以添加特定于贵组织的模式、验证�
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1159'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 使用Forms Portal集成自适应表单与数据库 {#submit-forms-to-database-using-forms-portal}
 
-利用自动表单转换服务(AFCS)，您可以将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 启动转换过程时，您可以选择生成带数据绑定或不带数据绑定的自适应表单。
+利用自动表单转换服务(AFCS)，您可以将非交互式PDF表单、Acro表单或基于XFA的PDF表单转换为自适应表单。 启动转换过程时，您可以选择生成带或不带数据绑定的自适应表单。
 
 如果选择生成无数据绑定的自适应表单，则可以在转换后将已转换的自适应表单与表单数据模型、XML架构或JSON架构集成。 但是，如果生成具有数据绑定的自适应表单，则转换服务会自动将自适应表单与JSON架构相关联，并在自适应表单中的可用字段与JSON架构之间创建数据绑定。 然后，您可以将自适应表单与所选的数据库集成，在表单中填写数据，并使用Forms门户将其提交到数据库。
 
@@ -299,3 +299,4 @@ ht-degree: 1%
 1. 在页面中插入&#x200B;**[!UICONTROL Drafts & Submissions]**&#x200B;组件。 Forms门户页面上将显示两个选项卡&#x200B;**[!UICONTROL Draft Forms]**&#x200B;和&#x200B;**[!UICONTROL Submitted Forms]**。 **[!UICONTROL Draft Forms]**&#x200B;选项卡还显示使用[为Forms Portal集成配置转换后的自适应表单](#configure-converted-adaptive-form-for-forms-portal-integration)中所述的步骤生成的转换后的自适应表单
 
 1. 点按&#x200B;**[!UICONTROL Preview]**，点按已转换的自适应表单，指定自适应表单字段的值并提交它。 您为自适应表单字段指定的值将提交给集成数据库。
+
