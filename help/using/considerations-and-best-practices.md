@@ -1,6 +1,6 @@
 ---
 title: 最佳实践和注意事项
-description: 不要PUBLISH
+description: 不发布
 seo-description: DO NOT PUBLISH
 page-status-flag: never-activated
 uuid: c2821264-39e2-44f8-b234-835c46f33fd5
@@ -8,9 +8,9 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '550'
 ht-degree: 6%
 
 ---
@@ -22,11 +22,11 @@ ht-degree: 6%
 [DO NOT PUBLISH]
 -->
 
-AEM Forms Automated Conversion服务可将PDF表单转换为自适应表单。 该服务使用人工智能和机器学习算法来了解源表单的布局和字段。 每个机器学习服务都不断从源数据中学习，并在每次流失时产生改进的输出。 这些服务就像人类一样从经验中学习。
+AEM Forms Automated Conversion服务将PDF表单转换为自适应表单。 该服务使用人工智能和机器学习算法来了解源表单的布局和字段。 每个机器学习服务都不断从源数据中学习，并在每次流失时产生改进的输出。 这些服务就像人类一样从经验中学习。
 
-automated forms conversion服务(AFCS)接受大量表单培训。 它可以轻松识别源表单中的字段并生成自适应表单。 然而，PDF forms中有些领域和风格是肉眼容易看到，但服务起来却很难理解的。 该服务可以为某些字段或样式分配与适用的字段类型或面板不同的类型。 下面列出了所有此类字段和样式模式。
+自动化表单转换服务(AFCS)针对大量表单进行了培训。 它可以轻松识别源表单中的字段并生成自适应表单。 但是，PDF forms中有些字段和样式虽然肉眼易于看到，但服务却难以理解。 该服务可以为某些字段或样式分配与适用的字段类型或面板不同的类型。 下面列出了所有此类字段和样式模式。
 
-当该服务不断从源数据中学习时，它将开始为这些模式标识和分配正确的字段或面板。 目前，您可以使用[查看和更正](review-correct-ui-edited.md)编辑器来修复此类问题。 在开始修复问题或进一步阅读之前，请熟悉[自适应表单组件](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+当该服务不断从源数据中学习时，它将开始为这些模式标识和分配正确的字段或面板。 目前，您可以使用[查看和更正](review-correct-ui-edited.md)编辑器来修复此类问题。 在开始修复问题或进一步阅读之前，请熟悉[自适应表单组件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 ## 常规 {#general}
 
@@ -48,7 +48,7 @@ automated forms conversion服务(AFCS)接受大量表单培训。 它可以轻�
    <td><img src="assets/scanned-form.jpg" /></td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务不提取图像中的图像和文本。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>手动将图像或文本添加到转换后的表单。</p> </td> 
+   <td><p><strong>模式</strong></p> <p>服务不提取图像中的图像和文本。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>手动将图像或文本添加到转换后的表单。</p> </td> 
    <td><img src="assets/image-in-adaptive-form.png" /></td> 
   </tr>
   <tr>
@@ -58,7 +58,7 @@ automated forms conversion服务(AFCS)接受大量表单培训。 它可以轻�
  </tbody>
 </table>
 
-## 选择组  {#choice-group}
+## 选择群组  {#choice-group}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
@@ -67,7 +67,7 @@ automated forms conversion服务(AFCS)接受大量表单培训。 它可以轻�
    <td width="70%">示例</td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>具有框或圆以外的形状的选择组选项不会转换为相应的自适应表单组件。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>将选项形状更改为框或圆形，或者使用“审阅并更正”编辑器来标识形状。</p> </td> 
+   <td><p><strong>模式</strong></p> <p>具有框或圆以外的形状的选择组选项不会转换为相应的自适应表单组件。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>将选项形状更改为框或圆形，或者使用“审阅并更正”编辑器来标识形状。</p> </td> 
    <td><img src="assets/shaded-box-patterns.png" /> </td> 
   </tr>
  </tbody>
@@ -90,7 +90,7 @@ automated forms conversion服务(AFCS)接受大量表单培训。 它可以轻�
    <td><br /> <img src="assets/forms-with-clear-borders-scale.png" /><br /> </td> 
   </tr>
   <tr>
-   <td><p><strong>图案</strong></p> <p>服务将错误类型合并或分配给某些表单字段，这些表单字段彼此非常接近或没有清晰的边框。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>使用“检查并更正”编辑器标识此类字段。</p> </td> 
+   <td><p><strong>模式</strong></p> <p>服务将错误类型合并或分配给某些表单字段，这些表单字段彼此非常接近或没有清晰的边框。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>使用“检查并更正”编辑器标识此类字段。</p> </td> 
    <td><img src="assets/forms-with-fields-placed-nearby.png" /></td> 
   </tr>
   <tr>
