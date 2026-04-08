@@ -8,9 +8,9 @@ topic-tags: forms
 role: Admin, Developer, User
 level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+source-git-commit: 2ec7faabc02ec6f416aafcbe7f7305e9323bd9eb
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2663'
 ht-degree: 6%
 
 ---
@@ -235,7 +235,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
       * **客户端ID**：复制并粘贴&#x200B;**API密钥（客户端ID）**。
       * **客户端密码**：复制并粘贴&#x200B;**客户端密码**。
       * **范围**：复制并粘贴&#x200B;**范围**。
-      * **组织ID**：复制并粘贴&#x200B;**技术帐户ID**。
+      * **组织ID**：复制并粘贴&#x200B;**组织ID**。
 
      ![创建IMS Adobe配置](/help/using/assets/save-ims-configuration.png)
 
