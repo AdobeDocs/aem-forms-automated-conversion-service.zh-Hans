@@ -44,14 +44,14 @@ ht-degree: 79%
 |--- |--- |
 | **错误消息** <br>访问令牌标头不可用。<br><br> **原因** <br>管理员创建了多个 IMS 配置，或 IMS 配置无法在 Adobe Cloud 上连接 AFCS 服务。 <br><br>**分辨率** <br>如果有多个配置，请删除所有配置并[创建新的配置](configure-service.md#obtainpubliccertificates)。<br> 如果只有一个配置，请使用&#x200B;**运行状况检查**&#x200B;到[检查连接](configure-service.md#createintegrationoption)。 | ![访问令牌标头不可用](assets/invalid-ims-configurations.png) |
 | **错误消息** <br>无法连接到服务。  <br><br>**原因** <br>服务URL不正确或自动表单转换服务(AFCS)云服务中没有提及服务URL。 <br><br>**解决办法** <br>在自动表单转换服务(AFCS)云服务中更正[服务URL](configure-service.md#configure-the-cloud-service)。 | ![无法连接到服务。](assets/wrong-service-url-configured.png) |
-| **错误消息** <br>服务无法转换表单。  <br><br>**原因** <br>您的网络连接有问题、服务因定期维护停止或 Adobe Cloud 中断。 <br><br>**解决办法** <br>解决您的网络连接问题，并在 https://status.adobe.com/ 上检查服务状态，确定是否有计划的或意外的中断。 | ![无法连接到服务。](assets/conversion-failure.png) |
+| **错误消息** <br>服务无法转换表单。  <br><br>**原因** <br>您的网络连接有问题、服务因定期维护停止或 Adobe Cloud 中断。 <br><br>**解决办法** <br>解决您的网络连接问题，并在 https://status.adobe.com/zh-cn/ 上检查服务状态，确定是否有计划的或意外的中断。 | ![无法连接到服务。](assets/conversion-failure.png) |
 | **错误消息** <br>页面超过 15 页。  <br><br>**原因** <br>源表单超过 15 页。  <br><br>**解决办法** <br>使用 Adobe Acrobat 对超过 15 页的表单进行拆分。 将表单缩减到 15 页以下。 | ![无法连接到服务。](assets/number-of-pages.png) |
 | **错误消息** <br>文件数超过 15 个。  <br><br>**原因** <br>  本文件夹包含的表单超过 15 个。 <br><br>**解决办法** <br>将文件夹中的表单数量缩减到 15 个或 15 个以下。 将文件夹中的总页数缩减到 50 页以下。 将文件夹的大小缩减到 10 MB 以下。 请勿将表单放在子文件夹中。 以 8 到 15 个表单为一个批次整理表单。 | ![无法连接到服务。](assets/number-of-pages.png) |
 | **错误消息** <br>不支持源文件格式。  <br><br>**原因** <br>源表格所在的文件夹中存在一些不支持的文件。 <br><br>**解决办法** <br>本服务仅支持 .xdp 和 .pdf 文件。 从文件夹中删除任何其他扩展名的文件，然后运行转换。 | ![无法连接到服务。](assets/unsupported-file-formats.png) |
 | **错误消息** <br>扫描的表单不受支持。  <br><br>**原因** <br>PDF 表单仅包含表单的扫描图像，不包含内容结构。 <br><br>**解决办法** <br>本服务不支持直接将扫描的表单或表单图像转换为自适应表单。 但您可以使用 Adobe Acrobat 将表单图像转换为 PDF 表单。 然后再使用本服务将 PDF 表单转换为自适应表单。 对于 Acrobat，请务必使用高质量的表单图像进行转换。 这样可以提高转换质量。 | ![无法连接到服务。](assets/scanned-forms-error.png) |
 | **错误消息** <br>加密的 PDF 表单不受支持。  <br><br>**原因** <br>文件夹包含加密的 PDF 表单。 <br><br>**解决办法** <br>本服务不支持将加密的 PDF 表单转换为自适应表单。 删除加密，上传未加密表单，然后运行转换。 | ![无法连接到服务。](assets/secured-pdf-form.png) |
 | **错误消息** <br>无法解析元模型 JSON 架构。  <br><br>**原因** <br>提供给本服务的 JSON 架构格式不正确，其中包含无效字符或用于映射组件的语法无效。  <br><br>**解决办法** <br>检查 JSON 文件格式。 可使用任何在线 JSON 验证器来检查架构格式和结构。 请参阅[“扩展默认的元模型”](extending-the-default-meta-model.md)一文，了解有关元模型语法的信息。 | ![无法连接到服务。](assets/invalid-meta-model-schema.png) |
-| **错误（仅限内部部署环境）** <br> **[!UICONTROL Source Language]**&#x200B;选项未列出自适应表单的正确语言。 <br><br>**原因** <br>自适应表单的jcr:language属性设置不正确。  <br><br>**分辨率** <br>打开CRX-DE LITE，导航到`/content/forms/af/`，打开`jcr:content`节点，并将节点的值设置为正确的语言。 有关支持的语言的列表，请参阅[添加对不受支持的区域设置的本地化支持](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html#add-localization-support-for-non-supported-locales)。 | ![无法连接到服务。](assets/aem-forms-translation-project-language-unavailable.png) |
+| **错误（仅限内部部署环境）** <br> **[!UICONTROL Source Language]**&#x200B;选项未列出自适应表单的正确语言。 <br><br>**原因** <br>自适应表单的jcr:language属性设置不正确。  <br><br>**分辨率** <br>打开CRX-DE LITE，导航到`/content/forms/af/`，打开`jcr:content`节点，并将节点的值设置为正确的语言。 有关支持的语言的列表，请参阅[添加对不受支持的区域设置的本地化支持](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html?lang=zh-Hans#add-localization-support-for-non-supported-locales)。 | ![无法连接到服务。](assets/aem-forms-translation-project-language-unavailable.png) |
 
 <!--
 
@@ -72,7 +72,7 @@ ht-degree: 79%
 <td><img alt="Unable to connect to the service." src="assets/wrong-endpoint-configured.png" /></td>
 </tr>
 <tr>
-<td><strong>Error Message</strong> <br> The service failed to convert the form.  <br><br><strong>Reason</strong> <br> Network connectivity issues at your end, the service is down due to scheduled maintenance, or outage on Adobe Cloud. <br><br><strong>Resolution</strong> <br> Resolve network connectivity issues at your end and check the status of the service on <a href="https://status.adobe.com/">https://status.adobe.com/</a> for a planned or unplanned outage.</td>
+<td><strong>Error Message</strong> <br> The service failed to convert the form.  <br><br><strong>Reason</strong> <br> Network connectivity issues at your end, the service is down due to scheduled maintenance, or outage on Adobe Cloud. <br><br><strong>Resolution</strong> <br> Resolve network connectivity issues at your end and check the status of the service on <a href="https://status.adobe.com/zh-cn/">https://status.adobe.com/zh-cn/</a> for a planned or unplanned outage.</td>
 <td><img alt="The service failed to convert the form." src="assets/service-failure.png" /></td>
 </tr>
 <tr>
