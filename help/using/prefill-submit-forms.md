@@ -1,6 +1,6 @@
 ---
 title: 基于数据源的预填充和提交工作流建议（用于生成自适应表单）
-description: 针对使用Automated forms conversion服务(AFCS)生成的自适应表单，基于数据源的预填充和提交工作流。
+description: 使用自动化表单转换服务(AFCS)生成的自适应表单，其预填充和提交工作流基于数据源。
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -9,16 +9,22 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: df401a2a-327d-468c-a5e4-b7b7ccd071a0id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: 2555
 ht-degree: 1%
 
 ---
 
 # 基于数据源的预填充和提交工作流建议（用于生成自适应表单） {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
-您可以对通过Automated forms conversion服务(AFCS)转换的自适应表单使用以下任何数据源：
+您可以对通过自动表单转换服务(AFCS)转换的自适应表单使用以下任何数据源：
 
 * 表单数据模型、OData或任何其他第三方服务
 * JSON架构
@@ -37,12 +43,12 @@ ht-degree: 1%
   <tr> 
    <td><p>表单数据模型、OData或任何其他第三方服务</p></td> 
    <td> 
-    <p><strong>选项1</strong>：选择表单数据模型、OData或任何其他第三方服务作为数据源。 您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服务(AFCS)生成没有数据绑定的自适应表单</a>。 您可以手动将自适应表单字段绑定到表单数据模型实体，并使用表单数据模型预填服务选项预填字段值。 使用“使用表单数据模型提交”选项提交自适应表单。</p></td> 
+    <p><strong>选项1</strong>：选择表单数据模型、OData或任何其他第三方服务作为数据源。 您<a href="#generate-adaptive-forms-with-no-data-binding">使用自动表单转换服务(AFCS)生成没有数据绑定的自适应表单</a>。 您可以手动将自适应表单字段绑定到表单数据模型实体，并使用表单数据模型预填服务选项预填字段值。 使用“使用表单数据模型提交”选项提交自适应表单。</p></td> 
   </tr>
   <tr> 
    <td></td> 
    <td> 
-   <p><strong>选项2</strong>：选择表单数据模型、OData或任何其他第三方服务作为数据源。 您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服务(AFCS)生成没有数据绑定的自适应表单</a>。 您可以使用规则编辑器绑定自适应表单字段以预填字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。</p>
+   <p><strong>选项2</strong>：选择表单数据模型、OData或任何其他第三方服务作为数据源。 您<a href="#generate-adaptive-forms-with-no-data-binding">使用自动表单转换服务(AFCS)生成没有数据绑定的自适应表单</a>。 您可以使用规则编辑器绑定自适应表单字段以预填字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。</p>
     </td> 
   </tr>
   <tr> 
@@ -58,7 +64,7 @@ ht-degree: 1%
   <tr>
   <td></td> 
    <td> 
-    <p><strong>选项1</strong>：您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服务(AFCS)生成没有数据绑定的自适应表单</a>，并将JSON架构配置为数据源。 手动将自适应表单字段绑定到JSON架构，然后<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支持的协议</a>预填充字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。</p></td> 
+    <p><strong>选项1</strong>：您<a href="#generate-adaptive-forms-with-no-data-binding">使用自动表单转换服务(AFCS)生成没有数据绑定的自适应表单</a>，并将JSON架构配置为数据源。 手动将自适应表单字段绑定到JSON架构，然后<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支持的协议</a>预填充字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。</p></td> 
   </tr>
   <tr>
   <td></td> 
@@ -68,7 +74,7 @@ ht-degree: 1%
   <tr>
   <td></td> 
    <td> 
-    <p><strong>选项2</strong>：您<a href="#generate-adaptive-forms-with-json-binding">使用Automated forms conversion服务(AFCS)生成具有JSON数据绑定的自适应表单</a>。 预填服务和表单提交无缝运行。 您不需要任何配置步骤。</p> </td> 
+    <p><strong>选项2</strong>：您<a href="#generate-adaptive-forms-with-json-binding">使用自动表单转换服务(AFCS)生成具有JSON数据绑定的自适应表单</a>。 预填服务和表单提交无缝运行。 您不需要任何配置步骤。</p> </td> 
   </tr>
    <tr>
   <td></td> 
@@ -78,7 +84,7 @@ ht-degree: 1%
   <tr>
   <td><p>XSD架构</p></td> 
    <td> 
-    <p>选择XSD架构作为数据源。 基于所选数据源，您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服务(AFCS)生成无数据绑定的自适应表单</a>，并将XSD架构配置为数据源。 手动将自适应表单字段绑定到XSD架构，并<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支持的协议</a>预填充字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。</p>
+    <p>选择XSD架构作为数据源。 基于所选数据源，您<a href="#generate-adaptive-forms-with-no-data-binding">使用自动表单转换服务(AFCS)生成无数据绑定的自适应表单</a>，并将XSD架构配置为数据源。 手动将自适应表单字段绑定到XSD架构，并<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支持的协议</a>预填充字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。</p>
     </td> 
   </tr>
   <tr>
@@ -91,10 +97,10 @@ ht-degree: 1%
 </table>
 
 
-有关Automated forms conversion服务(AFCS)的更多信息，请参阅以下文章：
+有关自动化表单转换服务(AFCS)的更多信息，请参阅以下文章：
 
-* [automated forms conversion服务简介](introduction.md)
-* [配置Automated forms conversion服务](configure-service.md)
+* [自动化表单转换服务简介](introduction.md)
+* [配置自动化表单转换服务](configure-service.md)
 * [将打印表单转换为自适应表单](convert-existing-forms-to-adaptive-forms.md)
 * [查看并更正转换后的表单](review-correct-ui-edited.md)
 
@@ -102,18 +108,18 @@ ht-degree: 1%
 
 ## 先决条件 {#pre-requisites}
 
-* 配置[AEM创作实例](https://helpx.adobe.com/cn/experience-manager/6-5/sites/deploying/using/deploy.html)
-* 在AEMAutomated forms conversion[&#128279;](configure-service.md)上配置创作服务(AFCS)
+* 配置[AEM创作实例](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html)
+* 在AEM创作实例](configure-service.md)上配置[自动表单转换服务(AFCS)
 
 ## 自适应表单示例 {#sample-adaptive-form}
 
-要执行用例以预填自适应表单中的字段值并将它们提交到数据源，请下载以下示例PDF文件。
+要执行用例以预填充自适应表单中的字段值并将它们提交到数据源，请下载以下PDF示例文件。
 
 贷款申请表示例
 
 [获取文件](assets/sample_loan_application_form.pdf)
 
-PDF文件用作Automated forms conversion服务(AFCS)的输入。 服务会将此文件转换为自适应表单。 下图以PDF格式描述了示例贷款申请。
+PDF文件用作自动表单转换服务(AFCS)的输入。 服务会将此文件转换为自适应表单。 下图描述了PDF格式的示例贷款申请。
 
 ![贷款申请表示例](assets/sample_form_new.png)
 
@@ -171,7 +177,7 @@ CREATE TABLE `applicant` (
 
 [获取文件](assets/loanapplication.xsd)
 
-有关将XSD架构用作自适应表单中的表单模型的详细信息，请参阅[使用XML架构创建自适应表单](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html)。
+有关将XSD架构用作自适应表单中的表单模型的详细信息，请参阅[使用XML架构创建自适应表单](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html)。
 
 如果您使用JSON架构作为表单模型来执行用例，请创建包含以下文本的JSON文件：
 
@@ -221,11 +227,11 @@ CREATE TABLE `applicant` (
 
 [获取文件](assets/demo_schema.json)
 
-有关在自适应表单中使用JSON架构作为表单模型的更多信息，请参阅[使用JSON架构创建自适应表单](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html)。
+有关在自适应表单中使用JSON架构作为表单模型的更多信息，请参阅[使用JSON架构创建自适应表单](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html)。
 
 ## 生成无数据绑定的自适应表单 {#generate-adaptive-forms-with-no-data-binding}
 
-使用[Automated forms conversion服务将](convert-existing-forms-to-adaptive-forms.md) [示例贷款申请表单](#sample-adaptive-form)转换为无数据绑定的自适应表单。 确保选中&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;复选框以生成无数据绑定的自适应表单。
+使用[自动表单转换服务将](convert-existing-forms-to-adaptive-forms.md)示例贷款申请表单[转换为无数据绑定的自适应表单。 ](#sample-adaptive-form)确保选中&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;复选框以生成无数据绑定的自适应表单。
 
 ![无数据绑定的自适应表单](assets/generate_af_without_binding.png)
 
@@ -236,19 +242,19 @@ CREATE TABLE `applicant` (
 * [XSD架构](#xsddatasource)
 
 >[!NOTE]
-> 如果使用Automated forms conversion服务(AFCS)转换的自适应表单包含多个同名字段，请确保这些字段已绑定到数据源实体，以避免在提交期间可能的数据丢失。
+> 如果使用自动表单转换服务(AFCS)转换的自适应表单包含多个同名字段，请确保这些字段已绑定到数据源实体，以避免在提交期间可能的数据丢失。
 >
 
 ### 使用数据库、OData或任何第三方服务作为数据源 {#sqldatasource}
 
-用例：使用Automated forms conversion服务(AFCS)生成无数据绑定的自适应表单，并将MYSQL数据库配置为数据源。 手动将自适应表单字段绑定到表单数据模型实体，并使用&#x200B;**[!UICONTROL Form Data Model Prefill Service]**&#x200B;选项预填充字段值。 您使用&#x200B;**[!UICONTROL Submit using Form Data Model]**&#x200B;选项提交自适应表单。
+用例：使用自动表单转换服务(AFCS)生成无数据绑定的自适应表单，并将MYSQL数据库配置为数据源。 手动将自适应表单字段绑定到表单数据模型实体，并使用&#x200B;**[!UICONTROL Form Data Model Prefill Service]**&#x200B;选项预填充字段值。 您使用&#x200B;**[!UICONTROL Submit using Form Data Model]**&#x200B;选项提交自适应表单。
 
 在执行用例之前：
 
-* [将MySQL数据库配置为数据源](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
-* [创建表单数据模型](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/work-with-form-data-model.html)
+* [将MySQL数据库配置为数据源](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
+* [创建表单数据模型](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html)
 
-根据用例，创建&#x200B;**loanapplication**&#x200B;表单数据模型并将读取服务参数绑定到&#x200B;**[!UICONTROL Literal]**&#x200B;值。 电话号码文字值必须是在MySQL数据库的&#x200B;**申请人**&#x200B;架构中配置的记录之一。 服务使用该值作为参数从数据源获取详细信息。 您还可以从&#x200B;**[!UICONTROL Binding To]**&#x200B;下拉列表中选择[用户配置文件属性或请求属性](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument)
+根据用例，创建&#x200B;**loanapplication**&#x200B;表单数据模型并将读取服务参数绑定到&#x200B;**[!UICONTROL Literal]**&#x200B;值。 电话号码文字值必须是在MySQL数据库的&#x200B;**申请人**&#x200B;架构中配置的记录之一。 服务使用该值作为参数从数据源获取详细信息。 您还可以从&#x200B;**[!UICONTROL Binding To]**&#x200B;下拉列表中选择[用户配置文件属性或请求属性](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument)
 
 ![配置表单数据模型](assets/configure_model_object.png)
 
@@ -281,9 +287,9 @@ CREATE TABLE `applicant` (
 1. 点按&#x200B;**[!UICONTROL Preview]**&#x200B;以查看预填充的自适应表单字段值。
 1. 修改字段值（如有必要），并提交自适应表单。 字段值将提交到MySQL数据库。 您可以刷新数据库中的&#x200B;**申请人**&#x200B;表以查看表中更新的值。
 
-**用例：**&#x200B;使用Automated forms conversion服务(AFCS)生成无数据绑定的自适应表单，并将MYSQL数据库配置为数据源。 您可以使用规则编辑器绑定自适应表单字段以预填字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。
+**用例：**&#x200B;使用自动表单转换服务(AFCS)生成无数据绑定的自适应表单，并将MYSQL数据库配置为数据源。 您可以使用规则编辑器绑定自适应表单字段以预填字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。
 
-执行以下步骤以使用[规则编辑器](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/rule-editor.html)调用表单数据模型服务来绑定自适应表单中的字段和预填充值：
+执行以下步骤以使用[规则编辑器](https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html)调用表单数据模型服务来绑定自适应表单中的字段和预填充值：
 
 1. 选择&#x200B;**[!UICONTROL output]**&#x200B;文件夹中的&#x200B;**示例贷款申请表**，然后点按&#x200B;**[!UICONTROL Edit]**。
 1. 在&#x200B;**[!UICONTROL Content]**&#x200B;选项卡中，点按配置图标：
@@ -307,7 +313,7 @@ CREATE TABLE `applicant` (
 
    1. 使用输出部分创建自适应表单字段与表单数据模型实体的绑定。 例如，用&#x200B;**name**&#x200B;实体绑定&#x200B;**[!UICONTROL Applicant Name]**&#x200B;自适应表单字段。
 
-   1. 点击&#x200B;**[!UICONTROL Done]**。在规则编辑器页面上再次点按&#x200B;**[!UICONTROL Done]**。
+   1. 点击&#x200B;**[!UICONTROL Done]**。 在规则编辑器页面上再次点按&#x200B;**[!UICONTROL Done]**。
 
    ![用于绑定引用的规则编辑器](assets/rule_editor_bind_references.png)
 
@@ -323,7 +329,7 @@ CREATE TABLE `applicant` (
 
 ### 使用JSON架构作为数据源 {#jsondatasource}
 
-**用例：**&#x200B;使用Automated forms conversion服务(AFCS)生成无数据绑定的自适应表单，并将JSON架构配置为数据源。 您手动将自适应表单字段绑定到JSON架构，并使用&#x200B;**预览数据**&#x200B;选项预填充字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。
+**用例：**&#x200B;使用自动表单转换服务(AFCS)生成无数据绑定的自适应表单，并将JSON架构配置为数据源。 您手动将自适应表单字段绑定到JSON架构，并使用&#x200B;**预览数据**&#x200B;选项预填充字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。
 
 在执行用例之前，请确保您具有：
 
@@ -351,7 +357,7 @@ CREATE TABLE `applicant` (
 
 ### 使用XSD架构作为数据源 {#xsddatasource}
 
-**用例：**&#x200B;使用Automated forms conversion服务(AFCS)生成无数据绑定的自适应表单，并将XSD架构配置为数据源。 您手动将自适应表单字段绑定到XSD架构，并使用&#x200B;**带有数据的预览**&#x200B;预填充字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。
+**用例：**&#x200B;使用自动表单转换服务(AFCS)生成无数据绑定的自适应表单，并将XSD架构配置为数据源。 您手动将自适应表单字段绑定到XSD架构，并使用&#x200B;**带有数据的预览**&#x200B;预填充字段值。 如有必要，请修改字段值，并将数据提交到crx-repository。
 
 在执行用例之前，请确保您具有：
 
@@ -364,7 +370,7 @@ CREATE TABLE `applicant` (
 1. 点按&#x200B;**[!UICONTROL Form Model]**&#x200B;选项卡，从&#x200B;**[!UICONTROL Select From]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Schema]**，然后点按&#x200B;**[!UICONTROL Select Schema]**&#x200B;以上传保存在本地文件系统上的&#x200B;**loanapplication** XSD架构。 为XSD架构选择根元素并点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存表单。
 1. 选择&#x200B;**示例贷款申请表**&#x200B;并点按&#x200B;**[!UICONTROL Edit]**。
 1. 点按“申请人姓名”文本框并选择![配置图标](assets/configure_icon.svg) （配置）。
-在“绑定引用”字段中，选择&#x200B;**申请人** > **名称**，然后点按![完成图标](assets/save_icon.svg)以保存属性。 同样，为&#x200B;**地址**、**电话号码**、**电子邮件**、**职业**、**年薪（美元）**&#x200B;和&#x200B;**否，创建数据绑定。 具有XSD架构实体的依赖家庭成员**&#x200B;字段。
+在“绑定引用”字段中，选择**申请人** > **名称**，然后点按![完成图标](assets/save_icon.svg)以保存属性。 同样，为&#x200B;**地址**、**电话号码**、**电子邮件**、**职业**、**年薪（美元）**&#x200B;和&#x200B;**否，创建数据绑定。 具有XSD架构实体的依赖家庭成员**&#x200B;字段。
 
 1. 再次选择&#x200B;**输出**&#x200B;文件夹中提供的转换后的&#x200B;**贷款申请表单**，然后选择&#x200B;**[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**。</br>
 
@@ -379,13 +385,13 @@ CREATE TABLE `applicant` (
 
 ## 生成具有JSON绑定的自适应表单 {#generate-adaptive-forms-with-json-binding}
 
-使用[Automated forms conversion服务(AFCS)将](convert-existing-forms-to-adaptive-forms.md) [示例贷款申请表单](#sample-adaptive-form)转换为具有数据绑定的自适应表单。 确保在生成自适应表单时未选中&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;复选框。
+使用[自动表单转换服务(AFCS)将](convert-existing-forms-to-adaptive-forms.md) [示例贷款申请表单](#sample-adaptive-form)转换为具有数据绑定的自适应表单。 确保在生成自适应表单时未选中&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;复选框。
 
 具有JSON绑定的![自适应表单](assets/generate_af_with_data_bindings.png)
 
 ### 使用JSON架构作为数据源 {#jsonwithdatabinding}
 
-**用例：**&#x200B;使用Automated forms conversion服务(AFCS)生成具有JSON数据绑定的自适应表单。 预填服务和表单提交无缝运行。 您不需要任何配置步骤。
+**用例：**&#x200B;您使用自动表单转换服务(AFCS)生成具有JSON数据绑定的自适应表单。 预填服务和表单提交无缝运行。 您不需要任何配置步骤。
 
 在执行用例之前，请确保您具有[带有数据绑定的自适应表单](#generate-adaptive-forms-with-json-binding)。
 

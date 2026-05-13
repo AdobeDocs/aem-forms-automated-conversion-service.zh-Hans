@@ -1,6 +1,6 @@
 ---
 title: 查看并更正转换后的表单
-description: 查看并更正由Automated forms conversion服务(AFCS)转换的自适应表单。
+description: 查看并更正通过自动表单转换服务(AFCS)转换的自适应表单。
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
 topic: Administration
@@ -8,16 +8,22 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/r--F0l84gNKh6jvpjo7cCV4NS-i3hM7zcK3kl0h3YX8
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '2512'
+source-wordcount: 2548
 ht-degree: 0%
 
 ---
 
 # 查看并更正转换后的表单{#review-and-correct-converted-forms}
 
-AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、内容和布局，并将PDF文档转换为自适应表单。 输出自适应表单可能缺少一些字段或字段转换不正确。 您可以使用审阅和修正编辑器对已识别字段进行改进，并重新生成自适应表单，使输出更接近所需体验。 首次转换后，您可以在编辑器中打开输入PDF文档，以：
+AEM Forms自动表单转换服务(AFCS)可识别输入PDF文档的字段、内容和布局，并将PDF文档转换为自适应表单。 输出自适应表单可能缺少一些字段或字段转换不正确。 您可以使用审阅和修正编辑器对已识别字段进行改进，并重新生成自适应表单，使输出更接近所需体验。 首次转换后，您可以在编辑器中打开输入的PDF文档，以：
 
 * 查看转换期间标识的所有字段和内容
 * 识别转换期间缺少的字段和内容
@@ -25,7 +31,7 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 * 验证标识的表、调整列大小以及修改单元格内容
 * 删除错误识别的字段
 
-进行所需的更改后，将PDF forms重新发送到转换服务。 成功转化后，更新的资源（包括自适应表单和架构）将下载到您的AEM Forms实例。 您可以重复该过程，直到获得所需的体验。![](assets/stages-of-form-2.gif)
+进行所需更改后，将PDF forms重新发送到转换服务。 成功转化后，更新的资源（包括自适应表单和架构）将下载到您的AEM Forms实例。 您可以重复该过程，直到获得所需的体验。![](assets/stages-of-form-2.gif)
 
 您需要Google Chrome、Mozilla FireFox或Microsoft Edge浏览器才能使用审阅和更正编辑器。 该编辑器不支持Internet Explorer。
 
@@ -45,9 +51,9 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
 ![查看并更正UI](assets/reviewcorrectui.png)
 
-**A.**&#x200B;内容浏览器&#x200B;**B.**&#x200B;属性浏览器&#x200B;**C.**&#x200B;工具栏&#x200B;**D.**&#x200B;属性按钮&#x200B;**E.**&#x200B;筛选器按钮&#x200B;**F.**&#x200B;保存按钮&#x200B;**G.** PDF表单与已识别的字段重叠
+**A.**&#x200B;内容浏览器&#x200B;**B.**&#x200B;属性浏览器&#x200B;**C.**&#x200B;工具栏&#x200B;**D.**&#x200B;属性按钮&#x200B;**E.**&#x200B;筛选器按钮&#x200B;**F.**&#x200B;保存按钮&#x200B;**G.** PDF表单与已标识的字段重叠
 
-在第一次成功转换之后，转换服务将带有已标识的字段和组件的源PDF文档叠加在一起。 这些字段或组件的类型为：文本、字段、面板、选择组和表：
+在首次成功转换后，转换服务会将已标识的字段和组件叠加在源PDF文档上。 这些字段或组件的类型为：文本、字段、面板、选择组和表：
 
 * 文本：源PDF文档中的纯文本。 例如，上面显示的图像中的贷款申请文本。
 * 字段：与值或输入框关联的文本或图标标签组合。 例如，上图中的第一个字段名称。 它有文本标签和一个输入框。 字段支持文本、数字、下拉列表、日期、电子邮件、电话号码、签名、货币和密码数据类型。
@@ -59,11 +65,11 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
 ## 开始查看转换 {#start-reviewing-a-conversion}
 
-在第一次成功转换之后，转换服务将带有已标识的字段和组件的源PDF文档叠加在一起。 您可以对已识别的字段进行改进，并重新生成自适应表单，使输出更接近所需体验。 只有在首次成功转换后，您才可以开始查看转换。
+在首次成功转换后，转换服务会将已标识的字段和组件叠加在源PDF文档上。 您可以对已识别的字段进行改进，并重新生成自适应表单，使输出更接近所需体验。 只有在首次成功转换后，您才可以开始查看转换。
 
 ### 开始之前 {#before-you-start}
 
-* “查看并更正”编辑器不支持片段。 请勿使用编辑器查看在转换期间启用了&#x200B;**提取片段**&#x200B;选项的转换。 您可以使用[自适应表单编辑器](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/introduction-forms-authoring.html)进行此类转换。
+* “查看并更正”编辑器不支持片段。 请勿使用编辑器查看在转换期间启用了&#x200B;**提取片段**&#x200B;选项的转换。 您可以使用[自适应表单编辑器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)进行此类转换。
 
 * “检查并更正”编辑器没有撤消操作。 仅使用“保存”按钮永久保存更改。
 
@@ -85,13 +91,13 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
    * 要删除面板，请选择该面板，然后点按工具栏中的删除![](assets/delete-icon.png)图标。 在确认对话框中，点按&#x200B;**[!UICONTROL Confirm]**。 点按&#x200B;**[!UICONTROL Save]**&#x200B;以保存更改。
 
-   * 要取消面板分组，请选择该面板，然后点按工具栏中的取消分组图标。 该面板将取消分组，并且取消分组面板的子字段将调整为父字段。 点按&#x200B;**[!UICONTROL Save]**&#x200B;以保存更改。
+   * 要取消面板分组，请选择该面板，然后点按工具栏中的取消分组图标。 该面板将取消分组，并且取消分组面板的子字段将调整为父字段。 点按**[!UICONTROL Save]**以保存更改。
 
 1. **创建文本的逻辑组**：验证已识别的文本的完整性和正确性。 此外，请检查，文本在逻辑上是否放在正确的面板或组中。 例如，在多列布局中，一个逻辑组的文本放在另一个组中。
 
    * 要检查文本的完整性和正确性，请使用过滤器![](assets/toggle_eye.png)按钮仅查看文本，单击每个文本，然后进行验证。 修复拼写、拼写错误或语法问题（如果有）。
 
-   * 要将文本添加到表单，请点按+按钮，点按&#x200B;**[!UICONTROL Text]**。 在Draw框中，打开资产浏览器，然后键入要添加到“内容”框中的文本。
+   * 要将文本添加到表单，请点按+按钮，点按&#x200B;**[!UICONTROL Text]**。 绘制该框，打开属性浏览器，然后键入文本以添加到“内容”框中。
 
 1. **审阅表：**&#x200B;确保已识别表的所有边框。 另外，还要确保正确识别单元格的内容。
 
@@ -99,7 +105,7 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
    * 要删除多余边框，请使用&#x200B;**[!UICONTROL Delete Column]**&#x200B;或&#x200B;**[!UICONTROL Delete Row]**&#x200B;选项。
 
-进行所需更改后，点击&#x200B;**[!UICONTROL Save & Convert]**&#x200B;按钮以将PDF forms重新发送到转换服务。 每个字段被转换为相应的自适应字段组件。 转换后，更新的资源（包括自适应表单和架构）将下载到您的AEM Forms实例。 根据表单的复杂性，服务可能需要一些时间才能完成转换。
+进行所需更改后，点按&#x200B;**[!UICONTROL Save & Convert]**&#x200B;按钮以将PDF forms重新发送到转换服务。 每个字段被转换为相应的自适应字段组件。 转换后，更新的资源（包括自适应表单和架构）将下载到您的AEM Forms实例。 根据表单的复杂性，服务可能需要一些时间才能完成转换。
 
 ![保存并转换](assets/save-and-convert.png)
 
@@ -126,7 +132,7 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
 ![](assets/add-component.gif)
 
-要将组件添加到表单，请点按&#x200B;**[!UICONTROL +]**&#x200B;并点按&#x200B;**[!UICONTROL Field]**。 Draw包含字段标签和输入框的框。 例如，上述示例图像使用字段组件将&#x200B;**出生日期**&#x200B;标签及其下方的值框添加到表单中。 绘制框时，转换服务将标识字段的类型。 如果需要，您可以在属性浏览器中更改字段类型。 创建组件后，打开属性浏览器，并设置组件的属性。
+要将组件添加到表单，请点按&#x200B;**[!UICONTROL +]**&#x200B;并点按&#x200B;**[!UICONTROL Field]**。 绘制覆盖字段标签的框和输入框。 例如，上述示例图像使用字段组件将&#x200B;**出生日期**&#x200B;标签及其下方的值框添加到表单中。 绘制框时，转换服务将标识字段的类型。 如果需要，您可以在属性浏览器中更改字段类型。 创建组件后，打开属性浏览器，并设置组件的属性。
 
 点按&#x200B;**[!UICONTROL Save]**&#x200B;按钮以保存修改，或使用&#x200B;**[!UICONTROL Save & Convert]**&#x200B;按钮将PDF forms重新发送到转换服务。
 
@@ -155,7 +161,7 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 |---|---|
 | 文本 | 字段或选择组 |
 | 字段 | 文本或选择组 |
-| 选择组 | 文本或面板 |
+| 选择群组 | 文本或面板 |
 
 转换后，打开属性浏览器，指定标签，然后指定其他必需的属性。 点按&#x200B;**[!UICONTROL Save]**&#x200B;按钮以保存修改，或者使用“保存并转换”按钮将PDF forms重新发送到转换服务。
 
@@ -167,7 +173,7 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
 * 要删除某个面板，请选择该面板，然后点按![取消分组](assets/ungroupX18.png)。 将移除面板，并将面板的子组件移至父组件。 您还可以使用[删除组件](review-correct-ui-edited.md#delete-a-panel-or-component)选项删除面板及其子面板。
 
-* 要创建面板，请使用Ctrl键（在Windows或Linux上）或Control键(在Mac上)选择相关组件，然后点按![组](assets/group.jpg)以创建面板。 打开属性浏览器以指定面板的属性。
+* 要创建面板，请使用Ctrl键（在Windows或Linux上）或Control键（在Mac上）选择相关组件，然后点按![组](assets/group.jpg)以创建面板。 打开属性浏览器以指定面板的属性。
 
 点按&#x200B;**[!UICONTROL Save]**&#x200B;按钮以保存修改，或使用&#x200B;**[!UICONTROL Save & Convert]**&#x200B;按钮将PDF forms重新发送到转换服务。
 
@@ -175,7 +181,7 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
 转换服务可能会识别一些不正确的面板或组件。 这些面板中的这些组件大多无关。 您可以删除此类面板或组件。
 
-要删除面板或组件，请选择一个面板或组件，然后点按删除![](assets/delete-icon.png)图标。 在确认对话框中，点按&#x200B;**[!UICONTROL Confirm]**。 所选的面板或组件将被删除。 删除面板时，也会删除面板的所有子项。 您可以使用Ctrl键（在Windows或Linux上）或Control键(在Mac上)选择多个组件或面板。
+要删除面板或组件，请选择一个面板或组件，然后点按删除![](assets/delete-icon.png)图标。 在确认对话框中，点按&#x200B;**[!UICONTROL Confirm]**。 所选的面板或组件将被删除。 删除面板时，也会删除面板的所有子项。 您可以使用Ctrl键（在Windows或Linux上）或Control键（在Mac上）选择多个组件或面板。
 
 ### 设置组件的属性 {#set-properties-of-a-component}
 
@@ -185,9 +191,9 @@ AEM FormsAutomated forms conversion服务(AFCS)标识输入PDF文档的字段、
 
 ### 发送表单进行转换 {#send-a-form-for-conversion}
 
-在“审核并更正”编辑器中完成所有必需的更改后，您可以重新发送表单以进行转换。 若要发送表单进行转换，请点按&#x200B;**[!UICONTROL Save & Convert]**。 **[!UICONTROL Sent for conversion label]**&#x200B;应用于包含源文档的文件夹，并且更新的源表单已上载到在Adobe I/O上运行的转换服务。
+在“审核并更正”编辑器中完成所有必需的更改后，您可以重新发送表单以进行转换。 若要发送表单进行转换，请点按&#x200B;**[!UICONTROL Save & Convert]**。 **[!UICONTROL Sent for conversion label]**&#x200B;应用于包含源文档的文件夹，并且更新的源表单已上载到Adobe I/O上运行的转换服务。
 
-根据表单的复杂性，转换服务可能需要一些时间来转换表单。 转换完成后，转换后的自适应表单和相关资产将下载到您的计算机。 转换完成后，您可以在编辑器中查看表单，并根据需要在[自适应表单编辑器](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中打开自适应表单以获取最终修复集。
+根据表单的复杂性，转换服务可能需要一些时间来转换表单。 转换完成后，转换后的自适应表单和相关资产将下载到您的计算机。 转换完成后，您可以在编辑器中查看表单，并根据需要在[自适应表单编辑器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中打开自适应表单以获取最终修复集。
 
 如果在自适应表单编辑器中更新表单后重新发送表单进行转换，则自适应表单中所做的所有更改都将丢失。 只有在成功转换之后，您才能在审阅和更正编辑器中打开表单。
 
