@@ -8,9 +8,15 @@ topic-tags: forms
 feature: Adaptive Forms
 exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
 TQID: https://experienceleague.adobe.com/t3Ng0VnihUMkisnaGzTBaw2QIR93l-fSHApCaOvz0r0
-product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 1905
@@ -73,8 +79,8 @@ AEM Forms自动表单转换服务(AFCS)由Adobe Sensei提供支持，可自动�
 
    * **[!UICONTROL Select a cloud configuration]**. 选择配置时，已指定默认模板和主题。 如果需要，您可以指定其他模板或主题。
    * 指定用于保存生成的自适应表单和相应架构的位置。 您可以使用默认路径或指定自定义路径。
-   * 使用&#x200B;**生成没有数据模型绑定的自适应表单**选项选择是否要生成具有或不具有数据模型绑定的自适应表单。
-如果不选择此选项，转换服务会自动将自适应表单与JSON架构相关联，并在自适应表单中可用的字段与JSON架构之间创建数据绑定。 **[!UICONTROL Save generated data model schema at]**字段显示保存生成的JSON架构的默认位置。 您还可以自定义保存生成的架构的位置。
+   * 使用&#x200B;**生成没有数据模型绑定的自适应表单**&#x200B;选项选择是否要生成具有或不具有数据模型绑定的自适应表单。
+如果不选择此选项，转换服务会自动将自适应表单与JSON架构相关联，并在自适应表单中可用的字段与JSON架构之间创建数据绑定。 **[!UICONTROL Save generated data model schema at]**&#x200B;字段显示保存生成的JSON架构的默认位置。 您还可以自定义保存生成的架构的位置。
 如果选择此选项，则转换服务会生成一个没有数据模型绑定的自适应表单。 成功转换后，您可以将自适应表单与表单数据模型、XML架构或JSON架构相关联。 有关详细信息，请参阅[创建自适应表单](https://helpx.adobe.com/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
 
    <!--
@@ -117,7 +123,7 @@ AEM Forms自动表单转换服务(AFCS)由Adobe Sensei提供支持，可自动�
    >[!NOTE]
    >
    >
-   > * 您一次只能使用&#x200B;**[!UICONTROL  Extract Fragment]**&#x200B;或&#x200B;**[!UICONTROL Use existing adaptive form fragments]**&#x200B;选项。 不能同时使用这两个选项。
+   > * 您一次只能使用&#x200B;**[!UICONTROL &#x200B; Extract Fragment]**&#x200B;或&#x200B;**[!UICONTROL Use existing adaptive form fragments]**&#x200B;选项。 不能同时使用这两个选项。
    > * 只能在非交互式PDF forms中使用&#x200B;**[!UICONTROL Use existing adaptive form fragments]**&#x200B;选项。 尚不支持其他表单类型。
    > * 您只能使用未绑定的片段或通过Automated Conversion Service绑定到JSON架构的片段。 请勿使用XFA片段。 不支持XFA片段。
    >

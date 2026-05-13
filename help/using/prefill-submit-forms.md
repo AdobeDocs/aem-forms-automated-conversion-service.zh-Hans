@@ -10,11 +10,20 @@ level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
 TQID: https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM
-product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2: id: df401a2a-327d-468c-a5e4-b7b7ccd071a0id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 2555
@@ -109,7 +118,7 @@ ht-degree: 1%
 ## 先决条件 {#pre-requisites}
 
 * 配置[AEM创作实例](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html)
-* 在AEM创作实例](configure-service.md)上配置[自动表单转换服务(AFCS)
+* 在AEM创作实例[&#128279;](configure-service.md)上配置自动表单转换服务(AFCS)
 
 ## 自适应表单示例 {#sample-adaptive-form}
 
@@ -231,7 +240,7 @@ CREATE TABLE `applicant` (
 
 ## 生成无数据绑定的自适应表单 {#generate-adaptive-forms-with-no-data-binding}
 
-使用[自动表单转换服务将](convert-existing-forms-to-adaptive-forms.md)示例贷款申请表单[转换为无数据绑定的自适应表单。 ](#sample-adaptive-form)确保选中&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;复选框以生成无数据绑定的自适应表单。
+使用[自动表单转换服务将](convert-existing-forms-to-adaptive-forms.md)示例贷款申请表单[转换为无数据绑定的自适应表单。 &#x200B;](#sample-adaptive-form)确保选中&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;复选框以生成无数据绑定的自适应表单。
 
 ![无数据绑定的自适应表单](assets/generate_af_without_binding.png)
 
@@ -370,7 +379,7 @@ CREATE TABLE `applicant` (
 1. 点按&#x200B;**[!UICONTROL Form Model]**&#x200B;选项卡，从&#x200B;**[!UICONTROL Select From]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Schema]**，然后点按&#x200B;**[!UICONTROL Select Schema]**&#x200B;以上传保存在本地文件系统上的&#x200B;**loanapplication** XSD架构。 为XSD架构选择根元素并点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存表单。
 1. 选择&#x200B;**示例贷款申请表**&#x200B;并点按&#x200B;**[!UICONTROL Edit]**。
 1. 点按“申请人姓名”文本框并选择![配置图标](assets/configure_icon.svg) （配置）。
-在“绑定引用”字段中，选择**申请人** > **名称**，然后点按![完成图标](assets/save_icon.svg)以保存属性。 同样，为&#x200B;**地址**、**电话号码**、**电子邮件**、**职业**、**年薪（美元）**&#x200B;和&#x200B;**否，创建数据绑定。 具有XSD架构实体的依赖家庭成员**&#x200B;字段。
+在“绑定引用”字段中，选择&#x200B;**申请人** > **名称**，然后点按![完成图标](assets/save_icon.svg)以保存属性。 同样，为&#x200B;**地址**、**电话号码**、**电子邮件**、**职业**、**年薪（美元）**&#x200B;和&#x200B;**否，创建数据绑定。 具有XSD架构实体的依赖家庭成员**&#x200B;字段。
 
 1. 再次选择&#x200B;**输出**&#x200B;文件夹中提供的转换后的&#x200B;**贷款申请表单**，然后选择&#x200B;**[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**。</br>
 
