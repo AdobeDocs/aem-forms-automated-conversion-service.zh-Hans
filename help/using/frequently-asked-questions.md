@@ -8,10 +8,25 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+TQID: https://experienceleague.adobe.com/yp0Kt5IApys-pqUHzqYJlzY9zhMg7z26v-bB0Fp9fjI
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '1806'
-ht-degree: 3%
+source-wordcount: 1918
+ht-degree: 4%
 
 ---
 
@@ -66,7 +81,7 @@ ht-degree: 3%
    * 为转换提供了安全的PDF forms。 请勿使用受密码保护或安全的PDF forms进行转换。
    * Internet连接中断。 确保在转换过程中已连接到Internet。
    * Source PDF具有表单的图像，而不是实际的表单。
-   * 服务配置不正确、未提供服务URL或提供的服务URL不正确。 在[&#x200B; > &#x200B;](configure-service.md#configure-the-cloud-service) > **[!UICONTROL AEM]** > **[!UICONTROL Tools]**&#x200B;检查&#x200B;**[!UICONTROL Cloud Services]**&#x200B;服务配置&#x200B;**[!UICONTROL Automated Forms Conversion configuration]**。
+   * 服务配置不正确、未提供服务URL或提供的服务URL不正确。 在&#x200B;**[!UICONTROL AEM]** > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion configuration]**&#x200B;检查[服务配置](configure-service.md#configure-the-cloud-service)。
    * IMS配置不正确。 对IMS配置执行运行状况检查以确保其正常工作。 要检查IMS配置是否正确，请执行以下操作：
       1. 转到`http://[servername]:[port]/libs/cq/adobeims-configuration/content/configurations.html`
       2. 选择配置。 单击标题中的&#x200B;**[!UICONTROL Check Health]**&#x200B;并单击&#x200B;**[!UICONTROL Check]**。 如果成功，您会收到&#x200B;**[!UICONTROL Token retrieved successfully!]**&#x200B;消息。<br> <br>
@@ -105,7 +120,7 @@ ht-degree: 3%
 当没有为RSA/BouncyCastle库配置引导委派时，会发生上述错误。 执行以下步骤以解决问题：
    <p> </p>
 
-   1. 停止 AEM 实例。导航到`[AEM installation directory]\crx-quickstart\conf\`文件夹。 打开sling.properties文件进行编辑。 如果您使用`[AEM installation directory]\crx-quickstart\bin\start.bat`启动AEM实例，请编辑位于`[AEM_root]\crx-quickstart\`的sling.properties。
+   1. 停止 AEM 实例。 导航到 `[AEM installation directory]\crx-quickstart\conf\` 文件夹。 打开sling.properties文件进行编辑。 如果您使用`[AEM installation directory]\crx-quickstart\bin\start.bat`启动AEM实例，请编辑位于`[AEM_root]\crx-quickstart\`的sling.properties。
    1. 将以下属性添加到sling.properties文件：<br/> `sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*`<br />  `sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*`<br /> `sling.bootdelegation.xerces=org.apache.xerces.*`
    1. 保存并关闭文件。<br/>
    1. 启动AEM实例。<br/>

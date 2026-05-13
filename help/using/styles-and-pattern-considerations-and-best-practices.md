@@ -8,9 +8,25 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+TQID: https://experienceleague.adobe.com/EixW6MGzAyHz-JcPYmnKQBLWqnEFOwUepUFOcG8DBUo
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: 1356
 ht-degree: 4%
 
 ---
@@ -69,12 +85,12 @@ AEM [!DNL Forms Automated Conversion service]使用人工智能和机器学习�
 
 | 图案 | 示例 |
 |--- |--- |
-| **模式** <br>服务未将已填充的PDF forms转换为自适应表单。<br><br>**分辨率** <br>使用空的自适应表单。 | ![已填写表单](assets/best-practice-filled-forms.png) |
-| **模式** <br>服务可能无法识别密集表单中的文本和字段。<br><br>**分辨率** <br>在开始转换之前，增加密集表单文本和字段之间的宽度。 |  |
-| **模式** <br>服务不支持扫描的表单。<br><br>**分辨率** <br>不使用扫描的表单。 | ![扫描的表单](assets/scanned-forms.png) |
-| **模式** <br>服务未提取图像中的图像和文本。<br><br>**分辨率** <br>手动将图像或文本添加到转换后的表单。 | ![带文本表单的图像](assets/best-practice-image-with-text.png) |
-| **图案** <br>带有点状或不清楚边界和边框的表格不转换。<br><br>**分辨率** <br>使用具有明确边界和边框的表。 受支持。 | ![未清除表格表单](assets/best-practice-table-dotted-non-clear.png) |
-| **模式** <br>自适应表单不支持开箱即用的垂直文本。 因此，该服务不会将垂直文本转换为相应的自适应Forms文本。<br><br>**分辨率** <br>如果需要，使用自适应表单编辑器添加垂直文本。 | ![未清除表格表单](assets/vertical-text.png) |
+| **模式** <br>服务未将已填充的PDF forms转换为自适应表单。 <br><br>**分辨率** <br>使用空的自适应表单。 | ![已填写表单](assets/best-practice-filled-forms.png) |
+| **模式** <br>服务可能无法识别密集表单中的文本和字段。 <br><br>**分辨率** <br>在开始转换之前，增加密集表单文本和字段之间的宽度。 |  |
+| **模式** <br>服务不支持扫描的表单。 <br><br>**分辨率** <br>不使用扫描的表单。 | ![扫描的表单](assets/scanned-forms.png) |
+| **模式** <br>服务未提取图像中的图像和文本。 <br><br>**分辨率** <br>手动将图像或文本添加到转换后的表单。 | ![带文本表单的图像](assets/best-practice-image-with-text.png) |
+| **图案** <br>带有点状或不清楚边界和边框的表格不转换。 <br><br>**分辨率** <br>使用具有明确边界和边框的表。 受支持。 | ![未清除表格表单](assets/best-practice-table-dotted-non-clear.png) |
+| **模式** <br>自适应表单不支持开箱即用的垂直文本。 因此，该服务不会将垂直文本转换为相应的自适应Forms文本。 <br><br>**分辨率** <br>如果需要，请使用自适应表单编辑器添加垂直文本。 | ![未清除表格表单](assets/vertical-text.png) |
 
 
 
@@ -82,16 +98,16 @@ AEM [!DNL Forms Automated Conversion service]使用人工智能和机器学习�
 
 | 图案 | 解决方法 |
 |--- |--- |
-| **图案** <br>具有框或圆以外的形状的选择组选项未转换为相应的自适应表单组件。<br><br>**分辨率** <br>将选择选项形状更改为方框或圆形，或者使用“审核并更正”编辑器识别形状。 | ![选择字段](assets/best-practice-choice-group-options.png) |
+| **图案** <br>具有框或圆以外的形状的选择组选项未转换为相应的自适应表单组件。 <br><br>**分辨率** <br>将选择选项形状更改为方框或圆形，或者使用“审核并更正”编辑器来标识形状。 | ![选择字段](assets/best-practice-choice-group-options.png) |
 
 ### 表单字段 {#form-fields}
 
 | 图案 | 解决方法 |
 |--- |--- |
-| **模式** <br>服务不识别没有明确边框的字段。<br><br>**分辨率** <br>使用“审核并更正”编辑器标识此类字段。 | ![具有非清除边界的字段](assets/best-practice-fields-without-clear-borders.png) |
-| **模式** <br>服务可能无法识别某些选择组表单字段，这些字段在表单的底部或右侧带有标题。<br><br>**分辨率** <br>使用“审核并更正”编辑器标识此类字段 | ![选择字段](assets/best-practice-caption-bottom-right.png) |
-| **模式** <br>服务合并或分配了错误类型给一些彼此非常接近或没有清晰边框的表单字段。<br><br>**分辨率** <br>使用“审核并更正”编辑器标识此类字段。 | ![选择字段](assets/best-practice-placed-very-near.png) |
-| **模式** <br>服务可能无法识别带有遥远字幕的字段或字幕与输入字段之间的虚线。<br><br>**解决方案** <br>使用具有明确边界的表单字段或使用审阅和更正编辑器修复此类问题。 | ![标题字段之间的远距字段或虚线](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
+| **模式** <br>服务不识别没有明确边框的字段。 <br><br>**解决方法** <br>使用“审核并更正”编辑器标识此类字段。 | ![具有非清除边界的字段](assets/best-practice-fields-without-clear-borders.png) |
+| **模式** <br>服务可能无法识别某些选择组表单字段，这些字段在表单的底部或右侧带有标题。 <br><br>**分辨率** <br>使用“审核并更正”编辑器标识此类字段 | ![选择字段](assets/best-practice-caption-bottom-right.png) |
+| **模式** <br>服务合并或分配了错误类型给一些彼此非常接近或没有清晰边框的表单字段。 <br><br>**解决方法** <br>使用“审核并更正”编辑器标识此类字段。 | ![选择字段](assets/best-practice-placed-very-near.png) |
+| **模式** <br>服务可能无法识别带有遥远字幕的字段或字幕与输入字段之间的虚线。 <br><br>**解决办法** <br>使用具有明确边界的表单字段或使用审阅和更正编辑器修复此类问题。 | ![标题字段之间的远距字段或虚线](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
 
 ### 列表 {#lists}
 

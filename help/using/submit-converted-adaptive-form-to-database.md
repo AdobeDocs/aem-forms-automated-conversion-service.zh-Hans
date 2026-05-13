@@ -8,9 +8,28 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+TQID: https://experienceleague.adobe.com/NjVGOlVHFuhj4IP-PL8NwhX0g78-x250m7QedQxLkEg
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: a1df6763-63b5-45b4-8c8a-155a692a2b3e
+  - id: ae478996-b206-4712-9b0c-dc78a2644453
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: 1541
 ht-degree: 2%
 
 ---
@@ -33,7 +52,7 @@ ht-degree: 2%
 * 为您的AEM实例安装[最新的Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)
 * 最新版本的AEM Forms附加组件包
 * 配置[自动表单转换服务](configure-service.md)
-* 设置数据库。 示例实施中使用的数据库是MySQL 5.6.24。但是，您可以将转换后的自适应表单与所选的任何数据库集成。
+* 设置数据库。 示例实施中使用的数据库是MySQL 5.6.24。 但是，您可以将转换后的自适应表单与所选的任何数据库集成。
 
 ## 自适应表单示例 {#sample-adaptive-form}
 
@@ -162,7 +181,7 @@ CREATE TABLE `contactus` (
 
 1. 点按&#x200B;**[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**。
 
-1. 在&#x200B;**[!UICONTROL Create Form Data Model]**&#x200B;向导中，将&#x200B;**workflow_submit**&#x200B;指定为表单数据模型的名称。 点按&#x200B;**[!UICONTROL Next]**。
+1. 在&#x200B;**[!UICONTROL Create Form Data Model]**&#x200B;向导中，将&#x200B;**workflow_submit**&#x200B;指定为表单数据模型的名称。 点击&#x200B;**[!UICONTROL Next]**。
 
 1. 选择您在上一部分中配置的MYSQL数据源，然后点按&#x200B;**[!UICONTROL Create]**。
 
@@ -170,7 +189,7 @@ CREATE TABLE `contactus` (
 
    ![示例数据mysql](assets/fdm_details_workfdlow_submit.png)
 
-1. 在右窗格中选择数据模型对象，然后点按&#x200B;**[!UICONTROL Edit Properties]**。 从&#x200B;**[!UICONTROL get]**&#x200B;和&#x200B;**[!UICONTROL insert]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Read Service]**&#x200B;和&#x200B;**[!UICONTROL Write Service]**。 指定读取服务的参数并点按&#x200B;**[!UICONTROL Done]**。
+1. 在右窗格中选择数据模型对象，然后点按&#x200B;**[!UICONTROL Edit Properties]**。 从&#x200B;**[!UICONTROL Read Service]**&#x200B;和&#x200B;**[!UICONTROL Write Service]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL get]**&#x200B;和&#x200B;**[!UICONTROL insert]**。 指定读取服务的参数并点按&#x200B;**[!UICONTROL Done]**。
 
 1. 在&#x200B;**[!UICONTROL Services]**&#x200B;选项卡中，选择&#x200B;**[!UICONTROL get]**&#x200B;服务并点按&#x200B;**[!UICONTROL Edit Properties]**。 选择&#x200B;**[!UICONTROL Output Model Object]**，禁用&#x200B;**[!UICONTROL Return array]**&#x200B;切换功能，然后点按&#x200B;**[!UICONTROL Done]**。
 
@@ -188,7 +207,7 @@ CREATE TABLE `contactus` (
 
 具有JSON绑定的![自适应表单](assets/generate_af_with_data_bindings.png)
 
-选择在&#x200B;**的**&#x200B;文件夹中提供的转换后的&#x200B;**[!UICONTROL output]**&#x200B;联系我们表单&#x200B;**[!UICONTROL Forms & Documents]**，然后点按&#x200B;**[!UICONTROL Edit]**。 点按&#x200B;**[!UICONTROL Preview]**，在自适应表单字段中输入值，然后点按&#x200B;**[!UICONTROL Submit]**。
+选择在&#x200B;**[!UICONTROL Forms & Documents]**&#x200B;的&#x200B;**[!UICONTROL output]**&#x200B;文件夹中提供的转换后的&#x200B;**联系我们表单**，然后点按&#x200B;**[!UICONTROL Edit]**。 点按&#x200B;**[!UICONTROL Preview]**，在自适应表单字段中输入值，然后点按&#x200B;**[!UICONTROL Submit]**。
 
 登录到&#x200B;**crx-repository**&#x200B;并导航到&#x200B;*/content/forms/fp/admin/submit/data*，以查看JSON格式提交的值。 以下是您提交转换后的&#x200B;**联系我们**&#x200B;自适应表单时JSON格式的示例数据：
 
@@ -233,7 +252,7 @@ CREATE TABLE `contactus` (
 
 1. 点按&#x200B;**[!UICONTROL Invoke Form Data Model Service]**&#x200B;步骤，然后点按![配置](assets/configure_icon.png)。
 
-1. 在&#x200B;**[!UICONTROL Form Data Model]**&#x200B;选项卡中，选择已在&#x200B;**[!UICONTROL Form Data Model path]**&#x200B;字段中创建的表单数据模型，并从&#x200B;**[!UICONTROL insert]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Service]**。
+1. 在&#x200B;**[!UICONTROL Form Data Model]**&#x200B;选项卡中，选择已在&#x200B;**[!UICONTROL Form Data Model path]**&#x200B;字段中创建的表单数据模型，并从&#x200B;**[!UICONTROL Service]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL insert]**。
 
 1. 在&#x200B;**[!UICONTROL Input for Service]**&#x200B;选项卡中，从下拉列表中选择&#x200B;**[!UICONTROL Provide input data using literal, variable, or a workflow metadata, and a JSON file]**，选中&#x200B;**[!UICONTROL Map input fields from input JSON]**&#x200B;复选框，选择&#x200B;**[!UICONTROL Relative to payload]**，并提供&#x200B;**data.xml**&#x200B;作为&#x200B;**[!UICONTROL Select input JSON document using]**&#x200B;字段的值。
 
@@ -247,11 +266,11 @@ CREATE TABLE `contactus` (
 
 执行以下步骤，将自适应表单提交到您在上一节中创建的工作流模型：
 
-1. 选择可在&#x200B;**[!UICONTROL output]**&#x200B;的&#x200B;**[!UICONTROL Forms & Documents]**&#x200B;文件夹中找到的已转换的“联系我们”表单，然后点按&#x200B;**[!UICONTROL Edit]**。
+1. 选择可在&#x200B;**[!UICONTROL Forms & Documents]**&#x200B;的&#x200B;**[!UICONTROL output]**&#x200B;文件夹中找到的已转换的“联系我们”表单，然后点按&#x200B;**[!UICONTROL Edit]**。
 
 1. 通过点按&#x200B;**[!UICONTROL Form Container]**，然后点按![配置](assets/configure_icon.png)打开自适应表单属性。
 
-1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;部分中，从&#x200B;**[!UICONTROL Invoke an AEM workflow]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Submit Action]**，选择您在上一部分中创建的工作流模型，并在&#x200B;**字段中指定** data.xml **[!UICONTROL Data File Path]**。
+1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;部分中，从&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Invoke an AEM workflow]**，选择您在上一部分中创建的工作流模型，并在&#x200B;**[!UICONTROL Data File Path]**&#x200B;字段中指定&#x200B;**data.xml**。
 
 1. 点按![保存](assets/save_icon.png)以保存属性。
 
@@ -263,11 +282,11 @@ CREATE TABLE `contactus` (
 
 1. 点按自适应表单中的&#x200B;**电子邮件**&#x200B;字段，然后点按![编辑规则](assets/edit-rules.png)。
 
-1. 点按&#x200B;**[!UICONTROL Create]**&#x200B;并从&#x200B;**[!UICONTROL is changed]**&#x200B;部分的&#x200B;**[!UICONTROL Select State]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL When]**。
+1. 点按&#x200B;**[!UICONTROL Create]**&#x200B;并从&#x200B;**[!UICONTROL When]**&#x200B;部分的&#x200B;**[!UICONTROL Select State]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL is changed]**。
 
 1. 在&#x200B;**[!UICONTROL Then]**&#x200B;部分中，选择&#x200B;**[!UICONTROL Invoke Service]**&#x200B;和&#x200B;**get**&#x200B;作为您在此文章的上一部分中创建的表单数据模型的服务。
 
-1. 在&#x200B;**部分中选择**&#x200B;电子邮件&#x200B;**[!UICONTROL Input]**，在&#x200B;**部分中选择表单数据模型的其余三个字段：**&#x200B;名称&#x200B;**、**&#x200B;电话号码&#x200B;**和**&#x200B;问题描述&#x200B;**[!UICONTROL Output]**。 点按&#x200B;**[!UICONTROL Done]**&#x200B;以保存设置。
+1. 在&#x200B;**[!UICONTROL Input]**&#x200B;部分中选择&#x200B;**电子邮件**，在&#x200B;**[!UICONTROL Output]**&#x200B;部分中选择表单数据模型的其余三个字段：**名称**、**电话号码**&#x200B;和&#x200B;**问题描述**。 点按&#x200B;**[!UICONTROL Done]**&#x200B;以保存设置。
 
    ![配置电子邮件预填充设置](assets/email_prefill_settings.png)
 

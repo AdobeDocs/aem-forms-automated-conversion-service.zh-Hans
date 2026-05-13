@@ -10,9 +10,23 @@ level: Beginner, Intermediate
 page-status-flag: never-activated
 contentOwner: khsingh
 exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/ImCKo49r-l9Iq0uOVa16bzA1ga9e-n-Q6Eo4MvB9SB4
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: 884
 ht-degree: 0%
 
 ---
@@ -26,7 +40,7 @@ DoR使用基本模板来定义其布局。 您可以使用默认模板或将任�
 
 有关生成DoR的详细信息，请参阅[生成自适应表单的记录文档](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
 
-[Automated forms conversion服务(AFCS)](/help/using/introduction.md)将以下源表单转换为自适应表单：
+[自动表单转换服务(AFCS)](/help/using/introduction.md)将以下源表单转换为自适应表单：
 
 * 非交互式PDF forms
 * Acro Forms
@@ -87,7 +101,7 @@ DoR使用基本模板来定义其布局。 您可以使用默认模板或将任�
 
 ## 为非交互式PDF forms生成记录文档 {#generate-document-of-record-non-interactive-pdf}
 
-如果您使用非交互式PDF表单作为Automated forms conversion服务(AFCS)的源表单，则可以：
+如果您使用非交互式PDF表单作为自动表单转换服务(AFCS)的源表单，则可以：
 
 * 启用自适应表单转换前的DoR生成，以使用默认模板生成DoR
 * 或在自适应表单转换后编辑自适应表单属性，以使用默认或任何其他表单模板启用DoR生成
@@ -119,9 +133,9 @@ DoR使用基本模板来定义其布局。 您可以使用默认模板或将任�
 
 在提交转换后的自适应表单时，会使用默认模板自动生成DoR。 如果要将任何其他DoR模板与转换后的自适应表单关联，可以选择&#x200B;**[!UICONTROL Associate form template as the Document of Record template]**&#x200B;选项。
 
-## 为基于Acro Forms或XFA的PDF forms生成记录文档 {#generate-document-of-record-acroform-xfaform}
+## 为Acro Forms或基于XFA的PDF forms生成记录文档 {#generate-document-of-record-acroform-xfaform}
 
-如果您使用Acro表单或基于XFA的PDF表单作为Automated forms conversion服务(AFCS)的源表单，您可以：
+如果您使用Acro表单或基于XFA的PDF表单作为自动表单转换服务(AFCS)的源表单，您可以：
 
 * 启用自适应表单转换前的DoR生成功能，以使用源表单作为模板来生成DoR
 
@@ -134,7 +148,7 @@ DoR使用基本模板来定义其布局。 您可以使用默认模板或将任�
 1. 点按&#x200B;**[!UICONTROL Save & Close]**&#x200B;以保存设置。
 
 1. [运行转换](/help/using/convert-existing-forms-to-adaptive-forms.md)。 确保您使用在这些说明的第1步中编辑的云配置。
-转换服务会自动将基于Acro表单或XFA的PDF表单与转换后的自适应表单关联为DoR模板。
+转换服务会自动将Acro表单或基于XFA的PDF表单与转换后的自适应表单关联为DoR模板。
 您可以打开自适应表单属性以在&#x200B;**[!UICONTROL Form Model]**&#x200B;选项卡的&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;部分中查看DoR模板。
 
    ![编辑自适应表单属性以生成记录文档](assets/generate_dor_af_properties_xdp_acro.png)
