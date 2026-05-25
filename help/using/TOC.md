@@ -6,6 +6,7 @@ solution: Experience Manager, Experience Manager Forms
 product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+usetq: true
 type: Documentation
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms 自动化表单转换服务
@@ -13,7 +14,7 @@ user-guide-description: 将 PDF Forms 转换为响应式和移动就绪型 HTML 
 breadcrumb-title: Forms Automated Conversion 指南
 feature: Adaptive Forms
 role: User
-source-git-commit: 5ab30094bb9f1d4a343088fdd3a523925544fbc8
+source-git-commit: a052df70ec394e0d0c72ab15ac191e0865f50acc
 workflow-type: tm+mt
 source-wordcount: 90
 ht-degree: 40%
