@@ -9,11 +9,19 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
 TQID: https://experienceleague.adobe.com/r--F0l84gNKh6jvpjo7cCV4NS-i3hM7zcK3kl0h3YX8
-product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 2548
@@ -91,7 +99,7 @@ AEM Forms自动表单转换服务(AFCS)可识别输入PDF文档的字段、内�
 
    * 要删除面板，请选择该面板，然后点按工具栏中的删除![](assets/delete-icon.png)图标。 在确认对话框中，点按&#x200B;**[!UICONTROL Confirm]**。 点按&#x200B;**[!UICONTROL Save]**&#x200B;以保存更改。
 
-   * 要取消面板分组，请选择该面板，然后点按工具栏中的取消分组图标。 该面板将取消分组，并且取消分组面板的子字段将调整为父字段。 点按**[!UICONTROL Save]**以保存更改。
+   * 要取消面板分组，请选择该面板，然后点按工具栏中的取消分组图标。 该面板将取消分组，并且取消分组面板的子字段将调整为父字段。 点按&#x200B;**[!UICONTROL Save]**&#x200B;以保存更改。
 
 1. **创建文本的逻辑组**：验证已识别的文本的完整性和正确性。 此外，请检查，文本在逻辑上是否放在正确的面板或组中。 例如，在多列布局中，一个逻辑组的文本放在另一个组中。
 
