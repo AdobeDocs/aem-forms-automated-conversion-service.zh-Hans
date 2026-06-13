@@ -9,19 +9,11 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
 TQID: https://experienceleague.adobe.com/r--F0l84gNKh6jvpjo7cCV4NS-i3hM7zcK3kl0h3YX8
-product_v2:
-  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 2548
@@ -77,7 +69,7 @@ AEM Forms自动表单转换服务(AFCS)可识别输入PDF文档的字段、内�
 
 ### 开始之前 {#before-you-start}
 
-* “查看并更正”编辑器不支持片段。 请勿使用编辑器查看在转换期间启用了&#x200B;**提取片段**&#x200B;选项的转换。 您可以使用[自适应表单编辑器](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/introduction-forms-authoring.html)进行此类转换。
+* “查看并更正”编辑器不支持片段。 请勿使用编辑器查看在转换期间启用了&#x200B;**提取片段**&#x200B;选项的转换。 您可以使用[自适应表单编辑器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)进行此类转换。
 
 * “检查并更正”编辑器没有撤消操作。 仅使用“保存”按钮永久保存更改。
 
@@ -99,7 +91,7 @@ AEM Forms自动表单转换服务(AFCS)可识别输入PDF文档的字段、内�
 
    * 要删除面板，请选择该面板，然后点按工具栏中的删除![](assets/delete-icon.png)图标。 在确认对话框中，点按&#x200B;**[!UICONTROL Confirm]**。 点按&#x200B;**[!UICONTROL Save]**&#x200B;以保存更改。
 
-   * 要取消面板分组，请选择该面板，然后点按工具栏中的取消分组图标。 该面板将取消分组，并且取消分组面板的子字段将调整为父字段。 点按&#x200B;**[!UICONTROL Save]**&#x200B;以保存更改。
+   * 要取消面板分组，请选择该面板，然后点按工具栏中的取消分组图标。 该面板将取消分组，并且取消分组面板的子字段将调整为父字段。 点按**[!UICONTROL Save]**以保存更改。
 
 1. **创建文本的逻辑组**：验证已识别的文本的完整性和正确性。 此外，请检查，文本在逻辑上是否放在正确的面板或组中。 例如，在多列布局中，一个逻辑组的文本放在另一个组中。
 
@@ -201,7 +193,7 @@ AEM Forms自动表单转换服务(AFCS)可识别输入PDF文档的字段、内�
 
 在“审核并更正”编辑器中完成所有必需的更改后，您可以重新发送表单以进行转换。 若要发送表单进行转换，请点按&#x200B;**[!UICONTROL Save & Convert]**。 **[!UICONTROL Sent for conversion label]**&#x200B;应用于包含源文档的文件夹，并且更新的源表单已上载到Adobe I/O上运行的转换服务。
 
-根据表单的复杂性，转换服务可能需要一些时间来转换表单。 转换完成后，转换后的自适应表单和相关资产将下载到您的计算机。 转换完成后，您可以在编辑器中查看表单，并根据需要在[自适应表单编辑器](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中打开自适应表单以获取最终修复集。
+根据表单的复杂性，转换服务可能需要一些时间来转换表单。 转换完成后，转换后的自适应表单和相关资产将下载到您的计算机。 转换完成后，您可以在编辑器中查看表单，并根据需要在[自适应表单编辑器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中打开自适应表单以获取最终修复集。
 
 如果在自适应表单编辑器中更新表单后重新发送表单进行转换，则自适应表单中所做的所有更改都将丢失。 只有在成功转换之后，您才能在审阅和更正编辑器中打开表单。
 
