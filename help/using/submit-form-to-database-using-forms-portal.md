@@ -6,8 +6,8 @@ topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 1%
+source-wordcount: '1188'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 本文介绍了成功执行所有这些集成阶段的分步说明。
 
-本文讨论的示例是自定义数据和元数据服务的参考实现，用于将Forms Portal页面与数据库集成。 示例实施中使用的数据库是MySQL 5.6.24。但是，您可以将Forms Portal页面与您选择的任何数据库集成。
+本文讨论的示例是自定义数据和元数据服务的参考实现，用于将Forms Portal页面与数据库集成。 示例实施中使用的数据库是MySQL 5.6.24。 但是，您可以将Forms Portal页面与您选择的任何数据库集成。
 
 ## 先决条件 {#pre-requisites}
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 * 为您的AEM实例安装[最新的Service Pack](https://helpx.adobe.com/cn/experience-manager/aem-releases-updates.html)
 * 最新版本的AEM Forms附加组件包
 * 配置[自动表单转换服务(AFCS)](configure-service.md)
-* 设置数据库。 示例实施中使用的数据库是MySQL 5.6.24。但是，您可以将转换后的自适应表单与所选的任何数据库集成。
+* 设置数据库。 示例实施中使用的数据库是MySQL 5.6.24。 但是，您可以将转换后的自适应表单与所选的任何数据库集成。
 
 ## 设置AEM实例与数据库之间的连接 {#set-up-connection-aem-instance-database}
 
@@ -269,7 +269,7 @@ ht-degree: 1%
 
 1. 将以下&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;包下载到您的文件系统。
 
-[获取文件](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
+   [获取文件](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
 1. 转到&#x200B;*http://[host]：[port]/crx/packmgr/*&#x200B;处的AEM包管理器。
 1. 单击 **[!UICONTROL Upload Package]**。
@@ -282,7 +282,7 @@ ht-degree: 1%
 1. [运行转换](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process)以将源表单转换为自适应表单。
 1. 在编辑模式下打开自适应表单。
 1. 点按表单容器，然后选择配置![配置自适应表单](assets/configure-adaptive-form.png)。
-1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;部分中，从&#x200B;**[!UICONTROL Forms Portal Submit Action]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Submit Action]**。
+1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;部分中，从&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉列表中选择&#x200B;**[!UICONTROL Forms Portal Submit Action]**。
 1. 点按![保存模板策略](assets/edit_template_done.png)以保存设置。
 
 ## 创建和配置Forms门户页面 {#create-configure-forms-portal-page}
