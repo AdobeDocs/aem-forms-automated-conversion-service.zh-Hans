@@ -9,28 +9,14 @@ role: Admin, Developer, User
 level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
 TQID: https://experienceleague.adobe.com/xxFiHKgzZsDqk1rjtsBOEa-gaEi5S7iRY-Ela1T6eL8
-product_v2:
-  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
-  - id: a1df6763-63b5-45b4-8c8a-155a692a2b3e
-  - id: ae478996-b206-4712-9b0c-dc78a2644453
-  - id: d49d6117-dd89-469c-a774-cc96b7eee433
-  - id: f013e6ab-27b8-4645-b5a7-31ffa474d04f
-role_v2:
-  - id: b69b2659-1057-424e-8fc5-ed9e016dc554
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552eid: a1df6763-63b5-45b4-8c8a-155a692a2b3eid: ae478996-b206-4712-9b0c-dc78a2644453id: d49d6117-dd89-469c-a774-cc96b7eee433id: f013e6ab-27b8-4645-b5a7-31ffa474d04f
+role_v2: id: b69b2659-1057-424e-8fc5-ed9e016dc554id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: cb6b167400093c85e8929eb147e2a0be256772a6
 workflow-type: tm+mt
-source-wordcount: 2663
+source-wordcount: 2448
 ht-degree: 6%
 
 ---
@@ -82,22 +68,22 @@ Adobe 可为贵企业开启访问通道，并为您指定的管理员提供各�
 
 自动表单转换服务(AFCS)在AEM创作实例上运行。 您需要AEM 6.5、AEM 6.5 LTS或AEM Forms as a Cloud Service才能设置AEM创作实例。
 
-* 如果您未启动并运行AEM 6.5或AEM 6.5 LTS，请从以下位置下载它。 下载AEM后，有关设置AEM创作实例的说明，请参阅[部署和维护](https://helpx.adobe.com/cn/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)：
+* 如果您未启动并运行AEM 6.5或AEM 6.5 LTS，请从以下位置下载它。 下载AEM后，有关设置AEM创作实例的说明，请参阅[部署和维护](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)：
 
    * 如果您是AEM现有客户，请从[AEM许可网站](http://licensing.adobe.com)下载Adobe 6.5或AEM 6.5 LTS。
 
    * 如果您是Adobe合作伙伴，请使用[Adobe合作伙伴培训计划](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)请求AEM 6.5或AEM 6.5 LTS。
 
-* 如果您使用的是AEM Forms as a Cloud Service，请参阅载入[AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=zh-Hans#setup-environment)和[设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=zh-Hans#setup-environment)。
+* 如果您使用的是AEM Forms as a Cloud Service，请参阅载入[AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=en#setup-environment)和[设置本地开发环境](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=en#setup-environment)。
 
 
 ### （仅适用于AEM 6.5和AEM 6.5 LTS）下载并安装AEM最新服务包 {#servicepack}
 
-下载并安装最新的AEM Service Pack。 有关详细说明，请参阅[AEM 6.5 Service Pack发行说明](https://helpx.adobe.com/cn/experience-manager/6-5/release-notes/sp-release-notes.html)。
+下载并安装最新的AEM Service Pack。 有关详细说明，请参阅[AEM 6.5 Service Pack发行说明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)。
 
 ### （仅适用于AEM 6.5和AEM 6.5 LTS）下载并安装AEM Forms附加组件包  {#downloadaemformsaddon}
 
-AEM实例包含基本表单功能。 转换服务需要AEM Forms的完整功能。 下载并安装AEM Forms附加组件包以使用AEM Forms的所有功能。 必须使用该包才能设置和运行转换服务。 有关详细说明，请参阅[安装和配置数据捕获功能。](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
+AEM实例包含基本表单功能。 转换服务需要AEM Forms的完整功能。 下载并安装AEM Forms附加组件包以使用AEM Forms的所有功能。 必须使用该包才能设置和运行转换服务。 有关详细说明，请参阅[安装和配置数据捕获功能。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
 
 >[!NOTE]
 > 请确保在安装附加组件包后执行强制安装后配置。
@@ -114,7 +100,7 @@ The connector package provides early access to the [Auto-detect logical sections
 
 **AEM Forms as a Cloud Service：**&#x200B;您可以使用现成的模板或创建自定义模板，并将[服务配置](#configure-the-cloud-service)指向它们。
 
-**（仅适用于AEM 6.5和AEM 6.5 LTS）**&#x200B;自动表单转换服务(AFCS)至少需要一个主题和一个模板才能将PDF表单转换为自适应表单。 如果要使用基于核心组件的模板和主题，您必须[启用自适应表单核心组件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=zh-Hans)；此处记录了相关说明。 如果您在[生产模式](https://helpx.adobe.com/cn/experience-manager/6-5/sites/administering/using/production-ready.html) （nosamplecontent运行模式）下启动AEM 6.5或AEM 6.5 LTS，则不会安装引用包。 创建自己的自定义主题和模板，或在创作实例上下载并安装[AEM Forms引用Assets](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)包以获取引用主题和模板。 然后指向[服务配置](#configure-the-cloud-service)以在使用服务之前使用模板和主题。
+**（仅适用于AEM 6.5和AEM 6.5 LTS）**&#x200B;自动表单转换服务(AFCS)至少需要一个主题和一个模板才能将PDF表单转换为自适应表单。 如果要使用基于核心组件的模板和主题，您必须[启用自适应表单核心组件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html)；此处记录了相关说明。 如果您在[生产模式](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) （nosamplecontent运行模式）下启动AEM 6.5或AEM 6.5 LTS，则不会安装引用包。 创建自己的自定义主题和模板，或在创作实例上下载并安装[AEM Forms引用Assets](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)包以获取引用主题和模板。 然后指向[服务配置](#configure-the-cloud-service)以在使用服务之前使用模板和主题。
 
 ## 配置访问和权限
 
@@ -132,8 +118,8 @@ The connector package provides early access to the [Auto-detect logical sections
 
 在Adobe为您的组织启用访问权限并向管理员提供所需权限后，管理员可以登录Admin Console（下面的详细说明）、创建配置文件并将开发人员添加到配置文件中。 开发人员可以将AEM Forms的一个实例连接到Adobe Cloud上的自动表单转换服务(AFCS)。
 
-开发人员是您指定用于运行转换服务的组织的成员。 只有添加到Adobe自动表单转换服务(AFCS)配置文件的那些开发人员才有权使用自动表单转换服务(AFCS)。
-执行以下步骤可创建配置文件并向其中添加开发人员。 至少需要一个配置文件来向组织的开发人员授予所需的访问权限：
+开发人员是您指定用于运行转换服务的组织的成员。只有添加到Adobe自动表单转换服务(AFCS)配置文件的那些开发人员才有权使用自动表单转换服务(AFCS)。
+执行以下步骤可创建配置文件并向其中添加开发人员。至少需要一个配置文件来向组织的开发人员授予所需的访问权限：
 
 1. 登录到[Admin Console](https://adminconsole.adobe.com/)。 使用配置为使用自动表单转换服务(AFCS)的管理员的&#x200B;**Adobe ID**&#x200B;登录。
 1. 单击&#x200B;**[!UICONTROL Automated Forms Conversion]**&#x200B;选项。
@@ -166,7 +152,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    3. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. In the **[!UICONTROL Domains]** field, specify the actual host name or IP address and port number for local, author, and publish instances. Click **[!UICONTROL Save]**.
 
-* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=zh-Hans#sending-email).
+* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
 -->
 
 ### 将用户添加到表单 — 用户组 {#adduserstousergroup}
@@ -200,7 +186,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ### &#x200B;1. 在Adobe Developer Console上配置服务API
 
-要使用自动表单转换服务(AFCS)，请创建一个项目并将&#x200B;**自动Forms配置服务** API添加到Adobe Developer Console上的项目中。 集成会生成API密钥、客户端密钥、技术帐户ID、范围和组织ID。
+要使用自动表单转换服务(AFCS)，请创建一个项目并将&#x200B;**自动Forms配置服务** API添加到Adobe Developer Console上的项目中。集成会生成API密钥、客户端密钥、技术帐户ID、范围和组织ID。
 要在Adobe Developer Console上配置自动表单转换服务API，请执行以下步骤：
 
 1. 登录到https://developer.adobe.com/console 。 使用管理员为登录Adobe I/O控制台而配置的Adobe ID开发人员帐户进行登录。
@@ -209,10 +195,10 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    ![创建新API项目](/help/using/assets/create-new-api-project.png)
 
-1. 单击 **[!UICONTROL Add API]**. 此时将显示一个屏幕，其中包含为您的帐户启用的所有API的列表。
+1. 单击&#x200B;**[!UICONTROL Add API]**。此时将显示一个屏幕，其中包含为您的帐户启用的所有API的列表。
    ![添加API](/help/using/assets/add-api.png)
 
-1. 选择&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;并单击&#x200B;**[!UICONTROL Next]**。 出现用于配置API的屏幕。
+1. 选择&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;并单击&#x200B;**[!UICONTROL Next]**。出现用于配置API的屏幕。
    ![选择AFCS API](/help/using/assets/select-afcs-api.png)
 
 1. 选择&#x200B;**OAuth服务器到服务器**&#x200B;身份验证方法。
@@ -226,7 +212,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    >
    > 选择向组织的开发人员授予访问权限时创建的配置文件。 如果您不知道要选择的配置文件，请联系您的管理员。
 
-1. 单击&#x200B;**[!UICONTROL OAuth Server-to-Server]**&#x200B;可查看将AEM实例连接到自动表单转换服务(AFCS)所需的API密钥、客户端密钥和其他信息。
+1. 单击&#x200B;**[!UICONTROL OAuth Server-to-Server]**可查看将AEM实例连接到自动表单转换服务(AFCS)所需的API密钥、客户端密钥和其他信息。
    ![选择Oath凭据](/help/using/assets/select-oauth-credential.png)
 
    页面上的信息用于创建IMS配置，如[在AEM创作实例上创建IMS技术配置](#2-create-ims-technical-configuration-on-aem-author-instance)部分中所述。
@@ -265,7 +251,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    >
    > 仅创建一个IMS配置。 请勿创建多个IMS配置。
 
-1. 选择&#x200B;**Adobe IMS配置**&#x200B;并单击&#x200B;**[!UICONTROL Check Health]**。 将显示一个对话框。
+1. 选择&#x200B;**Adobe IMS配置**&#x200B;并单击&#x200B;**[!UICONTROL Check Health]**。出现一个对话框。
    ![检查运行状况](/help/using/assets/check-health.png)
 
    出现&#x200B;**检查**&#x200B;对话框。
@@ -282,12 +268,12 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ### &#x200B;3. 创建自动表单转换配置
 
-创建自动表单转换配置以将您的AEM实例连接到转换服务。 它还允许您为转换指定模板、主题和表单片段。 您可以为每组表单分别创建多个云服务配置。
-例如，您可以对销售部门表单进行单独配置，为客户支持表单进行单独配置。 执行以下步骤可创建Cloud Service配置：
+创建自动表单转换配置以将您的AEM实例连接到转换服务。它还允许您为转换指定模板、主题和表单片段。您可以为每组表单分别创建多个云服务配置。
+例如，您可以对销售部门表单进行单独配置，为客户支持表单进行单独配置。执行以下步骤可创建Cloud Service配置：
 
 1. 在您的AEM Forms实例上，单击&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]**> **[!UICONTROL Cloud Services]** > **[!UICONTROL Automate Forms Conversion Configuration]**。
 1. 选择&#x200B;**[!UICONTROL Global]**&#x200B;文件夹并单击&#x200B;**[!UICONTROL Create]**。
-显示&#x200B;**创建自动表单转换配置**&#x200B;页面。 该配置在&#x200B;**Global**&#x200B;文件夹中创建。 您还可以在现有的其他文件夹中创建配置，或者为您的配置创建一个文件夹。
+显示**创建自动表单转换配置**&#x200B;页面。该配置在&#x200B;**Global**文件夹中创建。您还可以在现有的其他文件夹中创建配置，或者为您的配置创建一个文件夹。
    ![选择全局文件夹](/help/using/assets/create-afcs-cloud-conf.png)
 1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;页面上，为以下字段指定值并单击&#x200B;**[!UICONTROL Next]**。
 
@@ -304,7 +290,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    | 现有片段 | 现有片段的位置（如果有）。 |
    | 自定义元模型 | 自定义元模型的.schema.json文件的路径。 您可以为英语、法语、德语、西班牙语、意大利语和葡萄牙语创建单独的元模型。 |
 
-1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;页的&#x200B;**[!UICONTROL Advanced]**&#x200B;选项卡中，为以下字段指定值：
+1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;页的&#x200B;**[!UICONTROL Advanced]**选项卡中，为以下字段指定值：
    ![AFCS配置](/help/using/assets/afcs-config.png)
 
    <table>

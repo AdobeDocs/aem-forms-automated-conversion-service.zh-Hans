@@ -9,20 +9,11 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
 TQID: https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU
-product_v2:
-  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2:
-  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: cc72dcf1-72e1-48cc-b434-e7c27d62d67cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 2659
@@ -216,7 +207,7 @@ Meta-model是一个JSON架构。 在开始使用元模型之前，请确保您�
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>使用jcr：title属性和title JSON架构属性，可在转换后修改自适应表单字段的标签。<br>有关详细信息，请参阅<a href="#custommetamodelexamples">自定义元模型示例中的<strong>修改表单字段的标签</strong>。</a><br>有关可使用JSON架构应用于自适应表单字段的更多属性的信息，请参阅<a href="https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON架构创建自适应表单</a>。</p>
+    <p>使用jcr：title属性和title JSON架构属性，可在转换后修改自适应表单字段的标签。<br>有关详细信息，请参阅<a href="#custommetamodelexamples">自定义元模型示例中的<strong>修改表单字段的标签</strong>。</a><br>有关可使用JSON架构应用于自适应表单字段的更多属性的信息，请参阅<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON架构创建自适应表单</a>。</p>
     <p></p></td> 
   </tr>
   <td><p>sling：resourceType和guideNodeClass</p></td> 
