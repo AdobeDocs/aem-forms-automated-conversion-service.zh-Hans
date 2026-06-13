@@ -30,7 +30,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: cb6b167400093c85e8929eb147e2a0be256772a6
 workflow-type: tm+mt
-source-wordcount: 2663
+source-wordcount: 2448
 ht-degree: 6%
 
 ---
@@ -132,8 +132,8 @@ The connector package provides early access to the [Auto-detect logical sections
 
 在Adobe为您的组织启用访问权限并向管理员提供所需权限后，管理员可以登录Admin Console（下面的详细说明）、创建配置文件并将开发人员添加到配置文件中。 开发人员可以将AEM Forms的一个实例连接到Adobe Cloud上的自动表单转换服务(AFCS)。
 
-开发人员是您指定用于运行转换服务的组织的成员。 只有添加到Adobe自动表单转换服务(AFCS)配置文件的那些开发人员才有权使用自动表单转换服务(AFCS)。
-执行以下步骤可创建配置文件并向其中添加开发人员。 至少需要一个配置文件来向组织的开发人员授予所需的访问权限：
+开发人员是您指定用于运行转换服务的组织的成员。只有添加到Adobe自动表单转换服务(AFCS)配置文件的那些开发人员才有权使用自动表单转换服务(AFCS)。
+执行以下步骤可创建配置文件并向其中添加开发人员。至少需要一个配置文件来向组织的开发人员授予所需的访问权限：
 
 1. 登录到[Admin Console](https://adminconsole.adobe.com/)。 使用配置为使用自动表单转换服务(AFCS)的管理员的&#x200B;**Adobe ID**&#x200B;登录。
 1. 单击&#x200B;**[!UICONTROL Automated Forms Conversion]**&#x200B;选项。
@@ -200,7 +200,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ### &#x200B;1. 在Adobe Developer Console上配置服务API
 
-要使用自动表单转换服务(AFCS)，请创建一个项目并将&#x200B;**自动Forms配置服务** API添加到Adobe Developer Console上的项目中。 集成会生成API密钥、客户端密钥、技术帐户ID、范围和组织ID。
+要使用自动表单转换服务(AFCS)，请创建一个项目并将&#x200B;**自动Forms配置服务** API添加到Adobe Developer Console上的项目中。集成会生成API密钥、客户端密钥、技术帐户ID、范围和组织ID。
 要在Adobe Developer Console上配置自动表单转换服务API，请执行以下步骤：
 
 1. 登录到https://developer.adobe.com/console 。 使用管理员为登录Adobe I/O控制台而配置的Adobe ID开发人员帐户进行登录。
@@ -209,10 +209,10 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    ![创建新API项目](/help/using/assets/create-new-api-project.png)
 
-1. 单击 **[!UICONTROL Add API]**. 此时将显示一个屏幕，其中包含为您的帐户启用的所有API的列表。
+1. 单击&#x200B;**[!UICONTROL Add API]**。此时将显示一个屏幕，其中包含为您的帐户启用的所有API的列表。
    ![添加API](/help/using/assets/add-api.png)
 
-1. 选择&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;并单击&#x200B;**[!UICONTROL Next]**。 出现用于配置API的屏幕。
+1. 选择&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;并单击&#x200B;**[!UICONTROL Next]**。出现用于配置API的屏幕。
    ![选择AFCS API](/help/using/assets/select-afcs-api.png)
 
 1. 选择&#x200B;**OAuth服务器到服务器**&#x200B;身份验证方法。
@@ -265,7 +265,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    >
    > 仅创建一个IMS配置。 请勿创建多个IMS配置。
 
-1. 选择&#x200B;**Adobe IMS配置**&#x200B;并单击&#x200B;**[!UICONTROL Check Health]**。 将显示一个对话框。
+1. 选择&#x200B;**Adobe IMS配置**&#x200B;并单击&#x200B;**[!UICONTROL Check Health]**。出现一个对话框。
    ![检查运行状况](/help/using/assets/check-health.png)
 
    出现&#x200B;**检查**&#x200B;对话框。
@@ -282,12 +282,12 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ### &#x200B;3. 创建自动表单转换配置
 
-创建自动表单转换配置以将您的AEM实例连接到转换服务。 它还允许您为转换指定模板、主题和表单片段。 您可以为每组表单分别创建多个云服务配置。
-例如，您可以对销售部门表单进行单独配置，为客户支持表单进行单独配置。 执行以下步骤可创建Cloud Service配置：
+创建自动表单转换配置以将您的AEM实例连接到转换服务。它还允许您为转换指定模板、主题和表单片段。您可以为每组表单分别创建多个云服务配置。
+例如，您可以对销售部门表单进行单独配置，为客户支持表单进行单独配置。执行以下步骤可创建Cloud Service配置：
 
 1. 在您的AEM Forms实例上，单击&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]**> **[!UICONTROL Cloud Services]** > **[!UICONTROL Automate Forms Conversion Configuration]**。
 1. 选择&#x200B;**[!UICONTROL Global]**&#x200B;文件夹并单击&#x200B;**[!UICONTROL Create]**。
-显示&#x200B;**创建自动表单转换配置**&#x200B;页面。 该配置在&#x200B;**Global**&#x200B;文件夹中创建。 您还可以在现有的其他文件夹中创建配置，或者为您的配置创建一个文件夹。
+显示&#x200B;**创建自动表单转换配置**&#x200B;页面。该配置在&#x200B;**Global**&#x200B;文件夹中创建。您还可以在现有的其他文件夹中创建配置，或者为您的配置创建一个文件夹。
    ![选择全局文件夹](/help/using/assets/create-afcs-cloud-conf.png)
 1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;页面上，为以下字段指定值并单击&#x200B;**[!UICONTROL Next]**。
 
