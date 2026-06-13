@@ -19,7 +19,7 @@ level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: 1905
+source-wordcount: 1790
 ht-degree: 8%
 
 ---
@@ -80,8 +80,8 @@ AEM Forms自动表单转换服务(AFCS)由Adobe Sensei提供支持，可自动�
    * **[!UICONTROL Select a cloud configuration]**. 选择配置时，已指定默认模板和主题。 如果需要，您可以指定其他模板或主题。
    * 指定用于保存生成的自适应表单和相应架构的位置。 您可以使用默认路径或指定自定义路径。
    * 使用&#x200B;**生成没有数据模型绑定的自适应表单**&#x200B;选项选择是否要生成具有或不具有数据模型绑定的自适应表单。
-如果不选择此选项，转换服务会自动将自适应表单与JSON架构相关联，并在自适应表单中可用的字段与JSON架构之间创建数据绑定。 **[!UICONTROL Save generated data model schema at]**&#x200B;字段显示保存生成的JSON架构的默认位置。 您还可以自定义保存生成的架构的位置。
-如果选择此选项，则转换服务会生成一个没有数据模型绑定的自适应表单。 成功转换后，您可以将自适应表单与表单数据模型、XML架构或JSON架构相关联。 有关详细信息，请参阅[创建自适应表单](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
+如果不选择此选项，转换服务会自动将自适应表单与JSON架构相关联，并在自适应表单中可用的字段与JSON架构之间创建数据绑定。**[!UICONTROL Save generated data model schema at]**&#x200B;字段显示保存生成的JSON架构的默认位置。您还可以自定义保存生成的架构的位置。
+如果选择此选项，则转换服务会生成一个没有数据模型绑定的自适应表单。成功转换后，您可以将自适应表单与表单数据模型、XML架构或JSON架构相关联。有关详细信息，请参阅[创建自适应表单](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
 
    <!--
 
@@ -138,7 +138,7 @@ AEM Forms自动表单转换服务(AFCS)由Adobe Sensei提供支持，可自动�
 
   >[!NOTE]
   > 在使用“自动将部分转换为片段”选项时，请勿使用响应式布局模板。
-  > 使用审阅和修正编辑器将小面板合并到大面板。 它有助于减少转换后的自适应表单中的片段数。
+  > 使用审阅和修正编辑器将小面板合并到大面板。它有助于减少转换后的自适应表单中的片段数。
   > 如果您遇到“调用次数过多”的例外情况，
   >
   > * 重新构建表单以创建简化的层次结构

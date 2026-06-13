@@ -25,8 +25,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: 1918
-ht-degree: 4%
+source-wordcount: 1830
+ht-degree: 5%
 
 ---
 
@@ -76,7 +76,7 @@ ht-degree: 4%
 1. **该服务是否支持架构绑定的XDP表单？ 如果我有XDP绑定到架构，是否需要将架构嵌入到XDP？**
    <p>是，该服务支持架构绑定的XDP表单，并要求将架构嵌入到源XDP表单中。 转换绑定架构的XDP表单时，服务会生成JSON架构。 JSON架构在结构上与源XDP表单的XSD架构类似。</p> <br>
 
-1. **该服务无法转换表单。 原因是什么？如何解决此问题？**
+1. **该服务无法转换表单。问题的原因以及如何解决？**
 转化失败的最常见原因是：</p>
    * 为转换提供了安全的PDF forms。 请勿使用受密码保护或安全的PDF forms进行转换。
    * Internet连接中断。 确保在转换过程中已连接到Internet。
@@ -107,7 +107,7 @@ ht-degree: 4%
    您可以使用元模型将表单对象映射到您选择的自适应表单组件，并预配置组件的验证、规则、数据模式、帮助文本和辅助功能属性。 所有指定的属性将在转换期间应用。 您可以使用元模型将公共属性应用于字段。 它可以帮助您减少表单间的一些重复问题。<br/><br/>
 
 1. **对于包含敏感数据(如个人身份信息(PII)信息)的表单，有哪些选项？**
-该服务仅支持空白或未填写的表单。 请勿上传包含个人身份信息(PII)的已填写表单或表单。 此外，删除源表单中预填的数据、个人身份信息(PII)、机密和专有信息。<br/>
+该服务仅支持空白或未填写的表单。请勿上传包含个人身份信息(PII)的已填写表单或表单。此外，删除源表单中预填的数据、个人身份信息(PII)、机密和专有信息。<br/>
 
 1. **页眉和页脚应放置在何处？**
    <p>将页眉和页脚放置在自适应表单模板中。 如果源PDF表单有页眉和页脚，该服务将在转换期间使用自适应表单模板中可用的页眉和页脚检测并替换检测到的页眉和页脚。 如果自适应表单中包含任何额外的页眉或页脚，您可以使用<a href="review-correct-ui-edited.md">审阅并更正</a>编辑器来修复或删除此类页眉或页脚。</p> <br />
@@ -115,9 +115,9 @@ ht-degree: 4%
 1. **与手动规划、创建资产（主题、模板）、创建和发布自适应表单相比，该服务节省了多少时间？**
    <p>时间的长短取决于输入表单的大小和复杂性以及请求的数量。 这项服务旨在通过以比手动表单转换过程快得多的速度将PDF forms转换为自适应表单，显着缩短实现价值的时间。 </p> <br />
 
-1. **如果我遇到与RSA库相关的错误，该怎么办？ 错误消息类似于下面提到的消息：** <br/>
-   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&lt;init&gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
-当没有为RSA/BouncyCastle库配置引导委派时，会发生上述错误。 执行以下步骤以解决问题：
+1. **如果我遇到与RSA库相关的错误，该怎么办？错误消息类似于下面提到的消息：** <br/>
+   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
+当没有为RSA/BouncyCastle库配置引导委派时，会发生上述错误。执行以下步骤以解决问题：
    <p> </p>
 
    1. 停止 AEM 实例。 导航到 `[AEM installation directory]\crx-quickstart\conf\` 文件夹。 打开sling.properties文件进行编辑。 如果您使用`[AEM installation directory]\crx-quickstart\bin\start.bat`启动AEM实例，请编辑位于`[AEM_root]\crx-quickstart\`的sling.properties。
