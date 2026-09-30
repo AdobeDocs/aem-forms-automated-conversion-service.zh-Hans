@@ -8,27 +8,38 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-TQID: https://experienceleague.adobe.com/5c2zcJqsjOyH--SIp-DbEyQtflWnBy67-ja0BZY8aC8
+TQID: 'https://experienceleague.adobe.com/5c2zcJqsjOyH--SIp-DbEyQtflWnBy67-ja0BZY8aC8'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 496
+source-wordcount: '496'
 ht-degree: 52%
-
 ---
-
 # 发行说明
 
 自动化表单转换服务在不断改进。 要了解最新动态，请定期访问此页面。 此页面为您提供以下信息：
@@ -88,7 +99,7 @@ ht-degree: 52%
 
 **自动检测表单中的逻辑部分**
 
-默认情况下，该服务会为 PDF 表单每个页面单独创建顶层面板。 现在，您可以使用 **[!UICONTROL Auto-detect logical sections]** 选项拖放页面级别面板（基于页码的面板）并仅创建逻辑面板。 它还会将不属于任何之前逻辑部分的字段和跨页面逻辑部分的字段合并到一个逻辑部分中。 例如，如果某个逻辑部分的一部分字段位于第 1 页结尾而另一部分位于第 2 页开头，则所有此类字段会被合并到一个逻辑部分中。
+默认情况下，该服务会为 PDF 表单每个页面单独创建顶层面板。 现在，您可以使用 **[!UICONTROL Auto-detect logical sections]** 选项拖放页面级别面板（基于页码的面板）并仅创建逻辑面板。 它还会将不属于任何分区的字段归入前面的逻辑分区，并将分散在相邻两页上的同一逻辑分区中的字段合并为一个逻辑分区。 例如，如果某个逻辑部分的一部分字段位于第 1 页结尾而另一部分位于第 2 页开头，则所有此类字段会被合并到一个逻辑部分中。
 
 ### 改进内容 {#mar-2020-improvements}
 
