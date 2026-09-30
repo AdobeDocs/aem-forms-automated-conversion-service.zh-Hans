@@ -8,28 +8,40 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-TQID: https://experienceleague.adobe.com/yp0Kt5IApys-pqUHzqYJlzY9zhMg7z26v-bB0Fp9fjI
+TQID: 'https://experienceleague.adobe.com/yp0Kt5IApys-pqUHzqYJlzY9zhMg7z26v-bB0Fp9fjI'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 1830
-ht-degree: 5%
-
+source-wordcount: '1917'
+ht-degree: 4%
 ---
-
 # 常见问题解答{#frequently-asked-questions}
 
 1. **自动表单转换服务(AFCS)支持哪个AEM Forms版本？**
@@ -76,15 +88,15 @@ ht-degree: 5%
 1. **该服务是否支持架构绑定的XDP表单？ 如果我有XDP绑定到架构，是否需要将架构嵌入到XDP？**
    <p>是，该服务支持架构绑定的XDP表单，并要求将架构嵌入到源XDP表单中。 转换绑定架构的XDP表单时，服务会生成JSON架构。 JSON架构在结构上与源XDP表单的XSD架构类似。</p> <br>
 
-1. **该服务无法转换表单。问题的原因以及如何解决？**
+1. **该服务无法转换表单。 原因是什么？如何解决此问题？**
 转化失败的最常见原因是：</p>
    * 为转换提供了安全的PDF forms。 请勿使用受密码保护或安全的PDF forms进行转换。
    * Internet连接中断。 确保在转换过程中已连接到Internet。
    * Source PDF具有表单的图像，而不是实际的表单。
    * 服务配置不正确、未提供服务URL或提供的服务URL不正确。 在&#x200B;**[!UICONTROL AEM]** > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion configuration]**&#x200B;检查[服务配置](configure-service.md#configure-the-cloud-service)。
    * IMS配置不正确。 对IMS配置执行运行状况检查以确保其正常工作。 要检查IMS配置是否正确，请执行以下操作：
-      1. 转到`http://[servername]:[port]/libs/cq/adobeims-configuration/content/configurations.html`
-      2. 选择配置。 单击标题中的&#x200B;**[!UICONTROL Check Health]**&#x200B;并单击&#x200B;**[!UICONTROL Check]**。 如果成功，您会收到&#x200B;**[!UICONTROL Token retrieved successfully!]**&#x200B;消息。<br> <br>
+     1. 转到`http://[servername]:[port]/libs/cq/adobeims-configuration/content/configurations.html`
+     2. 选择配置。 单击标题中的&#x200B;**[!UICONTROL Check Health]**&#x200B;并单击&#x200B;**[!UICONTROL Check]**。 如果成功，您会收到&#x200B;**[!UICONTROL Token retrieved successfully!]**&#x200B;消息。<br> <br>
 
 1. **使用自定义字体是否会影响转化？**
    <p>当非交互式PDF表单转换为自适应表单时，为了提高转换质量，字体将嵌入到PDF表单中。 对嵌入字体的支持仅限于非交互式PDF forms。 为了优化AcroForm和基于XFA的PDF forms的转换，使用了回退字体。</p> 
@@ -107,7 +119,7 @@ ht-degree: 5%
    您可以使用元模型将表单对象映射到您选择的自适应表单组件，并预配置组件的验证、规则、数据模式、帮助文本和辅助功能属性。 所有指定的属性将在转换期间应用。 您可以使用元模型将公共属性应用于字段。 它可以帮助您减少表单间的一些重复问题。<br/><br/>
 
 1. **对于包含敏感数据(如个人身份信息(PII)信息)的表单，有哪些选项？**
-该服务仅支持空白或未填写的表单。请勿上传包含个人身份信息(PII)的已填写表单或表单。此外，删除源表单中预填的数据、个人身份信息(PII)、机密和专有信息。<br/>
+该服务仅支持空白或未填写的表单。 请勿上传包含个人身份信息(PII)的已填写表单或表单。 此外，删除源表单中预填的数据、个人身份信息(PII)、机密和专有信息。<br/>
 
 1. **页眉和页脚应放置在何处？**
    <p>将页眉和页脚放置在自适应表单模板中。 如果源PDF表单有页眉和页脚，该服务将在转换期间使用自适应表单模板中可用的页眉和页脚检测并替换检测到的页眉和页脚。 如果自适应表单中包含任何额外的页眉或页脚，您可以使用<a href="review-correct-ui-edited.md">审阅并更正</a>编辑器来修复或删除此类页眉或页脚。</p> <br />
@@ -115,9 +127,9 @@ ht-degree: 5%
 1. **与手动规划、创建资产（主题、模板）、创建和发布自适应表单相比，该服务节省了多少时间？**
    <p>时间的长短取决于输入表单的大小和复杂性以及请求的数量。 这项服务旨在通过以比手动表单转换过程快得多的速度将PDF forms转换为自适应表单，显着缩短实现价值的时间。 </p> <br />
 
-1. **如果我遇到与RSA库相关的错误，该怎么办？错误消息类似于下面提到的消息：** <br/>
+1. **如果我遇到与RSA库相关的错误，该怎么办？ 错误消息类似于下面提到的消息：** <br/>
    `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
-当没有为RSA/BouncyCastle库配置引导委派时，会发生上述错误。执行以下步骤以解决问题：
+   当没有为RSA/BouncyCastle库配置引导委派时，会发生上述错误。 执行以下步骤以解决问题：
    <p> </p>
 
    1. 停止 AEM 实例。 导航到 `[AEM installation directory]\crx-quickstart\conf\` 文件夹。 打开sling.properties文件进行编辑。 如果您使用`[AEM installation directory]\crx-quickstart\bin\start.bat`启动AEM实例，请编辑位于`[AEM_root]\crx-quickstart\`的sling.properties。

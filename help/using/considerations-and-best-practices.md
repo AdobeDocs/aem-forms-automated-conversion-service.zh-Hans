@@ -8,13 +8,16 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 6%
-
 ---
-
 
 # 最佳实践和注意事项 {#do-not-publish-best-practices-and-considerations}
 
@@ -48,7 +51,7 @@ AEM Forms Automated Conversion服务将PDF表单转换为自适应表单。 该�
    <td><img src="assets/scanned-form.jpg" /></td> 
   </tr>
   <tr>
-   <td><p><strong>模式</strong></p> <p>服务不提取图像中的图像和文本。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>手动将图像或文本添加到转换后的表单。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服务不提取图像中的图像和文本。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>手动将图像或文本添加到转换后的表单。</p> </td> 
    <td><img src="assets/image-in-adaptive-form.png" /></td> 
   </tr>
   <tr>
@@ -67,7 +70,7 @@ AEM Forms Automated Conversion服务将PDF表单转换为自适应表单。 该�
    <td width="70%">示例</td> 
   </tr>
   <tr>
-   <td><p><strong>模式</strong></p> <p>具有框或圆以外的形状的选择组选项不会转换为相应的自适应表单组件。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>将选项形状更改为框或圆形，或者使用“审阅并更正”编辑器来标识形状。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>具有框或圆以外的形状的选择组选项不会转换为相应的自适应表单组件。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>将选项形状更改为框或圆形，或者使用“审阅并更正”编辑器来标识形状。</p> </td> 
    <td><img src="assets/shaded-box-patterns.png" /> </td> 
   </tr>
  </tbody>
@@ -90,7 +93,7 @@ AEM Forms Automated Conversion服务将PDF表单转换为自适应表单。 该�
    <td><br /> <img src="assets/forms-with-clear-borders-scale.png" /><br /> </td> 
   </tr>
   <tr>
-   <td><p><strong>模式</strong></p> <p>服务将错误类型合并或分配给某些表单字段，这些表单字段彼此非常接近或没有清晰的边框。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>使用“检查并更正”编辑器标识此类字段。</p> </td> 
+   <td><p><strong>图案</strong></p> <p>服务将错误类型合并或分配给某些表单字段，这些表单字段彼此非常接近或没有清晰的边框。 </p> <p> </p> <p><strong>解决方法</strong></p> <p>使用“检查并更正”编辑器标识此类字段。</p> </td> 
    <td><img src="assets/forms-with-fields-placed-nearby.png" /></td> 
   </tr>
   <tr>

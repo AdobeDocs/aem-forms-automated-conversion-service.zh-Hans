@@ -4,13 +4,16 @@ description: 扩展默认元模型以添加特定于贵组织的模式、验证�
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 2%
-
 ---
-
 
 # 使用Forms Portal集成自适应表单与数据库 {#submit-forms-to-database-using-forms-portal}
 

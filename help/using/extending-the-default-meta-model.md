@@ -8,28 +8,40 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-TQID: https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU
+TQID: 'https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 2659
+source-wordcount: '2659'
 ht-degree: 1%
-
 ---
-
 # 扩展默认元模型 {#extend-the-default-meta-model}
 
 自动表单转换服务(AFCS)标识源表单并从中提取表单对象。 语义映射器可帮助服务确定提取的对象如何以自适应形式表示。 例如，源表单可以有许多不同类型的日期表示形式。 语义映射器有助于将源表单的日期表单对象的所有表示形式映射到自适应表单的日期组件。 语义映射器还允许该服务在转换期间预配置验证、规则、数据模式、帮助文本和可访问性属性并将其应用于自适应表单组件。
@@ -256,12 +268,12 @@ Meta-model是一个JSON架构。 在开始使用元模型之前，请确保您�
 * 确保每个键的名称都使用英语。 例如，emailAddress。
 * 确保所有实体引用和所有ID键的预定义值只包含ASCII字符。 例如，“id”：“ContactPoint”/“$ref”：“#ContactPoint”。
 * 确保与以下键对应的所有值都使用指定的元模型语言：
-   * aem:affKeyword
-   * 标题
-   * 说明
-   * enumName
-   * shortDescription
-   * validatePictureClauseMessage
+  * aem:affKeyword
+  * 标题
+  * 说明
+  * enumName
+  * shortDescription
+  * validatePictureClauseMessage
 
   例如，当元模型的语言为法语(“aem:Language”：“fr”)时，请确保所有描述和消息都为法语。
 

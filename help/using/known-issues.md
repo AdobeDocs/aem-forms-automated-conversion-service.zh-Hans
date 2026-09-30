@@ -8,27 +8,38 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-TQID: https://experienceleague.adobe.com/XEYLeElx7-hqEHX4g-Zx8IjjfX9BlFeuLYPSRHbBtTA
+TQID: 'https://experienceleague.adobe.com/XEYLeElx7-hqEHX4g-Zx8IjjfX9BlFeuLYPSRHbBtTA'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 871
+source-wordcount: '871'
 ht-degree: 2%
-
 ---
-
 # 已知问题和限制 {#known-issues-limitations}
 
 在开始使用AEM Forms自动表单转换服务(AFCS)之前，请查看以下已知问题和限制：
@@ -39,19 +50,19 @@ ht-degree: 2%
 * 某些形式的对象易于被人眼看到，但[对于服务](styles-and-pattern-considerations-and-best-practices.md)很难识别。 使用[查看并更正编辑器](review-correct-ui-edited.md)来标识和转换此类表单对象。
 * 查看并更正编辑器：
 
-   * 没有撤消操作。 “保存”按钮将永久保存更改。
-   * 不支持基于XFA表单的可重复面板。
-   * 如果使用“审阅并更正”编辑器修改表格中的列表，则行宽不会自动调整，并且文本可能会溢出到表格的下一行。
-   * **[!UICONTROL Auto-detect multi-column layout from input forms]**&#x200B;功能不适用于审阅和更正编辑器和表单片段。
-   * 无法为发布的自适应表单加载使用审阅和更正编辑器创建的涂写签名。
+  * 没有撤消操作。 “保存”按钮将永久保存更改。
+  * 不支持基于XFA表单的可重复面板。
+  * 如果使用“审阅并更正”编辑器修改表格中的列表，则行宽不会自动调整，并且文本可能会溢出到表格的下一行。
+  * **[!UICONTROL Auto-detect multi-column layout from input forms]**&#x200B;功能不适用于审阅和更正编辑器和表单片段。
+  * 无法为发布的自适应表单加载使用审阅和更正编辑器创建的涂写签名。
 
 
 * 对于基于XFA的表单：
-   * 不支持从基于XFA的表单中提取片段。
-   * 不支持XFA脚本。 例如，用于为下拉组件自动生成值的脚本。
-   * Meta-model不适用于选择组
-   * 带有单个字符的“选择组”选项无法识别
-   * 当源文档是动态XFA (.XDP)并且它[在自适应表单](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)中定义XFA属性的行为时，将不会遵循源文档的存在属性。 例如，源文档中的某个字段被标记为隐藏，并且脚本使该字段可见，则该字段在输出自适应表单中保持可见。
+  * 不支持从基于XFA的表单中提取片段。
+  * 不支持XFA脚本。 例如，用于为下拉组件自动生成值的脚本。
+  * Meta-model不适用于选择组
+  * 带有单个字符的“选择组”选项无法识别
+  * 当源文档是动态XFA (.XDP)并且它[在自适应表单](https://helpx.adobe.com/cn/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)中定义XFA属性的行为时，将不会遵循源文档的存在属性。 例如，源文档中的某个字段被标记为隐藏，并且脚本使该字段可见，则该字段在输出自适应表单中保持可见。
 
 * 使用&#x200B;**将输入AcroForm用作生成的自适应表单的记录文档(DoR)**&#x200B;选项时，请考虑以下事项：
 
